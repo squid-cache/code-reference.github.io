@@ -1,0 +1,27 @@
+var classNotePairs =
+[
+    [ "Entry", "classNotePairs_1_1Entry.html", "classNotePairs_1_1Entry" ],
+    [ "Entries", "classNotePairs.html#a160c175b808d95938436ea1b5f0fcf82", null ],
+    [ "Names", "classNotePairs.html#a14a03056b60b6684fa616928911b6058", null ],
+    [ "Pointer", "classNotePairs.html#a608fd7a95689be841aa42ceccb774603", null ],
+    [ "NotePairs", "classNotePairs.html#af8ca10562da7f5e68864ddd5aa022d17", null ],
+    [ "NotePairs", "classNotePairs.html#a24729a3399894694b682d82f67bc0a60", null ],
+    [ "add", "classNotePairs.html#a94ddac41e179481c6fb54ad25837ebf1", null ],
+    [ "add", "classNotePairs.html#a36b603c72d7682e871987f66d1dceac6", null ],
+    [ "addStrList", "classNotePairs.html#ac0e8624cd91c1b26d090ff1770f92995", null ],
+    [ "append", "classNotePairs.html#a04de2490ba5c8da8a474016e7b46eb58", null ],
+    [ "appendNewOnly", "classNotePairs.html#a0235547d238fc65bbf8088f62c1cb085", null ],
+    [ "clear", "classNotePairs.html#a0bb2599b95b39d3f8461a38ccd5cb919", null ],
+    [ "empty", "classNotePairs.html#a05fb57300fb07700f53d50b4872d395f", null ],
+    [ "expandListEntries", "classNotePairs.html#a8caebc5103214207e2135edb7601f0fc", null ],
+    [ "find", "classNotePairs.html#a299e3744a91951fcd042f1e37857f0f7", null ],
+    [ "findFirst", "classNotePairs.html#a8fd18fa94362de739d33ec0259bc4505", null ],
+    [ "hasPair", "classNotePairs.html#a7af0309021ec8bd2809ca5526afdcd8f", null ],
+    [ "operator=", "classNotePairs.html#afacda6e01e43c5cbc34514eff41280a2", null ],
+    [ "print", "classNotePairs.html#a3a46de955c3d702aa911e6f9e4c0f113", null ],
+    [ "remove", "classNotePairs.html#a44bc36d31a9420e5cc18c9dd4f47fd5b", null ],
+    [ "remove", "classNotePairs.html#a28208e3f467fb28d8418d92d614ab897", null ],
+    [ "replaceOrAdd", "classNotePairs.html#a5221e3d3b3eb3a5a250878bd65d4ffd8", null ],
+    [ "replaceOrAddOrAppend", "classNotePairs.html#aff0262aa66827fad0e1d69d93b39de81", null ],
+    [ "entries", "classNotePairs.html#acf3dae330e016b69cc4e386facd0eeca", null ]
+];

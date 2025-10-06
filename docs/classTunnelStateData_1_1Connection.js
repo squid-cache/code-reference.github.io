@@ -1,0 +1,28 @@
+var classTunnelStateData_1_1Connection =
+[
+    [ "Connection", "classTunnelStateData_1_1Connection.html#a8eeec9c8734846b1ccf7708fc165980d", null ],
+    [ "~Connection", "classTunnelStateData_1_1Connection.html#a89060aec239a0d02b4e9417e3fb6b869", null ],
+    [ "bytesIn", "classTunnelStateData_1_1Connection.html#a2e82517b42ab7c935f5f2d07466ae5f2", null ],
+    [ "bytesWanted", "classTunnelStateData_1_1Connection.html#a25e401dc358920ffa86701cb426c0bde", null ],
+    [ "dataSent", "classTunnelStateData_1_1Connection.html#a5d79d4c113df6aaebdcdc714e9df283b", null ],
+    [ "debugLevelForError", "classTunnelStateData_1_1Connection.html#ae82f56444fa1fac1f2db26b23b2903d3", null ],
+    [ "error", "classTunnelStateData_1_1Connection.html#a3b3e7570276ade952b00c716ac7075e7", null ],
+    [ "initConnection", "classTunnelStateData_1_1Connection.html#a3512ca1c20a2fa00336728ae2f78cb60", null ],
+    [ "noteClosure", "classTunnelStateData_1_1Connection.html#a14d7e6543bdeb68ad02080a8b4e51364", null ],
+    [ "noteEof", "classTunnelStateData_1_1Connection.html#aee3c4f1778707a0294c62c498c461d6e", null ],
+    [ "setDelayId", "classTunnelStateData_1_1Connection.html#a60069f544a1b1a56ac2609acf76a2bbc", null ],
+    [ "write", "classTunnelStateData_1_1Connection.html#a31cc6a8a7d29c3e8f4ce9da8fd858c4d", null ],
+    [ "buf", "classTunnelStateData_1_1Connection.html#a808054e8433229c9497784f358ef2d40", null ],
+    [ "closer", "classTunnelStateData_1_1Connection.html#ab00c30dabcac421db1869451dbd7a1bb", null ],
+    [ "conn", "classTunnelStateData_1_1Connection.html#a6d0428bf3b58b930fa321beb23dbb72a", null ],
+    [ "delayedLoops", "classTunnelStateData_1_1Connection.html#a9b755fdcabfd77caee28dbe4797bf4f2", null ],
+    [ "delayId", "classTunnelStateData_1_1Connection.html#adbc564a5e19375356ec630575408f6fc", null ],
+    [ "dirty", "classTunnelStateData_1_1Connection.html#abe6fbdb28e2cc763f593299e91cf88d4", null ],
+    [ "len", "classTunnelStateData_1_1Connection.html#a63f2a9cae4e376f95db25dd62a5797c0", null ],
+    [ "readPending", "classTunnelStateData_1_1Connection.html#ae7bd23306f05c35cb00cc574fd7754d5", null ],
+    [ "readPendingFunc", "classTunnelStateData_1_1Connection.html#a24da2a99079269bd96edaea1fdb7d98b", null ],
+    [ "receivedEof", "classTunnelStateData_1_1Connection.html#a40689927e79c678e3bd3fe9f190468b7", null ],
+    [ "side", "classTunnelStateData_1_1Connection.html#a0135f618e22108097239bbd5b81afc57", null ],
+    [ "size_ptr", "classTunnelStateData_1_1Connection.html#a6871017a7127225f3d42db9414b6c310", null ],
+    [ "writer", "classTunnelStateData_1_1Connection.html#a76419f29db7f924331e4224d63fc1e90", null ]
+];

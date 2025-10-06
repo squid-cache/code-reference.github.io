@@ -1,0 +1,25 @@
+var classRefCount =
+[
+    [ "RefCount", "classRefCount.html#af25d9fd54828195241a9725a9ef3d4db", null ],
+    [ "RefCount", "classRefCount.html#a0239b83d2d1ed384f32ffe8384e54065", null ],
+    [ "~RefCount", "classRefCount.html#ab21b8d4c41b964bb7e4ed75d5800b7d0", null ],
+    [ "RefCount", "classRefCount.html#a1b7f1f3e9e9f38d86b64735c5d0ad72e", null ],
+    [ "RefCount", "classRefCount.html#a4c47c45e00e9e08a485962562ae8c476", null ],
+    [ "RefCount", "classRefCount.html#aee33c412abb3ee797dc1aa65f505360d", null ],
+    [ "dereference", "classRefCount.html#aa634a9c4d43e764af8990b8235b1e761", null ],
+    [ "getRaw", "classRefCount.html#a9f2168c1df4a4ab6b7931425d85c37f0", null ],
+    [ "Make", "classRefCount.html#acbe7ebd6f40dbeb2bf54b8432b3135bf", null ],
+    [ "operator bool", "classRefCount.html#abcfbabc765267d759b248ea6c94277d6", null ],
+    [ "operator!", "classRefCount.html#ab2597ca77b634bc0e695e70a618659c1", null ],
+    [ "operator!=", "classRefCount.html#a8b0c54bf257d99b39dbd756e5c3679e3", null ],
+    [ "operator!=", "classRefCount.html#a94f12680dc578ed593134847ddd59df5", null ],
+    [ "operator*", "classRefCount.html#aeed19abb2d9f55f6998ee2ed3c8fcc4f", null ],
+    [ "operator->", "classRefCount.html#a1b5bc3087a86f2e7d58c4098663d569d", null ],
+    [ "operator=", "classRefCount.html#aa1b63340630a5ce96c89e8a9033bdfd8", null ],
+    [ "operator=", "classRefCount.html#a34477f94031927a7a6abb1dda1368f3c", null ],
+    [ "operator=", "classRefCount.html#aeafa5f411a5f74b6282e4d6d06e54a97", null ],
+    [ "operator==", "classRefCount.html#a38632ee12c4eed7a9d05508c06af64d9", null ],
+    [ "operator==", "classRefCount.html#aecac6cbfcebb50ca125d6af7bbde1a11", null ],
+    [ "reference", "classRefCount.html#a0e00d251797a1aba9259188041e04012", null ],
+    [ "p_", "classRefCount.html#acc06b540474e4d609d0156768700e1fa", null ]
+];

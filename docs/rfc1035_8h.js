@@ -1,0 +1,26 @@
+var rfc1035_8h =
+[
+    [ "rfc1035_rr", "classrfc1035__rr.html", "classrfc1035__rr" ],
+    [ "_rfc1035_query", "struct__rfc1035__query.html", "struct__rfc1035__query" ],
+    [ "_rfc1035_message", "struct__rfc1035__message.html", "struct__rfc1035__message" ],
+    [ "RFC1035_CLASS_IN", "rfc1035_8h.html#a3702375c287632f835d7e9cfcebf05a8", null ],
+    [ "RFC1035_DEFAULT_PACKET_SZ", "rfc1035_8h.html#aa50176f5859971ec9a6e93161c3fc56e", null ],
+    [ "RFC1035_MAXHOSTNAMESZ", "rfc1035_8h.html#a8d616b2b71e5786d5541481fc41fac61", null ],
+    [ "RFC1035_TYPE_A", "rfc1035_8h.html#a2e462a1ac210f16ea9d50d0a41c5221b", null ],
+    [ "RFC1035_TYPE_CNAME", "rfc1035_8h.html#afc0dc9a61a38c8bebd9cf49750fdd66e", null ],
+    [ "RFC1035_TYPE_PTR", "rfc1035_8h.html#a29878cdabed9256aa609a2e8ebe3229e", null ],
+    [ "rfc1035_message", "rfc1035_8h.html#a9cfdd2e000b9f603a5fed335e1fd258b", null ],
+    [ "rfc1035_query", "rfc1035_8h.html#aa7b5afcc3220713a84c171cace613528", null ],
+    [ "rfc1035BuildAQuery", "rfc1035_8h.html#aca0f1bf3c1a43a936cebf479caffad71", null ],
+    [ "rfc1035BuildPTRQuery", "rfc1035_8h.html#aac6a816c5b0917e46f9593b38ca8d2d5", null ],
+    [ "rfc1035ErrorMessage", "rfc1035_8h.html#aae27308a3e20c39546e9a0dfaf371e1a", null ],
+    [ "rfc1035HeaderPack", "rfc1035_8h.html#ae81e9bc57cc044972878acdee36bd8d1", null ],
+    [ "rfc1035HeaderUnpack", "rfc1035_8h.html#a2c3e23796a8a4aa190261e67b87bd3f8", null ],
+    [ "rfc1035MessageDestroy", "rfc1035_8h.html#a467131c8239ec6983c33c0424621bbaa", null ],
+    [ "rfc1035MessageUnpack", "rfc1035_8h.html#a472bc0c7e40db8645432906be6e50c5e", null ],
+    [ "rfc1035QueryCompare", "rfc1035_8h.html#ae8fee26d4019f5505ecb671fa74a27d4", null ],
+    [ "rfc1035QuestionPack", "rfc1035_8h.html#a334a5c8d5518432ff048e731818ae157", null ],
+    [ "rfc1035RRDestroy", "rfc1035_8h.html#a20bf58418de6d29aa33ecd2f716b3001", null ],
+    [ "rfc1035RRPack", "rfc1035_8h.html#a1ee8d62b9c8915a219fca0063af1ac69", null ],
+    [ "rfc1035SetQueryID", "rfc1035_8h.html#afbd7190cb9315aac4e751eb6a9761f13", null ]
+];

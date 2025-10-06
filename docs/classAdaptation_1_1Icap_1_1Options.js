@@ -1,0 +1,37 @@
+var classAdaptation_1_1Icap_1_1Options =
+[
+    [ "TransferList", "classAdaptation_1_1Icap_1_1Options_1_1TransferList.html", "classAdaptation_1_1Icap_1_1Options_1_1TransferList" ],
+    [ "Transfers", "structAdaptation_1_1Icap_1_1Options_1_1Transfers.html", "structAdaptation_1_1Icap_1_1Options_1_1Transfers" ],
+    [ "GetCallback", "classAdaptation_1_1Icap_1_1Options.html#a5dd0955ce7479c94e135a1f979d5f947", null ],
+    [ "TransferKind", "classAdaptation_1_1Icap_1_1Options.html#a606dab02a903e065d404d69324c158fd", [
+      [ "xferNone", "classAdaptation_1_1Icap_1_1Options.html#a606dab02a903e065d404d69324c158fda38a972655afc43dc8abe6a28a226c667", null ],
+      [ "xferPreview", "classAdaptation_1_1Icap_1_1Options.html#a606dab02a903e065d404d69324c158fda9add960351eb40fc6b5a98975bd17c43", null ],
+      [ "xferIgnore", "classAdaptation_1_1Icap_1_1Options.html#a606dab02a903e065d404d69324c158fda8802676eab67609ea5a6740ed789133a", null ],
+      [ "xferComplete", "classAdaptation_1_1Icap_1_1Options.html#a606dab02a903e065d404d69324c158fda21151ebc06449edae5600c2980040019", null ]
+    ] ],
+    [ "Options", "classAdaptation_1_1Icap_1_1Options.html#a653dae00fa0d6f05dd3231f78da501bc", null ],
+    [ "~Options", "classAdaptation_1_1Icap_1_1Options.html#abf67957116ddb766926b0d4e90645e12", null ],
+    [ "cfgIntHeader", "classAdaptation_1_1Icap_1_1Options.html#a465c6909ccaf6a911102fabd5f5d5197", null ],
+    [ "cfgMethod", "classAdaptation_1_1Icap_1_1Options.html#ae928f176c7908fba92faf064230c7095", null ],
+    [ "cfgTransferList", "classAdaptation_1_1Icap_1_1Options.html#aa89ce2a5d1544c7ef9f8b0da73f6b2bb", null ],
+    [ "configure", "classAdaptation_1_1Icap_1_1Options.html#ad40136c96fb3be957d2028de6baebab8", null ],
+    [ "expire", "classAdaptation_1_1Icap_1_1Options.html#a1696479ad59bcfcdac31ea7a6950a652", null ],
+    [ "fresh", "classAdaptation_1_1Icap_1_1Options.html#a30b2e4257c4d7a332d834778e4361235", null ],
+    [ "Get", "classAdaptation_1_1Icap_1_1Options.html#af7fd2b218d09d8afb2cf1acf8d17a437", null ],
+    [ "timestamp", "classAdaptation_1_1Icap_1_1Options.html#a66bfe6766f99d21d6cfa777b57fc4244", null ],
+    [ "transferKind", "classAdaptation_1_1Icap_1_1Options.html#aeac78c2f21a72ff6671a6da87947be2b", null ],
+    [ "ttl", "classAdaptation_1_1Icap_1_1Options.html#aef5d19ced25c351376d3d17c2e025867", null ],
+    [ "valid", "classAdaptation_1_1Icap_1_1Options.html#a8a0787ea8841ba6b390797c530b76c71", null ],
+    [ "allow204", "classAdaptation_1_1Icap_1_1Options.html#a2dce2f6d605c9e2014ecf54a20ab069c", null ],
+    [ "allow206", "classAdaptation_1_1Icap_1_1Options.html#a47a3b0aaac9d95656829f8f5b33f6cc4", null ],
+    [ "error", "classAdaptation_1_1Icap_1_1Options.html#ad5680ba406f4a869a18146e0f5e3e41b", null ],
+    [ "istag", "classAdaptation_1_1Icap_1_1Options.html#ac5ed882575b957f57e13a5da715d2cf7", null ],
+    [ "max_connections", "classAdaptation_1_1Icap_1_1Options.html#a68b8c4180b8ab22126b48f0b2d6f2fe9", null ],
+    [ "methods", "classAdaptation_1_1Icap_1_1Options.html#a385e1777adff452af989ff441e963bb5", null ],
+    [ "preview", "classAdaptation_1_1Icap_1_1Options.html#adec416e6809db170114f525c014c0904", null ],
+    [ "service", "classAdaptation_1_1Icap_1_1Options.html#a303456777628f26a893311d429b1ce20", null ],
+    [ "serviceId", "classAdaptation_1_1Icap_1_1Options.html#a11974968bc756b85e005757d5d150b2e", null ],
+    [ "theTimestamp", "classAdaptation_1_1Icap_1_1Options.html#a97e18a3c138b67e592b1f70ee9c448dc", null ],
+    [ "theTransfers", "classAdaptation_1_1Icap_1_1Options.html#a3392708c7abe6c239db90d26f722b7c4", null ],
+    [ "theTTL", "classAdaptation_1_1Icap_1_1Options.html#a3ba9d81f0316f9887f24eaa9340f16dc", null ]
+];

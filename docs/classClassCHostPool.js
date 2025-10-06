@@ -1,0 +1,28 @@
+var classClassCHostPool =
+[
+    [ "Pointer", "classClassCHostPool.html#aae2777242004992350796c55a7813fe1", null ],
+    [ "ClassCHostPool", "classClassCHostPool.html#a8f079b7d84e1d23ace3264ba176bf6c2", null ],
+    [ "~ClassCHostPool", "classClassCHostPool.html#a18d0e7a5776cb640f3cfea2396aa8ae1", null ],
+    [ "delayRead", "classClassCHostPool.html#abe0b2ab41641d7964f268c628603a977", null ],
+    [ "dump", "classClassCHostPool.html#a8540bfdde4af29f56cafd08fc47c3189", null ],
+    [ "id", "classClassCHostPool.html#a0172b817856b1dbe9cbe983aad3b86a9", null ],
+    [ "keyAllocated", "classClassCHostPool.html#a5a37c726a4e824c3e0acf711428455f7", null ],
+    [ "kickReads", "classClassCHostPool.html#a988211ca5cca37e873176b15fe5ff0d3", null ],
+    [ "label", "classClassCHostPool.html#a6c541d9ad386b8c57d1a4c25171681a5", null ],
+    [ "makeHostKey", "classClassCHostPool.html#a045ff176cba43c532e6532c7b127d492", null ],
+    [ "makeKey", "classClassCHostPool.html#aed588a40a22e01401f53dc6697c78e3a", null ],
+    [ "MEMPROXY_CLASS", "classClassCHostPool.html#a4acd698aa6c2d393f9912ebe45894312", null ],
+    [ "operator delete", "classClassCHostPool.html#aa681673d6d054a52bc0cd524b7d6b13e", null ],
+    [ "operator new", "classClassCHostPool.html#abccf01dc087756081e9fa1038d3a1c12", null ],
+    [ "parse", "classClassCHostPool.html#af4c1cc99296a1cdbfdefc82d401c47fc", null ],
+    [ "Pool", "classClassCHostPool.html#a361c836b6a6bb7b7f4fdf13c56f3773a", null ],
+    [ "rate", "classClassCHostPool.html#abe2f15768b435db537b1ee1716856599", null ],
+    [ "rate", "classClassCHostPool.html#a995f5677e66edaff9d68d511d5243099", null ],
+    [ "stats", "classClassCHostPool.html#a559c82c18f71b3d9d9babe55cd5f2623", null ],
+    [ "update", "classClassCHostPool.html#a52d20412f4339bf4c648ad8618b3d1d5", null ],
+    [ "UseCount", "classClassCHostPool.html#a74f56a09d6e8b404b812356a025d19e5", null ],
+    [ "ClassCHostPool::Id", "classClassCHostPool.html#a742ef1bce1eef187417913d2dff9186b", null ],
+    [ "buckets", "classClassCHostPool.html#a7015e17acd728f9d4d75c6a28d36b4b1", null ],
+    [ "deferredReads", "classClassCHostPool.html#ab0e17cd80384b75591a1795fa7aea1b8", null ],
+    [ "spec", "classClassCHostPool.html#af2f857a48fd3089baae1ca374213c3e9", null ]
+];

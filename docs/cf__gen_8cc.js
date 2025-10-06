@@ -1,0 +1,38 @@
+var cf__gen_8cc =
+[
+    [ "DefaultValues", "classDefaultValues.html", "classDefaultValues" ],
+    [ "Entry", "classEntry.html", "classEntry" ],
+    [ "Type", "classType.html", "classType" ],
+    [ "_PATH_CF_DEPEND", "cf__gen_8cc.html#ae2e571d6e5854a5f8d2d8dea85e0b527", null ],
+    [ "_PATH_PARSER", "cf__gen_8cc.html#a19490710b9a22df9c91e069466b240cf", null ],
+    [ "_PATH_SQUID_CONF", "cf__gen_8cc.html#a6c72ff2d3aef515183ec1dab01dc8c3f", null ],
+    [ "_PATH_SQUID_CONF_SHORT", "cf__gen_8cc.html#a155e4e515a80a52158bef291e39d497a", null ],
+    [ "MAX_LINE", "cf__gen_8cc.html#a842ed03f27719bc87666bfd1f75415b8", null ],
+    [ "EntryAliasList", "cf__gen_8cc.html#a12cacea2f34dac380aaf8d8b2e36631c", null ],
+    [ "EntryList", "cf__gen_8cc.html#a6cb9ae3a989c40377613004509445ff6", null ],
+    [ "LineList", "cf__gen_8cc.html#a485b6ba1985d9e210943fd84534f064f", null ],
+    [ "TypeDepList", "cf__gen_8cc.html#ab8be92e34631743695431ffa243688fd", null ],
+    [ "TypeList", "cf__gen_8cc.html#adb295656c3d699a148afe1740c3e2264", null ],
+    [ "State", "cf__gen_8cc.html#a5d74787dedbc4e11c1ab15bf487e61f8", [
+      [ "sSTART", "cf__gen_8cc.html#a5d74787dedbc4e11c1ab15bf487e61f8af3aee7951aba8a2965f13a51fd615af7", null ],
+      [ "s1", "cf__gen_8cc.html#a5d74787dedbc4e11c1ab15bf487e61f8a9aad8b8adbe6ec1aef47dba5064b8785", null ],
+      [ "sDOC", "cf__gen_8cc.html#a5d74787dedbc4e11c1ab15bf487e61f8a11b8e03de2c549dc578c9ddd02a93300", null ],
+      [ "sCFGLINES", "cf__gen_8cc.html#a5d74787dedbc4e11c1ab15bf487e61f8a24f4714068b87bd770d32d315b9fa805", null ],
+      [ "sEXIT", "cf__gen_8cc.html#a5d74787dedbc4e11c1ab15bf487e61f8aa2f8035c8ba924ee7b981a48fa490071", null ]
+    ] ],
+    [ "available_if", "cf__gen_8cc.html#ae5d68fc1eeba0bbe7517418876bfe8a6", null ],
+    [ "checkDepend", "cf__gen_8cc.html#a46b2bd3c5ebcef95cfc7fdeee4d6607a", null ],
+    [ "errorMsg", "cf__gen_8cc.html#a5b6ac08cd5cc2a75145281ff60680dd6", null ],
+    [ "gen_conf", "cf__gen_8cc.html#ab5052be0ce1d999e0eaa01b1a2d927e8", null ],
+    [ "gen_default", "cf__gen_8cc.html#ac3ec41a73e8c6f3ccf7210a01069ca9d", null ],
+    [ "gen_default_if_none", "cf__gen_8cc.html#ac91acf7166022db66f1e13ee6e5ab493", null ],
+    [ "gen_default_postscriptum", "cf__gen_8cc.html#a7f70bc95a1a6154d850c72c8fd15714f", null ],
+    [ "gen_dump", "cf__gen_8cc.html#a5f57a7f16c150cf453aef3964344f4e1", null ],
+    [ "gen_free", "cf__gen_8cc.html#af76e0d589eb9420bd0b2330e405f9796", null ],
+    [ "gen_parse", "cf__gen_8cc.html#a23bb2b2e6c5952df6fb34a06363c65be", null ],
+    [ "gen_quote_escape", "cf__gen_8cc.html#a7cb1a8851cd006678f3a26d38e047747", null ],
+    [ "isDefined", "cf__gen_8cc.html#a0ab10269edb948add83dc8d993995c09", null ],
+    [ "main", "cf__gen_8cc.html#a0ddf1224851353fc92bfbff6f499fa97", null ],
+    [ "usage", "cf__gen_8cc.html#a47364cb762e89cc85a4c29df5aff172e", null ],
+    [ "WS", "cf__gen_8cc.html#a9e0c60c6742292c813c0ce35b79ee3d3", null ]
+];

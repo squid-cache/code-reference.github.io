@@ -1,0 +1,27 @@
+var time_2gadgets_8h =
+[
+    [ "time_msec_t", "time_2gadgets_8h.html#a2e715dd5ddb7fa981718d013aa2471da", null ],
+    [ "FormatHttpd", "time_2gadgets_8h.html#a9eae609ba8ed49e159c091173b47edc0", null ],
+    [ "FormatRfc1123", "time_2gadgets_8h.html#a9a12545c0ec55788209d654df8654c27", null ],
+    [ "FormatStrf", "time_2gadgets_8h.html#a1a5f966520afc07ceccce632825eda4a", null ],
+    [ "getCurrentTime", "time_2gadgets_8h.html#a2293ab4b3de5994471e981e4d63fa973", null ],
+    [ "operator!=", "time_2gadgets_8h.html#acf08728a9e5f16c84153daae002cb682", null ],
+    [ "operator<", "time_2gadgets_8h.html#a5787c62907dd3a97fb06b262ddc7d4c7", null ],
+    [ "operator<<", "time_2gadgets_8h.html#aeb9ccf2e30943e5a0c79d55b705ae77e", null ],
+    [ "operator<=", "time_2gadgets_8h.html#ad00e4d74312542f6cbe4ed309ca41fae", null ],
+    [ "operator==", "time_2gadgets_8h.html#a4faa7a5e44a0749776fdbf8933b1eb55", null ],
+    [ "operator>", "time_2gadgets_8h.html#ae15cf01c03e9393d94902f32ed4382a5", null ],
+    [ "operator>=", "time_2gadgets_8h.html#a290aafdb7b3c620e548f6139510023d3", null ],
+    [ "ParseIso3307", "time_2gadgets_8h.html#a9fbc62e1df2afae845d214599cbd50d3", null ],
+    [ "ParseRfc1123", "time_2gadgets_8h.html#a04995ee951fa4aef0bddcdc95bc11ea2", null ],
+    [ "tvAdd", "time_2gadgets_8h.html#a130904ecd3ed71dc24b38f79973e920e", null ],
+    [ "tvAssignAdd", "time_2gadgets_8h.html#aeb37da7ea522d41dc052b8f89efd20a0", null ],
+    [ "tvSub", "time_2gadgets_8h.html#a2bf2be1c87c9581298c5112d6c07b004", null ],
+    [ "tvSubDsec", "time_2gadgets_8h.html#aff869510b54fcf72f964c634fc990e13", null ],
+    [ "tvSubMsec", "time_2gadgets_8h.html#a82b136fc31df1b10a0a422888f45cd5a", null ],
+    [ "tvSubUsec", "time_2gadgets_8h.html#a7c7e95cc1d3a5adb551c0ba206d28347", null ],
+    [ "tvToMsec", "time_2gadgets_8h.html#ada910ceb224c6c26cb7cb2a06c3cb248", null ],
+    [ "current_dtime", "time_2gadgets_8h.html#a7a85abd55e54e612c8f4451a47c63ec8", null ],
+    [ "current_time", "time_2gadgets_8h.html#a502612b4a32c5902726b120d713d7952", null ],
+    [ "squid_curtime", "time_2gadgets_8h.html#a161e26ef0307ccb4300ad3ea54bf9fd4", null ]
+];

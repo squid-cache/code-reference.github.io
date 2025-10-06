@@ -1,0 +1,25 @@
+var classMmappedFile =
+[
+    [ "Pointer", "classMmappedFile.html#a5fd897dbcbd6faa097c408e739b731c4", null ],
+    [ "MmappedFile", "classMmappedFile.html#aac12bd1c3d0603d91cda2996253a6f1e", null ],
+    [ "~MmappedFile", "classMmappedFile.html#a0c699870fb38e0b1596c3a97fddc47fb", null ],
+    [ "canRead", "classMmappedFile.html#ae873f962b242bbc29570a5991a00ee58", null ],
+    [ "canWrite", "classMmappedFile.html#a657eb2983d56407a6056239cfa2cd7c2", null ],
+    [ "CBDATA_CLASS", "classMmappedFile.html#ad70c587961ac4cc4d7d4515ec3a51fdb", null ],
+    [ "close", "classMmappedFile.html#ae841392b2d100074ae8383b33b7d356e", null ],
+    [ "configure", "classMmappedFile.html#a8637dae5ccc7840d92bd0c69a3ff3285", null ],
+    [ "create", "classMmappedFile.html#ab9c40e4b9907e11fb9e0d38d92bc7788", null ],
+    [ "doClose", "classMmappedFile.html#adcb151ba96ec588e2cbf524c50859d4d", null ],
+    [ "error", "classMmappedFile.html#a3726aedd4be00ba282d88a43d44dafd7", null ],
+    [ "getFD", "classMmappedFile.html#a30ee175c5349489bc865191ae09f4d54", null ],
+    [ "ioInProgress", "classMmappedFile.html#a11b9604900a19668ce4a079383ebc13a", null ],
+    [ "open", "classMmappedFile.html#aa2ca1580f7c450c01b5ef15f00a0e63e", null ],
+    [ "read", "classMmappedFile.html#a93ce0a8d9e7d3987058d38d33e010aba", null ],
+    [ "write", "classMmappedFile.html#a6295442f49b0c68b49abcd4e41cdb5b0", null ],
+    [ "error_", "classMmappedFile.html#a16ea3d8d5b6696c8af56617fae8b67fe", null ],
+    [ "fd", "classMmappedFile.html#a4e5d4ca6869df080e35394f779cdd99c", null ],
+    [ "ioRequestor", "classMmappedFile.html#a2684bc74712532f2843a8af9f92b94c5", null ],
+    [ "maxOffset", "classMmappedFile.html#a1465a10ec9b9e7fc7fb667b45b712c05", null ],
+    [ "minOffset", "classMmappedFile.html#aaae22496234c5e7ced9e4b086d885499", null ],
+    [ "path_", "classMmappedFile.html#a48105796e9fbdd34832e92052a95ad87", null ]
+];

@@ -1,0 +1,27 @@
+var classMemPoolMalloc =
+[
+    [ "MemPoolMalloc", "classMemPoolMalloc.html#aa6cfc3eacace904a6ae1ff3478a5950a", null ],
+    [ "~MemPoolMalloc", "classMemPoolMalloc.html#a943b2f99c56fb57f322806ef6ebe827a", null ],
+    [ "alloc", "classMemPoolMalloc.html#adf8e1d67e87828fb50fa52b5add00050", null ],
+    [ "allocate", "classMemPoolMalloc.html#a403d90e0571d9ca5dd3a7bf6a4ebc759", null ],
+    [ "clean", "classMemPoolMalloc.html#aee45801283709823e61b9437104c64db", null ],
+    [ "deallocate", "classMemPoolMalloc.html#ab1603eb198200b7763e6899665663e04", null ],
+    [ "flushCounters", "classMemPoolMalloc.html#a446c0f8e66014f7b9330842eb5143cb3", null ],
+    [ "freeOne", "classMemPoolMalloc.html#ac9d3d36648c5b91638020bd2ad56eb46", null ],
+    [ "getInUseCount", "classMemPoolMalloc.html#a4f966512dbf7746e5f590e983ae2da44", null ],
+    [ "getStats", "classMemPoolMalloc.html#aef5ce74bf5eee616440b6c41365a279a", null ],
+    [ "idleTrigger", "classMemPoolMalloc.html#a0007e1dbb3e78778e2d6f598582255f4", null ],
+    [ "relabel", "classMemPoolMalloc.html#a99cae97cdc9019ef2a923f9fe4d28ffe", null ],
+    [ "RoundedSize", "classMemPoolMalloc.html#a28f3d5ea28f587d1f4513e186cc0e4c5", null ],
+    [ "setChunkSize", "classMemPoolMalloc.html#a72ece6be08ff2bef24e66518f6d427c4", null ],
+    [ "zeroBlocks", "classMemPoolMalloc.html#adc4af78df0e843cb70d55ae333a719d9", null ],
+    [ "countAlloc", "classMemPoolMalloc.html#ae4a699c83f05bc198ccdf3ae884c6b0c", null ],
+    [ "countFreeOne", "classMemPoolMalloc.html#a4c9f57620c201c4a91d84ac75533a172", null ],
+    [ "countSavedAllocs", "classMemPoolMalloc.html#af35fa1b4c6981b2254ec7714c94d770b", null ],
+    [ "doZero", "classMemPoolMalloc.html#add5c822d67bd1dfbfedf65014a1e564a", null ],
+    [ "FlushLimit", "classMemPoolMalloc.html#a3a33c5f921355aa157fab761f0cddfae", null ],
+    [ "freelist", "classMemPoolMalloc.html#ac343da7fba741972658fd2638a179fdb", null ],
+    [ "label", "classMemPoolMalloc.html#a84045c3fcce8c62e01c84609fa692fd8", null ],
+    [ "meter", "classMemPoolMalloc.html#af3382f0bd00e6eebabd6b4766f942d9f", null ],
+    [ "objectSize", "classMemPoolMalloc.html#a20285483c065400b496caa6636df6bf5", null ]
+];

@@ -1,0 +1,38 @@
+var mem_2forward_8h =
+[
+    [ "FREE", "mem_2forward_8h.html#a302831a7d071d1b751ca56db1efb9e10", null ],
+    [ "mem_type", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5", [
+      [ "MEM_NONE", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5a294037817abd8a37b8a2f29f407886fc", null ],
+      [ "MEM_32B_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5a068d5e1ad429ad3e731376b3e2c2e19f", null ],
+      [ "MEM_64B_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5a89cf01cf6f37e149e88bec291c536bb7", null ],
+      [ "MEM_128B_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5ad278abc33da9950b98a4f8f156f30129", null ],
+      [ "MEM_256B_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5a3a9259b7da56b34b2ca4f8bc77a7f071", null ],
+      [ "MEM_512B_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5a9219f8a6a4adda087fe6ee5e43cca208", null ],
+      [ "MEM_1K_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5aae158aafc0773f651213d7ba76078cf2", null ],
+      [ "MEM_2K_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5a3fb6a00965473c0c1ab5323cbf52e000", null ],
+      [ "MEM_4K_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5a57d6c6ed46a12aae026d1f67b988d224", null ],
+      [ "MEM_8K_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5ac88e518c81a88d3c22174a6cd5bca9e9", null ],
+      [ "MEM_16K_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5ae1f4d3cffd703ff08857df352c87b7da", null ],
+      [ "MEM_32K_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5a39051fca28182736fa40e16754469e81", null ],
+      [ "MEM_64K_BUF", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5a67efcca088225d628e4b324e0b8b26d8", null ],
+      [ "MEM_MD5_DIGEST", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5ab648d363df6f70f7790b3e8cbd228f3b", null ],
+      [ "MEM_MAX", "mem_2forward_8h.html#ad756268621f03e4812b68792b291fff5a80947ddd234cd68c1a5746bb5d5440f1", null ]
+    ] ],
+    [ "CleanIdlePools", "mem_2forward_8h.html#ab23dbe0949badaf9c6ccd259c2059ddf", null ],
+    [ "Init", "mem_2forward_8h.html#a65ff8980ffcd2cbd57342291803994b7", null ],
+    [ "memAllocate", "mem_2forward_8h.html#a6e882b656bacba93c5e4e66ab400f616", null ],
+    [ "memAllocBuf", "mem_2forward_8h.html#a81e49c2b42229b0e7620094a8e886013", null ],
+    [ "memClean", "mem_2forward_8h.html#a3a14bdffedfd5efe14622152d8805f2d", null ],
+    [ "memCleanModule", "mem_2forward_8h.html#a1a817aeb5cd257e90d8c0f92ed410c7f", null ],
+    [ "memConfigure", "mem_2forward_8h.html#aedf7ed9e797f6486fbba42870965dda6", null ],
+    [ "memFree", "mem_2forward_8h.html#a438473873e951f6b608cb761d97970e1", null ],
+    [ "memFreeBuf", "mem_2forward_8h.html#a41ac79608cf8f31385ed3d284378037a", null ],
+    [ "memFreeBufFunc", "mem_2forward_8h.html#af22be36325c89a7c053a11251c209e26", null ],
+    [ "memInitModule", "mem_2forward_8h.html#acc02fc13ad5a42259f563c033232927c", null ],
+    [ "memInUse", "mem_2forward_8h.html#a830623905d40c0bd2708be83e9b5085d", null ],
+    [ "memReallocBuf", "mem_2forward_8h.html#ad5b158f5e8c809208d1f96b2e9f2dd2d", null ],
+    [ "PoolReport", "mem_2forward_8h.html#a64edd68cfebd2c35f3758c28d78f7b00", null ],
+    [ "Report", "mem_2forward_8h.html#a8754413a49a36ddd595789a38f798331", null ],
+    [ "Stats", "mem_2forward_8h.html#ac045e3ca1da734dfe42672cd4a5f09f4", null ],
+    [ "squidSystemPageSize", "mem_2forward_8h.html#a15a924bcc7ac00c4c12643527397e56f", null ]
+];

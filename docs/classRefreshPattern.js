@@ -1,0 +1,27 @@
+var classRefreshPattern =
+[
+    [ "stats_", "structRefreshPattern_1_1stats__.html", "structRefreshPattern_1_1stats__" ],
+    [ "RegexPointer", "classRefreshPattern.html#afa865b6ad899b84deca850d94d420295", null ],
+    [ "RefreshPattern", "classRefreshPattern.html#a3813ee45bdc670e3a8e53c9914950b51", null ],
+    [ "~RefreshPattern", "classRefreshPattern.html#ab262cca43bf23a4ba17a260227139b4d", null ],
+    [ "MEMPROXY_CLASS", "classRefreshPattern.html#a789991c91ed2493c830faa29e078e419", null ],
+    [ "printHead", "classRefreshPattern.html#adba2ec294659f351267c858a2db4d589", null ],
+    [ "printPattern", "classRefreshPattern.html#a7c189f138b4ba67ad0736644eba3289b", null ],
+    [ "regex", "classRefreshPattern.html#a8fce0a4eddbce89400976fbc95fe06b9", null ],
+    [ "flags", "classRefreshPattern.html#ad566e241265b7673eee801cf049ab0df", null ],
+    [ "ignore_no_store", "classRefreshPattern.html#a8b9850b2ecef01b1bda419203c84dd21", null ],
+    [ "ignore_private", "classRefreshPattern.html#a29dcd46145d08ba08f985bf38f588dbf", null ],
+    [ "ignore_reload", "classRefreshPattern.html#ae978b1ddff1faf12f2d1d4a2040c22ef", null ],
+    [ "max", "classRefreshPattern.html#a04046e01ac4248eeb58204b89fa52b93", null ],
+    [ "max_stale", "classRefreshPattern.html#a70cd188f9021271d4b701a2eea1c12ec", null ],
+    [ "min", "classRefreshPattern.html#aa02e6e9848bca71249e606935547caa2", null ],
+    [ "next", "classRefreshPattern.html#a48a38a616bc3e5a9bb1a502d68a87d6e", null ],
+    [ "override_expire", "classRefreshPattern.html#a4d40f8879042fe2a9de62383a72acb08", null ],
+    [ "override_lastmod", "classRefreshPattern.html#a23fedf10798315d5340759217bd931e7", null ],
+    [ "pct", "classRefreshPattern.html#af509b45690814f35855994426491ff2f", null ],
+    [ "refresh_ims", "classRefreshPattern.html#a756a1ab3c7251d521070371d7fed9011", null ],
+    [ "regex_", "classRefreshPattern.html#aca9b7f6cad261c3849a4ab26fbf6340a", null ],
+    [ "reload_into_ims", "classRefreshPattern.html#adc4c5153444bf82e71f8bb1e6a7e4e6d", null ],
+    [ "stats", "classRefreshPattern.html#a4437fcf479a77d0926546bcbbddebfe1", null ],
+    [ "store_stale", "classRefreshPattern.html#aa0848130456793870fdc79ff95a7c496", null ]
+];

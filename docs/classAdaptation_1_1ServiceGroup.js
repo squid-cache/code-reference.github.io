@@ -1,0 +1,27 @@
+var classAdaptation_1_1ServiceGroup =
+[
+    [ "Id", "classAdaptation_1_1ServiceGroup.html#a2d1101e3708bc14e9a1d469f09779639", null ],
+    [ "Pointer", "classAdaptation_1_1ServiceGroup.html#a123a4739695b6701531ab312b44b56f4", null ],
+    [ "Pos", "classAdaptation_1_1ServiceGroup.html#aad01310a2db1b9714f125d21ba041aa1", null ],
+    [ "Store", "classAdaptation_1_1ServiceGroup.html#a21209bec84acbc524035d798b2d83327", null ],
+    [ "ServiceGroup", "classAdaptation_1_1ServiceGroup.html#a65ae8fb77550fc310b57649d395f8646", null ],
+    [ "~ServiceGroup", "classAdaptation_1_1ServiceGroup.html#aef85ec82d274961f59f7acf755ea42e5", null ],
+    [ "at", "classAdaptation_1_1ServiceGroup.html#a99e40ae14b4851cd50d32496a572ec89", null ],
+    [ "checkUniqueness", "classAdaptation_1_1ServiceGroup.html#a8ee9c847ad3798fc0e70c50462744159", null ],
+    [ "finalize", "classAdaptation_1_1ServiceGroup.html#a7dfec86956db5d432cf8483b84bc557a", null ],
+    [ "finalizeMsg", "classAdaptation_1_1ServiceGroup.html#ab7230bc95a1085d546cc20bacd4f22da", null ],
+    [ "findLink", "classAdaptation_1_1ServiceGroup.html#a2e23c9cdf96136ac996026ac627882e3", null ],
+    [ "findReplacement", "classAdaptation_1_1ServiceGroup.html#ac80c7d3a9cb4970c9adf5666d60bd79f", null ],
+    [ "findService", "classAdaptation_1_1ServiceGroup.html#aea8a7d51a88d192200ae05d3198efde8", null ],
+    [ "has", "classAdaptation_1_1ServiceGroup.html#afc1987fec5830587ba16dc38de77fa53", null ],
+    [ "parse", "classAdaptation_1_1ServiceGroup.html#a90dade1fa02455a4506b6ee9b3b375f8", null ],
+    [ "wants", "classAdaptation_1_1ServiceGroup.html#a2b5937ff9d1695a8c29f1ca20d98bf9d", null ],
+    [ "ServicePlan", "classAdaptation_1_1ServiceGroup.html#a98d6d16e15d9da1ea1dc4fce609e03e5", null ],
+    [ "allServicesSame", "classAdaptation_1_1ServiceGroup.html#a2814bfcbed98608f3344d826c2557f72", null ],
+    [ "id", "classAdaptation_1_1ServiceGroup.html#a37c4472a6e4f37d5c85007920c407101", null ],
+    [ "kind", "classAdaptation_1_1ServiceGroup.html#a7244839849212e8299a3b363cff6f4d8", null ],
+    [ "method", "classAdaptation_1_1ServiceGroup.html#a278f6e8772cd73a2393aee79ca067ebf", null ],
+    [ "point", "classAdaptation_1_1ServiceGroup.html#ab12b17918a110bcfea1cc6658f6be933", null ],
+    [ "removedServices", "classAdaptation_1_1ServiceGroup.html#aac1f806f5720e32505dca6a9b384f370", null ],
+    [ "services", "classAdaptation_1_1ServiceGroup.html#aa34ded0029713c8ab0e5bc4498aaa845", null ]
+];

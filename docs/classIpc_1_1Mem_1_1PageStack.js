@@ -1,0 +1,25 @@
+var classIpc_1_1Mem_1_1PageStack =
+[
+    [ "Config", "classIpc_1_1Mem_1_1PageStack_1_1Config.html", "classIpc_1_1Mem_1_1PageStack_1_1Config" ],
+    [ "Levels_t", "classIpc_1_1Mem_1_1PageStack.html#a63a3bff68f54955fac36fbe20c7324ce", null ],
+    [ "PageCount", "classIpc_1_1Mem_1_1PageStack.html#ab5ad4e0b2fc1fbc71f4e58f15e8391ea", null ],
+    [ "PageStack", "classIpc_1_1Mem_1_1PageStack.html#a93a5226f388783b062c13ead7af2ecb8", null ],
+    [ "capacity", "classIpc_1_1Mem_1_1PageStack.html#a7543429d1ea7e4cdc6a728bed65f1187", null ],
+    [ "IdForMemStoreSpace", "classIpc_1_1Mem_1_1PageStack.html#a8bcbb30301a3cb293e197c0a0d26fc71", null ],
+    [ "IdForMultipurposePool", "classIpc_1_1Mem_1_1PageStack.html#a05ea3aeb1de1cf9648335777ee4ac272", null ],
+    [ "IdForSwapDirSpace", "classIpc_1_1Mem_1_1PageStack.html#a95935287e728597370555b55fa7f290b", null ],
+    [ "levelsPaddingSize", "classIpc_1_1Mem_1_1PageStack.html#a63f415fef9d21fee8a920e1ee37562e6", null ],
+    [ "LevelsPaddingSize", "classIpc_1_1Mem_1_1PageStack.html#a0f71130ffcf943745c46bc85d740d0dc", null ],
+    [ "pageIdIsValid", "classIpc_1_1Mem_1_1PageStack.html#a4d78fcc59713b2667855dad2693d1f4e", null ],
+    [ "pageSize", "classIpc_1_1Mem_1_1PageStack.html#a6f119b73c89beb05eedc1bd6be1989bf", null ],
+    [ "pop", "classIpc_1_1Mem_1_1PageStack.html#aea3ab33daf57220ebba41d3f6b178b05", null ],
+    [ "push", "classIpc_1_1Mem_1_1PageStack.html#af1b2aad9e150998a673e98f416ecae49", null ],
+    [ "sharedMemorySize", "classIpc_1_1Mem_1_1PageStack.html#ac95995a83c23df30db2714d747826699", null ],
+    [ "SharedMemorySize", "classIpc_1_1Mem_1_1PageStack.html#a109e356e7ab73e023e65f32246453b04", null ],
+    [ "size", "classIpc_1_1Mem_1_1PageStack.html#a1db79839f90cd26c3623f9ca2f29fdf5", null ],
+    [ "stackSize", "classIpc_1_1Mem_1_1PageStack.html#a87a21c2f4fad4117b3070b7b49d04d20", null ],
+    [ "StackSize", "classIpc_1_1Mem_1_1PageStack.html#accd94b48d843aa560efd7103fd7c851d", null ],
+    [ "config_", "classIpc_1_1Mem_1_1PageStack.html#ab5f893298ce6cd78bdc8e3a7ee3353c1", null ],
+    [ "ids_", "classIpc_1_1Mem_1_1PageStack.html#a08ba5d452e84512b768823fcc7f19c6e", null ],
+    [ "size_", "classIpc_1_1Mem_1_1PageStack.html#a7e198483de59f6d8d4497961ff26c5e1", null ]
+];

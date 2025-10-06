@@ -1,0 +1,66 @@
+<map id="squid/src/DiskIO/IORequestor.h" name="squid/src/DiskIO/IORequestor.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="937,5,1159,31"/>
+<area shape="rect" id="Node000002" href="$AIODiskFile_8cc.html" title=" " alt="" coords="5,79,160,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="923,25,583,41,378,58,172,81,160,83,160,78,172,76,377,53,583,36,923,20"/>
+<area shape="rect" id="Node000003" href="$AIODiskIOStrategy_8cc.html" title=" " alt="" coords="184,79,347,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="923,29,666,49,366,81,347,84,347,79,365,76,665,43,923,24"/>
+<area shape="rect" id="Node000004" href="$BlockingFile_8cc.html" title=" " alt="" coords="291,167,477,207"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="923,26,774,33,615,44,481,60,436,70,411,81,397,99,389,122,385,167,380,166,384,121,392,97,408,77,434,65,481,54,615,38,774,27,923,21"/>
+<area shape="rect" id="Node000005" href="$BlockingFile_8h.html" title=" " alt="" coords="421,79,608,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="946,35,620,81,609,83,608,78,620,76,945,30"/>
+<area shape="rect" id="Node000007" href="$DiskdFile_8cc.html" title=" " alt="" coords="633,79,847,119"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="990,37,815,81,813,76,989,31"/>
+<area shape="rect" id="Node000008" href="$DiskThreadsDiskFile_8cc.html" title=" " alt="" coords="871,79,1083,119"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1031,43,996,80,992,77,1027,39"/>
+<area shape="rect" id="Node000009" href="$IpcIoFile_8cc.html" title=" " alt="" coords="928,167,1091,207"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="1073,39,1087,57,1097,78,1102,99,1097,120,1076,148,1048,169,1045,164,1072,144,1092,118,1097,99,1092,80,1082,60,1068,42"/>
+<area shape="rect" id="Node000010" href="$IpcIoFile_8h.html" title=" " alt="" coords="1157,79,1320,119"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1089,33,1194,76,1192,81,1087,38"/>
+<area shape="rect" id="Node000012" href="$MmappedFile_8cc.html" title=" " alt="" coords="1302,167,1498,207"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="1173,22,1214,29,1256,40,1296,55,1334,77,1356,96,1373,120,1396,165,1391,168,1369,123,1352,100,1330,81,1294,60,1254,45,1213,34,1172,27"/>
+<area shape="rect" id="Node000013" href="$MmappedFile_8h.html" title=" " alt="" coords="1395,79,1591,119"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="1127,30,1396,78,1395,83,1126,36"/>
+<area shape="rect" id="Node000015" href="$RockSwapDir_8h.html" title=" " alt="" coords="2147,79,2346,119"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="1173,25,2147,88,2147,94,1173,30"/>
+<area shape="rect" id="Node000026" href="$UFSStoreState_8h.html" title=" " alt="" coords="3021,79,3203,119"/>
+<area shape="poly" id="edge34_Node000001_Node000026" title=" " alt="" coords="1173,21,3021,91,3020,97,1173,27"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="476,128,414,169,411,164,473,124"/>
+<area shape="rect" id="Node000006" href="$BlockingIOStrategy_8cc.html" title=" " alt="" coords="501,167,688,207"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="544,127,579,165,575,168,540,131"/>
+<area shape="poly" id="edge11_Node000010_Node000009" title=" " alt="" coords="1177,126,1060,169,1059,164,1175,121"/>
+<area shape="rect" id="Node000011" href="$IpcIoIOStrategy_8cc.html" title=" " alt="" coords="1115,167,1277,207"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="1226,132,1208,168,1203,165,1221,130"/>
+<area shape="poly" id="edge15_Node000013_Node000012" title=" " alt="" coords="1464,130,1422,168,1419,164,1461,126"/>
+<area shape="rect" id="Node000014" href="$MmappedIOStrategy_8cc.html" title=" " alt="" coords="1522,167,1718,207"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="1534,124,1593,164,1590,169,1531,129"/>
+<area shape="rect" id="Node000016" href="$RockHeaderUpdater_8h.html" title=" " alt="" coords="2019,167,2229,207"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="2210,129,2153,169,2150,164,2207,124"/>
+<area shape="rect" id="Node000018" href="$RockSwapDir_8cc.html" title=" " alt="" coords="2169,343,2367,383"/>
+<area shape="poly" id="edge32_Node000015_Node000018" title=" " alt="" coords="2360,100,2524,107,2705,118,2859,137,2911,150,2941,165,2950,183,2948,200,2935,216,2914,231,2849,259,2761,284,2661,306,2556,325,2368,352,2367,347,2555,320,2660,301,2760,279,2847,254,2911,227,2932,212,2943,198,2945,184,2937,169,2910,155,2858,142,2704,124,2523,112,2360,105"/>
+<area shape="rect" id="Node000019" href="$RockIoState_8cc.html" title=" " alt="" coords="1693,343,1869,383"/>
+<area shape="poly" id="edge21_Node000015_Node000019" title=" " alt="" coords="2134,105,2041,110,1944,122,1861,141,1830,153,1809,169,1794,188,1784,210,1774,258,1775,305,1780,342,1775,342,1769,305,1769,257,1779,208,1789,185,1805,165,1827,149,1859,136,1943,117,2040,105,2134,99"/>
+<area shape="rect" id="Node000020" href="$RockIoState_8h.html" title=" " alt="" coords="1819,167,1995,207"/>
+<area shape="poly" id="edge22_Node000015_Node000020" title=" " alt="" coords="2160,125,1982,169,1980,164,2158,119"/>
+<area shape="rect" id="Node000023" href="$RockRebuild_8cc.html" title=" " alt="" coords="2254,174,2485,199"/>
+<area shape="poly" id="edge30_Node000015_Node000023" title=" " alt="" coords="2287,125,2354,172,2351,176,2284,129"/>
+<area shape="rect" id="Node000024" href="$RockStoreFileSystem_8cc.html" title=" " alt="" coords="2509,167,2707,207"/>
+<area shape="poly" id="edge31_Node000015_Node000024" title=" " alt="" coords="2340,119,2530,164,2528,169,2338,124"/>
+<area shape="rect" id="Node000025" href="$testRock_8cc.html" title=" " alt="" coords="2732,174,2927,199"/>
+<area shape="poly" id="edge33_Node000015_Node000025" title=" " alt="" coords="2360,113,2719,164,2764,171,2763,177,2718,169,2360,118"/>
+<area shape="rect" id="Node000017" href="$RockHeaderUpdater_8cc.html" title=" " alt="" coords="2095,255,2305,295"/>
+<area shape="poly" id="edge19_Node000016_Node000017" title=" " alt="" coords="2152,215,2185,253,2181,256,2148,219"/>
+<area shape="poly" id="edge20_Node000016_Node000018" title=" " alt="" coords="2222,208,2281,228,2305,240,2319,253,2325,265,2327,277,2321,302,2307,325,2290,344,2286,341,2302,322,2316,300,2322,277,2320,266,2315,256,2302,244,2279,233,2220,213"/>
+<area shape="poly" id="edge23_Node000020_Node000017" title=" " alt="" coords="1985,208,2137,252,2135,257,1983,213"/>
+<area shape="poly" id="edge29_Node000020_Node000018" title=" " alt="" coords="1960,211,2034,252,2059,273,2084,292,2142,320,2201,340,2199,345,2140,325,2081,297,2055,277,2030,257,1957,215"/>
+<area shape="poly" id="edge28_Node000020_Node000019" title=" " alt="" coords="1872,217,1834,256,1807,302,1790,343,1785,341,1803,299,1830,253,1868,214"/>
+<area shape="rect" id="Node000021" href="$RockIoRequests_8h.html" title=" " alt="" coords="1844,255,2020,295"/>
+<area shape="poly" id="edge24_Node000020_Node000021" title=" " alt="" coords="1919,219,1929,254,1924,255,1914,221"/>
+<area shape="poly" id="edge27_Node000021_Node000018" title=" " alt="" coords="2020,295,2195,340,2194,345,2018,301"/>
+<area shape="poly" id="edge26_Node000021_Node000019" title=" " alt="" coords="1889,304,1816,345,1813,340,1886,299"/>
+<area shape="rect" id="Node000022" href="$RockIoRequests_8cc.html" title=" " alt="" coords="1893,343,2069,383"/>
+<area shape="poly" id="edge25_Node000021_Node000022" title=" " alt="" coords="1952,305,1973,341,1968,344,1947,308"/>
+<area shape="rect" id="Node000027" href="$UFSStoreState_8cc.html" title=" " alt="" coords="3246,167,3429,207"/>
+<area shape="poly" id="edge35_Node000026_Node000027" title=" " alt="" coords="3175,121,3289,164,3287,169,3173,126"/>
+<area shape="rect" id="Node000028" href="$UFSStrategy_8cc.html" title=" " alt="" coords="3002,174,3222,199"/>
+<area shape="poly" id="edge36_Node000026_Node000028" title=" " alt="" coords="3115,133,3115,174,3109,174,3109,133"/>
+</map>

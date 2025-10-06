@@ -1,0 +1,28 @@
+var namespaceAdaptation_1_1Ecap =
+[
+    [ "BodyRep", "classAdaptation_1_1Ecap_1_1BodyRep.html", "classAdaptation_1_1Ecap_1_1BodyRep" ],
+    [ "Config", "classAdaptation_1_1Ecap_1_1Config.html", "classAdaptation_1_1Ecap_1_1Config" ],
+    [ "ConfigRep", "classAdaptation_1_1Ecap_1_1ConfigRep.html", "classAdaptation_1_1Ecap_1_1ConfigRep" ],
+    [ "Engine", "classAdaptation_1_1Ecap_1_1Engine.html", "classAdaptation_1_1Ecap_1_1Engine" ],
+    [ "FirstLineRep", "classAdaptation_1_1Ecap_1_1FirstLineRep.html", "classAdaptation_1_1Ecap_1_1FirstLineRep" ],
+    [ "HeaderRep", "classAdaptation_1_1Ecap_1_1HeaderRep.html", "classAdaptation_1_1Ecap_1_1HeaderRep" ],
+    [ "Host", "classAdaptation_1_1Ecap_1_1Host.html", "classAdaptation_1_1Ecap_1_1Host" ],
+    [ "MessageRep", "classAdaptation_1_1Ecap_1_1MessageRep.html", "classAdaptation_1_1Ecap_1_1MessageRep" ],
+    [ "RequestLineRep", "classAdaptation_1_1Ecap_1_1RequestLineRep.html", "classAdaptation_1_1Ecap_1_1RequestLineRep" ],
+    [ "ServiceConfig", "classAdaptation_1_1Ecap_1_1ServiceConfig.html", "classAdaptation_1_1Ecap_1_1ServiceConfig" ],
+    [ "ServiceRep", "classAdaptation_1_1Ecap_1_1ServiceRep.html", "classAdaptation_1_1Ecap_1_1ServiceRep" ],
+    [ "StatusLineRep", "classAdaptation_1_1Ecap_1_1StatusLineRep.html", "classAdaptation_1_1Ecap_1_1StatusLineRep" ],
+    [ "XactionRep", "classAdaptation_1_1Ecap_1_1XactionRep.html", "classAdaptation_1_1Ecap_1_1XactionRep" ],
+    [ "CheckUnusedAdapterServices", "namespaceAdaptation_1_1Ecap.html#adc28daba940b095f4609fd0066593ecf", null ],
+    [ "FindAdapterService", "namespaceAdaptation_1_1Ecap.html#ae756b03c60ddec7251e872ed1dedcb01", null ],
+    [ "RegisterAdapterService", "namespaceAdaptation_1_1Ecap.html#a02ae18cb254cbabb97f6b825b410a12b", null ],
+    [ "UnregisterAdapterService", "namespaceAdaptation_1_1Ecap.html#aff61d8adf27cc35f0236a99a6d01c2f2", null ],
+    [ "metaBypassable", "namespaceAdaptation_1_1Ecap.html#a47c5cbed73bdf6257cc9effe0d4ee8df", null ],
+    [ "protocolCacheObj", "namespaceAdaptation_1_1Ecap.html#a8220aea84ccfda88be0be27141838594", null ],
+    [ "protocolHtcp", "namespaceAdaptation_1_1Ecap.html#a3ed48ea7cc90409eb5e301310a64c59d", null ],
+    [ "protocolIcp", "namespaceAdaptation_1_1Ecap.html#a34b49148f2857b4773e2f776aa86e117", null ],
+    [ "protocolIcy", "namespaceAdaptation_1_1Ecap.html#adb98b416bff56b4f74f98eed7fdf4425", null ],
+    [ "protocolInternal", "namespaceAdaptation_1_1Ecap.html#a494e3f77844de7e82470c1ef0e8689ff", null ],
+    [ "protocolUnknown", "namespaceAdaptation_1_1Ecap.html#a390f96ee0a47ab26a6e1054094cc6ab5", null ],
+    [ "TheConfig", "namespaceAdaptation_1_1Ecap.html#a63cfc14aaa35500a2b5935e41f63a51f", null ]
+];

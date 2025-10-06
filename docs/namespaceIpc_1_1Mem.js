@@ -1,0 +1,36 @@
+var namespaceIpc_1_1Mem =
+[
+    [ "FlexibleArray", "classIpc_1_1Mem_1_1FlexibleArray.html", "classIpc_1_1Mem_1_1FlexibleArray" ],
+    [ "IdSet", "classIpc_1_1Mem_1_1IdSet.html", "classIpc_1_1Mem_1_1IdSet" ],
+    [ "IdSetInnerNode", "classIpc_1_1Mem_1_1IdSetInnerNode.html", "classIpc_1_1Mem_1_1IdSetInnerNode" ],
+    [ "IdSetMeasurements", "classIpc_1_1Mem_1_1IdSetMeasurements.html", "classIpc_1_1Mem_1_1IdSetMeasurements" ],
+    [ "IdSetPosition", "classIpc_1_1Mem_1_1IdSetPosition.html", "classIpc_1_1Mem_1_1IdSetPosition" ],
+    [ "Object", "classIpc_1_1Mem_1_1Object.html", "classIpc_1_1Mem_1_1Object" ],
+    [ "Owner", "classIpc_1_1Mem_1_1Owner.html", "classIpc_1_1Mem_1_1Owner" ],
+    [ "PageId", "classIpc_1_1Mem_1_1PageId.html", "classIpc_1_1Mem_1_1PageId" ],
+    [ "PagePool", "classIpc_1_1Mem_1_1PagePool.html", "classIpc_1_1Mem_1_1PagePool" ],
+    [ "PageStack", "classIpc_1_1Mem_1_1PageStack.html", "classIpc_1_1Mem_1_1PageStack" ],
+    [ "Pointer", "classIpc_1_1Mem_1_1Pointer.html", "classIpc_1_1Mem_1_1Pointer" ],
+    [ "RegisteredRunner", "classIpc_1_1Mem_1_1RegisteredRunner.html", "classIpc_1_1Mem_1_1RegisteredRunner" ],
+    [ "Segment", "classIpc_1_1Mem_1_1Segment.html", "classIpc_1_1Mem_1_1Segment" ],
+    [ "PoolId", "namespaceIpc_1_1Mem.html#a33a4e7cce2fbef62e0b3558b01ce455c", null ],
+    [ "IdSetNavigationDirection", "namespaceIpc_1_1Mem.html#a13a8ffeb71916429e3718a760ec3f01b", [
+      [ "dirNone", "namespaceIpc_1_1Mem.html#a13a8ffeb71916429e3718a760ec3f01bac82b3875e6480b8f58b03fa53823ee94", null ],
+      [ "dirLeft", "namespaceIpc_1_1Mem.html#a13a8ffeb71916429e3718a760ec3f01ba15475257a8fbc5b60dc65d6aeba1ce5f", null ],
+      [ "dirRight", "namespaceIpc_1_1Mem.html#a13a8ffeb71916429e3718a760ec3f01ba51c591d78bfd90c18a796dba5e0e42a5", null ],
+      [ "dirEnd", "namespaceIpc_1_1Mem.html#a13a8ffeb71916429e3718a760ec3f01bab3f2b94880c63134653311161f2f4735", null ]
+    ] ],
+    [ "GetPage", "namespaceIpc_1_1Mem.html#a64788b33e8c75e925ba2f428a4d33c8f", null ],
+    [ "NotePageNeed", "namespaceIpc_1_1Mem.html#ac9fc4b8d7f79788c3379de7722800e8a", null ],
+    [ "operator<<", "namespaceIpc_1_1Mem.html#a76fb43b4c632766685cdf34d59db360e", null ],
+    [ "PageLevel", "namespaceIpc_1_1Mem.html#a3701aa138eb6df6cd67657bfe927d688", null ],
+    [ "PageLevel", "namespaceIpc_1_1Mem.html#ad82bae6b5cbb9c780bee54866735f91e", null ],
+    [ "PageLimit", "namespaceIpc_1_1Mem.html#af290b53c0b66dafa3562300c9d760f5e", null ],
+    [ "PageLimit", "namespaceIpc_1_1Mem.html#ac83254174ab2cd64fb2e1e822ba89d42", null ],
+    [ "PagePointer", "namespaceIpc_1_1Mem.html#aedd98bdf4a1a88eb64aafb94816da248", null ],
+    [ "PagesAvailable", "namespaceIpc_1_1Mem.html#aaf9e69ff3982b4f6df03a11f44d3bc71", null ],
+    [ "PagesAvailable", "namespaceIpc_1_1Mem.html#a6242b960c42565e811213599a3e5ec18", null ],
+    [ "PageSize", "namespaceIpc_1_1Mem.html#ac3b9f31cb5fef952eb6362e3fc03962c", null ],
+    [ "PutPage", "namespaceIpc_1_1Mem.html#add16cf221f33ff54cd184e0fb084088c", null ],
+    [ "BitsPerLeaf", "namespaceIpc_1_1Mem.html#a3857feec4c83e02327ead3c6a94800b2", null ]
+];

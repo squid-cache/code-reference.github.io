@@ -1,0 +1,116 @@
+<map id="TestRock" name="TestRock">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2599,505,2679,530"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="2319,455,2501,481"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2508,481,2575,495,2601,502,2599,507,2574,500,2507,486"/>
+<area shape="rect" id="Node000003" href="$classRefCount.html" title=" " alt="" coords="2307,505,2513,530"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="2527,515,2599,515,2599,520,2527,520"/>
+<area shape="rect" id="Node000004" href="$classRock_1_1SwapDir.html" title=" " alt="" coords="1937,505,2053,530"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="2067,515,2306,515,2306,520,2067,520"/>
+<area shape="rect" id="Node000005" href="$classStore_1_1Disk.html" title="manages a single cache_dir" alt="" coords="1507,453,1583,478"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1598,468,1840,495,1937,507,1937,512,1840,500,1597,473"/>
+<area shape="rect" id="Node000006" href="$classStore_1_1Controlled.html" title=" " alt="" coords="1075,423,1205,449"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1219,436,1432,449,1508,458,1507,463,1432,455,1219,442"/>
+<area shape="rect" id="Node000007" href="$classStore_1_1Storage.html" title=" " alt="" coords="686,583,801,609"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="779,575,894,518,966,486,1040,457,1079,446,1080,451,1042,463,968,491,896,523,782,579"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="370,687,481,713"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="477,680,703,606,704,611,479,686"/>
+<area shape="rect" id="Node000253" href="$classIORequestor.html" title=" " alt="" coords="878,695,981,721"/>
+<area shape="poly" id="edge16_Node000253_Node000008" title=" " alt="" coords="495,698,878,705,878,710,495,704"/>
+<area shape="rect" id="Node000264" href="$classDiskFile.html" title=" " alt="" coords="706,738,781,763"/>
+<area shape="poly" id="edge36_Node000264_Node000008" title=" " alt="" coords="495,708,706,742,705,747,494,713"/>
+<area shape="rect" id="Node000009" href="$classRemovalPolicy.html" title=" " alt="" coords="1081,589,1199,614"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="1186,581,1262,553,1431,497,1455,489,1506,474,1508,479,1457,495,1433,503,1264,559,1188,586"/>
+<area shape="rect" id="Node000010" href="$classRemovalPolicyWalker.html" title=" " alt="" coords="1464,559,1627,585"/>
+<area shape="poly" id="edge10_Node000010_Node000009" title=" " alt="" coords="1213,604,1317,607,1432,600,1507,582,1508,587,1432,605,1317,613,1213,610"/>
+<area shape="rect" id="Node000250" href="$classRemovalPurgeWalker.html" title=" " alt="" coords="1465,619,1626,645"/>
+<area shape="poly" id="edge12_Node000250_Node000009" title=" " alt="" coords="1175,619,1216,640,1263,656,1310,664,1347,665,1432,656,1500,642,1501,647,1432,661,1347,671,1309,670,1262,661,1214,645,1172,624"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1450,577,1263,588,1200,595,1200,590,1262,583,1450,572"/>
+<area shape="poly" id="edge11_Node000009_Node000250" title=" " alt="" coords="1451,640,1359,640,1262,633,1183,617,1184,611,1263,628,1360,635,1451,634"/>
+<area shape="rect" id="Node000251" href="$structStore_1_1Disk_1_1Flags.html" title=" " alt="" coords="1072,374,1208,399"/>
+<area shape="poly" id="edge13_Node000005_Node000251" title=" " alt="" coords="1222,392,1323,405,1433,425,1512,450,1510,455,1431,431,1322,410,1221,397"/>
+<area shape="rect" id="Node000252" href="$classStore_1_1Disk_1_1CleanLog.html" title=" " alt="" coords="1059,473,1221,498"/>
+<area shape="poly" id="edge14_Node000005_Node000252" title=" " alt="" coords="1234,478,1507,465,1507,470,1235,483"/>
+<area shape="poly" id="edge15_Node000004_Node000253" title=" " alt="" coords="994,718,1152,741,1255,749,1369,751,1488,745,1609,728,1669,714,1728,697,1784,675,1839,650,1884,621,1924,587,1981,528,1985,532,1928,591,1887,625,1841,654,1786,680,1729,702,1670,719,1610,733,1489,750,1369,756,1255,754,1151,746,994,724"/>
+<area shape="rect" id="Node000254" href="$classIpc_1_1StoreMapCleaner.html" title="API for adjusting external state when dirty map slice is being freed." alt="" coords="1059,325,1221,350"/>
+<area shape="poly" id="edge17_Node000004_Node000254" title=" " alt="" coords="1235,347,1432,377,1638,417,1841,467,1957,502,1956,507,1839,472,1637,422,1432,383,1234,352"/>
+<area shape="rect" id="Node000255" href="$classIpc_1_1StoreMap.html" title=" " alt="" coords="1490,250,1601,275"/>
+<area shape="poly" id="edge19_Node000255_Node000254" title=" " alt="" coords="1234,324,1330,311,1431,292,1504,273,1505,278,1433,297,1330,316,1235,330"/>
+<area shape="poly" id="edge18_Node000004_Node000255" title=" " alt="" coords="1615,264,1667,271,1725,284,1785,303,1841,331,1893,372,1936,421,1969,468,1989,503,1985,506,1964,471,1932,425,1889,376,1839,336,1783,308,1724,289,1666,277,1614,270"/>
+<area shape="rect" id="Node000016" href="$classSBuf.html" title=" " alt="" coords="717,117,769,142"/>
+<area shape="poly" id="edge20_Node000255_Node000016" title=" " alt="" coords="784,128,1109,150,1297,170,1375,182,1433,196,1486,221,1528,248,1525,252,1484,225,1431,201,1374,187,1296,175,1109,155,783,134"/>
+<area shape="rect" id="Node000017" href="$classInstanceId.html" title=" " alt="" coords="351,162,500,187"/>
+<area shape="poly" id="edge21_Node000016_Node000017" title=" " alt="" coords="513,164,645,147,717,133,718,138,646,152,514,169"/>
+<area shape="rect" id="Node000019" href="$classRefCount.html" title=" " alt="" coords="338,113,513,138"/>
+<area shape="poly" id="edge22_Node000016_Node000019" title=" " alt="" coords="526,124,717,126,717,132,526,129"/>
+<area shape="rect" id="Node000022" href="$classRefCount.html" title=" " alt="" coords="5,150,127,175"/>
+<area shape="poly" id="edge43_Node000003_Node000022" title=" " alt="" coords="95,140,153,104,233,64,278,46,326,31,375,21,424,17,1997,17,2040,21,2075,32,2103,49,2124,72,2141,99,2154,130,2172,201,2187,278,2210,356,2226,393,2247,429,2274,461,2308,490,2332,502,2330,507,2305,494,2270,465,2243,432,2221,396,2205,358,2182,280,2166,202,2149,132,2136,101,2120,75,2099,53,2073,37,2039,26,1997,23,424,23,375,26,327,36,280,51,235,69,156,109,98,144"/>
+<area shape="poly" id="edge23_Node000019_Node000022" title=" " alt="" coords="140,152,337,132,338,137,141,158"/>
+<area shape="rect" id="Node000259" href="$classRefCount.html" title=" " alt="" coords="316,211,535,237"/>
+<area shape="poly" id="edge29_Node000259_Node000022" title=" " alt="" coords="141,173,350,209,349,214,140,178"/>
+<area shape="rect" id="Node000263" href="$classRefCount.html" title=" " alt="" coords="1058,789,1222,814"/>
+<area shape="poly" id="edge37_Node000263_Node000022" title=" " alt="" coords="73,189,90,291,107,361,131,438,163,517,204,593,255,663,285,694,318,722,363,752,412,778,463,799,516,815,625,836,735,844,840,843,936,835,1019,823,1083,811,1084,817,1020,829,937,840,840,848,735,850,624,841,515,820,461,804,410,783,361,757,314,726,281,698,251,667,200,596,158,519,126,440,102,363,85,293,68,190"/>
+<area shape="rect" id="Node000023" href="$classSBufStats.html" title=" " alt="" coords="383,63,468,89"/>
+<area shape="poly" id="edge24_Node000016_Node000023" title=" " alt="" coords="482,80,646,105,718,121,717,126,645,111,482,86"/>
+<area shape="rect" id="Node000256" href="$classIpc_1_1Mem_1_1Pointer.html" title=" " alt="" coords="1057,260,1223,300"/>
+<area shape="poly" id="edge25_Node000255_Node000256" title=" " alt="" coords="1237,273,1490,262,1490,268,1237,279"/>
+<area shape="rect" id="Node000257" href="$classRefCount.html" title=" " alt="" coords="683,306,804,331"/>
+<area shape="poly" id="edge26_Node000256_Node000257" title=" " alt="" coords="818,313,1017,297,1056,292,1057,297,1018,303,818,318"/>
+<area shape="rect" id="Node000258" href="$classIpc_1_1Mem_1_1Pointer.html" title=" " alt="" coords="670,169,817,209"/>
+<area shape="poly" id="edge27_Node000256_Node000258" title=" " alt="" coords="803,212,842,225,953,251,1057,268,1056,273,952,256,841,231,801,217"/>
+<area shape="rect" id="Node000260" href="$classIpc_1_1Mem_1_1Pointer.html" title=" " alt="" coords="1049,196,1231,236"/>
+<area shape="poly" id="edge32_Node000260_Node000258" title=" " alt="" coords="830,192,1049,207,1048,213,830,198"/>
+<area shape="rect" id="Node000265" href="$classIpc_1_1Mem_1_1Pointer.html" title=" " alt="" coords="1052,69,1228,109"/>
+<area shape="poly" id="edge40_Node000265_Node000258" title=" " alt="" coords="830,165,1059,107,1060,112,831,170"/>
+<area shape="poly" id="edge28_Node000258_Node000259" title=" " alt="" coords="548,210,645,200,669,197,670,202,646,205,549,216"/>
+<area shape="poly" id="edge30_Node000255_Node000260" title=" " alt="" coords="1245,215,1337,220,1432,231,1504,247,1503,253,1432,236,1336,225,1245,220"/>
+<area shape="rect" id="Node000261" href="$classRefCount.html" title=" " alt="" coords="683,234,804,259"/>
+<area shape="poly" id="edge31_Node000260_Node000261" title=" " alt="" coords="817,238,1048,220,1049,226,818,244"/>
+<area shape="rect" id="Node000262" href="$classDiskIOStrategy.html" title=" " alt="" coords="1485,505,1605,530"/>
+<area shape="poly" id="edge33_Node000004_Node000262" title=" " alt="" coords="1619,515,1937,515,1937,520,1619,520"/>
+<area shape="poly" id="edge34_Node000004_Node000263" title=" " alt="" coords="1236,812,1387,829,1564,840,1650,840,1728,835,1792,823,1818,815,1839,804,1874,775,1904,740,1929,700,1949,659,1976,583,1989,529,1994,531,1981,584,1954,662,1934,703,1908,743,1878,779,1841,809,1820,820,1794,829,1729,840,1650,845,1564,845,1387,834,1235,817"/>
+<area shape="poly" id="edge35_Node000263_Node000264" title=" " alt="" coords="795,753,1018,780,1059,786,1058,791,1017,785,794,759"/>
+<area shape="poly" id="edge38_Node000004_Node000265" title=" " alt="" coords="1242,86,1372,96,1448,106,1529,121,1611,142,1692,171,1770,207,1842,253,1874,281,1902,315,1927,351,1947,388,1977,456,1993,504,1988,505,1972,458,1942,390,1922,353,1898,318,1870,285,1838,257,1767,212,1690,176,1609,147,1527,126,1447,111,1371,101,1242,92"/>
+<area shape="rect" id="Node000266" href="$classRefCount.html" title=" " alt="" coords="683,58,804,83"/>
+<area shape="poly" id="edge39_Node000265_Node000266" title=" " alt="" coords="818,71,1052,83,1052,88,818,77"/>
+<area shape="rect" id="Node000267" href="$classIpc_1_1Mem_1_1PageId.html" title="Shared memory page identifier, address, or handler." alt="" coords="1479,669,1612,694"/>
+<area shape="poly" id="edge41_Node000004_Node000267" title=" " alt="" coords="1606,662,1634,653,1821,585,1963,528,1965,533,1823,590,1636,659,1608,667"/>
+<area shape="rect" id="Node000268" href="$classDiskFile_1_1Config.html" title="generally useful configuration options supported by some children" alt="" coords="1484,770,1607,795"/>
+<area shape="poly" id="edge42_Node000004_Node000268" title=" " alt="" coords="1621,793,1672,797,1729,796,1786,785,1839,763,1871,739,1899,709,1923,676,1944,642,1973,576,1988,529,1993,531,1978,578,1948,644,1928,679,1903,713,1875,743,1841,768,1787,790,1729,801,1672,803,1620,799"/>
+<area shape="rect" id="Node000269" href="$classRock_1_1SwapDirRr.html" title="initializes shared memory segments used by Rock::SwapDir" alt="" coords="2345,959,2475,985"/>
+<area shape="poly" id="edge44_Node000001_Node000269" title=" " alt="" coords="2422,945,2629,529,2633,531,2426,948"/>
+<area shape="rect" id="Node000270" href="$classIpc_1_1Mem_1_1RegisteredRunner.html" title=" " alt="" coords="1892,1117,2099,1142"/>
+<area shape="poly" id="edge45_Node000269_Node000270" title=" " alt="" coords="2044,1110,2282,1022,2378,982,2380,987,2284,1026,2046,1115"/>
+<area shape="rect" id="Node000194" href="$classRegisteredRunner.html" title=" " alt="" coords="1476,1139,1615,1165"/>
+<area shape="poly" id="edge46_Node000270_Node000194" title=" " alt="" coords="1628,1145,1892,1132,1892,1137,1629,1151"/>
+<area shape="rect" id="Node000271" title=" " alt="" coords="1907,945,2083,999"/>
+<area shape="poly" id="edge47_Node000269_Node000271" title=" " alt="" coords="2097,969,2344,969,2344,975,2097,975"/>
+<area shape="rect" id="Node000272" href="$classIpc_1_1Mem_1_1Owner.html" title=" " alt="" coords="1456,969,1635,1009"/>
+<area shape="poly" id="edge48_Node000271_Node000272" title=" " alt="" coords="1649,989,1840,985,1907,980,1907,985,1840,991,1649,994"/>
+<area shape="rect" id="Node000273" href="$classIpc_1_1Mem_1_1Segment.html" title="POSIX shared memory segment." alt="" coords="669,1043,817,1069"/>
+<area shape="poly" id="edge49_Node000272_Node000273" title=" " alt="" coords="813,1038,841,1033,1011,1014,1181,1001,1456,989,1456,994,1181,1007,1012,1020,842,1039,814,1043"/>
+<area shape="rect" id="Node000276" href="$classIpc_1_1Mem_1_1Owner.html" title=" " alt="" coords="1041,1043,1239,1069"/>
+<area shape="poly" id="edge54_Node000276_Node000273" title=" " alt="" coords="831,1053,1041,1053,1041,1059,831,1059"/>
+<area shape="rect" id="Node000279" href="$classIpc_1_1Mem_1_1Owner.html" title=" " alt="" coords="1462,1075,1629,1115"/>
+<area shape="poly" id="edge61_Node000279_Node000273" title=" " alt="" coords="788,1072,901,1113,971,1133,1042,1148,1100,1154,1159,1156,1277,1148,1384,1131,1471,1112,1472,1117,1385,1137,1277,1153,1159,1161,1099,1160,1041,1153,969,1138,899,1118,786,1077"/>
+<area shape="rect" id="Node000045" href="$classString.html" title=" " alt="" coords="395,1043,455,1069"/>
+<area shape="poly" id="edge50_Node000273_Node000045" title=" " alt="" coords="469,1053,669,1053,669,1059,469,1059"/>
+<area shape="rect" id="Node000274" href="$classRock_1_1Rebuild_1_1Stats.html" title="cache_dir indexing statistics shared across same&#45;kid process restarts" alt="" coords="1064,925,1216,950"/>
+<area shape="poly" id="edge51_Node000272_Node000274" title=" " alt="" coords="1230,944,1432,968,1456,972,1455,977,1432,973,1229,949"/>
+<area shape="rect" id="Node000275" href="$classStoreRebuildData.html" title="cache_dir(s) indexing statistics" alt="" coords="675,925,811,950"/>
+<area shape="poly" id="edge52_Node000274_Node000275" title=" " alt="" coords="825,935,1064,935,1064,940,825,940"/>
+<area shape="poly" id="edge53_Node000272_Node000276" title=" " alt="" coords="1252,1045,1340,1035,1431,1020,1483,1007,1484,1012,1433,1025,1341,1040,1253,1051"/>
+<area shape="poly" id="edge63_Node000279_Node000276" title=" " alt="" coords="1253,1064,1263,1065,1462,1084,1461,1090,1262,1071,1252,1070"/>
+<area shape="rect" id="Node000046" title=" " alt="" coords="1481,902,1610,927"/>
+<area shape="poly" id="edge55_Node000271_Node000046" title=" " alt="" coords="1607,928,1659,939,1789,955,1907,965,1907,970,1789,961,1658,944,1606,933"/>
+<area shape="rect" id="Node000277" title=" " alt="" coords="1915,869,2075,909"/>
+<area shape="poly" id="edge58_Node000277_Node000046" title=" " alt="" coords="1624,908,1915,891,1915,896,1624,913"/>
+<area shape="rect" id="Node000278" title=" " alt="" coords="1864,1029,2127,1069"/>
+<area shape="poly" id="edge64_Node000278_Node000046" title=" " alt="" coords="1603,931,1621,942,1637,956,1646,975,1648,993,1650,1009,1660,1023,1686,1040,1713,1052,1773,1066,1834,1070,1891,1067,1892,1072,1834,1076,1772,1072,1712,1057,1683,1044,1657,1027,1645,1011,1642,993,1641,976,1633,959,1618,946,1600,935"/>
+<area shape="rect" id="Node000047" title=" " alt="" coords="1121,875,1159,901"/>
+<area shape="poly" id="edge56_Node000046_Node000047" title=" " alt="" coords="1173,887,1481,908,1480,913,1173,893"/>
+<area shape="poly" id="edge57_Node000269_Node000277" title=" " alt="" coords="2089,905,2346,957,2345,962,2088,910"/>
+<area shape="poly" id="edge59_Node000269_Node000278" title=" " alt="" coords="2116,1024,2344,981,2345,987,2117,1029"/>
+<area shape="poly" id="edge60_Node000278_Node000279" title=" " alt="" coords="1643,1098,1738,1099,1840,1091,1890,1080,1937,1067,1939,1072,1891,1086,1840,1096,1739,1104,1643,1103"/>
+<area shape="rect" id="Node000280" href="$classIpc_1_1Mem_1_1PageStack.html" title=" " alt="" coords="1061,1098,1219,1123"/>
+<area shape="poly" id="edge62_Node000279_Node000280" title=" " alt="" coords="1233,1113,1329,1115,1432,1111,1461,1107,1462,1113,1432,1116,1329,1120,1233,1118"/>
+</map>

@@ -1,0 +1,27 @@
+var classmem__hdr =
+[
+    [ "mem_hdr", "classmem__hdr.html#a542bf21bdd5714998eebbf0fce5af296", null ],
+    [ "~mem_hdr", "classmem__hdr.html#a9f96126e2110b4de6bdb922fb2796ada", null ],
+    [ "appendNode", "classmem__hdr.html#adbc23e5a96966733f46f1eae74a5243d", null ],
+    [ "copy", "classmem__hdr.html#a28d893d6f83eb745d0bfdfabb3c7bdf4", null ],
+    [ "copyAvailable", "classmem__hdr.html#a75cc16311fe456e5eda2ec9bf7fd0499", null ],
+    [ "debugDump", "classmem__hdr.html#a8f3c4128a5f84263e579b88e7820388d", null ],
+    [ "dump", "classmem__hdr.html#a1766ab3eff76bc4e309f965f3f704127", null ],
+    [ "endOffset", "classmem__hdr.html#ac69aa816e70d07e6c6fc2bbfd8f97f38", null ],
+    [ "freeContent", "classmem__hdr.html#a2b2234528cb7f8c50ed3787b3835eef1", null ],
+    [ "freeDataUpto", "classmem__hdr.html#a4841f866a679a3c2da7643fecc2dc9d9", null ],
+    [ "getBlockContainingLocation", "classmem__hdr.html#ae2cf454e8fa004ca924faca55a115dca", null ],
+    [ "getNodes", "classmem__hdr.html#a10f3f644b9d78911828b7a89457d5054", null ],
+    [ "hasContigousContentRange", "classmem__hdr.html#ae16e8853286c083619058d34f0e015ad", null ],
+    [ "lowestOffset", "classmem__hdr.html#af1b230e02abfab54f51569bc6981f544", null ],
+    [ "NodeGet", "classmem__hdr.html#a8c0114150270c9dfc4951ba07d5d0a5a", null ],
+    [ "nodeToRecieve", "classmem__hdr.html#a62f35a871756742fb500e3a9b06d3f3c", null ],
+    [ "size", "classmem__hdr.html#a921bac01ddb270979613734d1ae00b77", null ],
+    [ "unionNotEmpty", "classmem__hdr.html#a3a0c255ee6c7eb65ca5a45b93979bd68", null ],
+    [ "unlink", "classmem__hdr.html#a12a255138e99524e8d7ab1f21d57eef5", null ],
+    [ "write", "classmem__hdr.html#a8086c5631fa47b4705599d7e3024402e", null ],
+    [ "writeAvailable", "classmem__hdr.html#a622bc9e338a44e4933dc66c228808243", null ],
+    [ "inmem_hi", "classmem__hdr.html#a074609f18f8cd3c8a831ba1c3fff1ff4", null ],
+    [ "NodeCompare", "classmem__hdr.html#a7c420f708b3be62939586ac4bdc3f5af", null ],
+    [ "nodes", "classmem__hdr.html#abbfc507b37470442c8b04b5647f3d009", null ]
+];

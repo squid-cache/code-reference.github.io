@@ -1,0 +1,86 @@
+name: Automatically build squid documentation
+
+on:
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force documentation rebuild even if no source changes'
+        type: boolean
+        required: false
+        default: false
+  schedule:
+    - cron: '5 2 * * *'
+
+jobs:
+  gen-docs:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout Docs
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.PUSH_TOKEN }}
+
+      - name: Checkout Squid sources
+        uses: actions/checkout@v5
+        with:
+          repository: squid-cache/squid
+          path: squid
+      
+      - name: cache last commit hash
+        uses: actions/cache@v4
+        with:
+          path: last-squid-commit.txt
+          key: last-commit-hash-${{ github.run_id }}
+          restore-keys: last-commit-hash
+      
+      - name: Check for squid source updates
+        id: check_squid_updates
+        env:
+          FORCE_REBUILD: ${{ github.event.inputs.force }}
+        run: |
+          LAST_COMMIT_HASH=$(cat last-squid-commit.txt || echo "")
+          cd squid
+          CURRENT_COMMIT_HASH=$(git rev-parse --short HEAD)
+          echo "current=$CURRENT_COMMIT_HASH" >> $GITHUB_OUTPUT
+          if [ "$LAST_COMMIT_HASH" = "$CURRENT_COMMIT_HASH" -a "$FORCE_REBUILD" != "true" ]; then
+            echo "marking as no no updates"
+            echo "had_update=false" >> $GITHUB_OUTPUT
+          else
+            echo "had_update=true" >> $GITHUB_OUTPUT
+          fi
+          echo $CURRENT_COMMIT_HASH > ../last-squid-commit.txt
+      
+      - name: Install prerequisite Linux packages
+        if: steps.check_squid_updates.outputs.had_update == 'true'
+        run: |
+          # required for "apt-get build-dep" to work
+          sudo sed --in-place -E 's/^(Types: deb)$/\1 deb-src/' /etc/apt/sources.list.d/ubuntu.sources
+          sudo apt-get --quiet=2 update
+          sudo apt-get --quiet=2 build-dep squid
+          sudo apt-get --quiet=2 install libtool-bin doxygen graphviz pdf2svg
+
+      - name: Prepare squid sources
+        working-directory: squid
+        if: steps.check_squid_updates.outputs.had_update == 'true'
+        run: |
+          ./bootstrap.sh
+          . ./test-suite/buildtests/layer-02-maximus.opts
+          eval ./configure $DISTCHECK_CONFIGURE_FLAGS
+
+      - name: Build programming guide
+        if: steps.check_squid_updates.outputs.had_update == 'true'
+        run: |
+          doxygen doxyfile
+
+      - name: update self
+        if: steps.check_squid_updates.outputs.had_update == 'true'
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "automated update"
+          add: "./docs"
+          push: true

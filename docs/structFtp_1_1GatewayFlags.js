@@ -1,0 +1,26 @@
+var structFtp_1_1GatewayFlags =
+[
+    [ "authenticated", "structFtp_1_1GatewayFlags.html#a916bb420a7abd3f43e976c30ec866974", null ],
+    [ "binary", "structFtp_1_1GatewayFlags.html#a81e6d61e2bb46ec9b8542b4002bfdd24", null ],
+    [ "completed_forwarding", "structFtp_1_1GatewayFlags.html#a201c7263a10cf388789386f98fb21821", null ],
+    [ "dir_slash", "structFtp_1_1GatewayFlags.html#a27e3ed1f89703c5bf0bdd6f5b5dafa8f", null ],
+    [ "epsv_all_sent", "structFtp_1_1GatewayFlags.html#a8c6595dd4f6f5343f1b61a8b4e11d412", null ],
+    [ "http_header_sent", "structFtp_1_1GatewayFlags.html#af1777c0c2d68d29027c6487d6868e996", null ],
+    [ "isdir", "structFtp_1_1GatewayFlags.html#a652d8862e809dbf02936013c4d7dcce4", null ],
+    [ "listformat_unknown", "structFtp_1_1GatewayFlags.html#aaf1377d5113dc7a33d9c2be0accef815", null ],
+    [ "listing", "structFtp_1_1GatewayFlags.html#ab8a8e0885e516d9d5b089b6bf32d23cc", null ],
+    [ "need_base_href", "structFtp_1_1GatewayFlags.html#ac89ac5945dbaa9a905bc04e95fd60e2e", null ],
+    [ "no_dotdot", "structFtp_1_1GatewayFlags.html#a180ae08f36642ffcbef94f060b6290cf", null ],
+    [ "pasv_failed", "structFtp_1_1GatewayFlags.html#ad4873a048c2a976db1165b1b42ddce80", null ],
+    [ "pasv_only", "structFtp_1_1GatewayFlags.html#a2f60b4b4ad08db424201288e948beab2", null ],
+    [ "pasv_supported", "structFtp_1_1GatewayFlags.html#a321d5fc264177601ad5c0af3d2499a35", null ],
+    [ "put", "structFtp_1_1GatewayFlags.html#a5c11fd4d27c65edaa5ea92044f5019d2", null ],
+    [ "put_mkdir", "structFtp_1_1GatewayFlags.html#a3d010e6f8210f4a060b9f8cd61abacc8", null ],
+    [ "rest_supported", "structFtp_1_1GatewayFlags.html#a8a26085f84b45cb3764feb3ca321fb46", null ],
+    [ "root_dir", "structFtp_1_1GatewayFlags.html#ab94cf91e8bcb741eeeb0f0d95a15e5b6", null ],
+    [ "skip_whitespace", "structFtp_1_1GatewayFlags.html#a504d5f8898824ee835c3f68aed88381a", null ],
+    [ "tried_auth_anonymous", "structFtp_1_1GatewayFlags.html#a530e12f7e6172ddd59be8eca8b59ec79", null ],
+    [ "tried_auth_nopass", "structFtp_1_1GatewayFlags.html#af57e7ae2cb5780d71e77ec648f0bd88a", null ],
+    [ "tried_nlst", "structFtp_1_1GatewayFlags.html#a6806162b9fec3ec82ae9ecb3036c2abe", null ],
+    [ "try_slash_hack", "structFtp_1_1GatewayFlags.html#ad7179a22b2cd3f7c8b72549803915638", null ]
+];

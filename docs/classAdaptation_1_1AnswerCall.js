@@ -1,0 +1,26 @@
+var classAdaptation_1_1AnswerCall =
+[
+    [ "Dialer", "classAdaptation_1_1AnswerCall.html#a34ea47f524ae26a7f7536a173f84ea60", null ],
+    [ "Pointer", "classAdaptation_1_1AnswerCall.html#a57c571a47666d10c316689dc5d09e170", null ],
+    [ "AnswerCall", "classAdaptation_1_1AnswerCall.html#a5285d82940b28c51df7903c0a6d6b738", null ],
+    [ "~AnswerCall", "classAdaptation_1_1AnswerCall.html#a5bcefff79f4017064a3576bb85b3660b", null ],
+    [ "cancel", "classAdaptation_1_1AnswerCall.html#a7c1ca1dcfdb5961653d64edf51dc218d", null ],
+    [ "canceled", "classAdaptation_1_1AnswerCall.html#a930efd019d25d30d01658442ce8efed1", null ],
+    [ "canFire", "classAdaptation_1_1AnswerCall.html#af0a63f79907e4b54db507bde367928ce", null ],
+    [ "dequeue", "classAdaptation_1_1AnswerCall.html#a3df2c7c0269a7bd96c76317101b1a62f", null ],
+    [ "fire", "classAdaptation_1_1AnswerCall.html#a78042ea041bc8ed78594d0f7001a1fb1", null ],
+    [ "getDialer", "classAdaptation_1_1AnswerCall.html#a091c742e02c439b991410d12763e9047", null ],
+    [ "make", "classAdaptation_1_1AnswerCall.html#adb2073bda3345b698bfd2bd1b53e5d23", null ],
+    [ "Next", "classAdaptation_1_1AnswerCall.html#a9d95583f22ed6ee97f6f9a1238329b01", null ],
+    [ "print", "classAdaptation_1_1AnswerCall.html#abce952914da867ae80b11d962b835b5a", null ],
+    [ "setNext", "classAdaptation_1_1AnswerCall.html#aecf7a14a0135966e4b458ee5291eabe7", null ],
+    [ "codeContext", "classAdaptation_1_1AnswerCall.html#aeb7a543e6e5abb83f3dd45d265b77d45", null ],
+    [ "debugLevel", "classAdaptation_1_1AnswerCall.html#a00ebb19655769c7e3287b2c11b4e21b2", null ],
+    [ "debugSection", "classAdaptation_1_1AnswerCall.html#ab399dada160257beceea653179741b6d", null ],
+    [ "dialer", "classAdaptation_1_1AnswerCall.html#ac3fcd6af2e3b5e09ab232fe4cb99772f", null ],
+    [ "fired", "classAdaptation_1_1AnswerCall.html#a2bb9260192a2d9452538b9211558dd54", null ],
+    [ "id", "classAdaptation_1_1AnswerCall.html#a5a77bf1c0619998b45e1852b676eb980", null ],
+    [ "isCanceled", "classAdaptation_1_1AnswerCall.html#acb62b0179428973b7d275f5b8cb227c3", null ],
+    [ "name", "classAdaptation_1_1AnswerCall.html#ae374497446383e37c6d9a5845e35b003", null ],
+    [ "theNext", "classAdaptation_1_1AnswerCall.html#ad13150c144776c31421fbd3c0b97bca8", null ]
+];

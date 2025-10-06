@@ -1,0 +1,33 @@
+var icp__opcode_8h =
+[
+    [ "icp_opcode", "group__ServerProtocolICPAPI.html#ga6d172cc0273c7eb44afd1351198704c6", [
+      [ "enumBegin_", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6aeb1af424185fccc134a33d7f47b4ee61", null ],
+      [ "ICP_INVALID", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a373bcfac3cc95d63c2fe4043f41dbd94", null ],
+      [ "ICP_QUERY", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a5c6250115ccf383ec8ad97bc82abd5de", null ],
+      [ "ICP_HIT", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6ae976d3e0d00dd042e09fc832b7d2c5df", null ],
+      [ "ICP_MISS", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6abef39c1952136e11de121425150e3f8d", null ],
+      [ "ICP_ERR", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a88109329f6bad69c97d178a4fad9ddb2", null ],
+      [ "ICP_SEND", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6ae9f82af1aefbfc7989cfc7cce8317f71", null ],
+      [ "ICP_SENDA", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a896f5d4e0c61781b0dacf7bc4f643ac3", null ],
+      [ "ICP_DATABEG", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a498346be59454c70637f400998222e8b", null ],
+      [ "ICP_DATA", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a8cad4df97bee85f00165680a897dae19", null ],
+      [ "ICP_DATAEND", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a09df3b0e2dcd040e1fe7955d081abb88", null ],
+      [ "ICP_SECHO", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a9d41e5c7ef15fb29ac27e3d282ef322e", null ],
+      [ "ICP_DECHO", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a16755cd560859f4b80fc3268d86f1377", null ],
+      [ "ICP_NOTIFY", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a309e21226702cad525160ec812ee4024", null ],
+      [ "ICP_INVALIDATE", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a089c8c1e06a18afca084f40d613486b7", null ],
+      [ "ICP_DELETE", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a11f914e9d8b6bc45e27508be90f8eb73", null ],
+      [ "ICP_UNUSED15", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a7f2d590afb5d0c00c88bf06370ad608d", null ],
+      [ "ICP_UNUSED16", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a2a08897e3c6567fd6f139535c1a9862f", null ],
+      [ "ICP_UNUSED17", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a9113b11261e2e1aa04c9e275f5e74ab5", null ],
+      [ "ICP_UNUSED18", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6aa4cbd7a698d4d61509a4fae20b96eb88", null ],
+      [ "ICP_UNUSED19", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a99d5859af8661e10db49699dcdf80900", null ],
+      [ "ICP_UNUSED20", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a271c63477211181d898dc0544f90cede", null ],
+      [ "ICP_MISS_NOFETCH", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a6363622dfdc43141e3df39a81425176f", null ],
+      [ "ICP_DENIED", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a6d0200c4d928ab973233042d75e192c1", null ],
+      [ "ICP_HIT_OBJ", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a212a87eb0961671757e8055e9b5dd8cc", null ],
+      [ "ICP_END", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a6b90e3137805b84a36b36fa9016b0a37", null ],
+      [ "enumEnd_", "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6acdd505b950ebaf2fdaa4ad1e28db0dff", null ]
+    ] ],
+    [ "icp_opcode_str", "icp__opcode_8h.html#ac1431af6f906aacf2b4af78e1474d619", null ]
+];

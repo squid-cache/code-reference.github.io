@@ -1,0 +1,37 @@
+var ext__ad__group__acl_8cc =
+[
+    [ "ADSI_PATH", "ext__ad__group__acl_8cc.html#a75168667cb37ef5d3d8a4e4981026ced", [
+      [ "LDAP_MODE", "ext__ad__group__acl_8cc.html#a75168667cb37ef5d3d8a4e4981026ceda311641c41b359408fce1d68a23ac28d5", null ],
+      [ "GC_MODE", "ext__ad__group__acl_8cc.html#a75168667cb37ef5d3d8a4e4981026ceda7740d0e0ed3ec3aa2898f0270c67b931", null ]
+    ] ],
+    [ "add_User_Group", "ext__ad__group__acl_8cc.html#ae72044b1c2dc11036cb3c5db7cf7f536", null ],
+    [ "build_groups_DN_array", "ext__ad__group__acl_8cc.html#ac10db79f231a3f6f0b3573a153223521", null ],
+    [ "CloseCOM", "ext__ad__group__acl_8cc.html#a736904fbfcde26b9639d3ab8455cb7d9", null ],
+    [ "Get_primaryGroup", "ext__ad__group__acl_8cc.html#aef81443e1bb34dc1b07084764fab9188", null ],
+    [ "Get_WIN32_ErrorMessage", "ext__ad__group__acl_8cc.html#adfd27c25e7867568aa8a6dc4c3394372", null ],
+    [ "GetDomainName", "ext__ad__group__acl_8cc.html#a451b85b7a53dfd6f855251e77dd8170e", null ],
+    [ "GetLDAPPath", "ext__ad__group__acl_8cc.html#af0e5835cfe9b17363bf96b48773161e1", null ],
+    [ "GetLPBYTEtoOctetString", "ext__ad__group__acl_8cc.html#a637206fac27aa6392105f198f5da0742", null ],
+    [ "main", "ext__ad__group__acl_8cc.html#a0ddf1224851353fc92bfbff6f499fa97", null ],
+    [ "My_NameTranslate", "ext__ad__group__acl_8cc.html#a62c7b48c649ba92330dc7480436b5ddb", null ],
+    [ "process_options", "ext__ad__group__acl_8cc.html#a73a4d6ff259843ba9e7dc920fc2eb87b", null ],
+    [ "Recursive_Memberof", "ext__ad__group__acl_8cc.html#ae6cc15f967955a385e030483dc7c5874", null ],
+    [ "usage", "ext__ad__group__acl_8cc.html#afca6fd02476c763eca6a71c83e9fe559", null ],
+    [ "Valid_Global_Groups", "ext__ad__group__acl_8cc.html#a10bc9ce5673c3e01b4c73965766f11b6", null ],
+    [ "Valid_Local_Groups", "ext__ad__group__acl_8cc.html#a002f584771cb92b84167ca5fe22054a9", null ],
+    [ "wcstrcmparray", "ext__ad__group__acl_8cc.html#a48fa7cdb341cbc806a644a95d51d3725", null ],
+    [ "wStrIsInArray", "ext__ad__group__acl_8cc.html#a131d11aade992e32ac69c59c3a8ea6c1", null ],
+    [ "ADSI_Path", "ext__ad__group__acl_8cc.html#a1da3e47d352d61d8cd1389fd8f7567bf", null ],
+    [ "DefaultDomain", "ext__ad__group__acl_8cc.html#a61db9a3a5b2ee596c6f7400458ab3897", null ],
+    [ "machinedomain", "ext__ad__group__acl_8cc.html#a5ff5be7dbdd497777ec08898e1f507b6", null ],
+    [ "mypid", "ext__ad__group__acl_8cc.html#a3851c138a869fa9fbfc2f9da5576da2f", null ],
+    [ "NTV_VALID_DOMAIN_SEPARATOR", "ext__ad__group__acl_8cc.html#a9a0781c3d1f97135a451a97c243202c3", null ],
+    [ "numberofgroups", "ext__ad__group__acl_8cc.html#ab6e512be2811d75446b02fa9b6b7ec0a", null ],
+    [ "program_name", "ext__ad__group__acl_8cc.html#a289c5900d90626d909f0a85d5a0ed61d", null ],
+    [ "use_case_insensitive_compare", "ext__ad__group__acl_8cc.html#abe5237c7a9e95b3709f100614dfce327", null ],
+    [ "use_global", "ext__ad__group__acl_8cc.html#a953bcfa410bf40668eae9c94df2dcbcb", null ],
+    [ "User_Groups", "ext__ad__group__acl_8cc.html#a94aa778dfff6c61c6b70cfa99e6c23ca", null ],
+    [ "User_Groups_Count", "ext__ad__group__acl_8cc.html#ac6819ca89512b70ceae5d17901b09d99", null ],
+    [ "WIN32_COM_initialized", "ext__ad__group__acl_8cc.html#a1158688b00edde3b00ea31c57c2810ca", null ],
+    [ "WIN32_ErrorMessage", "ext__ad__group__acl_8cc.html#a260ef63dc7e211aa9d6679fb697d8b3c", null ]
+];

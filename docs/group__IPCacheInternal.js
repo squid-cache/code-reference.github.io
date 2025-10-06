@@ -1,0 +1,35 @@
+var group__IPCacheInternal =
+[
+    [ "_ipcache_stats", "struct__ipcache__stats.html", [
+      [ "cname_only", "struct__ipcache__stats.html#aeea9814de170a91225bde7bdf1b3b44d", null ],
+      [ "hits", "struct__ipcache__stats.html#abf1a95357eb0aa067697ef63a74696ae", null ],
+      [ "invalid", "struct__ipcache__stats.html#a248f3e4f0c9590883b87b1d04d257d40", null ],
+      [ "misses", "struct__ipcache__stats.html#affbf5058765b67b927efcec45a3fda86", null ],
+      [ "negative_hits", "struct__ipcache__stats.html#af990e2a6b4189e966d0e82be0057c712", null ],
+      [ "numeric_hits", "struct__ipcache__stats.html#a24e157862be5a9164f84e2c8cb1544ee", null ],
+      [ "replies", "struct__ipcache__stats.html#acdf56e36b3aa6cf95a6178abe911237a", null ],
+      [ "requests", "struct__ipcache__stats.html#adb76640b75aedd2c769bb6804e44b5a9", null ],
+      [ "rr_a", "struct__ipcache__stats.html#af66dd042f277cc47c3119b906da774e3", null ],
+      [ "rr_aaaa", "struct__ipcache__stats.html#a4b2d4c1330de6ea6f848761dd31b44b4", null ],
+      [ "rr_cname", "struct__ipcache__stats.html#a75230eec3d3bed5afad77b66f4c705bc", null ]
+    ] ],
+    [ "ipcache_get", "group__IPCacheInternal.html#ga11edbbf97f3a995cb3f877609c260eed", null ],
+    [ "ipcacheAddEntry", "group__IPCacheInternal.html#gad25a3ce24eca4c714787575076d64bd3", null ],
+    [ "ipcacheCallback", "group__IPCacheInternal.html#ga96accb0e0c2a4a330a44b7f3a3164677", null ],
+    [ "ipcacheCount", "group__IPCacheInternal.html#ga74ad2ee65e25e6b98f2fbd327c27057d", null ],
+    [ "ipcacheExpiredEntry", "group__IPCacheInternal.html#gaf8241963f01e6176ad3e4e65ec665431", null ],
+    [ "ipcacheFreeEntry", "group__IPCacheInternal.html#gab3c6c4953bf825b52d7ed8b51237e329", null ],
+    [ "ipcacheHandleReply", "group__IPCacheInternal.html#ga56d2d8c41c776d5fffcbb093387d979f", null ],
+    [ "ipcacheLockEntry", "group__IPCacheInternal.html#ga37f78c1c622a99a9ecf86e7e26f57b79", null ],
+    [ "ipcacheRegisterWithCacheManager", "group__IPCacheInternal.html#gacd2451de4b234591051b387460c6b9a6", null ],
+    [ "ipcacheRelease", "group__IPCacheInternal.html#gac2b318645910ea339255095ea6816393", null ],
+    [ "ipcacheStatPrint", "group__IPCacheInternal.html#ga314061423f3305bb58069ac585375d16", null ],
+    [ "ipcacheUnlockEntry", "group__IPCacheInternal.html#ga0f3dca2601bc2616501106b786d4926a", null ],
+    [ "purge_entries_fromhosts", "group__IPCacheInternal.html#ga6518159f9bc13a3ba364ae6e4c90d198", null ],
+    [ "stat_ipcache_get", "group__IPCacheInternal.html#ga9944dc6ff0fad517ec7dfe452522c0f8", null ],
+    [ "ip_table", "group__IPCacheInternal.html#ga2b384c7e24db68058650e411bbe8f747", null ],
+    [ "ipcache_high", "group__IPCacheInternal.html#gaa10da3a2fcbbe9419fc03f1ce376f3dc", null ],
+    [ "ipcache_low", "group__IPCacheInternal.html#gac4fac4f4c30a3553ab64fe0428a2f405", null ],
+    [ "IpcacheStats", "group__IPCacheInternal.html#ga814675489633efc1589b6777b18b9ac9", null ],
+    [ "lru_list", "group__IPCacheInternal.html#gabe91ce5952a78337cfe54689f28183a7", null ]
+];

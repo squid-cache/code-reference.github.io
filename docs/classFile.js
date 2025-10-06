@@ -1,0 +1,27 @@
+var classFile =
+[
+    [ "Be", "classFile.html#a5e460a8e8c03d0a216c578b4879d8466", null ],
+    [ "Handle", "classFile.html#ac0b2a8e28405403b4e5d71223a4d6599", null ],
+    [ "File", "classFile.html#a0b93d017bc6929427883f858c42ea633", null ],
+    [ "~File", "classFile.html#ac704ebdf5f57d7a1c5ddf409d797fb69", null ],
+    [ "File", "classFile.html#a042f525d4beac394675727bcd5cce274", null ],
+    [ "File", "classFile.html#a830313629e5e3d8c6ee5f4eaa881c4e0", null ],
+    [ "close", "classFile.html#a83cbce54d6c3b8c2f417b51f6b3f488c", null ],
+    [ "isOpen", "classFile.html#abb0ce5b71ecf6fbaa538a812a622fc10", null ],
+    [ "lock", "classFile.html#a3d1e4ff8a539895a87d92020d2811b3b", null ],
+    [ "lockOnce", "classFile.html#a90849eaa6da042885803743a4b6f7091", null ],
+    [ "name", "classFile.html#a00b0cf97fb697db811ba71ea09684fb0", null ],
+    [ "open", "classFile.html#a6cf7a58c0f3570090b4185e10adc373e", null ],
+    [ "operator=", "classFile.html#a878dae94a3b260807de318337ecfc515", null ],
+    [ "operator=", "classFile.html#abebad163db16bb0e98d2c7f36a6b21c0", null ],
+    [ "Optional", "classFile.html#a75eec649a5b26d5fc43d4ec6bb8ce344", null ],
+    [ "readSmall", "classFile.html#ae0c476e04315f0a4a2f13c0d2f425282", null ],
+    [ "synchronize", "classFile.html#ac8741ff11abb61e32e0a0677c202e8f9", null ],
+    [ "sysCallError", "classFile.html#a9b73fd4f3e73e15515efe6e511f7255b", null ],
+    [ "sysCallFailure", "classFile.html#a9bf4ecae7b311da7c7364f8b68f4ea39", null ],
+    [ "truncate", "classFile.html#abf57eca839ab62507689b5369b623309", null ],
+    [ "writeAll", "classFile.html#a525391b96661e9401b008eda9f43f101", null ],
+    [ "fd_", "classFile.html#a145976734047a7c0979d9a1a89d49d3e", null ],
+    [ "InvalidHandle", "classFile.html#aad035631231c8d695bbd095aa2f5d70b", null ],
+    [ "name_", "classFile.html#af549288cc17f20327c0c0098f6bd36dc", null ]
+];

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['x_5fforwarded_5ffor_5fiterator_0',['x_forwarded_for_iterator',['../classHttpRequest.html#a78716ec3adf40429095b375415093bfa',1,'HttpRequest']]],
+  ['xact_5fid_1',['xact_id',['../classidns__query.html#af0ed1fafab59b3ff6a1257e216775100',1,'idns_query']]],
+  ['xerrno_2',['xerrno',['../classComm_1_1IoCallback.html#a0e1cf2c9f1e9a80bbe0b7366bae9aa60',1,'Comm::IoCallback::xerrno'],['../classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d',1,'CommCommonCbParams::xerrno'],['../classIpcIoMsg.html#aba217ec171889729abbd63b560d1fcfd',1,'IpcIoMsg::xerrno'],['../classErrorState.html#a8944a08940b5f6f1df4f4f2c53209fe0',1,'ErrorState::xerrno']]],
+  ['xitindex_3',['xitIndex',['../classCollapsedForwardingMsg.html#a92d841d9e2f2802c295fd28cf7ce8b93',1,'CollapsedForwardingMsg']]],
+  ['xittable_4',['xitTable',['../classMemObject.html#a5deadd7696045abdba9c2ad654a21f7d',1,'MemObject']]],
+  ['xm_5fdeltat_5',['xm_deltat',['../old__api_8cc.html#a6f09324e871300dd7a25af103544978c',1,'old_api.cc']]],
+  ['xm_5ftime_6',['xm_time',['../old__api_8cc.html#a33110e811d65a88d8f7c768bd1e1ece1',1,'old_api.cc']]],
+  ['xoecho_7',['xoEcho',['../namespaceAdaptation_1_1Icap.html#adc17b1ae829ae343bde0aa403e85a793',1,'Adaptation::Icap']]],
+  ['xoerror_8',['xoError',['../namespaceAdaptation_1_1Icap.html#a48fa331f02ccfbe3ad16cf337af9ef26',1,'Adaptation::Icap']]],
+  ['xogone_9',['xoGone',['../namespaceAdaptation_1_1Icap.html#a22a40ea45ecc9128ea81a89f16baeb42',1,'Adaptation::Icap']]],
+  ['xomodified_10',['xoModified',['../namespaceAdaptation_1_1Icap.html#a0e6a48f5c85edfb5c98d31f60e14eae3',1,'Adaptation::Icap']]],
+  ['xoopt_11',['xoOpt',['../namespaceAdaptation_1_1Icap.html#a5bb9ce1e757b29dfe1ef10890fabfd87',1,'Adaptation::Icap']]],
+  ['xopartecho_12',['xoPartEcho',['../namespaceAdaptation_1_1Icap.html#a01a7711a0101985246a8e78b2a1339f9',1,'Adaptation::Icap']]],
+  ['xorace_13',['xoRace',['../namespaceAdaptation_1_1Icap.html#a4866aef82ca750509ef575ee314c2d29',1,'Adaptation::Icap']]],
+  ['xosatisfied_14',['xoSatisfied',['../namespaceAdaptation_1_1Icap.html#ab99920e0222fae370b6103cddf505204',1,'Adaptation::Icap']]],
+  ['xounknown_15',['xoUnknown',['../namespaceAdaptation_1_1Icap.html#ac6fb9a7484aa2009068eddcc5e1f1637',1,'Adaptation::Icap']]]
+];
