@@ -195,10 +195,10 @@ var NAVTREEINDEX167 =
 "structAclDomainDataDumpVisitor.html#aba75cd4bb14339100f66d186fede7675":[9,0,80,1],
 "structAdaptation_1_1Icap_1_1Options_1_1Transfers.html":[9,0,1,1,8,1],
 "structAdaptation_1_1Icap_1_1Options_1_1Transfers.html":[8,0,1,1,9,1],
-"structAdaptation_1_1Icap_1_1Options_1_1Transfers.html#a025b3829625d9b777a2b4ae7f1a9eadf":[9,0,1,1,8,1,1],
 "structAdaptation_1_1Icap_1_1Options_1_1Transfers.html#a025b3829625d9b777a2b4ae7f1a9eadf":[8,0,1,1,9,1,1],
-"structAdaptation_1_1Icap_1_1Options_1_1Transfers.html#a52eb537301ef56caa56892189689a4b7":[8,0,1,1,9,1,3],
+"structAdaptation_1_1Icap_1_1Options_1_1Transfers.html#a025b3829625d9b777a2b4ae7f1a9eadf":[9,0,1,1,8,1,1],
 "structAdaptation_1_1Icap_1_1Options_1_1Transfers.html#a52eb537301ef56caa56892189689a4b7":[9,0,1,1,8,1,3],
+"structAdaptation_1_1Icap_1_1Options_1_1Transfers.html#a52eb537301ef56caa56892189689a4b7":[8,0,1,1,9,1,3],
 "structAdaptation_1_1Icap_1_1Options_1_1Transfers.html#a9deb7530b48702b06b898b020a912cad":[9,0,1,1,8,1,0],
 "structAdaptation_1_1Icap_1_1Options_1_1Transfers.html#a9deb7530b48702b06b898b020a912cad":[8,0,1,1,9,1,0],
 "structAdaptation_1_1Icap_1_1Options_1_1Transfers.html#af97a6d8ed2091db4b9b2dc4535d1d854":[9,0,1,1,8,1,2],
@@ -249,5 +249,5 @@ var NAVTREEINDEX167 =
 "structClientInfo_1_1Protocol.html#a38d1dc483da2545b610394d4e70fef37":[9,0,177,1,3],
 "structClientInfo_1_1Protocol.html#a7653d80bad9b2b4c81e0dd7cbc358ce4":[9,0,177,1,4],
 "structClientInfo_1_1Protocol.html#aedaa41fe203c9c9bd8edbacea4a0809b":[9,0,177,1,2],
-"structComm_1_1ConnOpener_1_1Calls.html":[9,0,4,3,0]
+"structComm_1_1ConnOpener_1_1Calls.html":[8,0,4,3,0]
 };
