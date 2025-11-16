@@ -575,7 +575,7 @@ var searchData=
   ['peersourcehashregisterwithcachemanager_572',['peerSourceHashRegisterWithCacheManager',['../peer__sourcehash_8cc.html#a1eeddd90f6c3a70752436f1ba7c96809',1,'peer_sourcehash.cc']]],
   ['peersourcehashrr_573',['PeerSourceHashRr',['../classPeerSourceHashRr.html',1,'']]],
   ['peersourcehashselectparent_574',['peersourcehashselectparent',['../peer__sourcehash_8cc.html#a8fb1d8a1f2b4eb81ecb0348776e7ad1d',1,'peerSourceHashSelectParent(PeerSelector *ps):&#160;peer_sourcehash.cc'],['../peer__sourcehash_8h.html#a1424f278ce0798a058ed388f583ae08c',1,'peerSourceHashSelectParent(PeerSelector *):&#160;peer_sourcehash.cc']]],
-  ['peerstats_575',['PeerStats',['../peer__select_8cc.html#a28a14fd41697ee7099712598a835b8e3',1,'peer_select.cc']]],
+  ['peerstats_575',['PeerStats',['../peer__select_8cc.html#a3f775c64a615b1da6906cc240e2831bc',1,'peer_select.cc']]],
   ['peersupportsconnectionpinning_576',['peerSupportsConnectionPinning',['../classHttpStateData.html#ab5f75e03259c0706091cf78827598bed',1,'HttpStateData']]],
   ['peertype_577',['peerType',['../classComm_1_1Connection.html#a4cb3143725bd3f4f09eb89e5c7298cc4',1,'Comm::Connection']]],
   ['peeruserhashcachemgr_578',['peeruserhashcachemgr',['../peer__userhash_8cc.html#af39371080d1b0488a08c92a6e8d749d3',1,'peerUserHashCachemgr(StoreEntry *sentry):&#160;peer_userhash.cc'],['../peer__userhash_8cc.html#ad90093564dcb6ecd500dfcef448ee87e',1,'peerUserHashCachemgr:&#160;peer_userhash.cc']]],
