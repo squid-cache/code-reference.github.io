@@ -97,12 +97,14 @@ $(document).ready(function(){initNavTree('fqdncache_8h.html',''); initResizable(
   <div class="headertitle"><div class="title">fqdncache.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ip_2Address_8h_source.html">ip/Address.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dns_2forward_8h_source.html">dns/forward.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ip_2forward_8h_source.html">ip/forward.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sbuf_2forward_8h_source.html">sbuf/forward.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="store_2forward_8h_source.html">store/forward.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for fqdncache.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="fqdncache_8h__incl.svg" width="579" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="fqdncache_8h__incl.svg" width="380" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -120,16 +122,16 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ab5f0b4ea3ca17447c5009d819228c54a" id="r_ab5f0b4ea3ca17447c5009d819228c54a"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fqdncache_8h.html#ab5f0b4ea3ca17447c5009d819228c54a">FQDNH</a>(const char *, const <a class="el" href="classDns_1_1LookupDetails.html">Dns::LookupDetails</a> &amp;details, void *)</td></tr>
-<tr class="separator:ab5f0b4ea3ca17447c5009d819228c54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a013a6876b01cf22cf67e1c15fa0deaea" id="r_a013a6876b01cf22cf67e1c15fa0deaea"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fqdncache_8h.html#a013a6876b01cf22cf67e1c15fa0deaea">FQDNH</a> = void(const char *, const <a class="el" href="classDns_1_1LookupDetails.html">Dns::LookupDetails</a> &amp;, void *)</td></tr>
+<tr class="separator:a013a6876b01cf22cf67e1c15fa0deaea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga3948117c2b5730028c5cbd3330353e5c" id="r_ga3948117c2b5730028c5cbd3330353e5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FQDNCacheAPI.html#ga3948117c2b5730028c5cbd3330353e5c">fqdncache_init</a> (void)</td></tr>
+<tr class="memitem:ga3948117c2b5730028c5cbd3330353e5c" id="r_ga3948117c2b5730028c5cbd3330353e5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FQDNCacheAPI.html#ga3948117c2b5730028c5cbd3330353e5c">fqdncache_init</a> ()</td></tr>
 <tr class="separator:ga3948117c2b5730028c5cbd3330353e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8ead58ba4be7538229ef678193097fce" id="r_ga8ead58ba4be7538229ef678193097fce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FQDNCacheInternal.html#ga8ead58ba4be7538229ef678193097fce">fqdnStats</a> (<a class="el" href="classStoreEntry.html">StoreEntry</a> *)</td></tr>
 <tr class="separator:ga8ead58ba4be7538229ef678193097fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad9c6f92e801f01ff8fa314a97af14690" id="r_gad9c6f92e801f01ff8fa314a97af14690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FQDNCacheAPI.html#gad9c6f92e801f01ff8fa314a97af14690">fqdncache_restart</a> (void)</td></tr>
+<tr class="memitem:gad9c6f92e801f01ff8fa314a97af14690" id="r_gad9c6f92e801f01ff8fa314a97af14690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FQDNCacheAPI.html#gad9c6f92e801f01ff8fa314a97af14690">fqdncache_restart</a> ()</td></tr>
 <tr class="separator:gad9c6f92e801f01ff8fa314a97af14690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4af78ee808c6163ab1980387ac6066d6" id="r_ga4af78ee808c6163ab1980387ac6066d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FQDNCacheAPI.html#ga4af78ee808c6163ab1980387ac6066d6">fqdncache_purgelru</a> (void *)</td></tr>
 <tr class="separator:ga4af78ee808c6163ab1980387ac6066d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,7 +139,7 @@ Functions</h2></td></tr>
 <tr class="separator:a22774f484e90bd1d10b744e89d7f3757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8075670505bd7c7ff30bbeaa0d835c4b" id="r_ga8075670505bd7c7ff30bbeaa0d835c4b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FQDNCacheAPI.html#ga8075670505bd7c7ff30bbeaa0d835c4b">fqdncache_gethostbyaddr</a> (const <a class="el" href="classIp_1_1Address.html">Ip::Address</a> &amp;, <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> flags)</td></tr>
 <tr class="separator:ga8075670505bd7c7ff30bbeaa0d835c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac8ec26790231e62d26e032e56eb0e67e" id="r_gac8ec26790231e62d26e032e56eb0e67e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FQDNCacheAPI.html#gac8ec26790231e62d26e032e56eb0e67e">fqdncache_nbgethostbyaddr</a> (const <a class="el" href="classIp_1_1Address.html">Ip::Address</a> &amp;, <a class="el" href="fqdncache_8h.html#ab5f0b4ea3ca17447c5009d819228c54a">FQDNH</a> *, void *)</td></tr>
+<tr class="memitem:gac8ec26790231e62d26e032e56eb0e67e" id="r_gac8ec26790231e62d26e032e56eb0e67e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FQDNCacheAPI.html#gac8ec26790231e62d26e032e56eb0e67e">fqdncache_nbgethostbyaddr</a> (const <a class="el" href="classIp_1_1Address.html">Ip::Address</a> &amp;, <a class="el" href="fqdncache_8h.html#a013a6876b01cf22cf67e1c15fa0deaea">FQDNH</a> *, void *)</td></tr>
 <tr class="separator:gac8ec26790231e62d26e032e56eb0e67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -147,19 +149,19 @@ Variables</h2></td></tr>
 <tr class="separator:a2cd038103702e02a3dbb5f4c55fe1302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="ab5f0b4ea3ca17447c5009d819228c54a" name="ab5f0b4ea3ca17447c5009d819228c54a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5f0b4ea3ca17447c5009d819228c54a">&#9670;&#160;</a></span>FQDNH</h2>
+<a id="a013a6876b01cf22cf67e1c15fa0deaea" name="a013a6876b01cf22cf67e1c15fa0deaea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a013a6876b01cf22cf67e1c15fa0deaea">&#9670;&#160;</a></span>FQDNH</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void FQDNH(const char *, const <a class="el" href="classDns_1_1LookupDetails.html">Dns::LookupDetails</a> &amp;details, void *)</td>
+          <td class="memname">using <a class="el" href="fqdncache_8h.html#a013a6876b01cf22cf67e1c15fa0deaea">FQDNH</a> =  void (const char *, const <a class="el" href="classDns_1_1LookupDetails.html">Dns::LookupDetails</a> &amp;, void *)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fqdncache_8h_source.html#l00026">26</a> of file <a class="el" href="fqdncache_8h_source.html">fqdncache.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fqdncache_8h_source.html#l00025">25</a> of file <a class="el" href="fqdncache_8h_source.html">fqdncache.h</a>.</p>
 
 </div>
 </div>
