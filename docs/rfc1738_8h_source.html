@@ -108,44 +108,37 @@ $(document).ready(function(){initNavTree('rfc1738_8h_source.html',''); initResiz
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef SQUID_INCLUDE_RFC1738_H</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define SQUID_INCLUDE_RFC1738_H</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/* Encoder rfc1738_do_escape flag values. */</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#a3329e9e688023a463db96baae9095246">   17</a></span><span class="preprocessor">#define RFC1738_ESCAPE_CTRLS       1</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#a30cf8f80c739762c2741539ae4595918">   18</a></span><span class="preprocessor">#define RFC1738_ESCAPE_UNSAFE      2</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#aaecf2c825c62dabcc2ae86f09f219eff">   19</a></span><span class="preprocessor">#define RFC1738_ESCAPE_RESERVED    4</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#afa42fcc7f195983892489566724ffc9f">   20</a></span><span class="preprocessor">#define RFC1738_ESCAPE_ALL         (RFC1738_ESCAPE_UNSAFE|RFC1738_ESCAPE_RESERVED|RFC1738_ESCAPE_CTRLS)</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// exclusions</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#a613978ce289223fe435998397dd5891d">   22</a></span><span class="preprocessor">#define RFC1738_ESCAPE_NOSPACE     128</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#ae13e741d9e72450384e20300eeba78a0">   23</a></span><span class="preprocessor">#define RFC1738_ESCAPE_NOPERCENT   256</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// Backward compatibility</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#aa693a78eb62509fddfd2a9da6634c0f8">   25</a></span><span class="preprocessor">#define RFC1738_ESCAPE_UNESCAPED   (RFC1738_ESCAPE_UNSAFE|RFC1738_ESCAPE_CTRLS|RFC1738_ESCAPE_NOPERCENT)</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">extern</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="rfc1738_8h.html#a99ceb7c3adc96b1424f47ce962e792c1">rfc1738_do_escape</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *url, <span class="keywordtype">int</span> flags);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">/* Old API functions */</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">/* Default RFC 1738 escaping. Escape all UNSAFE characters and binary CTRL codes */</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#aabddaed3b091481a15a392ade729705c">   52</a></span><span class="preprocessor">#define rfc1738_escape(x)  rfc1738_do_escape(x, RFC1738_ESCAPE_UNSAFE|RFC1738_ESCAPE_CTRLS)</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">/* Escape a partial URL. Encoding every binary code, unsafe or reserved character. */</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#a9c2cd9f65c20c3ce38f7467da4aa0dfe">   55</a></span><span class="preprocessor">#define rfc1738_escape_part(x)  rfc1738_do_escape(x, RFC1738_ESCAPE_ALL)</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">/* Encoder rfc1738_do_escape flag values. */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#a3329e9e688023a463db96baae9095246">   13</a></span><span class="preprocessor">#define RFC1738_ESCAPE_CTRLS       1</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#a30cf8f80c739762c2741539ae4595918">   14</a></span><span class="preprocessor">#define RFC1738_ESCAPE_UNSAFE      2</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#aaecf2c825c62dabcc2ae86f09f219eff">   15</a></span><span class="preprocessor">#define RFC1738_ESCAPE_RESERVED    4</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#afa42fcc7f195983892489566724ffc9f">   16</a></span><span class="preprocessor">#define RFC1738_ESCAPE_ALL         (RFC1738_ESCAPE_UNSAFE|RFC1738_ESCAPE_RESERVED|RFC1738_ESCAPE_CTRLS)</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// exclusions</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#a613978ce289223fe435998397dd5891d">   18</a></span><span class="preprocessor">#define RFC1738_ESCAPE_NOSPACE     128</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#ae13e741d9e72450384e20300eeba78a0">   19</a></span><span class="preprocessor">#define RFC1738_ESCAPE_NOPERCENT   256</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// Backward compatibility</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#aa693a78eb62509fddfd2a9da6634c0f8">   21</a></span><span class="preprocessor">#define RFC1738_ESCAPE_UNESCAPED   (RFC1738_ESCAPE_UNSAFE|RFC1738_ESCAPE_CTRLS|RFC1738_ESCAPE_NOPERCENT)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">extern</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="rfc1738_8h.html#a99ceb7c3adc96b1424f47ce962e792c1">rfc1738_do_escape</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *url, <span class="keywordtype">int</span> flags);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">/* Old API functions */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">/* Default RFC 1738 escaping. Escape all UNSAFE characters and binary CTRL codes */</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#aabddaed3b091481a15a392ade729705c">   48</a></span><span class="preprocessor">#define rfc1738_escape(x)  rfc1738_do_escape(x, RFC1738_ESCAPE_UNSAFE|RFC1738_ESCAPE_CTRLS)</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">/* Escape a partial URL. Encoding every binary code, unsafe or reserved character. */</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#a9c2cd9f65c20c3ce38f7467da4aa0dfe">   51</a></span><span class="preprocessor">#define rfc1738_escape_part(x)  rfc1738_do_escape(x, RFC1738_ESCAPE_ALL)</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">/* Escape a URL. Encoding every unsafe characters but skipping reserved and already-encoded bytes.</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"> * Suitable for safely encoding an absolute URL which may be encoded but is not trusted. */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#aac1210d2cdbff9d38d2dff20cd8e2a7e">   55</a></span><span class="preprocessor">#define rfc1738_escape_unescaped(x)  rfc1738_do_escape(x, RFC1738_ESCAPE_UNSAFE|RFC1738_ESCAPE_CTRLS|RFC1738_ESCAPE_NOPERCENT)</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">/* Escape a URL. Encoding every unsafe characters but skipping reserved and already-encoded bytes.</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment"> * Suitable for safely encoding an absolute URL which may be encoded but is not trusted. */</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="rfc1738_8h.html#aac1210d2cdbff9d38d2dff20cd8e2a7e">   59</a></span><span class="preprocessor">#define rfc1738_escape_unescaped(x)  rfc1738_do_escape(x, RFC1738_ESCAPE_UNSAFE|RFC1738_ESCAPE_CTRLS|RFC1738_ESCAPE_NOPERCENT)</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="rfc1738_8h.html#ab7318649b87997ddee197e269bf76a7c">rfc1738_unescape</a>(<span class="keywordtype">char</span> *url);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span><span class="comment">/* SQUID_INCLUDE_RFC1738_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="ttc" id="arfc1738_8h_html_a99ceb7c3adc96b1424f47ce962e792c1"><div class="ttname"><a href="rfc1738_8h.html#a99ceb7c3adc96b1424f47ce962e792c1">rfc1738_do_escape</a></div><div class="ttdeci">char * rfc1738_do_escape(const char *url, int flags)</div><div class="ttdef"><b>Definition</b> <a href="rfc1738_8c_source.html#l00056">rfc1738.c:56</a></div></div>
-<div class="ttc" id="arfc1738_8h_html_ab7318649b87997ddee197e269bf76a7c"><div class="ttname"><a href="rfc1738_8h.html#ab7318649b87997ddee197e269bf76a7c">rfc1738_unescape</a></div><div class="ttdeci">void rfc1738_unescape(char *url)</div><div class="ttdef"><b>Definition</b> <a href="rfc1738_8c_source.html#l00146">rfc1738.c:146</a></div></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="rfc1738_8h.html#ab7318649b87997ddee197e269bf76a7c">rfc1738_unescape</a>(<span class="keywordtype">char</span> *url);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">/* SQUID_INCLUDE_RFC1738_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="ttc" id="arfc1738_8h_html_a99ceb7c3adc96b1424f47ce962e792c1"><div class="ttname"><a href="rfc1738_8h.html#a99ceb7c3adc96b1424f47ce962e792c1">rfc1738_do_escape</a></div><div class="ttdeci">char * rfc1738_do_escape(const char *url, int flags)</div><div class="ttdef"><b>Definition</b> <a href="rfc1738_8cc_source.html#l00056">rfc1738.cc:56</a></div></div>
+<div class="ttc" id="arfc1738_8h_html_ab7318649b87997ddee197e269bf76a7c"><div class="ttname"><a href="rfc1738_8h.html#ab7318649b87997ddee197e269bf76a7c">rfc1738_unescape</a></div><div class="ttdeci">void rfc1738_unescape(char *url)</div><div class="ttdef"><b>Definition</b> <a href="rfc1738_8cc_source.html#l00146">rfc1738.cc:146</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

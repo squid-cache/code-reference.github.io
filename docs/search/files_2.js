@@ -2,7 +2,7 @@ var searchData=
 [
   ['bandwidthbucket_2ecc_0',['BandwidthBucket.cc',['../BandwidthBucket_8cc.html',1,'']]],
   ['bandwidthbucket_2eh_1',['BandwidthBucket.h',['../BandwidthBucket_8h.html',1,'']]],
-  ['base64_2ec_2',['base64.c',['../base64_8c.html',1,'']]],
+  ['base64_2ecc_2',['base64.cc',['../base64_8cc.html',1,'']]],
   ['base64_2eh_3',['base64.h',['../base64_8h.html',1,'']]],
   ['basic_5fgetpwnam_5fauth_2ecc_4',['basic_getpwnam_auth.cc',['../basic__getpwnam__auth_8cc.html',1,'']]],
   ['basic_5fldap_5fauth_2ecc_5',['basic_ldap_auth.cc',['../basic__ldap__auth_8cc.html',1,'']]],

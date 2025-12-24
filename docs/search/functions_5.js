@@ -15,7 +15,7 @@ var searchData=
   ['enablemacros_12',['EnableMacros',['../classConfigParser.html#aa5a27f954c8dc8a21b23d474b6b08544',1,'ConfigParser']]],
   ['encapsulatehead_13',['encapsulateHead',['../classAdaptation_1_1Icap_1_1ModXact.html#ade35d3d6fc5861207cb02ff8783e86b5',1,'Adaptation::Icap::ModXact']]],
   ['encode_14',['encode',['../classAnyP_1_1Uri.html#af4f1d57dbbd057b7f4eae15198d16096',1,'AnyP::Uri::Encode()'],['../classEui_1_1Eui48.html#ab381c693dce69d956cfedf6ee746f651',1,'Eui::Eui48::encode()'],['../classEui_1_1Eui64.html#ae23d9670e62b6f0c7746b0283949a698',1,'Eui::Eui64::encode()']]],
-  ['encode_5fraw_15',['encode_raw',['../base64_8c.html#aff5459fa12797b8011523bb6f0a62654',1,'base64.c']]],
+  ['encode_5fraw_15',['encode_raw',['../base64_8cc.html#aff5459fa12797b8011523bb6f0a62654',1,'base64.cc']]],
   ['encrypt_16',['encrypt',['../encrypt_8c.html#a3fff6d5c9327212d5592b1f117eed66d',1,'encrypt.c']]],
   ['encryptedcertificates_17',['encryptedCertificates',['../classSsl_1_1ServerBio.html#aa6e8012a4439b426555d4603fe7a037d',1,'Ssl::ServerBio']]],
   ['encryptoranswer_18',['EncryptorAnswer',['../classSecurity_1_1EncryptorAnswer.html#a0afc44821ec2a05c43343d9e39c74fc4',1,'Security::EncryptorAnswer']]],

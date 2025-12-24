@@ -329,7 +329,7 @@ var searchData=
   ['fresh_326',['fresh',['../classAdaptation_1_1Icap_1_1Options.html#a30b2e4257c4d7a332d834778e4361235',1,'Adaptation::Icap::Options']]],
   ['freshestreply_327',['freshestReply',['../classMemObject.html#a89697947bc40cdbe591b9e26951b59ba',1,'MemObject']]],
   ['fromerrno_328',['FromErrno',['../classLogTagsErrors.html#ac7e39018644570e0964c3fe9b74dc0f0',1,'LogTagsErrors']]],
-  ['fromhex_329',['fromhex',['../rfc1738_8c.html#aff612bcedd06da626af6c1da9b103263',1,'rfc1738.c']]],
+  ['fromhex_329',['fromhex',['../rfc1738_8cc.html#aff612bcedd06da626af6c1da9b103263',1,'rfc1738.cc']]],
   ['fromhost_330',['fromHost',['../classIp_1_1Address.html#a6eab37ec7f48b2d9461f38ab74488f5d',1,'Ip::Address']]],
   ['fromnanoseconds_331',['FromNanoseconds',['../cache__cf_8cc.html#aec0b19f4cd78f4c5c7b46a0ac67ba488',1,'cache_cf.cc']]],
   ['fromurl_332',['FromUrl',['../classHttpRequest.html#ad433674df1fe206d190f89b520d59621',1,'HttpRequest']]],
