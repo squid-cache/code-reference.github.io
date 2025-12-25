@@ -371,7 +371,7 @@ var searchData=
   ['certs_368',['certs',['../classSecurity_1_1PeerOptions.html#adc1be6f9e203c397460b0e18ecf5374e',1,'Security::PeerOptions']]],
   ['certsdownloads_369',['certsDownloads',['../classSecurity_1_1PeerConnector.html#ac6e8b2162ab6f1985b92c2cfa04ac4c1',1,'Security::PeerConnector']]],
   ['certselfsigned_370',['certSelfSigned',['../ssl_2ErrorDetail_8cc.html#ab4ad2d6a44223bb872e491b4a1697364',1,'ErrorDetail.cc']]],
-  ['certsignalgorithm_371',['certsignalgorithm',['../group__SslCrtdSslAPI.html#gaf27f0494263606b3fde9cbd7a686ec32',1,'Ssl::certSignAlgorithm(int sg)'],['../group__SslCrtdSslAPI.html#ga87ed0e1c2b78fa6575e2c0c16cff01ab',1,'Ssl::CertSignAlgorithm']]],
+  ['certsignalgorithm_371',['certsignalgorithm',['../group__SslCrtdSslAPI.html#ga87ed0e1c2b78fa6575e2c0c16cff01ab',1,'Ssl::CertSignAlgorithm'],['../group__SslCrtdSslAPI.html#gaf27f0494263606b3fde9cbd7a686ec32',1,'Ssl::certSignAlgorithm(int sg)']]],
   ['certsignalgorithmid_372',['certSignAlgorithmId',['../group__SslCrtdSslAPI.html#ga18f99b7d1fe0e6ad947a91ddff574beb',1,'Ssl']]],
   ['certsignalgorithmstr_373',['CertSignAlgorithmStr',['../group__SslCrtdSslAPI.html#gaf43e89bb9a8f7d06ee0703b43f6138ac',1,'Ssl']]],
   ['certsignhash_374',['certSignHash',['../classSquidConfig.html#a8096504da5a904ad2bc9b0a80836140d',1,'SquidConfig']]],

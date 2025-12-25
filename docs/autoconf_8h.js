@@ -158,6 +158,7 @@ var autoconf_8h =
     [ "HAVE_LIBNETFILTER_CONNTRACK_LIBNETFILTER_CONNTRACK_H", "autoconf_8h.html#a46a9c48988522852368dcd0e502307ce", null ],
     [ "HAVE_LIBNETFILTER_CONNTRACK_LIBNETFILTER_CONNTRACK_TCP_H", "autoconf_8h.html#a2851f5eb4ee996e26c39d4620780079b", null ],
     [ "HAVE_LIBNETTLE", "autoconf_8h.html#a9b8699bf594aa9af9b67e91d79ea2a4c", null ],
+    [ "HAVE_LIBPAM", "autoconf_8h.html#a4e9ec57e57a67554d99f1cc91b96af8e", null ],
     [ "HAVE_LIBSASL", "autoconf_8h.html#aa1c276f0b170ef30718ee6b6cff4a3c7", null ],
     [ "HAVE_LIBSSL_OPENSSL_INIT_SSL", "autoconf_8h.html#a6eda8ef124c2c2b396f4fda2b6fcbd5f", null ],
     [ "HAVE_LIBSSL_SSL_CIPHER_FIND", "autoconf_8h.html#a604a7fdc84abb8f212ca5bc2b1a48d6d", null ],

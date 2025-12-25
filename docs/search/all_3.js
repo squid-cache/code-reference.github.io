@@ -261,7 +261,7 @@ var searchData=
   ['bumpbump_258',['bumpBump',['../group__ServerProtocolSSLAPI.html#ggae6b7865118af149a83cc4569060c1af9ab474c808e5ea2e0c4a475c73bef1d399',1,'Ssl']]],
   ['bumpclientfirst_259',['bumpClientFirst',['../group__ServerProtocolSSLAPI.html#ggae6b7865118af149a83cc4569060c1af9a63dd03e830a0746569e5635a3dfa28dc',1,'Ssl']]],
   ['bumpend_260',['bumpEnd',['../group__ServerProtocolSSLAPI.html#ggae6b7865118af149a83cc4569060c1af9a06ff25b96e1b9974bda38b9fb3f8bd80',1,'Ssl']]],
-  ['bumpmode_261',['bumpmode',['../classSsl_1_1ServerBio.html#aad66eeeb42aed0f0d374923650cb5280',1,'Ssl::ServerBio::bumpMode()'],['../classAccessLogEntry_1_1SslDetails.html#a950d067714ceddb9129ac1cc7bb6d5ab',1,'AccessLogEntry::SslDetails::bumpMode'],['../group__ServerProtocolSSLAPI.html#gae6b7865118af149a83cc4569060c1af9',1,'Ssl::BumpMode'],['../group__ServerProtocolSSLAPI.html#ga326212e49d2774b730d08ae598a11e30',1,'Ssl::bumpMode(int bm)']]],
+  ['bumpmode_261',['bumpmode',['../classSsl_1_1ServerBio.html#aad66eeeb42aed0f0d374923650cb5280',1,'Ssl::ServerBio::bumpMode()'],['../classAccessLogEntry_1_1SslDetails.html#a950d067714ceddb9129ac1cc7bb6d5ab',1,'AccessLogEntry::SslDetails::bumpMode'],['../group__ServerProtocolSSLAPI.html#ga326212e49d2774b730d08ae598a11e30',1,'Ssl::bumpMode(int bm)'],['../group__ServerProtocolSSLAPI.html#gae6b7865118af149a83cc4569060c1af9',1,'Ssl::BumpMode']]],
   ['bumpmode_5f_262',['bumpMode_',['../classSsl_1_1ServerBio.html#a6d60807c75eb1ec0a30073372f6a2555',1,'Ssl::ServerBio']]],
   ['bumpmodestr_263',['BumpModeStr',['../group__ServerProtocolSSLAPI.html#ga2fe78ec4690c11e576ca1f4ef7a152b5',1,'Ssl']]],
   ['bumpnone_264',['bumpNone',['../group__ServerProtocolSSLAPI.html#ggae6b7865118af149a83cc4569060c1af9a6ff031aa135572a0f8f968b29fda9f72',1,'Ssl']]],
