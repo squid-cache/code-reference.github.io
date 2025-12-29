@@ -46,7 +46,7 @@ var searchData=
   ['dbslotlimit_43',['dbSlotLimit',['../classRock_1_1Rebuild.html#a4d5f818ee7354d1c98433c418aca53a1',1,'Rock::Rebuild']]],
   ['dbslotsize_44',['dbSlotSize',['../classRock_1_1Rebuild.html#a62b15273e19fff0da9413b6d5a618147',1,'Rock::Rebuild']]],
   ['ddomain_45',['ddomain',['../structmain__args.html#a3319b9a292f97e115996e90fd350feba',1,'main_args']]],
-  ['dead_5fmsg_46',['dead_msg',['../tools_8cc.html#a70f753e1b684b3b9a4cefbc91b87d323',1,'DEAD_MSG:&#160;tools.cc'],['../tools_8cc.html#a5211acae55fc0688663f278e5adb4fd2',1,'dead_msg(void):&#160;tools.cc']]],
+  ['dead_5fmsg_46',['dead_msg',['../tools_8cc.html#a5211acae55fc0688663f278e5adb4fd2',1,'dead_msg(void):&#160;tools.cc'],['../tools_8cc.html#a70f753e1b684b3b9a4cefbc91b87d323',1,'DEAD_MSG:&#160;tools.cc']]],
   ['deadline_47',['deadline',['../classping__data.html#a5d85e5da5cba0d2b5a0081ceb6be9dff',1,'ping_data']]],
   ['deadline_5f_48',['deadline_',['../classComm_1_1ConnOpener.html#a72d0784e3bc49ee86484155428201844',1,'Comm::ConnOpener']]],
   ['deadpeer_49',['deadPeer',['../classSquidConfig.html#a1bd0123600a9c5ad8828e0fb0747d4c3',1,'SquidConfig']]],

@@ -1,8 +1,5 @@
 var NAVTREEINDEX81 =
 {
-"classHttpHeader.html#af87838abd8fbd3fa454ccf7abf16ebed":[9,0,341,40],
-"classHttpHeader.html#afe9724c0468f38fffbcdc2a694ddb47d":[9,0,341,13],
-"classHttpHeaderEntry.html":[9,0,342],
 "classHttpHeaderEntry.html#a025921b5978511f5aada21dab8a3c0de":[9,0,342,7],
 "classHttpHeaderEntry.html#a050d4ae5ab8ecf5cc8619c4e6b5682a5":[9,0,342,8],
 "classHttpHeaderEntry.html#a4dd4adacea1e2c2d0f22144272016722":[9,0,342,3],
@@ -249,5 +246,8 @@ var NAVTREEINDEX81 =
 "classHttpRequest.html#afcb0c1d278e61a1379032790c427788d":[9,0,347,81],
 "classHttpRequestMethod.html":[9,0,348],
 "classHttpRequestMethod.html#a1f2fdc9de654660793489d03d7e7ce84":[9,0,348,0],
-"classHttpRequestMethod.html#a294a18165164ba2ee6d0a7fba7d48f92":[9,0,348,15]
+"classHttpRequestMethod.html#a294a18165164ba2ee6d0a7fba7d48f92":[9,0,348,15],
+"classHttpRequestMethod.html#a4851912268374a062e4498b383312f93":[9,0,348,12],
+"classHttpRequestMethod.html#a4efa328d87cb3bb4edb7468ff296c9fd":[9,0,348,18],
+"classHttpRequestMethod.html#a62e53a6953b813370bade644f30927b3":[9,0,348,11]
 };

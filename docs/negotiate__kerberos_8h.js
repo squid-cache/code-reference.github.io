@@ -2,7 +2,6 @@ var negotiate__kerberos_8h =
 [
     [ "gss_nt_service_name", "negotiate__kerberos_8h.html#a199e51a8ee4a7f588f40eb3bc42dc0bd", null ],
     [ "GSSKRB_APPLE_DEPRECATED", "negotiate__kerberos_8h.html#a6383924a2a064d62ac5b7ef0989ff73e", null ],
-    [ "HAVE_PAC_SUPPORT", "negotiate__kerberos_8h.html#a281b88200a9c6f2763f19259d9acc835", null ],
     [ "MAX_AUTHTOKEN_LEN", "negotiate__kerberos_8h.html#a34755058d05640cf1ccaf253d3f4ed1f", null ],
     [ "PROGRAM", "negotiate__kerberos_8h.html#a906afbfd1ce81a146b72d1ce928e7abb", null ],
     [ "SQUID_KERB_AUTH_VERSION", "negotiate__kerberos_8h.html#a60d296e6b9c800405ac01e81678aad73", null ],

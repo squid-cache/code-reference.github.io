@@ -213,36 +213,33 @@ $(document).ready(function(){initNavTree('negotiate__kerberos_8h_source.html',''
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keywordtype">char</span> *<a class="code hl_function" href="negotiate__kerberos_8h.html#a30cedf08665b9882041b9fbf64225c2f">gethost_name</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#if (HAVE_GSSKRB5_EXTRACT_AUTHZ_DATA_FROM_SEC_CONTEXT || HAVE_GSS_MAP_NAME_TO_ANY) &amp;&amp; HAVE_KRB5_PAC</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#define HAVE_PAC_SUPPORT 1</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">#define MAX_PAC_GROUP_SIZE (1024*98)</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    uint16_t length;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    uint16_t maxlength;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    uint32_t pointer;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>} RPC_UNICODE_STRING;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keywordtype">void</span> align(<span class="keywordtype">int</span> n);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keywordtype">void</span> getustr(RPC_UNICODE_STRING *<span class="keywordtype">string</span>);</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="keywordtype">char</span> **getgids(<span class="keywordtype">char</span> **Rids, uint32_t GroupIds, uint32_t GroupCount);</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keywordtype">char</span> *getdomaingids(<span class="keywordtype">char</span> *ad_groups, uint32_t DomainLogonId, <span class="keywordtype">char</span> **Rids, uint32_t  GroupCount);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keywordtype">char</span> *getextrasids(<span class="keywordtype">char</span> *ad_groups, uint32_t ExtraSids, uint32_t SidCount);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>uint64_t get6byt_be(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>uint32_t get4byt(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>uint16_t get2byt(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>uint8_t get1byt(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keywordtype">char</span> *xstrcpy( <span class="keywordtype">char</span> *src, <span class="keyword">const</span> <span class="keywordtype">char</span>*dst);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keywordtype">char</span> *xstrcat( <span class="keywordtype">char</span> *src, <span class="keyword">const</span> <span class="keywordtype">char</span>*dst);</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keywordtype">int</span> checkustr(RPC_UNICODE_STRING *<span class="keywordtype">string</span>);</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keywordtype">char</span> *get_ad_groups(<span class="keywordtype">char</span> *ad_groups, krb5_context context, krb5_pac pac);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="negotiate__kerberos_8h.html#a281b88200a9c6f2763f19259d9acc835">  152</a></span><span class="preprocessor">#define HAVE_PAC_SUPPORT 0</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="negotiate__kerberos_8h.html#aab519e50305acf427775bcec4ee31301">  154</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="negotiate__kerberos_8h.html#aab519e50305acf427775bcec4ee31301">check_k5_err</a>(krb5_context context, <span class="keyword">const</span> <span class="keywordtype">char</span> *msg, krb5_error_code code);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="preprocessor">#endif </span><span class="comment">/* SQUID_SRC_AUTH_NEGOTIATE_KERBEROS_NEGOTIATE_KERBEROS_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#if HAVE_KRB5_PAC_SUPPORT</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#define MAX_PAC_GROUP_SIZE (1024*98)</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    uint16_t length;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    uint16_t maxlength;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    uint32_t pointer;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>} RPC_UNICODE_STRING;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="keywordtype">void</span> align(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keywordtype">void</span> getustr(RPC_UNICODE_STRING *<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keywordtype">char</span> **getgids(<span class="keywordtype">char</span> **Rids, uint32_t GroupIds, uint32_t GroupCount);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keywordtype">char</span> *getdomaingids(<span class="keywordtype">char</span> *ad_groups, uint32_t DomainLogonId, <span class="keywordtype">char</span> **Rids, uint32_t  GroupCount);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="keywordtype">char</span> *getextrasids(<span class="keywordtype">char</span> *ad_groups, uint32_t ExtraSids, uint32_t SidCount);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>uint64_t get6byt_be(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>uint32_t get4byt(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>uint16_t get2byt(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>uint8_t get1byt(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="keywordtype">char</span> *xstrcpy( <span class="keywordtype">char</span> *src, <span class="keyword">const</span> <span class="keywordtype">char</span>*dst);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="keywordtype">char</span> *xstrcat( <span class="keywordtype">char</span> *src, <span class="keyword">const</span> <span class="keywordtype">char</span>*dst);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keywordtype">int</span> checkustr(RPC_UNICODE_STRING *<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keywordtype">char</span> *get_ad_groups(<span class="keywordtype">char</span> *ad_groups, krb5_context context, krb5_pac pac);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">#endif </span><span class="comment">/* HAVE_KRB5_PAC_SUPPORT */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="negotiate__kerberos_8h.html#aab519e50305acf427775bcec4ee31301">  151</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="negotiate__kerberos_8h.html#aab519e50305acf427775bcec4ee31301">check_k5_err</a>(krb5_context context, <span class="keyword">const</span> <span class="keywordtype">char</span> *msg, krb5_error_code code);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="preprocessor">#endif </span><span class="comment">/* SQUID_SRC_AUTH_NEGOTIATE_KERBEROS_NEGOTIATE_KERBEROS_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
 <div class="ttc" id="aacl_2external_2kerberos__ldap__group_2support_8h_html_a32f789db0d4418e80f04e30e089b1265"><div class="ttname"><a href="acl_2external_2kerberos__ldap__group_2support_8h.html#a32f789db0d4418e80f04e30e089b1265">log</a></div><div class="ttdeci">void log(char *format,...)</div></div>
 <div class="ttc" id="abase64_8h_html"><div class="ttname"><a href="base64_8h.html">base64.h</a></div></div>
 <div class="ttc" id="akrb5_8h_html"><div class="ttname"><a href="krb5_8h.html">krb5.h</a></div></div>

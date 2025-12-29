@@ -139,7 +139,7 @@ $(document).ready(function(){initNavTree('negotiate__kerberos__pac_8cc_source.ht
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="negotiate__kerberos_8h.html">negotiate_kerberos.h</a>&quot;</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#if HAVE_GSSAPI &amp;&amp; HAVE_PAC_SUPPORT</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#if HAVE_GSSAPI &amp;&amp; HAVE_KRB5_PAC_SUPPORT</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#define LOGON_EXTRA_SIDS 0x0020</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#define LOGON_RESOURCE_GROUPS 0x0200</span></div>
@@ -747,8 +747,8 @@ $(document).ready(function(){initNavTree('negotiate__kerberos__pac_8cc_source.ht
 <div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>    krb5_free_data(context, ad_data);</div>
 <div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>}</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span> </div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span> </div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span><span class="preprocessor">#endif </span><span class="comment">/* HAVE_GSSAPI &amp;&amp; HAVE_KRB5_PAC_SUPPORT */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aModDevPoll_8cc_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="ModDevPoll_8cc_source.html#l00070">ModDevPoll.cc:70</a></div></div>
 <div class="ttc" id="aOnOff_8h_html_a51cd39c0e888d198344991083efd2ecfa3262d48df5d75e3452f0f16b313b7808"><div class="ttname"><a href="OnOff_8h.html#a51cd39c0e888d198344991083efd2ecfa3262d48df5d75e3452f0f16b313b7808">OnOff::off</a></div><div class="ttdeci">@ off</div></div>
 <div class="ttc" id="aacl_2external_2kerberos__ldap__group_2support_8h_html_a906afbfd1ce81a146b72d1ce928e7abb"><div class="ttname"><a href="acl_2external_2kerberos__ldap__group_2support_8h.html#a906afbfd1ce81a146b72d1ce928e7abb">PROGRAM</a></div><div class="ttdeci">#define PROGRAM</div><div class="ttdef"><b>Definition</b> <a href="acl_2external_2kerberos__ldap__group_2support_8h_source.html#l00169">support.h:169</a></div></div>
