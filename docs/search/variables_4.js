@@ -175,7 +175,7 @@ var searchData=
   ['done_5fhandler_172',['done_handler',['../classsquidaio__ctrl__t.html#a3efabe2c2df54b8b7ea882520ec04393',1,'squidaio_ctrl_t']]],
   ['done_5fhandler_5fdata_173',['done_handler_data',['../classsquidaio__ctrl__t.html#a86d516d1b9926936cfa485e0c93d5a8e',1,'squidaio_ctrl_t']]],
   ['done_5fqueue_174',['done_queue',['../aiops__win32_8cc.html#a757654fa9293810165e68a0cbd5b159f',1,'done_queue:&#160;aiops_win32.cc'],['../aiops_8cc.html#a757654fa9293810165e68a0cbd5b159f',1,'done_queue:&#160;aiops.cc']]],
-  ['done_5frequests_175',['done_requests',['../aiops__win32_8cc.html#a681faa3084efcc2cf006db31229c9de9',1,'done_requests:&#160;aiops_win32.cc'],['../aiops_8cc.html#a4c479f6cddfc4d038272104ce07a2fe7',1,'done_requests:&#160;aiops.cc']]],
+  ['done_5frequests_175',['done_requests',['../aiops__win32_8cc.html#a4c479f6cddfc4d038272104ce07a2fe7',1,'done_requests:&#160;aiops_win32.cc'],['../aiops_8cc.html#a681faa3084efcc2cf006db31229c9de9',1,'done_requests:&#160;aiops.cc']]],
   ['donefd_176',['DoneFD',['../classCommIO.html#aa748a903a3b0937efb678fbcf1314e55',1,'CommIO']]],
   ['donereadfd_177',['DoneReadFD',['../classCommIO.html#a7dc899e87a5c7b7e702e06781b5c6e4e',1,'CommIO']]],
   ['donesignalled_178',['DoneSignalled',['../classCommIO.html#a0ad64b7970d313dca0fdff4ab5a7cf34',1,'CommIO']]],
