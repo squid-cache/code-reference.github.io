@@ -118,9 +118,11 @@ $(document).ready(function(){initNavTree('fd_8cc_source.html',''); initResizable
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="fde_8h.html">fde.h</a>&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="globals_8h.html">globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">int</span> <a class="code hl_function" href="fd_8cc.html#a21d29fdac5797211e8a24fd2528e32bd">default_read_method</a>(<span class="keywordtype">int</span>, <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>);</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="stub__fd_8cc.html#a7e4dda497ae8cf83a9bd0ec61a87c39f">   22</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="fd_8cc.html#a21d29fdac5797211e8a24fd2528e32bd">default_read_method</a>(<span class="keywordtype">int</span>, <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">int</span> <a class="code hl_function" href="fd_8cc.html#a7a33a4bb4d0151b52746625cea50b117">default_write_method</a>(<span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#if _SQUID_WINDOWS_</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="stub__fd_8cc.html#ad5d49dce54812a79441b1f17447b8aae">   24</a></span><span class="preprocessor">#if _SQUID_WINDOWS_</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">int</span> socket_read_method(<span class="keywordtype">int</span>, <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">int</span> socket_write_method(<span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> file_read_method(<span class="keywordtype">int</span>, <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>);</div>
@@ -302,8 +304,7 @@ $(document).ready(function(){initNavTree('fd_8cc_source.html',''); initResizable
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">switch</span> (type) {</div>
-<div class="foldopen" id="foldopen00191" data-start="{" data-end="}">
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="stub__fd_8cc.html#a898a5b370b981fea572a6e6e2e92c67a">  191</a></span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="enums_8h.html#a713819d767e1ce5a30bd566e64a47433abf5ecd8edc0f2ae016a40d151045cbf1">FD_MSGHDR</a>:</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        F-&gt;<a class="code hl_function" href="classfde.html#a82de592afceb4371fd1fc7cd3c5482b2">setIo</a>(&amp;<a class="code hl_function" href="fd_8cc.html#a585347b351577ad154da6e8a0dc129da">msghdr_read_method</a>, &amp;<a class="code hl_function" href="fd_8cc.html#af333b5a96ac2584cc04bac902d538f89">msghdr_write_method</a>);</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordflow">break</span>;</div>
@@ -321,6 +322,7 @@ $(document).ready(function(){initNavTree('fd_8cc_source.html',''); initResizable
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    ++<a class="code hl_variable" href="globals_8h.html#a98f5a1948893a2c1835124c71de0b12a">Number_FD</a>;</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>}</div>
+</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keywordtype">void</span></div>
 <div class="foldopen" id="foldopen00211" data-start="{" data-end="}">
@@ -378,6 +380,7 @@ $(document).ready(function(){initNavTree('fd_8cc_source.html',''); initResizable
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    }</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>}</div>
 </div>
+</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="keywordtype">int</span></div>
 <div class="foldopen" id="foldopen00262" data-start="{" data-end="}">
@@ -385,7 +388,6 @@ $(document).ready(function(){initNavTree('fd_8cc_source.html',''); initResizable
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>{</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="globals_8h.html#a85fb5b16080caacaaf9ca40e713fccb9">Squid_MaxFD</a> - <a class="code hl_variable" href="globals_8h.html#a98f5a1948893a2c1835124c71de0b12a">Number_FD</a> - <a class="code hl_variable" href="globals_8h.html#a24061fe3ef1fd290d32ba7fc2e725207">Opening_FD</a>;</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>}</div>
-</div>
 </div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="keywordtype">int</span></div>

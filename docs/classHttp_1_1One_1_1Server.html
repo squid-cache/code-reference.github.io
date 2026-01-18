@@ -333,7 +333,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aefa3f5c9ce268c3ef38f618ccdfab405" id="r_aefa3f5c9ce268c3ef38f618ccdfab405"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#aefa3f5c9ce268c3ef38f618ccdfab405">write</a> (<a class="el" href="classMemBuf.html">MemBuf</a> *mb)</td></tr>
 <tr class="memdesc:aefa3f5c9ce268c3ef38f618ccdfab405"><td class="mdescLeft">&#160;</td><td class="mdescRight">schedule some data for a <a class="el" href="namespaceComm.html#a96a9518a6c2c77d282a79f406e0252a9">Comm::Write()</a>  <br /></td></tr>
 <tr class="separator:aefa3f5c9ce268c3ef38f618ccdfab405"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ec8ee6471bb0d81b66c3ee5d94341f7" id="r_a3ec8ee6471bb0d81b66c3ee5d94341f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a3ec8ee6471bb0d81b66c3ee5d94341f7">write</a> (char *buf, <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> len)</td></tr>
+<tr class="memitem:a3ec8ee6471bb0d81b66c3ee5d94341f7" id="r_a3ec8ee6471bb0d81b66c3ee5d94341f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a3ec8ee6471bb0d81b66c3ee5d94341f7">write</a> (char *buf, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> len)</td></tr>
 <tr class="memdesc:a3ec8ee6471bb0d81b66c3ee5d94341f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">schedule some data for a <a class="el" href="namespaceComm.html#a96a9518a6c2c77d282a79f406e0252a9">Comm::Write()</a>  <br /></td></tr>
 <tr class="separator:a3ec8ee6471bb0d81b66c3ee5d94341f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9bb5e6586825daf184b04b1e60339ea" id="r_aa9bb5e6586825daf184b04b1e60339ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#aa9bb5e6586825daf184b04b1e60339ea">writing</a> () const</td></tr>
@@ -465,7 +465,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7868f6c83620a3355e3f53e6fbe87daa" id="r_a7868f6c83620a3355e3f53e6fbe87daa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHttp_1_1One_1_1Server.html#a7868f6c83620a3355e3f53e6fbe87daa">writeControlMsgAndCall</a> (<a class="el" href="classHttpReply.html">HttpReply</a> *rep, <a class="el" href="classAsyncCall.html#a57c571a47666d10c316689dc5d09e170">AsyncCall::Pointer</a> &amp;call) override</td></tr>
 <tr class="memdesc:a7868f6c83620a3355e3f53e6fbe87daa"><td class="mdescLeft">&#160;</td><td class="mdescRight">handle a control message received by context from a peer and call back  <br /></td></tr>
 <tr class="separator:a7868f6c83620a3355e3f53e6fbe87daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade79635001afef68c7936aae16267f05" id="r_ade79635001afef68c7936aae16267f05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHttp_1_1One_1_1Server.html#ade79635001afef68c7936aae16267f05">pipelinePrefetchMax</a> () const override</td></tr>
+<tr class="memitem:ade79635001afef68c7936aae16267f05" id="r_ade79635001afef68c7936aae16267f05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHttp_1_1One_1_1Server.html#ade79635001afef68c7936aae16267f05">pipelinePrefetchMax</a> () const override</td></tr>
 <tr class="memdesc:ade79635001afef68c7936aae16267f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">returning N allows a pipeline of 1+N requests (see pipeline_prefetch)  <br /></td></tr>
 <tr class="separator:ade79635001afef68c7936aae16267f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73eaed1cdcd71f4611166021f2c13c10" id="r_a73eaed1cdcd71f4611166021f2c13c10"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHttp_1_1One_1_1Server.html#a73eaed1cdcd71f4611166021f2c13c10">idleTimeout</a> () const override</td></tr>
@@ -3573,7 +3573,7 @@ false if more data is needed to parse the header or on error </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Server::pipelinePrefetchMax </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Server::pipelinePrefetchMax </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -5689,7 +5689,7 @@ false if more data is needed to parse the header or on error </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>

@@ -207,7 +207,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a38dc66b048f85b27b8da4c65ff0b4885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7741f21ba32a8b041593015783ed4784" id="r_a7741f21ba32a8b041593015783ed4784"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a7741f21ba32a8b041593015783ed4784">statfs</a> (<a class="el" href="classStoreEntry.html">StoreEntry</a> &amp;) const</td></tr>
 <tr class="separator:a7741f21ba32a8b041593015783ed4784"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c67a983ae3f0e904c86265fe9c373c0" id="r_a0c67a983ae3f0e904c86265fe9c373c0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a0c67a983ae3f0e904c86265fe9c373c0">canStore</a> (const <a class="el" href="classStoreEntry.html">StoreEntry</a> &amp;e, int64_t diskSpaceNeeded, <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> &amp;load) const =0</td></tr>
+<tr class="memitem:a0c67a983ae3f0e904c86265fe9c373c0" id="r_a0c67a983ae3f0e904c86265fe9c373c0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a0c67a983ae3f0e904c86265fe9c373c0">canStore</a> (const <a class="el" href="classStoreEntry.html">StoreEntry</a> &amp;e, int64_t diskSpaceNeeded, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> &amp;load) const =0</td></tr>
 <tr class="memdesc:a0c67a983ae3f0e904c86265fe9c373c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether we can store the entry; if we can, report current load  <br /></td></tr>
 <tr class="separator:a0c67a983ae3f0e904c86265fe9c373c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa27429c95ebec227f8531eb08c0901a9" id="r_aa27429c95ebec227f8531eb08c0901a9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#aa27429c95ebec227f8531eb08c0901a9">createStoreIO</a> (<a class="el" href="classStoreEntry.html">StoreEntry</a> &amp;, <a class="el" href="classStoreIOState.html#af82d5f8ddee6eae14054d5a93b54a2cb">StoreIOState::STIOCB</a> *, void *)=0</td></tr>
@@ -220,13 +220,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a33da87ba7c93df6215462019702426f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4dc6bd76a1e296629ccf56a4b17a081" id="r_ad4dc6bd76a1e296629ccf56a4b17a081"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#ad4dc6bd76a1e296629ccf56a4b17a081">closeLog</a> ()</td></tr>
 <tr class="separator:ad4dc6bd76a1e296629ccf56a4b17a081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81c98af037e3ab49c85f9fc9524ae31e" id="r_a81c98af037e3ab49c85f9fc9524ae31e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a81c98af037e3ab49c85f9fc9524ae31e">logEntry</a> (const <a class="el" href="classStoreEntry.html">StoreEntry</a> &amp;e, <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> op) const</td></tr>
+<tr class="memitem:a81c98af037e3ab49c85f9fc9524ae31e" id="r_a81c98af037e3ab49c85f9fc9524ae31e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a81c98af037e3ab49c85f9fc9524ae31e">logEntry</a> (const <a class="el" href="classStoreEntry.html">StoreEntry</a> &amp;e, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> op) const</td></tr>
 <tr class="separator:a81c98af037e3ab49c85f9fc9524ae31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a707e8b614dc8b984de052bc4dbaeceed" id="r_a707e8b614dc8b984de052bc4dbaeceed"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a707e8b614dc8b984de052bc4dbaeceed">writeCleanStart</a> ()</td></tr>
+<tr class="memitem:a707e8b614dc8b984de052bc4dbaeceed" id="r_a707e8b614dc8b984de052bc4dbaeceed"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a707e8b614dc8b984de052bc4dbaeceed">writeCleanStart</a> ()</td></tr>
 <tr class="separator:a707e8b614dc8b984de052bc4dbaeceed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a067ee506e68622dd09916fe2349ee2" id="r_a4a067ee506e68622dd09916fe2349ee2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a4a067ee506e68622dd09916fe2349ee2">writeCleanDone</a> ()</td></tr>
 <tr class="separator:a4a067ee506e68622dd09916fe2349ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dd6c81c2a2b6c9a01640d5d14fb07dc" id="r_a2dd6c81c2a2b6c9a01640d5d14fb07dc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a2dd6c81c2a2b6c9a01640d5d14fb07dc">parse</a> (<a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> <a class="el" href="classStore_1_1Disk.html#a2d740ff7c1a98be5a7bf58d777444380">index</a>, char *<a class="el" href="classStore_1_1Disk.html#a04507ba38acff67bdaa53c3bbbaf9379">path</a>)=0</td></tr>
+<tr class="memitem:a2dd6c81c2a2b6c9a01640d5d14fb07dc" id="r_a2dd6c81c2a2b6c9a01640d5d14fb07dc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a2dd6c81c2a2b6c9a01640d5d14fb07dc">parse</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> <a class="el" href="classStore_1_1Disk.html#a2d740ff7c1a98be5a7bf58d777444380">index</a>, char *<a class="el" href="classStore_1_1Disk.html#a04507ba38acff67bdaa53c3bbbaf9379">path</a>)=0</td></tr>
 <tr class="separator:a2dd6c81c2a2b6c9a01640d5d14fb07dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b8a6f860c1d4f58815899128d1cf033" id="r_a4b8a6f860c1d4f58815899128d1cf033"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Controlled.html#a4b8a6f860c1d4f58815899128d1cf033">updateHeaders</a> (<a class="el" href="classStoreEntry.html">StoreEntry</a> *)</td></tr>
 <tr class="memdesc:a4b8a6f860c1d4f58815899128d1cf033"><td class="mdescLeft">&#160;</td><td class="mdescRight">make stored metadata and HTTP headers the same as in the given entry  <br /></td></tr>
@@ -247,7 +247,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adfc2d67a0d9ad4e117d5d2254727c62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bf66f95adbcfa2ed7f2d3091b8748a4" id="r_a3bf66f95adbcfa2ed7f2d3091b8748a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Storage.html#a3bf66f95adbcfa2ed7f2d3091b8748a4">evictIfFound</a> (const <a class="el" href="store_2forward_8h.html#ab1424e1b13666cc28f4c5cb05f8c8305">cache_key</a> *)=0</td></tr>
 <tr class="separator:a3bf66f95adbcfa2ed7f2d3091b8748a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99c14693126fe25d4100a8d27d108640" id="r_a99c14693126fe25d4100a8d27d108640"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Storage.html#a99c14693126fe25d4100a8d27d108640">callback</a> ()</td></tr>
+<tr class="memitem:a99c14693126fe25d4100a8d27d108640" id="r_a99c14693126fe25d4100a8d27d108640"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Storage.html#a99c14693126fe25d4100a8d27d108640">callback</a> ()</td></tr>
 <tr class="memdesc:a99c14693126fe25d4100a8d27d108640"><td class="mdescLeft">&#160;</td><td class="mdescRight">called once every main loop iteration; TODO: Move to UFS code.  <br /></td></tr>
 <tr class="separator:a99c14693126fe25d4100a8d27d108640"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ddd28191e3c5299b5d485f786e7d77a" id="r_a7ddd28191e3c5299b5d485f786e7d77a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Storage.html#a7ddd28191e3c5299b5d485f786e7d77a">sync</a> ()</td></tr>
@@ -258,16 +258,16 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a04507ba38acff67bdaa53c3bbbaf9379" id="r_a04507ba38acff67bdaa53c3bbbaf9379"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a04507ba38acff67bdaa53c3bbbaf9379">path</a></td></tr>
 <tr class="separator:a04507ba38acff67bdaa53c3bbbaf9379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d740ff7c1a98be5a7bf58d777444380" id="r_a2d740ff7c1a98be5a7bf58d777444380"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a2d740ff7c1a98be5a7bf58d777444380">index</a></td></tr>
+<tr class="memitem:a2d740ff7c1a98be5a7bf58d777444380" id="r_a2d740ff7c1a98be5a7bf58d777444380"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a2d740ff7c1a98be5a7bf58d777444380">index</a></td></tr>
 <tr class="separator:a2d740ff7c1a98be5a7bf58d777444380"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b930038e5cf4d7797ad9aa08d26a498" id="r_a8b930038e5cf4d7797ad9aa08d26a498"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a8b930038e5cf4d7797ad9aa08d26a498">disker</a></td></tr>
+<tr class="memitem:a8b930038e5cf4d7797ad9aa08d26a498" id="r_a8b930038e5cf4d7797ad9aa08d26a498"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a8b930038e5cf4d7797ad9aa08d26a498">disker</a></td></tr>
 <tr class="memdesc:a8b930038e5cf4d7797ad9aa08d26a498"><td class="mdescLeft">&#160;</td><td class="mdescRight">disker kid id dedicated to this SwapDir or -1  <br /></td></tr>
 <tr class="separator:a8b930038e5cf4d7797ad9aa08d26a498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a215e45663ce7a8ef5de20c73f495080d" id="r_a215e45663ce7a8ef5de20c73f495080d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRemovalPolicy.html">RemovalPolicy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a215e45663ce7a8ef5de20c73f495080d">repl</a></td></tr>
 <tr class="separator:a215e45663ce7a8ef5de20c73f495080d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8513d4a5c06801984b85e462d07096dc" id="r_a8513d4a5c06801984b85e462d07096dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a8513d4a5c06801984b85e462d07096dc">removals</a></td></tr>
+<tr class="memitem:a8513d4a5c06801984b85e462d07096dc" id="r_a8513d4a5c06801984b85e462d07096dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a8513d4a5c06801984b85e462d07096dc">removals</a></td></tr>
 <tr class="separator:a8513d4a5c06801984b85e462d07096dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ff72f9fe2f468e4e7077f15f139c421" id="r_a2ff72f9fe2f468e4e7077f15f139c421"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a2ff72f9fe2f468e4e7077f15f139c421">scanned</a></td></tr>
+<tr class="memitem:a2ff72f9fe2f468e4e7077f15f139c421" id="r_a2ff72f9fe2f468e4e7077f15f139c421"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a2ff72f9fe2f468e4e7077f15f139c421">scanned</a></td></tr>
 <tr class="separator:a2ff72f9fe2f468e4e7077f15f139c421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cc25d200957206efde5ee259a70c9f5" id="r_a5cc25d200957206efde5ee259a70c9f5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structStore_1_1Disk_1_1Flags.html">Store::Disk::Flags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a5cc25d200957206efde5ee259a70c9f5">flags</a></td></tr>
 <tr class="separator:a5cc25d200957206efde5ee259a70c9f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,14 +275,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a87ff175696042830617393071895f55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaca8336ae79eca70e5a11f5dbacd2a8" id="r_aeaca8336ae79eca70e5a11f5dbacd2a8"><td class="memItemLeft" >struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00adb44c340900699b8627334ac597b1" id="r_a00adb44c340900699b8627334ac597b1"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;&#160;&#160;<a class="el" href="classStore_1_1Disk.html#aa44205d60922435fe1f00ee44e9a9413">blksize</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:a00adb44c340900699b8627334ac597b1" id="r_a00adb44c340900699b8627334ac597b1"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;&#160;&#160;<a class="el" href="classStore_1_1Disk.html#aa44205d60922435fe1f00ee44e9a9413">blksize</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:a00adb44c340900699b8627334ac597b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaca8336ae79eca70e5a11f5dbacd2a8" id="r_aeaca8336ae79eca70e5a11f5dbacd2a8"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#aeaca8336ae79eca70e5a11f5dbacd2a8">fs</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:aeaca8336ae79eca70e5a11f5dbacd2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4434a21ebe730fda907d26f5c3c4a3c6" id="r_a4434a21ebe730fda907d26f5c3c4a3c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a4434a21ebe730fda907d26f5c3c4a3c6">parseOptions</a> (<a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> <a class="el" href="globals_8h.html#af69356c193d459e88d2decb7b98728d2">reconfiguring</a>)</td></tr>
+<tr class="memitem:a4434a21ebe730fda907d26f5c3c4a3c6" id="r_a4434a21ebe730fda907d26f5c3c4a3c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a4434a21ebe730fda907d26f5c3c4a3c6">parseOptions</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> <a class="el" href="globals_8h.html#af69356c193d459e88d2decb7b98728d2">reconfiguring</a>)</td></tr>
 <tr class="separator:a4434a21ebe730fda907d26f5c3c4a3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71167194a94ac1b8bf49a627c1ee441d" id="r_a71167194a94ac1b8bf49a627c1ee441d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a71167194a94ac1b8bf49a627c1ee441d">dumpOptions</a> (<a class="el" href="classStoreEntry.html">StoreEntry</a> *e) const</td></tr>
 <tr class="separator:a71167194a94ac1b8bf49a627c1ee441d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,11 +307,11 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:aee6861b75f726c25ca478a2eb73bbe2b" id="r_aee6861b75f726c25ca478a2eb73bbe2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#aee6861b75f726c25ca478a2eb73bbe2b">optionReadOnlyParse</a> (char const *option, const char *value, <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> <a class="el" href="globals_8h.html#af69356c193d459e88d2decb7b98728d2">reconfiguring</a>)</td></tr>
+<tr class="memitem:aee6861b75f726c25ca478a2eb73bbe2b" id="r_aee6861b75f726c25ca478a2eb73bbe2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#aee6861b75f726c25ca478a2eb73bbe2b">optionReadOnlyParse</a> (char const *option, const char *value, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> <a class="el" href="globals_8h.html#af69356c193d459e88d2decb7b98728d2">reconfiguring</a>)</td></tr>
 <tr class="separator:aee6861b75f726c25ca478a2eb73bbe2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78514ed663d4ea1c21060491d25e240e" id="r_a78514ed663d4ea1c21060491d25e240e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a78514ed663d4ea1c21060491d25e240e">optionReadOnlyDump</a> (<a class="el" href="classStoreEntry.html">StoreEntry</a> *e) const</td></tr>
 <tr class="separator:a78514ed663d4ea1c21060491d25e240e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90020a18bfe09e178798251378cc17ba" id="r_a90020a18bfe09e178798251378cc17ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a90020a18bfe09e178798251378cc17ba">optionObjectSizeParse</a> (char const *option, const char *value, <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> <a class="el" href="globals_8h.html#af69356c193d459e88d2decb7b98728d2">reconfiguring</a>)</td></tr>
+<tr class="memitem:a90020a18bfe09e178798251378cc17ba" id="r_a90020a18bfe09e178798251378cc17ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#a90020a18bfe09e178798251378cc17ba">optionObjectSizeParse</a> (char const *option, const char *value, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> <a class="el" href="globals_8h.html#af69356c193d459e88d2decb7b98728d2">reconfiguring</a>)</td></tr>
 <tr class="separator:a90020a18bfe09e178798251378cc17ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec928dcb3747852b7544556a944a0dc0" id="r_aec928dcb3747852b7544556a944a0dc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStore_1_1Disk.html#aec928dcb3747852b7544556a944a0dc0">optionObjectSizeDump</a> (<a class="el" href="classStoreEntry.html">StoreEntry</a> *e) const</td></tr>
 <tr class="separator:aec928dcb3747852b7544556a944a0dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -514,7 +514,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Store::Storage::callback </td>
+          <td class="memname">virtual <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Store::Storage::callback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -579,7 +579,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> &amp;&#160;</td>
           <td class="paramname"><em>load</em>&#160;</td>
         </tr>
         <tr>
@@ -1275,7 +1275,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>op</em>&#160;</td>
         </tr>
         <tr>
@@ -1655,7 +1655,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>reconfiguring</em>&#160;</td>
         </tr>
         <tr>
@@ -1735,7 +1735,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>reconfiguring</em>&#160;</td>
         </tr>
         <tr>
@@ -1771,7 +1771,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void Store::Disk::parse </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>index</em>, </td>
         </tr>
         <tr>
@@ -1809,7 +1809,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Store::Disk::parseOptions </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>reconfiguring</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2190,7 +2190,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Store::Disk::writeCleanStart </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Store::Disk::writeCleanStart </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2217,7 +2217,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Store::Disk::blksize</td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Store::Disk::blksize</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2251,7 +2251,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Store::Disk::disker</td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Store::Disk::disker</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2299,7 +2299,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Store::Disk::index</td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Store::Disk::index</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2409,7 +2409,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Store::Disk::removals</td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Store::Disk::removals</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2441,7 +2441,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Store::Disk::scanned</td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Store::Disk::scanned</td>
         </tr>
       </table>
 </div><div class="memdoc">

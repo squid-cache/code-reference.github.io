@@ -112,7 +112,7 @@ Collaboration diagram for Comm::IoCallback:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a23737fe09db942d0f49a3a1f8be04e" id="r_a3a23737fe09db942d0f49a3a1f8be04e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a3a23737fe09db942d0f49a3a1f8be04e">active</a> () const</td></tr>
 <tr class="separator:a3a23737fe09db942d0f49a3a1f8be04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05d06b3ca7f14a468c2974d34f356d85" id="r_a05d06b3ca7f14a468c2974d34f356d85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a05d06b3ca7f14a468c2974d34f356d85">setCallback</a> (<a class="el" href="namespaceComm.html#a69fbf73fdb4226b958646899ee844683">iocb_type</a> <a class="el" href="classComm_1_1IoCallback.html#a89db8ca332decd5f6eef9ff41f92359a">type</a>, <a class="el" href="classAsyncCall.html#a57c571a47666d10c316689dc5d09e170">AsyncCall::Pointer</a> &amp;cb, char *<a class="el" href="classComm_1_1IoCallback.html#a8698599cde62798b6748b42d55bc2e5c">buf</a>, <a class="el" href="mem_2forward_8h.html#a302831a7d071d1b751ca56db1efb9e10">FREE</a> *func, <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> sz)</td></tr>
+<tr class="memitem:a05d06b3ca7f14a468c2974d34f356d85" id="r_a05d06b3ca7f14a468c2974d34f356d85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a05d06b3ca7f14a468c2974d34f356d85">setCallback</a> (<a class="el" href="namespaceComm.html#a69fbf73fdb4226b958646899ee844683">iocb_type</a> <a class="el" href="classComm_1_1IoCallback.html#a89db8ca332decd5f6eef9ff41f92359a">type</a>, <a class="el" href="classAsyncCall.html#a57c571a47666d10c316689dc5d09e170">AsyncCall::Pointer</a> &amp;cb, char *<a class="el" href="classComm_1_1IoCallback.html#a8698599cde62798b6748b42d55bc2e5c">buf</a>, <a class="el" href="mem_2forward_8h.html#a302831a7d071d1b751ca56db1efb9e10">FREE</a> *func, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> sz)</td></tr>
 <tr class="separator:a05d06b3ca7f14a468c2974d34f356d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4bdc2558a88899e423ca925d13fd62" id="r_a3d4bdc2558a88899e423ca925d13fd62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a3d4bdc2558a88899e423ca925d13fd62">selectOrQueueWrite</a> ()</td></tr>
 <tr class="memdesc:a3d4bdc2558a88899e423ca925d13fd62"><td class="mdescLeft">&#160;</td><td class="mdescRight">called when fd needs to write but may need to wait in line for its quota  <br /></td></tr>
@@ -120,7 +120,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d0baab7d730c012ad87219a3725a555" id="r_a7d0baab7d730c012ad87219a3725a555"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a7d0baab7d730c012ad87219a3725a555">cancel</a> (const char *reason)</td></tr>
 <tr class="memdesc:a7d0baab7d730c012ad87219a3725a555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actively cancel the given callback.  <br /></td></tr>
 <tr class="separator:a7d0baab7d730c012ad87219a3725a555"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a465e30345a1fa0d9e910c52af0a52b9d" id="r_a465e30345a1fa0d9e910c52af0a52b9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a465e30345a1fa0d9e910c52af0a52b9d">finish</a> (<a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a> code, <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> xerrn)</td></tr>
+<tr class="memitem:a465e30345a1fa0d9e910c52af0a52b9d" id="r_a465e30345a1fa0d9e910c52af0a52b9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a465e30345a1fa0d9e910c52af0a52b9d">finish</a> (<a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a> code, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> xerrn)</td></tr>
 <tr class="memdesc:a465e30345a1fa0d9e910c52af0a52b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">finish the IO operation immediately and schedule the callback with the current state.  <br /></td></tr>
 <tr class="separator:a465e30345a1fa0d9e910c52af0a52b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -136,15 +136,15 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a8698599cde62798b6748b42d55bc2e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a205547570776dbb1dd21205e9758ea34" id="r_a205547570776dbb1dd21205e9758ea34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mem_2forward_8h.html#a302831a7d071d1b751ca56db1efb9e10">FREE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a205547570776dbb1dd21205e9758ea34">freefunc</a></td></tr>
 <tr class="separator:a205547570776dbb1dd21205e9758ea34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30028b45a38c33ed2238e977df434563" id="r_a30028b45a38c33ed2238e977df434563"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a30028b45a38c33ed2238e977df434563">size</a></td></tr>
+<tr class="memitem:a30028b45a38c33ed2238e977df434563" id="r_a30028b45a38c33ed2238e977df434563"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a30028b45a38c33ed2238e977df434563">size</a></td></tr>
 <tr class="separator:a30028b45a38c33ed2238e977df434563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25c33ec4515490561cf5d486cb60cf66" id="r_a25c33ec4515490561cf5d486cb60cf66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a25c33ec4515490561cf5d486cb60cf66">offset</a></td></tr>
+<tr class="memitem:a25c33ec4515490561cf5d486cb60cf66" id="r_a25c33ec4515490561cf5d486cb60cf66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a25c33ec4515490561cf5d486cb60cf66">offset</a></td></tr>
 <tr class="separator:a25c33ec4515490561cf5d486cb60cf66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdcff4e3bb8fe87dd1aca9da3d63a504" id="r_acdcff4e3bb8fe87dd1aca9da3d63a504"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#acdcff4e3bb8fe87dd1aca9da3d63a504">errcode</a></td></tr>
 <tr class="separator:acdcff4e3bb8fe87dd1aca9da3d63a504"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e1cf2c9f1e9a80bbe0b7366bae9aa60" id="r_a0e1cf2c9f1e9a80bbe0b7366bae9aa60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a0e1cf2c9f1e9a80bbe0b7366bae9aa60">xerrno</a></td></tr>
+<tr class="memitem:a0e1cf2c9f1e9a80bbe0b7366bae9aa60" id="r_a0e1cf2c9f1e9a80bbe0b7366bae9aa60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#a0e1cf2c9f1e9a80bbe0b7366bae9aa60">xerrno</a></td></tr>
 <tr class="separator:a0e1cf2c9f1e9a80bbe0b7366bae9aa60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4f80708153285d29a31b82f2aa62f95" id="r_af4f80708153285d29a31b82f2aa62f95"><td class="memItemLeft" align="right" valign="top">unsigned <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#af4f80708153285d29a31b82f2aa62f95">quotaQueueReserv</a></td></tr>
+<tr class="memitem:af4f80708153285d29a31b82f2aa62f95" id="r_af4f80708153285d29a31b82f2aa62f95"><td class="memItemLeft" align="right" valign="top">unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComm_1_1IoCallback.html#af4f80708153285d29a31b82f2aa62f95">quotaQueueReserv</a></td></tr>
 <tr class="memdesc:af4f80708153285d29a31b82f2aa62f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">reservation ID from <a class="el" href="classCommQuotaQueue.html">CommQuotaQueue</a>  <br /></td></tr>
 <tr class="separator:af4f80708153285d29a31b82f2aa62f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -225,7 +225,7 @@ Private Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>xerrn</em>&#160;</td>
         </tr>
         <tr>
@@ -325,7 +325,7 @@ Private Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>sz</em>&#160;</td>
         </tr>
         <tr>
@@ -452,7 +452,7 @@ Private Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Comm::IoCallback::offset</td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Comm::IoCallback::offset</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -470,7 +470,7 @@ Private Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned <a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Comm::IoCallback::quotaQueueReserv</td>
+          <td class="memname">unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Comm::IoCallback::quotaQueueReserv</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -488,7 +488,7 @@ Private Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Comm::IoCallback::size</td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Comm::IoCallback::size</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -524,7 +524,7 @@ Private Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a35fed7109d24712d6b86b6134537c7bd">int</a> Comm::IoCallback::xerrno</td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Comm::IoCallback::xerrno</td>
         </tr>
       </table>
 </div><div class="memdoc">
