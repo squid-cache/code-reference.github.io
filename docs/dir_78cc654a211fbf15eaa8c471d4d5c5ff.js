@@ -29,6 +29,7 @@ var dir_78cc654a211fbf15eaa8c471d4d5c5ff =
     [ "stub_external_acl.cc", "stub__external__acl_8cc.html", "stub__external__acl_8cc" ],
     [ "stub_fatal.cc", "stub__fatal_8cc.html", "stub__fatal_8cc" ],
     [ "stub_fd.cc", "stub__fd_8cc.html", "stub__fd_8cc" ],
+    [ "stub_fde.cc", "stub__fde_8cc.html", "stub__fde_8cc" ],
     [ "stub_fqdncache.cc", "stub__fqdncache_8cc.html", "stub__fqdncache_8cc" ],
     [ "stub_helper.cc", "stub__helper_8cc.html", "stub__helper_8cc" ],
     [ "stub_HelperChildConfig.cc", "stub__HelperChildConfig_8cc.html", "stub__HelperChildConfig_8cc" ],

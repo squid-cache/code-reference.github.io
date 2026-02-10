@@ -12,5 +12,6 @@ var fd_8h =
     [ "fd_open", "fd_8h.html#a114b171c2d67c4ce466a9d9fe25c9985", null ],
     [ "fdAdjustReserved", "fd_8h.html#a81de8836b21369118838d1c94b71d9f9", null ],
     [ "fdDumpOpen", "fd_8h.html#ab527bcd377ba7ab9bc98d425f49a6ed3", null ],
+    [ "fdNFree", "fd_8h.html#a3c425b7e0ca9f550f8023b07fb4c2b54", null ],
     [ "fdUsageHigh", "fd_8h.html#ac8fc7d6a8690be1f0ebc3a29f4c88ec0", null ]
 ];

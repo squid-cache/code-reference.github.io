@@ -261,26 +261,24 @@ $(document).ready(function(){initNavTree('fde_8h_source.html',''); initResizable
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="fde_8h.html#a0f820c6a388ea0380a19a97713736a35">  189</a></span><span class="preprocessor">#define fd_table fde::Table</span></div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="keywordtype">int</span> <a class="code hl_function" href="fde_8h.html#a3c425b7e0ca9f550f8023b07fb4c2b54">fdNFree</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keyword">inline</span> <span class="keywordtype">int</span></div>
-<div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="fde_8h.html#a5e31cf696bff0f1d143a0cccec84811f">  194</a></span><a class="code hl_function" href="fde_8h.html#a5e31cf696bff0f1d143a0cccec84811f">FD_READ_METHOD</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> len)</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>{</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="fde_8h.html#a0f820c6a388ea0380a19a97713736a35">fd_table</a>[fd].read(fd, buf, len);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>}</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="keyword">inline</span> <span class="keywordtype">int</span></div>
+<div class="foldopen" id="foldopen00192" data-start="{" data-end="}">
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="fde_8h.html#a5e31cf696bff0f1d143a0cccec84811f">  192</a></span><a class="code hl_function" href="fde_8h.html#a5e31cf696bff0f1d143a0cccec84811f">FD_READ_METHOD</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> len)</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>{</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="fde_8h.html#a0f820c6a388ea0380a19a97713736a35">fd_table</a>[fd].read(fd, buf, len);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
 </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="keyword">inline</span> <span class="keywordtype">int</span></div>
-<div class="foldopen" id="foldopen00200" data-start="{" data-end="}">
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="fde_8h.html#a6595f79b951b8e0a6b0f9dc966a5e9a9">  200</a></span><a class="code hl_function" href="fde_8h.html#a6595f79b951b8e0a6b0f9dc966a5e9a9">FD_WRITE_METHOD</a>(<span class="keywordtype">int</span> fd, <span class="keyword">const</span> <span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> len)</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>{</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="fde_8h.html#a0f820c6a388ea0380a19a97713736a35">fd_table</a>[fd].write(fd, buf, len);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>}</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="keyword">inline</span> <span class="keywordtype">int</span></div>
+<div class="foldopen" id="foldopen00198" data-start="{" data-end="}">
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="fde_8h.html#a6595f79b951b8e0a6b0f9dc966a5e9a9">  198</a></span><a class="code hl_function" href="fde_8h.html#a6595f79b951b8e0a6b0f9dc966a5e9a9">FD_WRITE_METHOD</a>(<span class="keywordtype">int</span> fd, <span class="keyword">const</span> <span class="keywordtype">char</span> *buf, <span class="keywordtype">int</span> len)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>{</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="fde_8h.html#a0f820c6a388ea0380a19a97713736a35">fd_table</a>[fd].write(fd, buf, len);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>}</div>
 </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">#endif </span><span class="comment">/* SQUID_SRC_FDE_H */</span><span class="preprocessor"></span></div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">#endif </span><span class="comment">/* SQUID_SRC_FDE_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
 <div class="ttc" id="aCodeContext_8h_html"><div class="ttname"><a href="CodeContext_8h.html">CodeContext.h</a></div></div>
 <div class="ttc" id="aMessageBucket_8h_html"><div class="ttname"><a href="MessageBucket_8h.html">MessageBucket.h</a></div></div>
 <div class="ttc" id="abase_2forward_8h_html"><div class="ttname"><a href="base_2forward_8h.html">forward.h</a></div></div>
@@ -351,9 +349,8 @@ $(document).ready(function(){initNavTree('fde_8h_source.html',''); initResizable
 <div class="ttc" id="adefines_8h_html"><div class="ttname"><a href="defines_8h.html">defines.h</a></div></div>
 <div class="ttc" id="adefines_8h_html_afe066d3a9be213351016ccfad3dd374c"><div class="ttname"><a href="defines_8h.html#afe066d3a9be213351016ccfad3dd374c">FD_DESC_SZ</a></div><div class="ttdeci">#define FD_DESC_SZ</div><div class="ttdef"><b>Definition</b> <a href="defines_8h_source.html#l00032">defines.h:32</a></div></div>
 <div class="ttc" id="afde_8h_html_a0f820c6a388ea0380a19a97713736a35"><div class="ttname"><a href="fde_8h.html#a0f820c6a388ea0380a19a97713736a35">fd_table</a></div><div class="ttdeci">#define fd_table</div><div class="ttdef"><b>Definition</b> <a href="fde_8h_source.html#l00189">fde.h:189</a></div></div>
-<div class="ttc" id="afde_8h_html_a3c425b7e0ca9f550f8023b07fb4c2b54"><div class="ttname"><a href="fde_8h.html#a3c425b7e0ca9f550f8023b07fb4c2b54">fdNFree</a></div><div class="ttdeci">int fdNFree(void)</div><div class="ttdef"><b>Definition</b> <a href="fd_8cc_source.html#l00262">fd.cc:262</a></div></div>
-<div class="ttc" id="afde_8h_html_a5e31cf696bff0f1d143a0cccec84811f"><div class="ttname"><a href="fde_8h.html#a5e31cf696bff0f1d143a0cccec84811f">FD_READ_METHOD</a></div><div class="ttdeci">int FD_READ_METHOD(int fd, char *buf, int len)</div><div class="ttdef"><b>Definition</b> <a href="fde_8h_source.html#l00194">fde.h:194</a></div></div>
-<div class="ttc" id="afde_8h_html_a6595f79b951b8e0a6b0f9dc966a5e9a9"><div class="ttname"><a href="fde_8h.html#a6595f79b951b8e0a6b0f9dc966a5e9a9">FD_WRITE_METHOD</a></div><div class="ttdeci">int FD_WRITE_METHOD(int fd, const char *buf, int len)</div><div class="ttdef"><b>Definition</b> <a href="fde_8h_source.html#l00200">fde.h:200</a></div></div>
+<div class="ttc" id="afde_8h_html_a5e31cf696bff0f1d143a0cccec84811f"><div class="ttname"><a href="fde_8h.html#a5e31cf696bff0f1d143a0cccec84811f">FD_READ_METHOD</a></div><div class="ttdeci">int FD_READ_METHOD(int fd, char *buf, int len)</div><div class="ttdef"><b>Definition</b> <a href="fde_8h_source.html#l00192">fde.h:192</a></div></div>
+<div class="ttc" id="afde_8h_html_a6595f79b951b8e0a6b0f9dc966a5e9a9"><div class="ttname"><a href="fde_8h.html#a6595f79b951b8e0a6b0f9dc966a5e9a9">FD_WRITE_METHOD</a></div><div class="ttdeci">int FD_WRITE_METHOD(int fd, const char *buf, int len)</div><div class="ttdef"><b>Definition</b> <a href="fde_8h_source.html#l00198">fde.h:198</a></div></div>
 <div class="ttc" id="afde_8h_html_a9e82d3882a28ec4dbd98b9ac63423bb3"><div class="ttname"><a href="fde_8h.html#a9e82d3882a28ec4dbd98b9ac63423bb3">READ_HANDLER</a></div><div class="ttdeci">int READ_HANDLER(int, char *, int)</div><div class="ttdef"><b>Definition</b> <a href="fde_8h_source.html#l00031">fde.h:31</a></div></div>
 <div class="ttc" id="afde_8h_html_af1aa7a6910be78ddf63954899d9afebd"><div class="ttname"><a href="fde_8h.html#af1aa7a6910be78ddf63954899d9afebd">WRITE_HANDLER</a></div><div class="ttdeci">int WRITE_HANDLER(int, const char *, int)</div><div class="ttdef"><b>Definition</b> <a href="fde_8h_source.html#l00037">fde.h:37</a></div></div>
 <div class="ttc" id="aip_2Address_8h_html"><div class="ttname"><a href="ip_2Address_8h.html">Address.h</a></div></div>

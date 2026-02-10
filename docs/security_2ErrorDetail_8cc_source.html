@@ -649,251 +649,255 @@ $(document).ready(function(){initNavTree('security_2ErrorDetail_8cc_source.html'
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>    std::optional&lt;SBuf&gt; customFormat;</div>
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span><span class="preprocessor">#if USE_OPENSSL</span></div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> errorDetail = <a class="code hl_function" href="classSsl_1_1ErrorDetailsManager.html#a64eeca450ef3041746b706a6c81d86f1">Ssl::ErrorDetailsManager::GetInstance</a>().findDetail(error_no, request))</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>        customFormat = errorDetail-&gt;detail;</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>    (void)request;</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>    <span class="keyword">auto</span> format = customFormat ? customFormat-&gt;c_str() : <span class="stringliteral">&quot;SSL handshake error (%err_name)&quot;</span>;</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span> </div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    <a class="code hl_class" href="classSBufStream.html">SBufStream</a> os;</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(format);</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>    <span class="keyword">auto</span> remainder = format;</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>    <span class="keywordflow">while</span> (<span class="keyword">auto</span> p = strchr(remainder, <span class="charliteral">&#39;%&#39;</span>)) {</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        os.write(remainder, p - remainder);</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        <span class="keyword">const</span> <span class="keyword">auto</span> formattingCodeLen = convertErrorCodeToDescription(++p, os);</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        <span class="keywordflow">if</span> (!formattingCodeLen)</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>            os &lt;&lt; <span class="charliteral">&#39;%&#39;</span>;</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        remainder = p + formattingCodeLen;</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>    }</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>    os &lt;&lt; remainder;</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>    <span class="keywordflow">return</span> os.<a class="code hl_function" href="classSBufStream.html#a11422fa1d8e0136156a9d83fb48d7673">buf</a>();</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>}</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> errorDetail = <a class="code hl_function" href="classSsl_1_1ErrorDetailsManager.html#a64eeca450ef3041746b706a6c81d86f1">Ssl::ErrorDetailsManager::GetInstance</a>().findDetail(error_no, request)) {</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>        detailEntry = *errorDetail;</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>        customFormat = detailEntry-&gt;detail;</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        detailEntry.reset();</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>    }</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    (void)request;</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>    <span class="keyword">auto</span> format = customFormat ? customFormat-&gt;c_str() : <span class="stringliteral">&quot;SSL handshake error (%err_name)&quot;</span>;</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span> </div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>    <a class="code hl_class" href="classSBufStream.html">SBufStream</a> os;</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(format);</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>    <span class="keyword">auto</span> remainder = format;</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>    <span class="keywordflow">while</span> (<span class="keyword">auto</span> p = strchr(remainder, <span class="charliteral">&#39;%&#39;</span>)) {</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        os.write(remainder, p - remainder);</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        <span class="keyword">const</span> <span class="keyword">auto</span> formattingCodeLen = convertErrorCodeToDescription(++p, os);</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>        <span class="keywordflow">if</span> (!formattingCodeLen)</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>            os &lt;&lt; <span class="charliteral">&#39;%&#39;</span>;</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>        remainder = p + formattingCodeLen;</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>    }</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    os &lt;&lt; remainder;</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    <span class="keywordflow">return</span> os.<a class="code hl_function" href="classSBufStream.html#a11422fa1d8e0136156a9d83fb48d7673">buf</a>();</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>}</div>
 </div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span> </div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00561" data-start="{" data-end="}">
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#a67f850ecfd38dfc57cd66e7555d711f2">  561</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a67f850ecfd38dfc57cd66e7555d711f2">Security::ErrorDetail::printSubject</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    <span class="keywordflow">if</span> (broken_cert) {</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        <span class="keyword">auto</span> buf = <a class="code hl_function" href="namespaceSecurity.html#ab4dfe29d04dc3880668fd3b41a5595aa">SubjectName</a>(*broken_cert);</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>        <span class="keywordflow">if</span> (!buf.isEmpty()) {</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>            <span class="comment">// TODO: Convert html_quote() into an std::ostream manipulator.</span></div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>            <span class="comment">// quote to avoid possible html code injection through</span></div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>            <span class="comment">// certificate subject</span></div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>            os &lt;&lt; <a class="code hl_function" href="html_2Quoting_8cc.html#a185935c4d5c12def6c990aa193726390">html_quote</a>(buf.c_str());</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>        }</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    }</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>}</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00565" data-start="{" data-end="}">
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#a67f850ecfd38dfc57cd66e7555d711f2">  565</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a67f850ecfd38dfc57cd66e7555d711f2">Security::ErrorDetail::printSubject</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    <span class="keywordflow">if</span> (broken_cert) {</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        <span class="keyword">auto</span> buf = <a class="code hl_function" href="namespaceSecurity.html#ab4dfe29d04dc3880668fd3b41a5595aa">SubjectName</a>(*broken_cert);</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>        <span class="keywordflow">if</span> (!buf.isEmpty()) {</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>            <span class="comment">// TODO: Convert html_quote() into an std::ostream manipulator.</span></div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>            <span class="comment">// quote to avoid possible html code injection through</span></div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>            <span class="comment">// certificate subject</span></div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>            os &lt;&lt; <a class="code hl_function" href="html_2Quoting_8cc.html#a185935c4d5c12def6c990aa193726390">html_quote</a>(buf.c_str());</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>        }</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    }</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>}</div>
 </div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span> </div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="preprocessor">#if USE_OPENSSL</span></div>
-<div class="foldopen" id="foldopen00578" data-start="{" data-end="};">
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html">  578</a></span><span class="keyword">class </span><a class="code hl_class" href="classCommonNamesPrinter.html">CommonNamesPrinter</a>: <span class="keyword">public</span> <a class="code hl_class" href="classSsl_1_1GeneralNameMatcher.html">Ssl::GeneralNameMatcher</a></div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>{</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#a163885bca54e12cd6ca011f376a39c92">  581</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classCommonNamesPrinter.html#a163885bca54e12cd6ca011f376a39c92">CommonNamesPrinter</a>(std::ostream &amp;os): os_(os) {}</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span> </div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#a4d82033bcd74f20c6d03d43726e02b00">  584</a></span>    <span class="keyword">mutable</span> <span class="keywordtype">size_t</span> printed = 0;</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span> </div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>    <span class="comment">/* GeneralNameMatcher API */</span></div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="Uri_8cc.html#a7b3d400c54dd0ce685ac6c136ae73fe3">matchDomainName</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSBuf.html">Dns::DomainName</a> &amp;) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>    <span class="keywordtype">bool</span> matchIp(<span class="keyword">const</span> <a class="code hl_class" href="classIp_1_1Address.html">Ip::Address</a> &amp;) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span> </div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>    std::ostream &amp;itemStream() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span> </div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#ae9e5a38d54eca6a1f09bfc89fbb82535">  594</a></span>    std::ostream &amp;<a class="code hl_variable" href="classCommonNamesPrinter.html#ae9e5a38d54eca6a1f09bfc89fbb82535">os_</a>; </div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>};</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span><span class="preprocessor">#if USE_OPENSSL</span></div>
+<div class="foldopen" id="foldopen00582" data-start="{" data-end="};">
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html">  582</a></span><span class="keyword">class </span><a class="code hl_class" href="classCommonNamesPrinter.html">CommonNamesPrinter</a>: <span class="keyword">public</span> <a class="code hl_class" href="classSsl_1_1GeneralNameMatcher.html">Ssl::GeneralNameMatcher</a></div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>{</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#a163885bca54e12cd6ca011f376a39c92">  585</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classCommonNamesPrinter.html#a163885bca54e12cd6ca011f376a39c92">CommonNamesPrinter</a>(std::ostream &amp;os): os_(os) {}</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span> </div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#a4d82033bcd74f20c6d03d43726e02b00">  588</a></span>    <span class="keyword">mutable</span> <span class="keywordtype">size_t</span> printed = 0;</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span> </div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>    <span class="comment">/* GeneralNameMatcher API */</span></div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="Uri_8cc.html#a7b3d400c54dd0ce685ac6c136ae73fe3">matchDomainName</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSBuf.html">Dns::DomainName</a> &amp;) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>    <span class="keywordtype">bool</span> matchIp(<span class="keyword">const</span> <a class="code hl_class" href="classIp_1_1Address.html">Ip::Address</a> &amp;) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span> </div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>    std::ostream &amp;itemStream() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span> </div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#ae9e5a38d54eca6a1f09bfc89fbb82535">  598</a></span>    std::ostream &amp;<a class="code hl_variable" href="classCommonNamesPrinter.html#ae9e5a38d54eca6a1f09bfc89fbb82535">os_</a>; </div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>};</div>
 </div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span> </div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span><span class="keywordtype">bool</span></div>
-<div class="foldopen" id="foldopen00598" data-start="{" data-end="}">
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#ac09bb2a5437f734f9bf07c8d392fa1fb">  598</a></span><a class="code hl_function" href="classCommonNamesPrinter.html#ac09bb2a5437f734f9bf07c8d392fa1fb">CommonNamesPrinter::matchDomainName</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSBuf.html">Dns::DomainName</a> &amp;domain)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>    <span class="comment">// TODO: Convert html_quote() into an std::ostream manipulator accepting (buf, n).</span></div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>    itemStream() &lt;&lt; <a class="code hl_function" href="html_2Quoting_8cc.html#a185935c4d5c12def6c990aa193726390">html_quote</a>(<a class="code hl_class" href="classSBuf.html">SBuf</a>(domain).c_str());</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// keep going</span></div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>}</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span> </div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span><span class="keywordtype">bool</span></div>
+<div class="foldopen" id="foldopen00602" data-start="{" data-end="}">
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#ac09bb2a5437f734f9bf07c8d392fa1fb">  602</a></span><a class="code hl_function" href="classCommonNamesPrinter.html#ac09bb2a5437f734f9bf07c8d392fa1fb">CommonNamesPrinter::matchDomainName</a>(<span class="keyword">const</span> <a class="code hl_class" href="classSBuf.html">Dns::DomainName</a> &amp;domain)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>    <span class="comment">// TODO: Convert html_quote() into an std::ostream manipulator accepting (buf, n).</span></div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>    itemStream() &lt;&lt; <a class="code hl_function" href="html_2Quoting_8cc.html#a185935c4d5c12def6c990aa193726390">html_quote</a>(<a class="code hl_class" href="classSBuf.html">SBuf</a>(domain).c_str());</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// keep going</span></div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>}</div>
 </div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span> </div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span><span class="keywordtype">bool</span></div>
-<div class="foldopen" id="foldopen00606" data-start="{" data-end="}">
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#a4916963e685c0a6867e46196d83349ed">  606</a></span><a class="code hl_function" href="classCommonNamesPrinter.html#a4916963e685c0a6867e46196d83349ed">CommonNamesPrinter::matchIp</a>(<span class="keyword">const</span> <a class="code hl_class" href="classIp_1_1Address.html">Ip::Address</a> &amp;ip)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>    <span class="keywordtype">char</span> hostStr[<a class="code hl_define" href="ip_2forward_8h.html#a28806a9f06b4d32dab73b27053f10494">MAX_IPSTRLEN</a>];</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>    (void)ip.<a class="code hl_function" href="classIp_1_1Address.html#a00a47f51e0c2b78115495af295924aee">toStr</a>(hostStr, <span class="keyword">sizeof</span>(hostStr)); <span class="comment">// no html_quote() is needed; no brackets</span></div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>    itemStream().write(hostStr, strlen(hostStr));</div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// keep going</span></div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>}</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span> </div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span><span class="keywordtype">bool</span></div>
+<div class="foldopen" id="foldopen00610" data-start="{" data-end="}">
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#a4916963e685c0a6867e46196d83349ed">  610</a></span><a class="code hl_function" href="classCommonNamesPrinter.html#a4916963e685c0a6867e46196d83349ed">CommonNamesPrinter::matchIp</a>(<span class="keyword">const</span> <a class="code hl_class" href="classIp_1_1Address.html">Ip::Address</a> &amp;ip)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>    <span class="keywordtype">char</span> hostStr[<a class="code hl_define" href="ip_2forward_8h.html#a28806a9f06b4d32dab73b27053f10494">MAX_IPSTRLEN</a>];</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>    (void)ip.<a class="code hl_function" href="classIp_1_1Address.html#a00a47f51e0c2b78115495af295924aee">toStr</a>(hostStr, <span class="keyword">sizeof</span>(hostStr)); <span class="comment">// no html_quote() is needed; no brackets</span></div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>    itemStream().write(hostStr, strlen(hostStr));</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// keep going</span></div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>}</div>
 </div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span> </div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>std::ostream &amp;</div>
-<div class="foldopen" id="foldopen00617" data-start="{" data-end="}">
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#a0c7662838cd12ccf25fc3fb580a73427">  617</a></span><a class="code hl_function" href="classCommonNamesPrinter.html#a0c7662838cd12ccf25fc3fb580a73427">CommonNamesPrinter::itemStream</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    <span class="keywordflow">if</span> (printed++)</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>        os_ &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>    <span class="keywordflow">return</span> os_;</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>}</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span> </div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>std::ostream &amp;</div>
+<div class="foldopen" id="foldopen00621" data-start="{" data-end="}">
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno"><a class="line" href="classCommonNamesPrinter.html#a0c7662838cd12ccf25fc3fb580a73427">  621</a></span><a class="code hl_function" href="classCommonNamesPrinter.html#a0c7662838cd12ccf25fc3fb580a73427">CommonNamesPrinter::itemStream</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>    <span class="keywordflow">if</span> (printed++)</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>        os_ &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>    <span class="keywordflow">return</span> os_;</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>}</div>
 </div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span> </div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="preprocessor">#endif </span><span class="comment">// USE_OPENSSL</span></div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span> </div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00628" data-start="{" data-end="}">
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#a56415d8d57ddb12b1a581edef9b7b81f">  628</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a56415d8d57ddb12b1a581edef9b7b81f">Security::ErrorDetail::printCommonName</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span><span class="preprocessor">#if USE_OPENSSL</span></div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>    <span class="keywordflow">if</span> (broken_cert.get()) {</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>        <a class="code hl_class" href="classCommonNamesPrinter.html">CommonNamesPrinter</a> printer(os);</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>        (void)<a class="code hl_function" href="namespaceSsl.html#a083daec7cef7ded68bf1947546a0772c">Ssl::HasMatchingSubjectName</a>(*broken_cert, printer);</div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>        <span class="keywordflow">if</span> (printer.<a class="code hl_variable" href="classCommonNamesPrinter.html#a4d82033bcd74f20c6d03d43726e02b00">printed</a>)</div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    }</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span><span class="preprocessor">#endif </span><span class="comment">// USE_OPENSSL</span></div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>}</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span> </div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span><span class="preprocessor">#endif </span><span class="comment">// USE_OPENSSL</span></div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span> </div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00632" data-start="{" data-end="}">
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#a56415d8d57ddb12b1a581edef9b7b81f">  632</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a56415d8d57ddb12b1a581edef9b7b81f">Security::ErrorDetail::printCommonName</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span><span class="preprocessor">#if USE_OPENSSL</span></div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>    <span class="keywordflow">if</span> (broken_cert.get()) {</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>        <a class="code hl_class" href="classCommonNamesPrinter.html">CommonNamesPrinter</a> printer(os);</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>        (void)<a class="code hl_function" href="namespaceSsl.html#a083daec7cef7ded68bf1947546a0772c">Ssl::HasMatchingSubjectName</a>(*broken_cert, printer);</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>        <span class="keywordflow">if</span> (printer.<a class="code hl_variable" href="classCommonNamesPrinter.html#a4d82033bcd74f20c6d03d43726e02b00">printed</a>)</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>    }</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span><span class="preprocessor">#endif </span><span class="comment">// USE_OPENSSL</span></div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>}</div>
 </div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span> </div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00643" data-start="{" data-end="}">
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#ad69e837720f778043ecf1c4f7c73d6cf">  643</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#ad69e837720f778043ecf1c4f7c73d6cf">Security::ErrorDetail::printCaName</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>    <span class="keywordflow">if</span> (broken_cert) {</div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>        <span class="keyword">auto</span> buf = <a class="code hl_function" href="namespaceSecurity.html#a22a6ec2bd7340b66fe60a5e0cb9b179e">IssuerName</a>(*broken_cert);</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>        <span class="keywordflow">if</span> (!buf.isEmpty()) {</div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>            <span class="comment">// quote to avoid possible html code injection through</span></div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>            <span class="comment">// certificate issuer subject</span></div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>            os &lt;&lt; <a class="code hl_function" href="html_2Quoting_8cc.html#a185935c4d5c12def6c990aa193726390">html_quote</a>(buf.c_str());</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>        }</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>    }</div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>}</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span> </div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00647" data-start="{" data-end="}">
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#ad69e837720f778043ecf1c4f7c73d6cf">  647</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#ad69e837720f778043ecf1c4f7c73d6cf">Security::ErrorDetail::printCaName</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>    <span class="keywordflow">if</span> (broken_cert) {</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>        <span class="keyword">auto</span> buf = <a class="code hl_function" href="namespaceSecurity.html#a22a6ec2bd7340b66fe60a5e0cb9b179e">IssuerName</a>(*broken_cert);</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>        <span class="keywordflow">if</span> (!buf.isEmpty()) {</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>            <span class="comment">// quote to avoid possible html code injection through</span></div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>            <span class="comment">// certificate issuer subject</span></div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>            os &lt;&lt; <a class="code hl_function" href="html_2Quoting_8cc.html#a185935c4d5c12def6c990aa193726390">html_quote</a>(buf.c_str());</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>        }</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>    }</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>}</div>
 </div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span> </div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00659" data-start="{" data-end="}">
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#ab33c925ac6f316aabf136000cd029bc7">  659</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#ab33c925ac6f316aabf136000cd029bc7">Security::ErrorDetail::printNotBefore</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span><span class="preprocessor">#if USE_OPENSSL</span></div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>    <span class="keywordflow">if</span> (broken_cert.get()) {</div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> tm = <a class="code hl_define" href="openssl_8h.html#a5e731d1ecda65a2bdebbbd879ee77d89">X509_getm_notBefore</a>(broken_cert.get())) {</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>            <span class="comment">// TODO: Add and use an ASN1_TIME printing operator instead.</span></div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>            <span class="keyword">static</span> <span class="keywordtype">char</span> tmpBuffer[256]; <span class="comment">// A temporary buffer</span></div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>            <a class="code hl_function" href="group__ServerProtocolSSLAPI.html#gaab2eab656c4d8257625c87e2dd23bc8a">Ssl::asn1timeToString</a>(tm, tmpBuffer, <span class="keyword">sizeof</span>(tmpBuffer));</div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>            os &lt;&lt; tmpBuffer;</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>        }</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>    }</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span><span class="preprocessor">#endif </span><span class="comment">// USE_OPENSSL</span></div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>}</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span> </div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00663" data-start="{" data-end="}">
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#ab33c925ac6f316aabf136000cd029bc7">  663</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#ab33c925ac6f316aabf136000cd029bc7">Security::ErrorDetail::printNotBefore</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span><span class="preprocessor">#if USE_OPENSSL</span></div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>    <span class="keywordflow">if</span> (broken_cert.get()) {</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> tm = <a class="code hl_define" href="openssl_8h.html#a5e731d1ecda65a2bdebbbd879ee77d89">X509_getm_notBefore</a>(broken_cert.get())) {</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>            <span class="comment">// TODO: Add and use an ASN1_TIME printing operator instead.</span></div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>            <span class="keyword">static</span> <span class="keywordtype">char</span> tmpBuffer[256]; <span class="comment">// A temporary buffer</span></div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>            <a class="code hl_function" href="group__ServerProtocolSSLAPI.html#gaab2eab656c4d8257625c87e2dd23bc8a">Ssl::asn1timeToString</a>(tm, tmpBuffer, <span class="keyword">sizeof</span>(tmpBuffer));</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>            os &lt;&lt; tmpBuffer;</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>        }</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>    }</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span><span class="preprocessor">#endif </span><span class="comment">// USE_OPENSSL</span></div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>}</div>
 </div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span> </div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00677" data-start="{" data-end="}">
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#aea8ebebba263d5e8c22055b8c97ec1c6">  677</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#aea8ebebba263d5e8c22055b8c97ec1c6">Security::ErrorDetail::printNotAfter</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span><span class="preprocessor">#if USE_OPENSSL</span></div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>    <span class="keywordflow">if</span> (broken_cert.get()) {</div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> tm = <a class="code hl_define" href="openssl_8h.html#a31143b34b6c18cfc8041c7f5359e01b5">X509_getm_notAfter</a>(broken_cert.get())) {</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>            <span class="comment">// XXX: Reduce code duplication.</span></div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>            <span class="keyword">static</span> <span class="keywordtype">char</span> tmpBuffer[256]; <span class="comment">// A temporary buffer</span></div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>            <a class="code hl_function" href="group__ServerProtocolSSLAPI.html#gaab2eab656c4d8257625c87e2dd23bc8a">Ssl::asn1timeToString</a>(tm, tmpBuffer, <span class="keyword">sizeof</span>(tmpBuffer));</div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>            os &lt;&lt; tmpBuffer;</div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>        }</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>    }</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span><span class="preprocessor">#endif </span><span class="comment">// USE_OPENSSL</span></div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>}</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span> </div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00681" data-start="{" data-end="}">
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#aea8ebebba263d5e8c22055b8c97ec1c6">  681</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#aea8ebebba263d5e8c22055b8c97ec1c6">Security::ErrorDetail::printNotAfter</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span><span class="preprocessor">#if USE_OPENSSL</span></div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>    <span class="keywordflow">if</span> (broken_cert.get()) {</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> tm = <a class="code hl_define" href="openssl_8h.html#a31143b34b6c18cfc8041c7f5359e01b5">X509_getm_notAfter</a>(broken_cert.get())) {</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>            <span class="comment">// XXX: Reduce code duplication.</span></div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>            <span class="keyword">static</span> <span class="keywordtype">char</span> tmpBuffer[256]; <span class="comment">// A temporary buffer</span></div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>            <a class="code hl_function" href="group__ServerProtocolSSLAPI.html#gaab2eab656c4d8257625c87e2dd23bc8a">Ssl::asn1timeToString</a>(tm, tmpBuffer, <span class="keyword">sizeof</span>(tmpBuffer));</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>            os &lt;&lt; tmpBuffer;</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>        }</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>    }</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span><span class="preprocessor">#endif </span><span class="comment">// USE_OPENSSL</span></div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>}</div>
 </div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span> </div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00695" data-start="{" data-end="}">
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#a3fbed4a824b561efe35eab1beae09033">  695</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a3fbed4a824b561efe35eab1beae09033">Security::ErrorDetail::printErrorCode</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span><span class="preprocessor">#if USE_OPENSSL</span></div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>    <span class="comment">// try detailEntry first because it is faster</span></div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>    <span class="keywordflow">if</span> (detailEntry) {</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>        os &lt;&lt; detailEntry-&gt;name;</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>    }</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>    os &lt;&lt; <a class="code hl_function" href="namespaceSecurity.html#a5ec028352c7e27ef335f933bb7f0a1d8">ErrorNameFromCode</a>(error_no);</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>}</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span> </div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00699" data-start="{" data-end="}">
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#a3fbed4a824b561efe35eab1beae09033">  699</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a3fbed4a824b561efe35eab1beae09033">Security::ErrorDetail::printErrorCode</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span><span class="preprocessor">#if USE_OPENSSL</span></div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>    <span class="comment">// try detailEntry first because it is faster</span></div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>    <span class="keywordflow">if</span> (detailEntry) {</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        os &lt;&lt; detailEntry-&gt;name;</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>    }</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>    os &lt;&lt; <a class="code hl_function" href="namespaceSecurity.html#a5ec028352c7e27ef335f933bb7f0a1d8">ErrorNameFromCode</a>(error_no);</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>}</div>
 </div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span> </div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00709" data-start="{" data-end="}">
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#aa37dc70d767b02a312344407208fa7ed">  709</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#aa37dc70d767b02a312344407208fa7ed">Security::ErrorDetail::printErrorDescription</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>    <span class="keywordflow">if</span> (!error_no) {</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>        os &lt;&lt; <span class="stringliteral">&quot;[No Error]&quot;</span>;</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>    }</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span> </div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span><span class="preprocessor">#if USE_OPENSSL</span></div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>    <span class="keywordflow">if</span> (detailEntry) {</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>        os &lt;&lt; detailEntry-&gt;descr;</div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>    }</div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span> </div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>}</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span> </div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00713" data-start="{" data-end="}">
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#aa37dc70d767b02a312344407208fa7ed">  713</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#aa37dc70d767b02a312344407208fa7ed">Security::ErrorDetail::printErrorDescription</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>    <span class="keywordflow">if</span> (!error_no) {</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>        os &lt;&lt; <span class="stringliteral">&quot;[No Error]&quot;</span>;</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>    }</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span> </div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span><span class="preprocessor">#if USE_OPENSSL</span></div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>    <span class="keywordflow">if</span> (detailEntry) {</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>        os &lt;&lt; detailEntry-&gt;descr;</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>    }</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span> </div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>    os &lt;&lt; <span class="stringliteral">&quot;[Not available]&quot;</span>;</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>}</div>
 </div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span> </div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00728" data-start="{" data-end="}">
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#a8bb7b465171eceeb99012fad34058a72">  728</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a8bb7b465171eceeb99012fad34058a72">Security::ErrorDetail::printErrorLibError</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>    <span class="keywordflow">if</span> (errReason.size() &gt; 0)</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>        os &lt;&lt; errReason;</div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lib_error_no)</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>        os &lt;&lt; <a class="code hl_function" href="namespaceSecurity.html#ae026d69c714c41065a22f2d0351a9c32">ErrorString</a>(lib_error_no);</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>        os &lt;&lt; <span class="stringliteral">&quot;[No Error]&quot;</span>;</div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>}</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span> </div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00732" data-start="{" data-end="}">
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#a8bb7b465171eceeb99012fad34058a72">  732</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a8bb7b465171eceeb99012fad34058a72">Security::ErrorDetail::printErrorLibError</a>(std::ostream &amp;os)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>    <span class="keywordflow">if</span> (errReason.size() &gt; 0)</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>        os &lt;&lt; errReason;</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lib_error_no)</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>        os &lt;&lt; <a class="code hl_function" href="namespaceSecurity.html#ae026d69c714c41065a22f2d0351a9c32">ErrorString</a>(lib_error_no);</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>        os &lt;&lt; <span class="stringliteral">&quot;[No Error]&quot;</span>;</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>}</div>
 </div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span> </div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span><span class="keywordtype">size_t</span></div>
-<div class="foldopen" id="foldopen00757" data-start="{" data-end="}">
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#a6960d57407ac254b8fe39fdd490d80e3">  757</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a6960d57407ac254b8fe39fdd490d80e3">Security::ErrorDetail::convertErrorCodeToDescription</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> code, std::ostream &amp;os)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>    <span class="keyword">using </span>PartDescriber = void (<a class="code hl_class" href="classSecurity_1_1ErrorDetail.html">ErrorDetail</a>::*)(std::ostream &amp;os) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>    <span class="keyword">static</span> <span class="keyword">const</span> std::map&lt;const char*, PartDescriber&gt; PartDescriberByCode = {</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>        {<span class="stringliteral">&quot;ssl_subject&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a67f850ecfd38dfc57cd66e7555d711f2">ErrorDetail::printSubject</a>},</div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>        {<span class="stringliteral">&quot;ssl_ca_name&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#ad69e837720f778043ecf1c4f7c73d6cf">ErrorDetail::printCaName</a>},</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>        {<span class="stringliteral">&quot;ssl_cn&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a56415d8d57ddb12b1a581edef9b7b81f">ErrorDetail::printCommonName</a>},</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>        {<span class="stringliteral">&quot;ssl_notbefore&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#ab33c925ac6f316aabf136000cd029bc7">ErrorDetail::printNotBefore</a>},</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>        {<span class="stringliteral">&quot;ssl_notafter&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#aea8ebebba263d5e8c22055b8c97ec1c6">ErrorDetail::printNotAfter</a>},</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        {<span class="stringliteral">&quot;err_name&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a3fbed4a824b561efe35eab1beae09033">ErrorDetail::printErrorCode</a>},</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>        {<span class="stringliteral">&quot;ssl_error_descr&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#aa37dc70d767b02a312344407208fa7ed">ErrorDetail::printErrorDescription</a>},</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>        {<span class="stringliteral">&quot;ssl_lib_error&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a8bb7b465171eceeb99012fad34058a72">ErrorDetail::printErrorLibError</a>}</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    };</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span> </div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    <span class="comment">// We can refactor the map to find matches without looping, but that</span></div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>    <span class="comment">// requires a &quot;starts with&quot; comparison function -- `code` length is unknown.</span></div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;pair: PartDescriberByCode) {</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>        <span class="keyword">const</span> <span class="keyword">auto</span> len = strlen(pair.first);</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>        <span class="keywordflow">if</span> (strncmp(code, pair.first, len) == 0) {</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>            <span class="keyword">const</span> <span class="keyword">auto</span> method = pair.second;</div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>            (this-&gt;*method)(os);</div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>            <span class="keywordflow">return</span> len;</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>        }</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>    }</div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span> </div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>    <span class="comment">// TODO: Support logformat %codes.</span></div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>}</div>
-</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span> </div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span><span class="keywordtype">size_t</span></div>
+<div class="foldopen" id="foldopen00761" data-start="{" data-end="}">
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno"><a class="line" href="classSecurity_1_1ErrorDetail.html#a6960d57407ac254b8fe39fdd490d80e3">  761</a></span><a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a6960d57407ac254b8fe39fdd490d80e3">Security::ErrorDetail::convertErrorCodeToDescription</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> code, std::ostream &amp;os)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>    <span class="keyword">using </span>PartDescriber = void (<a class="code hl_class" href="classSecurity_1_1ErrorDetail.html">ErrorDetail</a>::*)(std::ostream &amp;os) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>    <span class="keyword">static</span> <span class="keyword">const</span> std::map&lt;const char*, PartDescriber&gt; PartDescriberByCode = {</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>        {<span class="stringliteral">&quot;ssl_subject&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a67f850ecfd38dfc57cd66e7555d711f2">ErrorDetail::printSubject</a>},</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        {<span class="stringliteral">&quot;ssl_ca_name&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#ad69e837720f778043ecf1c4f7c73d6cf">ErrorDetail::printCaName</a>},</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>        {<span class="stringliteral">&quot;ssl_cn&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a56415d8d57ddb12b1a581edef9b7b81f">ErrorDetail::printCommonName</a>},</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>        {<span class="stringliteral">&quot;ssl_notbefore&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#ab33c925ac6f316aabf136000cd029bc7">ErrorDetail::printNotBefore</a>},</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>        {<span class="stringliteral">&quot;ssl_notafter&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#aea8ebebba263d5e8c22055b8c97ec1c6">ErrorDetail::printNotAfter</a>},</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>        {<span class="stringliteral">&quot;err_name&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a3fbed4a824b561efe35eab1beae09033">ErrorDetail::printErrorCode</a>},</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>        {<span class="stringliteral">&quot;ssl_error_descr&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#aa37dc70d767b02a312344407208fa7ed">ErrorDetail::printErrorDescription</a>},</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>        {<span class="stringliteral">&quot;ssl_lib_error&quot;</span>, &amp;<a class="code hl_function" href="classSecurity_1_1ErrorDetail.html#a8bb7b465171eceeb99012fad34058a72">ErrorDetail::printErrorLibError</a>}</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>    };</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span> </div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>    <span class="comment">// We can refactor the map to find matches without looping, but that</span></div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>    <span class="comment">// requires a &quot;starts with&quot; comparison function -- `code` length is unknown.</span></div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;pair: PartDescriberByCode) {</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>        <span class="keyword">const</span> <span class="keyword">auto</span> len = strlen(pair.first);</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>        <span class="keywordflow">if</span> (strncmp(code, pair.first, len) == 0) {</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>            <span class="keyword">const</span> <span class="keyword">auto</span> method = pair.second;</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>            (this-&gt;*method)(os);</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>            <span class="keywordflow">return</span> len;</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>        }</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    }</div>
 <div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span> </div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>    <span class="comment">// TODO: Support logformat %codes.</span></div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>}</div>
+</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span> </div>
 <div class="ttc" id="aErrorDetailManager_8h_html"><div class="ttname"><a href="ErrorDetailManager_8h.html">ErrorDetailManager.h</a></div></div>
 <div class="ttc" id="aIoManip_8h_html"><div class="ttname"><a href="IoManip_8h.html">IoManip.h</a></div></div>
 <div class="ttc" id="aIoManip_8h_html_afbc9e9f40a0e63baaf5a4089edba6a7c"><div class="ttname"><a href="IoManip_8h.html#afbc9e9f40a0e63baaf5a4089edba6a7c">asHex</a></div><div class="ttdeci">AsHex&lt; Integer &gt; asHex(const Integer n)</div><div class="ttdoc">a helper to ease AsHex object creation</div><div class="ttdef"><b>Definition</b> <a href="IoManip_8h_source.html#l00169">IoManip.h:169</a></div></div>
@@ -902,13 +906,13 @@ $(document).ready(function(){initNavTree('security_2ErrorDetail_8cc_source.html'
 <div class="ttc" id="aSysErrorDetail_8h_html"><div class="ttname"><a href="SysErrorDetail_8h.html">SysErrorDetail.h</a></div></div>
 <div class="ttc" id="aUri_8cc_html_a7b3d400c54dd0ce685ac6c136ae73fe3"><div class="ttname"><a href="Uri_8cc.html#a7b3d400c54dd0ce685ac6c136ae73fe3">matchDomainName</a></div><div class="ttdeci">int matchDomainName(const char *h, const char *d, MatchDomainNameFlags flags)</div><div class="ttdef"><b>Definition</b> <a href="Uri_8cc_source.html#l00903">Uri.cc:903</a></div></div>
 <div class="ttc" id="aassert_8h_html_a33fa45e42155e69ce8d0da0fd978b351"><div class="ttname"><a href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a></div><div class="ttdeci">#define assert(EX)</div><div class="ttdef"><b>Definition</b> <a href="assert_8h_source.html#l00017">assert.h:17</a></div></div>
-<div class="ttc" id="aclassCommonNamesPrinter_html"><div class="ttname"><a href="classCommonNamesPrinter.html">CommonNamesPrinter</a></div><div class="ttdoc">prints X.509 names extracted using Ssl::HasMatchingSubjectName()</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00578">ErrorDetail.cc:579</a></div></div>
-<div class="ttc" id="aclassCommonNamesPrinter_html_a0c7662838cd12ccf25fc3fb580a73427"><div class="ttname"><a href="classCommonNamesPrinter.html#a0c7662838cd12ccf25fc3fb580a73427">CommonNamesPrinter::itemStream</a></div><div class="ttdeci">std::ostream &amp; itemStream() const</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00617">ErrorDetail.cc:617</a></div></div>
-<div class="ttc" id="aclassCommonNamesPrinter_html_a163885bca54e12cd6ca011f376a39c92"><div class="ttname"><a href="classCommonNamesPrinter.html#a163885bca54e12cd6ca011f376a39c92">CommonNamesPrinter::CommonNamesPrinter</a></div><div class="ttdeci">CommonNamesPrinter(std::ostream &amp;os)</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00581">ErrorDetail.cc:581</a></div></div>
-<div class="ttc" id="aclassCommonNamesPrinter_html_a4916963e685c0a6867e46196d83349ed"><div class="ttname"><a href="classCommonNamesPrinter.html#a4916963e685c0a6867e46196d83349ed">CommonNamesPrinter::matchIp</a></div><div class="ttdeci">bool matchIp(const Ip::Address &amp;) const override</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00606">ErrorDetail.cc:606</a></div></div>
-<div class="ttc" id="aclassCommonNamesPrinter_html_a4d82033bcd74f20c6d03d43726e02b00"><div class="ttname"><a href="classCommonNamesPrinter.html#a4d82033bcd74f20c6d03d43726e02b00">CommonNamesPrinter::printed</a></div><div class="ttdeci">size_t printed</div><div class="ttdoc">the number of names printed so far</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00584">ErrorDetail.cc:584</a></div></div>
-<div class="ttc" id="aclassCommonNamesPrinter_html_ac09bb2a5437f734f9bf07c8d392fa1fb"><div class="ttname"><a href="classCommonNamesPrinter.html#ac09bb2a5437f734f9bf07c8d392fa1fb">CommonNamesPrinter::matchDomainName</a></div><div class="ttdeci">bool matchDomainName(const Dns::DomainName &amp;) const override</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00598">ErrorDetail.cc:598</a></div></div>
-<div class="ttc" id="aclassCommonNamesPrinter_html_ae9e5a38d54eca6a1f09bfc89fbb82535"><div class="ttname"><a href="classCommonNamesPrinter.html#ae9e5a38d54eca6a1f09bfc89fbb82535">CommonNamesPrinter::os_</a></div><div class="ttdeci">std::ostream &amp; os_</div><div class="ttdoc">destination for printed names</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00594">ErrorDetail.cc:594</a></div></div>
+<div class="ttc" id="aclassCommonNamesPrinter_html"><div class="ttname"><a href="classCommonNamesPrinter.html">CommonNamesPrinter</a></div><div class="ttdoc">prints X.509 names extracted using Ssl::HasMatchingSubjectName()</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00582">ErrorDetail.cc:583</a></div></div>
+<div class="ttc" id="aclassCommonNamesPrinter_html_a0c7662838cd12ccf25fc3fb580a73427"><div class="ttname"><a href="classCommonNamesPrinter.html#a0c7662838cd12ccf25fc3fb580a73427">CommonNamesPrinter::itemStream</a></div><div class="ttdeci">std::ostream &amp; itemStream() const</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00621">ErrorDetail.cc:621</a></div></div>
+<div class="ttc" id="aclassCommonNamesPrinter_html_a163885bca54e12cd6ca011f376a39c92"><div class="ttname"><a href="classCommonNamesPrinter.html#a163885bca54e12cd6ca011f376a39c92">CommonNamesPrinter::CommonNamesPrinter</a></div><div class="ttdeci">CommonNamesPrinter(std::ostream &amp;os)</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00585">ErrorDetail.cc:585</a></div></div>
+<div class="ttc" id="aclassCommonNamesPrinter_html_a4916963e685c0a6867e46196d83349ed"><div class="ttname"><a href="classCommonNamesPrinter.html#a4916963e685c0a6867e46196d83349ed">CommonNamesPrinter::matchIp</a></div><div class="ttdeci">bool matchIp(const Ip::Address &amp;) const override</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00610">ErrorDetail.cc:610</a></div></div>
+<div class="ttc" id="aclassCommonNamesPrinter_html_a4d82033bcd74f20c6d03d43726e02b00"><div class="ttname"><a href="classCommonNamesPrinter.html#a4d82033bcd74f20c6d03d43726e02b00">CommonNamesPrinter::printed</a></div><div class="ttdeci">size_t printed</div><div class="ttdoc">the number of names printed so far</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00588">ErrorDetail.cc:588</a></div></div>
+<div class="ttc" id="aclassCommonNamesPrinter_html_ac09bb2a5437f734f9bf07c8d392fa1fb"><div class="ttname"><a href="classCommonNamesPrinter.html#ac09bb2a5437f734f9bf07c8d392fa1fb">CommonNamesPrinter::matchDomainName</a></div><div class="ttdeci">bool matchDomainName(const Dns::DomainName &amp;) const override</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00602">ErrorDetail.cc:602</a></div></div>
+<div class="ttc" id="aclassCommonNamesPrinter_html_ae9e5a38d54eca6a1f09bfc89fbb82535"><div class="ttname"><a href="classCommonNamesPrinter.html#ae9e5a38d54eca6a1f09bfc89fbb82535">CommonNamesPrinter::os_</a></div><div class="ttdeci">std::ostream &amp; os_</div><div class="ttdoc">destination for printed names</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00598">ErrorDetail.cc:598</a></div></div>
 <div class="ttc" id="aclassIp_1_1Address_html"><div class="ttname"><a href="classIp_1_1Address.html">Ip::Address</a></div><div class="ttdef"><b>Definition</b> <a href="ip_2Address_8h_source.html#l00042">Address.h:43</a></div></div>
 <div class="ttc" id="aclassIp_1_1Address_html_a00a47f51e0c2b78115495af295924aee"><div class="ttname"><a href="classIp_1_1Address.html#a00a47f51e0c2b78115495af295924aee">Ip::Address::toStr</a></div><div class="ttdeci">char * toStr(char *buf, const unsigned int blen, int force=AF_UNSPEC) const</div><div class="ttdef"><b>Definition</b> <a href="ip_2Address_8cc_source.html#l00804">Address.cc:804</a></div></div>
 <div class="ttc" id="aclassRefCount_html"><div class="ttname"><a href="classRefCount.html">RefCount&lt; HttpRequest &gt;</a></div></div>
@@ -916,23 +920,23 @@ $(document).ready(function(){initNavTree('security_2ErrorDetail_8cc_source.html'
 <div class="ttc" id="aclassSBufStream_html_a11422fa1d8e0136156a9d83fb48d7673"><div class="ttname"><a href="classSBufStream.html#a11422fa1d8e0136156a9d83fb48d7673">SBufStream::buf</a></div><div class="ttdeci">SBuf buf()</div><div class="ttdoc">bytes written so far</div><div class="ttdef"><b>Definition</b> <a href="sbuf_2Stream_8h_source.html#l00041">Stream.h:41</a></div></div>
 <div class="ttc" id="aclassSBuf_html"><div class="ttname"><a href="classSBuf.html">SBuf</a></div><div class="ttdef"><b>Definition</b> <a href="SBuf_8h_source.html#l00093">SBuf.h:94</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1ErrorDetail_html"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html">Security::ErrorDetail</a></div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8h_source.html#l00039">ErrorDetail.h:40</a></div></div>
-<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a3fbed4a824b561efe35eab1beae09033"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a3fbed4a824b561efe35eab1beae09033">Security::ErrorDetail::printErrorCode</a></div><div class="ttdeci">void printErrorCode(std::ostream &amp;os) const</div><div class="ttdoc">textual representation of error_no</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00695">ErrorDetail.cc:695</a></div></div>
+<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a3fbed4a824b561efe35eab1beae09033"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a3fbed4a824b561efe35eab1beae09033">Security::ErrorDetail::printErrorCode</a></div><div class="ttdeci">void printErrorCode(std::ostream &amp;os) const</div><div class="ttdoc">textual representation of error_no</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00699">ErrorDetail.cc:699</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a4defb156f167f95ca3b29e4a2360015d"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a4defb156f167f95ca3b29e4a2360015d">Security::ErrorDetail::verbose</a></div><div class="ttdeci">SBuf verbose(const HttpRequestPointer &amp;) const override</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00534">ErrorDetail.cc:534</a></div></div>
-<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a56415d8d57ddb12b1a581edef9b7b81f"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a56415d8d57ddb12b1a581edef9b7b81f">Security::ErrorDetail::printCommonName</a></div><div class="ttdeci">void printCommonName(std::ostream &amp;os) const</div><div class="ttdoc">a list of the broken certificates CN and alternate names</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00628">ErrorDetail.cc:628</a></div></div>
+<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a56415d8d57ddb12b1a581edef9b7b81f"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a56415d8d57ddb12b1a581edef9b7b81f">Security::ErrorDetail::printCommonName</a></div><div class="ttdeci">void printCommonName(std::ostream &amp;os) const</div><div class="ttdoc">a list of the broken certificates CN and alternate names</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00632">ErrorDetail.cc:632</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a5a9a466b0eb29abaaa524fd66df453af"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a5a9a466b0eb29abaaa524fd66df453af">Security::ErrorDetail::lib_error_no</a></div><div class="ttdeci">LibErrorCode lib_error_no</div><div class="ttdoc">TLS library-reported non-validation error or zero;.</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8h_source.html#l00105">ErrorDetail.h:105</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a5bde4241198d66e0bf00d75ccef03287"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a5bde4241198d66e0bf00d75ccef03287">Security::ErrorDetail::ErrorDetail</a></div><div class="ttdeci">ErrorDetail(ErrorCode err_no, const CertPointer &amp;peer, const CertPointer &amp;broken, const char *aReason=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00466">ErrorDetail.cc:466</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a5f51a0447eabc6180561d8ad9b5d3883"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a5f51a0447eabc6180561d8ad9b5d3883">Security::ErrorDetail::ioErrorNo</a></div><div class="ttdeci">int ioErrorNo</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8h_source.html#l00115">ErrorDetail.h:115</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a635098c4117e42fc1e3092101c9015e9"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a635098c4117e42fc1e3092101c9015e9">Security::ErrorDetail::broken_cert</a></div><div class="ttdeci">CertPointer broken_cert</div><div class="ttdoc">A pointer to the broken certificate (peer or intermediate)</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8h_source.html#l00099">ErrorDetail.h:99</a></div></div>
-<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a67f850ecfd38dfc57cd66e7555d711f2"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a67f850ecfd38dfc57cd66e7555d711f2">Security::ErrorDetail::printSubject</a></div><div class="ttdeci">void printSubject(std::ostream &amp;os) const</div><div class="ttdoc">textual representation of the subject of the broken certificate</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00561">ErrorDetail.cc:561</a></div></div>
-<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a6960d57407ac254b8fe39fdd490d80e3"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a6960d57407ac254b8fe39fdd490d80e3">Security::ErrorDetail::convertErrorCodeToDescription</a></div><div class="ttdeci">size_t convertErrorCodeToDescription(const char *code, std::ostream &amp;os) const</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00757">ErrorDetail.cc:757</a></div></div>
-<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a8bb7b465171eceeb99012fad34058a72"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a8bb7b465171eceeb99012fad34058a72">Security::ErrorDetail::printErrorLibError</a></div><div class="ttdeci">void printErrorLibError(std::ostream &amp;os) const</div><div class="ttdoc">textual representation of lib_error_no</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00728">ErrorDetail.cc:728</a></div></div>
-<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_aa37dc70d767b02a312344407208fa7ed"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#aa37dc70d767b02a312344407208fa7ed">Security::ErrorDetail::printErrorDescription</a></div><div class="ttdeci">void printErrorDescription(std::ostream &amp;os) const</div><div class="ttdoc">short description of error_no</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00709">ErrorDetail.cc:709</a></div></div>
+<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a67f850ecfd38dfc57cd66e7555d711f2"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a67f850ecfd38dfc57cd66e7555d711f2">Security::ErrorDetail::printSubject</a></div><div class="ttdeci">void printSubject(std::ostream &amp;os) const</div><div class="ttdoc">textual representation of the subject of the broken certificate</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00565">ErrorDetail.cc:565</a></div></div>
+<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a6960d57407ac254b8fe39fdd490d80e3"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a6960d57407ac254b8fe39fdd490d80e3">Security::ErrorDetail::convertErrorCodeToDescription</a></div><div class="ttdeci">size_t convertErrorCodeToDescription(const char *code, std::ostream &amp;os) const</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00761">ErrorDetail.cc:761</a></div></div>
+<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_a8bb7b465171eceeb99012fad34058a72"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#a8bb7b465171eceeb99012fad34058a72">Security::ErrorDetail::printErrorLibError</a></div><div class="ttdeci">void printErrorLibError(std::ostream &amp;os) const</div><div class="ttdoc">textual representation of lib_error_no</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00732">ErrorDetail.cc:732</a></div></div>
+<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_aa37dc70d767b02a312344407208fa7ed"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#aa37dc70d767b02a312344407208fa7ed">Security::ErrorDetail::printErrorDescription</a></div><div class="ttdeci">void printErrorDescription(std::ostream &amp;os) const</div><div class="ttdoc">short description of error_no</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00713">ErrorDetail.cc:713</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_aa793c890bcb16b19cfb069e71da8a65f"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#aa793c890bcb16b19cfb069e71da8a65f">Security::ErrorDetail::errReason</a></div><div class="ttdeci">String errReason</div><div class="ttdoc">a custom reason for the error</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8h_source.html#l00123">ErrorDetail.h:123</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_aaa6c0c07b130170ebdfb4fc427f307e7"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#aaa6c0c07b130170ebdfb4fc427f307e7">Security::ErrorDetail::setPeerCertificate</a></div><div class="ttdeci">void setPeerCertificate(const CertPointer &amp;)</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00490">ErrorDetail.cc:490</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_aadbb939dc3d19ed6e57b2efa3f811bc6"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#aadbb939dc3d19ed6e57b2efa3f811bc6">Security::ErrorDetail::brief</a></div><div class="ttdeci">SBuf brief() const override</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00500">ErrorDetail.cc:500</a></div></div>
-<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_ab33c925ac6f316aabf136000cd029bc7"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#ab33c925ac6f316aabf136000cd029bc7">Security::ErrorDetail::printNotBefore</a></div><div class="ttdeci">void printNotBefore(std::ostream &amp;os) const</div><div class="ttdoc">textual representation of the &quot;not before&quot; field of the broken certificate</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00659">ErrorDetail.cc:659</a></div></div>
-<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_ad69e837720f778043ecf1c4f7c73d6cf"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#ad69e837720f778043ecf1c4f7c73d6cf">Security::ErrorDetail::printCaName</a></div><div class="ttdeci">void printCaName(std::ostream &amp;os) const</div><div class="ttdoc">the issuer of the broken certificate</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00643">ErrorDetail.cc:643</a></div></div>
-<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_aea8ebebba263d5e8c22055b8c97ec1c6"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#aea8ebebba263d5e8c22055b8c97ec1c6">Security::ErrorDetail::printNotAfter</a></div><div class="ttdeci">void printNotAfter(std::ostream &amp;os) const</div><div class="ttdoc">textual representation of the &quot;not after&quot; field of the broken certificate</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00677">ErrorDetail.cc:677</a></div></div>
+<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_ab33c925ac6f316aabf136000cd029bc7"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#ab33c925ac6f316aabf136000cd029bc7">Security::ErrorDetail::printNotBefore</a></div><div class="ttdeci">void printNotBefore(std::ostream &amp;os) const</div><div class="ttdoc">textual representation of the &quot;not before&quot; field of the broken certificate</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00663">ErrorDetail.cc:663</a></div></div>
+<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_ad69e837720f778043ecf1c4f7c73d6cf"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#ad69e837720f778043ecf1c4f7c73d6cf">Security::ErrorDetail::printCaName</a></div><div class="ttdeci">void printCaName(std::ostream &amp;os) const</div><div class="ttdoc">the issuer of the broken certificate</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00647">ErrorDetail.cc:647</a></div></div>
+<div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_aea8ebebba263d5e8c22055b8c97ec1c6"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#aea8ebebba263d5e8c22055b8c97ec1c6">Security::ErrorDetail::printNotAfter</a></div><div class="ttdeci">void printNotAfter(std::ostream &amp;os) const</div><div class="ttdoc">textual representation of the &quot;not after&quot; field of the broken certificate</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8cc_source.html#l00681">ErrorDetail.cc:681</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1ErrorDetail_html_afada41c00f71e12e20e850ce0940f85a"><div class="ttname"><a href="classSecurity_1_1ErrorDetail.html#afada41c00f71e12e20e850ce0940f85a">Security::ErrorDetail::peer_cert</a></div><div class="ttdeci">CertPointer peer_cert</div><div class="ttdoc">A pointer to the peer certificate.</div><div class="ttdef"><b>Definition</b> <a href="security_2ErrorDetail_8h_source.html#l00098">ErrorDetail.h:98</a></div></div>
 <div class="ttc" id="aclassSecurity_1_1LockingPointer_html"><div class="ttname"><a href="classSecurity_1_1LockingPointer.html">Security::LockingPointer&lt; X509, X509_free_cpp, HardFun&lt; int, X509 *, X509_up_ref &gt; &gt;</a></div></div>
 <div class="ttc" id="aclassSsl_1_1ErrorDetailsManager_html_a64eeca450ef3041746b706a6c81d86f1"><div class="ttname"><a href="classSsl_1_1ErrorDetailsManager.html#a64eeca450ef3041746b706a6c81d86f1">Ssl::ErrorDetailsManager::GetInstance</a></div><div class="ttdeci">static ErrorDetailsManager &amp; GetInstance()</div><div class="ttdoc">Instance class.</div><div class="ttdef"><b>Definition</b> <a href="ErrorDetailManager_8cc_source.html#l00075">ErrorDetailManager.cc:75</a></div></div>
