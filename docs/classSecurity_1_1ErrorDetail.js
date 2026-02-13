@@ -7,6 +7,7 @@ var classSecurity_1_1ErrorDetail =
     [ "ErrorDetail", "classSecurity_1_1ErrorDetail.html#a62c3d14c4615a852d07e9416cf67c30b", null ],
     [ "brief", "classSecurity_1_1ErrorDetail.html#aadbb939dc3d19ed6e57b2efa3f811bc6", null ],
     [ "brokenCert", "classSecurity_1_1ErrorDetail.html#ab4d8f8d0594b94121bc7e85cf384d5d5", null ],
+    [ "certificateToReport", "classSecurity_1_1ErrorDetail.html#ac3d7cc0e743b1c329dac234ad5178b78", null ],
     [ "convertErrorCodeToDescription", "classSecurity_1_1ErrorDetail.html#a6960d57407ac254b8fe39fdd490d80e3", null ],
     [ "equals", "classSecurity_1_1ErrorDetail.html#ae6768232bf644b3241d5204a93bcb9d2", null ],
     [ "errorNo", "classSecurity_1_1ErrorDetail.html#a89a6c9bbecf804a9e4c070b88404bcb3", null ],

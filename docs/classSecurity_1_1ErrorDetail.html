@@ -180,6 +180,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a8bb7b465171eceeb99012fad34058a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6960d57407ac254b8fe39fdd490d80e3" id="r_a6960d57407ac254b8fe39fdd490d80e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1ErrorDetail.html#a6960d57407ac254b8fe39fdd490d80e3">convertErrorCodeToDescription</a> (const char *code, std::ostream &amp;os) const</td></tr>
 <tr class="separator:a6960d57407ac254b8fe39fdd490d80e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d7cc0e743b1c329dac234ad5178b78" id="r_ac3d7cc0e743b1c329dac234ad5178b78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSecurity.html#a790f0b7f45166899f459e108d1e97bbc">Certificate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1ErrorDetail.html#ac3d7cc0e743b1c329dac234ad5178b78">certificateToReport</a> () const</td></tr>
+<tr class="separator:ac3d7cc0e743b1c329dac234ad5178b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -243,7 +245,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00117">117</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00124">124</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 </div>
 </div>
@@ -301,7 +303,13 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Details a server-side certificate verification failure. If <code>broken</code> is nil, then the broken certificate is the peer certificate. </p>
+<p>Details an origin or cache_peer certificate verification failure or mismatch. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">peer</td><td>is an origin server or cache_peer certificate </td></tr>
+    <tr><td class="paramname">broken</td><td>is the problematic certificate (if verification failed) or nil (otherwise) Two non-nil certificates may differ when, for example, an intermediate (rather than leaf) certificate fails validation. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8cc_source.html#l00466">466</a> of file <a class="el" href="security_2ErrorDetail_8cc_source.html">ErrorDetail.cc</a>.</p>
 
@@ -458,9 +466,39 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00078">78</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00081">81</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 <p class="reference">References <a class="el" href="classSecurity_1_1ErrorDetail.html#a635098c4117e42fc1e3092101c9015e9">broken_cert</a>, and <a class="el" href="classSecurity_1_1LockingPointer.html#abd5883cbae01116de745ff8496a65664">Security::LockingPointer&lt; T, UnLocker, Locker &gt;::get()</a>.</p>
+
+</div>
+</div>
+<a id="ac3d7cc0e743b1c329dac234ad5178b78" name="ac3d7cc0e743b1c329dac234ad5178b78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d7cc0e743b1c329dac234ad5178b78">&#9670;&#160;</a></span>certificateToReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceSecurity.html#a790f0b7f45166899f459e108d1e97bbc">Certificate</a> * Security::ErrorDetail::certificateToReport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>peer or intermediate certificate that should be used when expanding various error page codes like ssl_subject </p>
+
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00103">103</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+
+<p class="reference">References <a class="el" href="classSecurity_1_1ErrorDetail.html#a635098c4117e42fc1e3092101c9015e9">broken_cert</a>, <a class="el" href="classSecurity_1_1LockingPointer.html#abd5883cbae01116de745ff8496a65664">Security::LockingPointer&lt; T, UnLocker, Locker &gt;::get()</a>, and <a class="el" href="classSecurity_1_1ErrorDetail.html#afada41c00f71e12e20e850ce0940f85a">peer_cert</a>.</p>
 
 </div>
 </div>
@@ -499,7 +537,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>Converts the code to a string value. Supported formatting codes are:</p>
 <p><a class="el" href="classError.html" title="a transaction problem">Error</a> meta information: err_name: The name of a high-level SSL error (e.g., X509_V_ERR_*) ssl_error_descr: A short description of the SSL error ssl_lib_error: human-readable low-level error string by <a class="el" href="namespaceSecurity.html#ae026d69c714c41065a22f2d0351a9c32" title="converts numeric LibErrorCode into a human-friendlier string">ErrorString()</a></p>
-<p>Certificate information extracted from broken (not necessarily peer!) cert ssl_cn: The comma-separated list of common and alternate names ssl_subject: The certificate subject ssl_ca_name: The certificate issuer name ssl_notbefore: The certificate "not before" field ssl_notafter: The certificate "not after" field</p>
+<p>Peer or intermediate certificate info extracted from <a class="el" href="classSecurity_1_1ErrorDetail.html#ac3d7cc0e743b1c329dac234ad5178b78">certificateToReport()</a> ssl_cn: The comma-separated list of common and alternate names ssl_subject: The certificate subject ssl_ca_name: The certificate issuer name ssl_notbefore: The certificate "not before" field ssl_notafter: The certificate "not after" field</p>
 <dl class="section return"><dt>Returns</dt><dd>the length of the code (the number of characters to be replaced by value) </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -569,7 +607,7 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>error category; </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceSecurity.html#a5e9bec92651d3a02ed9b6af7e962c663" title="Squid-defined error code (&lt;0), an error code returned by X.509 API, or zero.">ErrorCode</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00067">67</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00070">70</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 <p class="reference">References <a class="el" href="classSecurity_1_1ErrorDetail.html#a3ca502417ddd962ef2b80ccb4990567f">error_no</a>.</p>
 
@@ -624,7 +662,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00075">75</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00078">78</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 <p class="reference">References <a class="el" href="classSecurity_1_1LockingPointer.html#abd5883cbae01116de745ff8496a65664">Security::LockingPointer&lt; T, UnLocker, Locker &gt;::get()</a>, and <a class="el" href="classSecurity_1_1ErrorDetail.html#afada41c00f71e12e20e850ce0940f85a">peer_cert</a>.</p>
 
@@ -931,7 +969,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the previously saved errno(3) or zero </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00070">70</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00073">73</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 <p class="reference">References <a class="el" href="classSecurity_1_1ErrorDetail.html#a2901da59553599db86a2da609ccb311c">sysErrorNo</a>.</p>
 
@@ -993,9 +1031,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00099">99</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00106">106</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classSecurity_1_1ErrorDetail.html#a5bde4241198d66e0bf00d75ccef03287">ErrorDetail()</a>, and <a class="el" href="classSecurity_1_1ErrorDetail.html#ab4d8f8d0594b94121bc7e85cf384d5d5">brokenCert()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classSecurity_1_1ErrorDetail.html#a5bde4241198d66e0bf00d75ccef03287">ErrorDetail()</a>, <a class="el" href="classSecurity_1_1ErrorDetail.html#ab4d8f8d0594b94121bc7e85cf384d5d5">brokenCert()</a>, and <a class="el" href="classSecurity_1_1ErrorDetail.html#ac3d7cc0e743b1c329dac234ad5178b78">certificateToReport()</a>.</p>
 
 </div>
 </div>
@@ -1019,7 +1057,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00118">118</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00125">125</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 </div>
 </div>
@@ -1044,7 +1082,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceSecurity.html#a5e9bec92651d3a02ed9b6af7e962c663" title="Squid-defined error code (&lt;0), an error code returned by X.509 API, or zero.">ErrorCode</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00102">102</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00109">109</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classSecurity_1_1ErrorDetail.html#a89a6c9bbecf804a9e4c070b88404bcb3">errorNo()</a>.</p>
 
@@ -1070,7 +1108,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00123">123</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00130">130</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classSecurity_1_1ErrorDetail.html#a5bde4241198d66e0bf00d75ccef03287">ErrorDetail()</a>.</p>
 
@@ -1097,7 +1135,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>OpenSSL-specific (first-level or intermediate) TLS I/O operation result reported by SSL_get_error(3SSL) (e.g., SSL_ERROR_SYSCALL) or zero. Unlike lib_error_no, this error is mostly meant for I/O control and has no OpenSSL-provided human-friendly text representation. </p>
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00115">115</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00122">122</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classSecurity_1_1ErrorDetail.html#a861ad3f2e777c66617d46b6eeb492575">ErrorDetail()</a>.</p>
 
@@ -1124,7 +1162,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespaceSecurity.html#a78e37ef3ef4720ca4a71ec15e0902d5e" title="TLS library-reported non-validation error.">LibErrorCode</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00105">105</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00112">112</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classSecurity_1_1ErrorDetail.html#a62c3d14c4615a852d07e9416cf67c30b">ErrorDetail()</a>.</p>
 
@@ -1150,9 +1188,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00098">98</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00105">105</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classSecurity_1_1ErrorDetail.html#a5bde4241198d66e0bf00d75ccef03287">ErrorDetail()</a>, and <a class="el" href="classSecurity_1_1ErrorDetail.html#a2b19d2efa1844c3bc4a2c4ec9cd4eec8">peerCert()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classSecurity_1_1ErrorDetail.html#a5bde4241198d66e0bf00d75ccef03287">ErrorDetail()</a>, <a class="el" href="classSecurity_1_1ErrorDetail.html#ac3d7cc0e743b1c329dac234ad5178b78">certificateToReport()</a>, and <a class="el" href="classSecurity_1_1ErrorDetail.html#a2b19d2efa1844c3bc4a2c4ec9cd4eec8">peerCert()</a>.</p>
 
 </div>
 </div>
@@ -1176,7 +1214,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00108">108</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="security_2ErrorDetail_8h_source.html#l00115">115</a> of file <a class="el" href="security_2ErrorDetail_8h_source.html">ErrorDetail.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classSecurity_1_1ErrorDetail.html#ac68ca9730c8636ac7af086138e958e79">sysError()</a>.</p>
 

@@ -1,5 +1,7 @@
 var NAVTREEINDEX151 =
 {
+"group__FQDNCacheInternal.html#gae5ac1f04c0c840373cafb0f98cae03b1":[7,2,10,0,17],
+"group__FQDNCacheInternal.html#gaf9d3db2969e88ba2bf3d4c338062ef5e":[7,2,10,0,5],
 "group__FileFormatSwapStateAPI.html":[7,16,3],
 "group__FileSystems.html":[7,16],
 "group__IPCacheAPI.html":[7,2,11],
@@ -186,12 +188,12 @@ var NAVTREEINDEX151 =
 "group__Timeouts.html":[7,6],
 "group__UFS.html":[7,16,2],
 "group__compat.html":[7,0],
-"group__diskd.html":[7,16,1],
 "group__diskd.html":[7,16,2,1],
-"group__diskd.html#ga930e553b51fb797427225044aa9cd165":[7,16,1,4],
+"group__diskd.html":[7,16,1],
 "group__diskd.html#ga930e553b51fb797427225044aa9cd165":[7,16,2,1,4],
-"group__diskd.html#gac2d3520fa5be54fb4fa2c844ff61aefd":[7,16,2,1,5],
+"group__diskd.html#ga930e553b51fb797427225044aa9cd165":[7,16,1,4],
 "group__diskd.html#gac2d3520fa5be54fb4fa2c844ff61aefd":[7,16,1,5],
+"group__diskd.html#gac2d3520fa5be54fb4fa2c844ff61aefd":[7,16,2,1,5],
 "group__libsquid.html":[7,3],
 "group__pinger.html":[7,11],
 "group__pinger.html#ga2c3f6775325c30275d11c6abee2db6a0":[7,11,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX151 =
 "heap_8c.html#a0f9023d37ac54893eb596b1036c9cbf3":[10,0,0,3,9,8],
 "heap_8c.html#a1b20d70f1cb202dab3c79f3e935e2439":[10,0,0,3,9,19],
 "heap_8c.html#a1d9477f976ae34193df3c167b46fa3be":[10,0,0,3,9,24],
-"heap_8c.html#a268ab861ec35af399249cf2827114f36":[10,0,0,3,9,12],
-"heap_8c.html#a29d3956dd6e06e14b8ea0f7afa7c123b":[10,0,0,3,9,3],
-"heap_8c.html#a2b52c6eb3c2bdd5008df5cff4a8bb08b":[10,0,0,3,9,25]
+"heap_8c.html#a268ab861ec35af399249cf2827114f36":[10,0,0,3,9,12]
 };

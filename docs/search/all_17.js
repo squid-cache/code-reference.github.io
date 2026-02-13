@@ -116,7 +116,7 @@ var searchData=
   ['version_2eh_113',['version.h',['../version_8h.html',1,'']]],
   ['version_5f_114',['version_',['../classProxyProtocol_1_1Header.html#ac62eb40fef3de2cb4af4af16d5cdcbcc',1,'ProxyProtocol::Header::version_'],['../classSecurity_1_1NegotiationHistory.html#a00cf3871d1198782499e0253d8bc3cb2',1,'Security::NegotiationHistory::version_']]],
   ['version_5fstring_115',['version_string',['../globals_8h.html#a8042d0ef3deb220500d4c3a0c1382f07',1,'globals.h']]],
-  ['versions_116',['versions',['../classRock_1_1LoadingParts.html#ab4abbba47f62f1dbb0b4b6de3cbd1300',1,'Rock::LoadingParts::versions() const'],['../classRock_1_1LoadingParts.html#a9ccf87e2c01ef6a300f606349c01b415',1,'Rock::LoadingParts::Versions']]],
+  ['versions_116',['versions',['../classRock_1_1LoadingParts.html#a9ccf87e2c01ef6a300f606349c01b415',1,'Rock::LoadingParts::Versions'],['../classRock_1_1LoadingParts.html#ab4abbba47f62f1dbb0b4b6de3cbd1300',1,'Rock::LoadingParts::versions() const']]],
   ['versionsowner_117',['versionsOwner',['../classRock_1_1LoadingParts.html#a1dde0c1906e068ad69c8548842baa9da',1,'Rock::LoadingParts']]],
   ['veto_118',['veto',['../classSupportOrVeto.html#aa34618d1c0303ab67ec91663d046faea',1,'SupportOrVeto']]],
   ['vhost_119',['vhost',['../classAnyP_1_1PortCfg.html#ac996c9f2086a3d7d2bb612c293581192',1,'AnyP::PortCfg']]],
