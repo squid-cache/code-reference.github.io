@@ -123,7 +123,7 @@ var searchData=
   ['peers_120',['peers',['../classSquidConfig.html#a859f8be49d92d04469051dd6f304e9a8',1,'SquidConfig::peers'],['../classnetdbEntry.html#a6dadfb6eee27c7231507edfa8afc8175',1,'netdbEntry::peers']]],
   ['peerselectorpingmonitor_121',['PeerSelectorPingMonitor',['../classping__data.html#a83108c90b09cd0b03df15211ae0dda5a',1,'ping_data']]],
   ['peersourcehashcachemgr_122',['peerSourceHashCachemgr',['../peer__sourcehash_8cc.html#a490540c5ed471161097e29d099757b49',1,'peer_sourcehash.cc']]],
-  ['peerstats_123',['PeerStats',['../peer__select_8cc.html#a3f775c64a615b1da6906cc240e2831bc',1,'peer_select.cc']]],
+  ['peerstats_123',['PeerStats',['../peer__select_8cc.html#a28a14fd41697ee7099712598a835b8e3',1,'peer_select.cc']]],
   ['peertype_124',['peerType',['../classComm_1_1Connection.html#a4cb3143725bd3f4f09eb89e5c7298cc4',1,'Comm::Connection']]],
   ['peeruserhashcachemgr_125',['peerUserHashCachemgr',['../peer__userhash_8cc.html#ad90093564dcb6ecd500dfcef448ee87e',1,'peer_userhash.cc']]],
   ['peerwait_126',['peerwait',['../classTunnelStateData.html#ae9a3a74bb5cfde9c1c821ede88226ba2',1,'TunnelStateData::peerWait'],['../classFwdState.html#a2b97dff94013001970fb358c6ea5f85e',1,'FwdState::peerWait']]],

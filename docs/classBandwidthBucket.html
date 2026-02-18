@@ -112,13 +112,13 @@ Inheritance diagram for BandwidthBucket:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a743f728939ba87787ed994ada6e84378" id="r_a743f728939ba87787ed994ada6e84378"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#a743f728939ba87787ed994ada6e84378">BandwidthBucket</a> (const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> speed, const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> initialLevelPercent, const <a class="el" href="stub__event_8cc.html#a0c9547f061079f5587b085091da968bc">double</a> sizeLimit)</td></tr>
+<tr class="memitem:a743f728939ba87787ed994ada6e84378" id="r_a743f728939ba87787ed994ada6e84378"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#a743f728939ba87787ed994ada6e84378">BandwidthBucket</a> (const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> speed, const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> initialLevelPercent, const <a class="el" href="stub__event_8cc.html#a0c9547f061079f5587b085091da968bc">double</a> sizeLimit)</td></tr>
 <tr class="separator:a743f728939ba87787ed994ada6e84378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69c289a6a3fc560d0335a6754dba1663" id="r_a69c289a6a3fc560d0335a6754dba1663"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#a69c289a6a3fc560d0335a6754dba1663">~BandwidthBucket</a> ()</td></tr>
 <tr class="separator:a69c289a6a3fc560d0335a6754dba1663"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95c1e9e1948e947922a1686dcbc93055" id="r_a95c1e9e1948e947922a1686dcbc93055"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#a95c1e9e1948e947922a1686dcbc93055">quota</a> ()=0</td></tr>
+<tr class="memitem:a95c1e9e1948e947922a1686dcbc93055" id="r_a95c1e9e1948e947922a1686dcbc93055"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#a95c1e9e1948e947922a1686dcbc93055">quota</a> ()=0</td></tr>
 <tr class="separator:a95c1e9e1948e947922a1686dcbc93055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94e30e5070db041e8a4282af9f5bd29d" id="r_a94e30e5070db041e8a4282af9f5bd29d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#a94e30e5070db041e8a4282af9f5bd29d">applyQuota</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> &amp;nleft, <a class="el" href="classComm_1_1IoCallback.html">Comm::IoCallback</a> *state)</td></tr>
+<tr class="memitem:a94e30e5070db041e8a4282af9f5bd29d" id="r_a94e30e5070db041e8a4282af9f5bd29d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#a94e30e5070db041e8a4282af9f5bd29d">applyQuota</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> &amp;nleft, <a class="el" href="classComm_1_1IoCallback.html">Comm::IoCallback</a> *state)</td></tr>
 <tr class="separator:a94e30e5070db041e8a4282af9f5bd29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae45b26bf2ced4de0030943b8433a4a55" id="r_ae45b26bf2ced4de0030943b8433a4a55"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#ae45b26bf2ced4de0030943b8433a4a55">scheduleWrite</a> (<a class="el" href="classComm_1_1IoCallback.html">Comm::IoCallback</a> *state)=0</td></tr>
 <tr class="memdesc:ae45b26bf2ced4de0030943b8433a4a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will plan another write call.  <br /></td></tr>
@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ff722be3d3193e2348e7e7e85262457" id="r_a7ff722be3d3193e2348e7e7e85262457"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#a7ff722be3d3193e2348e7e7e85262457">onFdClosed</a> ()</td></tr>
 <tr class="memdesc:a7ff722be3d3193e2348e7e7e85262457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs cleanup when the related file descriptor becomes closed.  <br /></td></tr>
 <tr class="separator:a7ff722be3d3193e2348e7e7e85262457"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abad14b6d83730c883273b2e7c9dba4c9" id="r_abad14b6d83730c883273b2e7c9dba4c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#abad14b6d83730c883273b2e7c9dba4c9">reduceBucket</a> (const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> len)</td></tr>
+<tr class="memitem:abad14b6d83730c883273b2e7c9dba4c9" id="r_abad14b6d83730c883273b2e7c9dba4c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#abad14b6d83730c883273b2e7c9dba4c9">reduceBucket</a> (const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> len)</td></tr>
 <tr class="memdesc:abad14b6d83730c883273b2e7c9dba4c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decreases the bucket level.  <br /></td></tr>
 <tr class="separator:abad14b6d83730c883273b2e7c9dba4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e741767401db72c36bfcb3696561332" id="r_a0e741767401db72c36bfcb3696561332"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBandwidthBucket.html#a0e741767401db72c36bfcb3696561332">noLimit</a> () const</td></tr>
@@ -178,13 +178,13 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">BandwidthBucket::BandwidthBucket </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>speed</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>initialLevelPercent</em>, </td>
         </tr>
         <tr>
@@ -247,7 +247,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool BandwidthBucket::applyQuota </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> &amp;&#160;</td>
           <td class="paramname"><em>nleft</em>, </td>
         </tr>
         <tr>
@@ -354,7 +354,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> BandwidthBucket::quota </td>
+          <td class="memname">virtual <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> BandwidthBucket::quota </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -386,7 +386,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void BandwidthBucket::reduceBucket </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>len</em></td><td>)</td>
           <td></td>
         </tr>

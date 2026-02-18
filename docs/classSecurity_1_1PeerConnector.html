@@ -299,7 +299,7 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:aa4113f3da680d7a118cd06183297bd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a884bf3ad9f94a3501da29c350093eee9" id="r_a884bf3ad9f94a3501da29c350093eee9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSecurity_1_1PeerConnector.html">PeerConnector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#a884bf3ad9f94a3501da29c350093eee9">operator=</a> (const <a class="el" href="classSecurity_1_1PeerConnector.html">PeerConnector</a> &amp;)</td></tr>
 <tr class="separator:a884bf3ad9f94a3501da29c350093eee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbc21dcfcf82f4ece06ad2488341ca92" id="r_adbc21dcfcf82f4ece06ad2488341ca92"><td class="memItemLeft" align="right" valign="top">unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#adbc21dcfcf82f4ece06ad2488341ca92">certDownloadNestingLevel</a> () const</td></tr>
+<tr class="memitem:adbc21dcfcf82f4ece06ad2488341ca92" id="r_adbc21dcfcf82f4ece06ad2488341ca92"><td class="memItemLeft" align="right" valign="top">unsigned <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#adbc21dcfcf82f4ece06ad2488341ca92">certDownloadNestingLevel</a> () const</td></tr>
 <tr class="memdesc:adbc21dcfcf82f4ece06ad2488341ca92"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of concurrent <a class="el" href="classSecurity_1_1PeerConnector.html">PeerConnector</a> jobs waiting for us  <br /></td></tr>
 <tr class="separator:adbc21dcfcf82f4ece06ad2488341ca92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ddd3ccd1616d60d48d2a8676427b62b" id="r_a1ddd3ccd1616d60d48d2a8676427b62b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#a1ddd3ccd1616d60d48d2a8676427b62b">sslCrtvdHandleReply</a> (<a class="el" href="namespaceSsl.html#a325cb729327d56444bae7c11345760a1">Ssl::CertValidationResponsePointer</a> &amp;)</td></tr>
@@ -320,7 +320,7 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:abf128b99474bd47eabfee257fb418708" id="r_abf128b99474bd47eabfee257fb418708"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#abf128b99474bd47eabfee257fb418708">NegotiateSsl</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> fd, void *data)</td></tr>
+<tr class="memitem:abf128b99474bd47eabfee257fb418708" id="r_abf128b99474bd47eabfee257fb418708"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#abf128b99474bd47eabfee257fb418708">NegotiateSsl</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> fd, void *data)</td></tr>
 <tr class="memdesc:abf128b99474bd47eabfee257fb418708"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper for <a class="el" href="namespaceComm.html#ae3a7e8f0df297346e84f0e9943033a3e" title="Mark an FD to be watched for its IO status.">Comm::SetSelect()</a> notifications.  <br /></td></tr>
 <tr class="separator:abf128b99474bd47eabfee257fb418708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -343,7 +343,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a7d2cb271467c21a7f59fc58673061f9c" id="r_a7d2cb271467c21a7f59fc58673061f9c"><td class="memItemLeft" align="right" valign="top">std::queue&lt; <a class="el" href="classSBuf.html">SBuf</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#a7d2cb271467c21a7f59fc58673061f9c">urlsOfMissingCerts</a></td></tr>
 <tr class="memdesc:a7d2cb271467c21a7f59fc58673061f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of URLs where missing certificates should be downloaded.  <br /></td></tr>
 <tr class="separator:a7d2cb271467c21a7f59fc58673061f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6e8b2162ab6f1985b92c2cfa04ac4c1" id="r_ac6e8b2162ab6f1985b92c2cfa04ac4c1"><td class="memItemLeft" align="right" valign="top">unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#ac6e8b2162ab6f1985b92c2cfa04ac4c1">certsDownloads</a></td></tr>
+<tr class="memitem:ac6e8b2162ab6f1985b92c2cfa04ac4c1" id="r_ac6e8b2162ab6f1985b92c2cfa04ac4c1"><td class="memItemLeft" align="right" valign="top">unsigned <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#ac6e8b2162ab6f1985b92c2cfa04ac4c1">certsDownloads</a></td></tr>
 <tr class="memdesc:ac6e8b2162ab6f1985b92c2cfa04ac4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of downloaded missing certificates  <br /></td></tr>
 <tr class="separator:ac6e8b2162ab6f1985b92c2cfa04ac4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f6e9f4347c907b40d94ed3d1fd76bdd" id="r_a0f6e9f4347c907b40d94ed3d1fd76bdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceSsl.html#ad040357da8844ca9ad87ecc808bbafb7">Ssl::X509_STACK_Pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#a0f6e9f4347c907b40d94ed3d1fd76bdd">downloadedCerts</a></td></tr>
@@ -358,10 +358,10 @@ Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:ae6b161a1a464ab9da3be40082ccbf2f7" id="r_ae6b161a1a464ab9da3be40082ccbf2f7"><td class="memItemLeft" align="right" valign="top">static const unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#ae6b161a1a464ab9da3be40082ccbf2f7">MaxCertsDownloads</a> = 10</td></tr>
+<tr class="memitem:ae6b161a1a464ab9da3be40082ccbf2f7" id="r_ae6b161a1a464ab9da3be40082ccbf2f7"><td class="memItemLeft" align="right" valign="top">static const unsigned <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#ae6b161a1a464ab9da3be40082ccbf2f7">MaxCertsDownloads</a> = 10</td></tr>
 <tr class="memdesc:ae6b161a1a464ab9da3be40082ccbf2f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of missing certificates a single <a class="el" href="classSecurity_1_1PeerConnector.html">PeerConnector</a> may download.  <br /></td></tr>
 <tr class="separator:ae6b161a1a464ab9da3be40082ccbf2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e506779023e47d64c15ae12ed997a29" id="r_a9e506779023e47d64c15ae12ed997a29"><td class="memItemLeft" align="right" valign="top">static const unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#a9e506779023e47d64c15ae12ed997a29">MaxNestedDownloads</a> = 3</td></tr>
+<tr class="memitem:a9e506779023e47d64c15ae12ed997a29" id="r_a9e506779023e47d64c15ae12ed997a29"><td class="memItemLeft" align="right" valign="top">static const unsigned <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSecurity_1_1PeerConnector.html#a9e506779023e47d64c15ae12ed997a29">MaxNestedDownloads</a> = 3</td></tr>
 <tr class="memdesc:a9e506779023e47d64c15ae12ed997a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of inter-dependent <a class="el" href="classDownloader.html">Downloader</a> jobs a worker may initiate.  <br /></td></tr>
 <tr class="separator:a9e506779023e47d64c15ae12ed997a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -797,7 +797,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Security::PeerConnector::certDownloadNestingLevel </td>
+          <td class="memname">unsigned <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> Security::PeerConnector::certDownloadNestingLevel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1377,7 +1377,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Security::PeerConnector::NegotiateSsl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>fd</em>, </td>
         </tr>
         <tr>
@@ -2180,7 +2180,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Security::PeerConnector::certsDownloads</td>
+          <td class="memname">unsigned <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> Security::PeerConnector::certsDownloads</td>
         </tr>
       </table>
   </td>
@@ -2328,7 +2328,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Security::PeerConnector::MaxCertsDownloads = 10</td>
+          <td class="memname">const unsigned <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> Security::PeerConnector::MaxCertsDownloads = 10</td>
         </tr>
       </table>
   </td>
@@ -2352,7 +2352,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Security::PeerConnector::MaxNestedDownloads = 3</td>
+          <td class="memname">const unsigned <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> Security::PeerConnector::MaxNestedDownloads = 3</td>
         </tr>
       </table>
   </td>

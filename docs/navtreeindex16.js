@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"aiops__win32_8cc.html#a15358a80518e6c3b611d7abfad55d7cb":[10,0,0,5,8,3,1,7],
 "aiops__win32_8cc.html#a236f10dd3ce0fc9fbe103f2100078ca5":[10,0,0,5,8,3,1,38],
 "aiops__win32_8cc.html#a2554411e8a0026c33c474fc6ce9d28b7":[10,0,0,5,8,3,1,28],
 "aiops__win32_8cc.html#a2843c63601909c4996765294132ecf69":[10,0,0,5,8,3,1,46],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "auth_2negotiate_2Config_8cc.html#a0354529cbfb8bbdda356127fbf3dd94a":[10,0,0,5,3,2,3,1],
 "auth_2negotiate_2Config_8cc.html#aae3222f2ada81397d43128ed6752bc27":[10,0,0,5,3,2,3,0],
 "auth_2negotiate_2Config_8cc.html#ab3a7400261c51a1e6d86041c85c8963d":[10,0,0,5,3,2,3,2],
-"auth_2negotiate_2Config_8cc.html#ab9cba2ab96858687e7af118afd06020a":[10,0,0,5,3,2,3,4],
-"auth_2negotiate_2Config_8cc.html#ade059e240d6c961337fc74c663245596":[10,0,0,5,3,2,3,3]
+"auth_2negotiate_2Config_8cc.html#ab9cba2ab96858687e7af118afd06020a":[10,0,0,5,3,2,3,4]
 };

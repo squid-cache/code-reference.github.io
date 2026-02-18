@@ -121,7 +121,7 @@ Public Types</h2></td></tr>
 <tr class="separator:a405546ca20b5bfb4af78d32536064779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d5240ec4a99c68e2ed5575d7ebc2c63" id="r_a8d5240ec4a99c68e2ed5575d7ebc2c63"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreIOState.html#a8d5240ec4a99c68e2ed5575d7ebc2c63">STRCB</a>(void *their_data, const char *buf, ssize_t len, <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a> self)</td></tr>
 <tr class="separator:a8d5240ec4a99c68e2ed5575d7ebc2c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af82d5f8ddee6eae14054d5a93b54a2cb" id="r_af82d5f8ddee6eae14054d5a93b54a2cb"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreIOState.html#af82d5f8ddee6eae14054d5a93b54a2cb">STIOCB</a>(void *their_data, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> errflag, <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a> self)</td></tr>
+<tr class="memitem:af82d5f8ddee6eae14054d5a93b54a2cb" id="r_af82d5f8ddee6eae14054d5a93b54a2cb"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreIOState.html#af82d5f8ddee6eae14054d5a93b54a2cb">STIOCB</a>(void *their_data, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> errflag, <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a> self)</td></tr>
 <tr class="separator:af82d5f8ddee6eae14054d5a93b54a2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -140,7 +140,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a373a95c16906207929a7fea287c38565"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeade51c7bdeb6de08fc07c55f06e5aa4" id="r_aeade51c7bdeb6de08fc07c55f06e5aa4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreIOState.html#aeade51c7bdeb6de08fc07c55f06e5aa4">write</a> (char const *buf, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, off_t <a class="el" href="classStoreIOState.html#a33a303be7e5e8e0ddbd690087acac133">offset</a>, <a class="el" href="mem_2forward_8h.html#a302831a7d071d1b751ca56db1efb9e10">FREE</a> *free_func)=0</td></tr>
 <tr class="separator:aeade51c7bdeb6de08fc07c55f06e5aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acacc1b6174c0618723962edde9bd64e0" id="r_acacc1b6174c0618723962edde9bd64e0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreIOState.html#acacc1b6174c0618723962edde9bd64e0">close</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> how)=0</td></tr>
+<tr class="memitem:acacc1b6174c0618723962edde9bd64e0" id="r_acacc1b6174c0618723962edde9bd64e0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreIOState.html#acacc1b6174c0618723962edde9bd64e0">close</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> how)=0</td></tr>
 <tr class="memdesc:acacc1b6174c0618723962edde9bd64e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">finish or abort swapping per CloseHow  <br /></td></tr>
 <tr class="separator:acacc1b6174c0618723962edde9bd64e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb4039a01a1e136deb3af0471e6804f5" id="r_acb4039a01a1e136deb3af0471e6804f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreIOState.html#acb4039a01a1e136deb3af0471e6804f5">touchingStoreEntry</a> () const</td></tr>
@@ -205,7 +205,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void StoreIOState::STIOCB(void *their_data, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> errflag, <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a> self)</td>
+          <td class="memname">typedef void StoreIOState::STIOCB(void *their_data, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> errflag, <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a> self)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -330,7 +330,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void StoreIOState::close </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>how</em></td><td>)</td>
           <td></td>
         </tr>

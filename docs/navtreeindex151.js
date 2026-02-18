@@ -1,5 +1,6 @@
 var NAVTREEINDEX151 =
 {
+"group__FQDNCacheInternal.html#gabe91ce5952a78337cfe54689f28183a7":[7,2,10,0,18],
 "group__FQDNCacheInternal.html#gae5ac1f04c0c840373cafb0f98cae03b1":[7,2,10,0,17],
 "group__FQDNCacheInternal.html#gaf9d3db2969e88ba2bf3d4c338062ef5e":[7,2,10,0,5],
 "group__FileFormatSwapStateAPI.html":[7,16,3],
@@ -50,7 +51,9 @@ var NAVTREEINDEX151 =
 "group__ServerProtocolFTPAPI.html":[7,2,1,1],
 "group__ServerProtocolHTTP.html":[7,2,1,0],
 "group__ServerProtocolICPAPI.html":[7,2,1,5],
+"group__ServerProtocolICPAPI.html#ga067a3084353521d1ecbdd0bb1645a8e3":[7,2,1,5,10],
 "group__ServerProtocolICPAPI.html#ga18d539f98a1a07ee112aa09c590130be":[7,2,1,5,9],
+"group__ServerProtocolICPAPI.html#ga25e77ed28d738dbbfce1093e8ed0369a":[7,2,1,5,7],
 "group__ServerProtocolICPAPI.html#ga4d210ff125985b55f52278cc17868ad1":[7,2,1,5,13],
 "group__ServerProtocolICPAPI.html#ga53e8fe6736b5dfae15ba459a4e8c3376":[7,2,1,5,6],
 "group__ServerProtocolICPAPI.html#ga6d172cc0273c7eb44afd1351198704c6":[7,2,1,5,2],
@@ -61,8 +64,6 @@ var NAVTREEINDEX151 =
 "group__ServerProtocolICPAPI.html#gaaab2644af97fc6b985191a986b334115":[7,2,1,5,4],
 "group__ServerProtocolICPAPI.html#gab93f57258963c48f1250548e659438e8":[7,2,1,5,3],
 "group__ServerProtocolICPAPI.html#gad4c4db21dc8f810889079162fb186dd9":[7,2,1,5,8],
-"group__ServerProtocolICPAPI.html#gaf40ad0502b4a42f8a70ad6c687e19be7":[7,2,1,5,7],
-"group__ServerProtocolICPAPI.html#gaf6a313c5aa8e419feea13a3479465178":[7,2,1,5,10],
 "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a089c8c1e06a18afca084f40d613486b7":[7,2,1,5,2,14],
 "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a09df3b0e2dcd040e1fe7955d081abb88":[7,2,1,5,2,10],
 "group__ServerProtocolICPAPI.html#gga6d172cc0273c7eb44afd1351198704c6a11f914e9d8b6bc45e27508be90f8eb73":[7,2,1,5,2,15],
@@ -100,7 +101,7 @@ var NAVTREEINDEX151 =
 "group__ServerProtocolICPInternal2.html#gace50691132effead01082ec248608c55":[7,2,1,5,0,7],
 "group__ServerProtocolICPInternal2.html#gaf4b529ddf3e9b04d5b38f3b9937c613e":[7,2,1,5,0,4],
 "group__ServerProtocolICPInternal3.html":[7,2,1,5,1],
-"group__ServerProtocolICPInternal3.html#ga9292bb9a3366d1194da3d4fb62364868":[7,2,1,5,1,1],
+"group__ServerProtocolICPInternal3.html#ga0bb4f05eb608c6cae8952c6dff4ced48":[7,2,1,5,1,1],
 "group__ServerProtocolICPInternal3.html#gaeffcec7b0f454d17037eb359b0aa1dc2":[7,2,1,5,1,2],
 "group__ServerProtocolPassthru.html":[7,2,1,3],
 "group__ServerProtocolSSLAPI.html":[7,2,1,6],
@@ -190,10 +191,10 @@ var NAVTREEINDEX151 =
 "group__compat.html":[7,0],
 "group__diskd.html":[7,16,2,1],
 "group__diskd.html":[7,16,1],
-"group__diskd.html#ga930e553b51fb797427225044aa9cd165":[7,16,2,1,4],
 "group__diskd.html#ga930e553b51fb797427225044aa9cd165":[7,16,1,4],
-"group__diskd.html#gac2d3520fa5be54fb4fa2c844ff61aefd":[7,16,1,5],
+"group__diskd.html#ga930e553b51fb797427225044aa9cd165":[7,16,2,1,4],
 "group__diskd.html#gac2d3520fa5be54fb4fa2c844ff61aefd":[7,16,2,1,5],
+"group__diskd.html#gac2d3520fa5be54fb4fa2c844ff61aefd":[7,16,1,5],
 "group__libsquid.html":[7,3],
 "group__pinger.html":[7,11],
 "group__pinger.html#ga2c3f6775325c30275d11c6abee2db6a0":[7,11,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX151 =
 "heap_8c.html#a0d6ac5c3395ab0f05704bef22cb6d9e2":[10,0,0,3,9,23],
 "heap_8c.html#a0f9023d37ac54893eb596b1036c9cbf3":[10,0,0,3,9,8],
 "heap_8c.html#a1b20d70f1cb202dab3c79f3e935e2439":[10,0,0,3,9,19],
-"heap_8c.html#a1d9477f976ae34193df3c167b46fa3be":[10,0,0,3,9,24],
-"heap_8c.html#a268ab861ec35af399249cf2827114f36":[10,0,0,3,9,12]
+"heap_8c.html#a1d9477f976ae34193df3c167b46fa3be":[10,0,0,3,9,24]
 };

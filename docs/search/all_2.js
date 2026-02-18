@@ -34,7 +34,7 @@ var searchData=
   ['accel_31',['accel',['../structClientHttpRequest_1_1Flags.html#a409fd4d5e3b72f06df2921bd417e0a5c',1,'ClientHttpRequest::Flags::accel'],['../classSquidConfig.html#acf3a5393cee89bdde86ce50e0d15bbbd',1,'SquidConfig::Accel']]],
   ['accelerated_32',['accelerated',['../classRequestFlags.html#a0e7db730c27abb7eac3b676961773797',1,'RequestFlags']]],
   ['accelsurrogate_33',['accelSurrogate',['../classAnyP_1_1TrafficMode.html#aa0f171063e54223defcc9bc0664156ec',1,'AnyP::TrafficMode']]],
-  ['accept_34',['accept',['../namespaceHttp.html#a92faa3c60e0b457c167759389ae061a4a2923fc380e340d596af9507645069f49',1,'Http::ACCEPT'],['../namespaceSecurity.html#a5184cf80d640561cc955883a77ccbf88',1,'Security::Accept()']]],
+  ['accept_34',['accept',['../namespaceSecurity.html#a5184cf80d640561cc955883a77ccbf88',1,'Security::Accept()'],['../namespaceHttp.html#a92faa3c60e0b457c167759389ae061a4a2923fc380e340d596af9507645069f49',1,'Http::ACCEPT']]],
   ['accept_5fcharset_35',['ACCEPT_CHARSET',['../namespaceHttp.html#a92faa3c60e0b457c167759389ae061a4acf163c6f7abe346883d7f7c9a86bf2d7',1,'Http']]],
   ['accept_5fencoding_36',['ACCEPT_ENCODING',['../namespaceHttp.html#a92faa3c60e0b457c167759389ae061a4a627c1f3dd407576b1d0e5d9f46867e48',1,'Http']]],
   ['accept_5ffilter_37',['accept_filter',['../classSquidConfig.html#a42034dfa5edada430ff56dd8b28702f0',1,'SquidConfig']]],

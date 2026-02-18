@@ -126,9 +126,9 @@ Functions</h2></td></tr>
 <tr class="separator:adafc0bb9e2ebfa4cbf0aa738d8fe233b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a718de9490c09a5cc852fd176360766b8" id="r_a718de9490c09a5cc852fd176360766b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="store__rebuild_8h.html#a718de9490c09a5cc852fd176360766b8">storeRebuildComplete</a> (<a class="el" href="classStoreRebuildData.html">StoreRebuildData</a> *)</td></tr>
 <tr class="separator:a718de9490c09a5cc852fd176360766b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0639b62758acff9fc222915c58ad73a5" id="r_a0639b62758acff9fc222915c58ad73a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="store__rebuild_8h.html#a0639b62758acff9fc222915c58ad73a5">storeRebuildProgress</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> sd_index, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> total, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> sofar)</td></tr>
+<tr class="memitem:a0639b62758acff9fc222915c58ad73a5" id="r_a0639b62758acff9fc222915c58ad73a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="store__rebuild_8h.html#a0639b62758acff9fc222915c58ad73a5">storeRebuildProgress</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> sd_index, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> total, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> sofar)</td></tr>
 <tr class="separator:a0639b62758acff9fc222915c58ad73a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80bfc4ebc4500b52e54bcb7c69208964" id="r_a80bfc4ebc4500b52e54bcb7c69208964"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="store__rebuild_8h.html#a80bfc4ebc4500b52e54bcb7c69208964">storeRebuildLoadEntry</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> fd, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> diskIndex, <a class="el" href="classMemBuf.html">MemBuf</a> &amp;buf, <a class="el" href="classStoreRebuildData.html">StoreRebuildData</a> &amp;<a class="el" href="store__rebuild_8cc.html#a66d1a389fd3dbf4f78f8dbfa7b322e3f">counts</a>)</td></tr>
+<tr class="memitem:a80bfc4ebc4500b52e54bcb7c69208964" id="r_a80bfc4ebc4500b52e54bcb7c69208964"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="store__rebuild_8h.html#a80bfc4ebc4500b52e54bcb7c69208964">storeRebuildLoadEntry</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> fd, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> diskIndex, <a class="el" href="classMemBuf.html">MemBuf</a> &amp;buf, <a class="el" href="classStoreRebuildData.html">StoreRebuildData</a> &amp;<a class="el" href="store__rebuild_8cc.html#a66d1a389fd3dbf4f78f8dbfa7b322e3f">counts</a>)</td></tr>
 <tr class="memdesc:a80bfc4ebc4500b52e54bcb7c69208964"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads entry from disk; fills supplied memory buffer on success  <br /></td></tr>
 <tr class="separator:a80bfc4ebc4500b52e54bcb7c69208964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace2dea99edae8f9ac2348152536557d3" id="r_ace2dea99edae8f9ac2348152536557d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="store__rebuild_8h.html#ace2dea99edae8f9ac2348152536557d3">storeRebuildParseEntry</a> (<a class="el" href="classMemBuf.html">MemBuf</a> &amp;buf, <a class="el" href="classStoreEntry.html">StoreEntry</a> &amp;e, <a class="el" href="store_2forward_8h.html#ab1424e1b13666cc28f4c5cb05f8c8305">cache_key</a> *key, <a class="el" href="classStoreRebuildData.html">StoreRebuildData</a> &amp;<a class="el" href="store__rebuild_8cc.html#a66d1a389fd3dbf4f78f8dbfa7b322e3f">counts</a>, uint64_t expectedSize)</td></tr>
@@ -208,13 +208,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool storeRebuildLoadEntry </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>fd</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>diskIndex</em>, </td>
         </tr>
         <tr>
@@ -323,19 +323,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void storeRebuildProgress </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>sd_index</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>total</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>sofar</em>&#160;</td>
         </tr>
         <tr>

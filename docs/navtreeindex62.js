@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"classConnStateData.html#a4cbbc46289185d9b973594b11f7649fa":[9,0,215,115],
 "classConnStateData.html#a4d4de1cff9d3c5f5d312fee3622e0fa2":[9,0,215,80],
 "classConnStateData.html#a4dcb7a1c309024f3032f7d70b8827a96":[9,0,215,197],
 "classConnStateData.html#a4df7c16218f9f9ce43973bcc8a0c5618":[9,0,215,100],
@@ -248,6 +249,5 @@ var NAVTREEINDEX62 =
 "classDebugChannel_1_1Logger.html":[9,0,222,0],
 "classDebugChannel_1_1Logger.html#a0dc43c97326900944622fe8bd8d8e278":[9,0,222,0,5],
 "classDebugChannel_1_1Logger.html#a377e477a665fd113e25230541b36f3cf":[9,0,222,0,10],
-"classDebugChannel_1_1Logger.html#a3f1e0f27354fc3624eb114facd33bccb":[9,0,222,0,4],
-"classDebugChannel_1_1Logger.html#a4a3e13688f5f33774044415e63ab58d6":[9,0,222,0,2]
+"classDebugChannel_1_1Logger.html#a3f1e0f27354fc3624eb114facd33bccb":[9,0,222,0,4]
 };

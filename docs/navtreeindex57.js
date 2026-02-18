@@ -1,5 +1,6 @@
 var NAVTREEINDEX57 =
 {
+"classClassCHostPool.html#a4acd698aa6c2d393f9912ebe45894312":[7,2,8,0,8,11],
 "classClassCHostPool.html#a52d20412f4339bf4c648ad8618b3d1d5":[7,2,8,0,8,19],
 "classClassCHostPool.html#a559c82c18f71b3d9d9babe55cd5f2623":[7,2,8,0,8,18],
 "classClassCHostPool.html#a5a37c726a4e824c3e0acf711428455f7":[7,2,8,0,8,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX57 =
 "classClientHttpRequest.html#a4dbc0f19084e278ac577fb6a669c6a40":[9,0,176,24],
 "classClientHttpRequest.html#a4df7c16218f9f9ce43973bcc8a0c5618":[9,0,176,55],
 "classClientHttpRequest.html#a508820b306e7215b9536f7da545f160a":[9,0,176,4],
-"classClientHttpRequest.html#a52f95c3b38b4cacf5fa0e4d157b6eac6":[9,0,176,26],
-"classClientHttpRequest.html#a53f0bfbec60d40769f21aff66eeaaa79":[9,0,176,53]
+"classClientHttpRequest.html#a52f95c3b38b4cacf5fa0e4d157b6eac6":[9,0,176,26]
 };

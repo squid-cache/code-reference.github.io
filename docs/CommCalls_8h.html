@@ -149,9 +149,9 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:aacb094d7a8854d685479662a7a925a8f" id="r_aacb094d7a8854d685479662a7a925a8f"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommCalls_8h.html#aacb094d7a8854d685479662a7a925a8f">IOACB</a>(const <a class="el" href="classCommAcceptCbParams.html">CommAcceptCbParams</a> &amp;params)</td></tr>
 <tr class="separator:aacb094d7a8854d685479662a7a925a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafdebdf0576f8621014d6e8e9f245e8e" id="r_aafdebdf0576f8621014d6e8e9f245e8e"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommCalls_8h.html#aafdebdf0576f8621014d6e8e9f245e8e">CNCB</a>(const <a class="el" href="namespaceComm.html#a2256a253c0fa350403f151d712286d9e">Comm::ConnectionPointer</a> &amp;conn, <a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a> status, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> xerrno, void *data)</td></tr>
+<tr class="memitem:aafdebdf0576f8621014d6e8e9f245e8e" id="r_aafdebdf0576f8621014d6e8e9f245e8e"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommCalls_8h.html#aafdebdf0576f8621014d6e8e9f245e8e">CNCB</a>(const <a class="el" href="namespaceComm.html#a2256a253c0fa350403f151d712286d9e">Comm::ConnectionPointer</a> &amp;conn, <a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a> status, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> xerrno, void *data)</td></tr>
 <tr class="separator:aafdebdf0576f8621014d6e8e9f245e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a983a5cd4fb40ae32c439ef9aa6d81767" id="r_a983a5cd4fb40ae32c439ef9aa6d81767"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommCalls_8h.html#a983a5cd4fb40ae32c439ef9aa6d81767">IOCB</a>(const <a class="el" href="namespaceComm.html#a2256a253c0fa350403f151d712286d9e">Comm::ConnectionPointer</a> &amp;conn, char *, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a> flag, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> xerrno, void *data)</td></tr>
+<tr class="memitem:a983a5cd4fb40ae32c439ef9aa6d81767" id="r_a983a5cd4fb40ae32c439ef9aa6d81767"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommCalls_8h.html#a983a5cd4fb40ae32c439ef9aa6d81767">IOCB</a>(const <a class="el" href="namespaceComm.html#a2256a253c0fa350403f151d712286d9e">Comm::ConnectionPointer</a> &amp;conn, char *, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a> flag, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> xerrno, void *data)</td></tr>
 <tr class="separator:a983a5cd4fb40ae32c439ef9aa6d81767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88e9a8370ae8b929deaa6a02b453ee81" id="r_a88e9a8370ae8b929deaa6a02b453ee81"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommCalls_8h.html#a88e9a8370ae8b929deaa6a02b453ee81">CTCB</a>(const <a class="el" href="classCommTimeoutCbParams.html">CommTimeoutCbParams</a> &amp;params)</td></tr>
 <tr class="separator:a88e9a8370ae8b929deaa6a02b453ee81"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,7 +164,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ad21aed86ba33719068e3a5fde63767a2"><td class="memTemplItemLeft" align="right" valign="top">Params &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="CommCalls_8h.html#ad21aed86ba33719068e3a5fde63767a2">GetCommParams</a> (<a class="el" href="classAsyncCall.html#a57c571a47666d10c316689dc5d09e170">AsyncCall::Pointer</a> &amp;call)</td></tr>
 <tr class="separator:ad21aed86ba33719068e3a5fde63767a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e143fa246c3e54c90fa8d20b390b88d" id="r_a7e143fa246c3e54c90fa8d20b390b88d"><td class="memTemplParams" colspan="2">template&lt;class Dialer &gt; </td></tr>
-<tr class="memitem:a7e143fa246c3e54c90fa8d20b390b88d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classCommCbFunPtrCallT.html">CommCbFunPtrCallT</a>&lt; Dialer &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="CommCalls_8h.html#a7e143fa246c3e54c90fa8d20b390b88d">commCbCall</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> debugSection, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> debugLevel, const char *callName, const Dialer &amp;dialer)</td></tr>
+<tr class="memitem:a7e143fa246c3e54c90fa8d20b390b88d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classCommCbFunPtrCallT.html">CommCbFunPtrCallT</a>&lt; Dialer &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="CommCalls_8h.html#a7e143fa246c3e54c90fa8d20b390b88d">commCbCall</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> debugSection, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> debugLevel, const char *callName, const Dialer &amp;dialer)</td></tr>
 <tr class="separator:a7e143fa246c3e54c90fa8d20b390b88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -191,7 +191,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void CNCB(const <a class="el" href="namespaceComm.html#a2256a253c0fa350403f151d712286d9e">Comm::ConnectionPointer</a> &amp;conn, <a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a> status, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> xerrno, void *data)</td>
+          <td class="memname">typedef void CNCB(const <a class="el" href="namespaceComm.html#a2256a253c0fa350403f151d712286d9e">Comm::ConnectionPointer</a> &amp;conn, <a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a> status, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> xerrno, void *data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -239,7 +239,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void IOCB(const <a class="el" href="namespaceComm.html#a2256a253c0fa350403f151d712286d9e">Comm::ConnectionPointer</a> &amp;conn, char *, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a> flag, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> xerrno, void *data)</td>
+          <td class="memname">typedef void IOCB(const <a class="el" href="namespaceComm.html#a2256a253c0fa350403f151d712286d9e">Comm::ConnectionPointer</a> &amp;conn, char *, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <a class="el" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050">Comm::Flag</a> flag, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> xerrno, void *data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -263,13 +263,13 @@ template&lt;class Dialer &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classCommCbFunPtrCallT.html">CommCbFunPtrCallT</a>&lt; Dialer &gt; * commCbCall </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>debugSection</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
           <td class="paramname"><em>debugLevel</em>, </td>
         </tr>
         <tr>
