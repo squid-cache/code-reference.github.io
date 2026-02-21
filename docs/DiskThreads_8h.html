@@ -147,7 +147,7 @@ Macros</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a4a97454406818440a448e6d89abd69f7" id="r_a4a97454406818440a448e6d89abd69f7"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="DiskThreads_8h.html#aadbd7b09910026ef6d7229bb4c8c6eac">_squidaio_request_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a4a97454406818440a448e6d89abd69f7">squidaio_request_type</a></td></tr>
 <tr class="separator:a4a97454406818440a448e6d89abd69f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeb5693f10ddd8f89fd3b692890a3ea1" id="r_adeb5693f10ddd8f89fd3b692890a3ea1"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#adeb5693f10ddd8f89fd3b692890a3ea1">AIOCB</a>(<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> fd, void *<a class="el" href="classcbdata.html">cbdata</a>, const char *buf, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> aio_return, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> aio_errno)</td></tr>
+<tr class="memitem:adeb5693f10ddd8f89fd3b692890a3ea1" id="r_adeb5693f10ddd8f89fd3b692890a3ea1"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#adeb5693f10ddd8f89fd3b692890a3ea1">AIOCB</a>(<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> fd, void *<a class="el" href="classcbdata.html">cbdata</a>, const char *buf, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> aio_return, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> aio_errno)</td></tr>
 <tr class="separator:adeb5693f10ddd8f89fd3b692890a3ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -172,33 +172,33 @@ Functions</h2></td></tr>
 <tr class="separator:a5dd264496dd490b6e7288935d7e643c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a926cc87783c5aa5c405904111074eebd" id="r_a926cc87783c5aa5c405904111074eebd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a926cc87783c5aa5c405904111074eebd">squidaio_shutdown</a> (void)</td></tr>
 <tr class="separator:a926cc87783c5aa5c405904111074eebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b15effad13eed9ea388317b1b196c65" id="r_a9b15effad13eed9ea388317b1b196c65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a9b15effad13eed9ea388317b1b196c65">squidaio_cancel</a> (<a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
+<tr class="memitem:a9b15effad13eed9ea388317b1b196c65" id="r_a9b15effad13eed9ea388317b1b196c65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a9b15effad13eed9ea388317b1b196c65">squidaio_cancel</a> (<a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
 <tr class="separator:a9b15effad13eed9ea388317b1b196c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d6c8dd95b356ee7572857b4d85ebb0c" id="r_a8d6c8dd95b356ee7572857b4d85ebb0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a8d6c8dd95b356ee7572857b4d85ebb0c">squidaio_open</a> (const char *, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>, <a class="el" href="types_8h.html#a51b5bca3280ca743227e9b07c4f839a1">mode_t</a>, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
+<tr class="memitem:a8d6c8dd95b356ee7572857b4d85ebb0c" id="r_a8d6c8dd95b356ee7572857b4d85ebb0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a8d6c8dd95b356ee7572857b4d85ebb0c">squidaio_open</a> (const char *, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>, <a class="el" href="types_8h.html#a51b5bca3280ca743227e9b07c4f839a1">mode_t</a>, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
 <tr class="separator:a8d6c8dd95b356ee7572857b4d85ebb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4fb97ccc70487dc83a93544fc33dead" id="r_ab4fb97ccc70487dc83a93544fc33dead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#ab4fb97ccc70487dc83a93544fc33dead">squidaio_read</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>, char *, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a>, off_t, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
+<tr class="memitem:ab4fb97ccc70487dc83a93544fc33dead" id="r_ab4fb97ccc70487dc83a93544fc33dead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#ab4fb97ccc70487dc83a93544fc33dead">squidaio_read</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>, char *, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a>, off_t, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
 <tr class="separator:ab4fb97ccc70487dc83a93544fc33dead"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a040a11315cdb30bab83f0dad8e0689dc" id="r_a040a11315cdb30bab83f0dad8e0689dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a040a11315cdb30bab83f0dad8e0689dc">squidaio_write</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>, char *, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a>, off_t, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
+<tr class="memitem:a040a11315cdb30bab83f0dad8e0689dc" id="r_a040a11315cdb30bab83f0dad8e0689dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a040a11315cdb30bab83f0dad8e0689dc">squidaio_write</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>, char *, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a>, off_t, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
 <tr class="separator:a040a11315cdb30bab83f0dad8e0689dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a869d8b11e2fde6ffe9c5482614581a29" id="r_a869d8b11e2fde6ffe9c5482614581a29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a869d8b11e2fde6ffe9c5482614581a29">squidaio_close</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
+<tr class="memitem:a869d8b11e2fde6ffe9c5482614581a29" id="r_a869d8b11e2fde6ffe9c5482614581a29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a869d8b11e2fde6ffe9c5482614581a29">squidaio_close</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
 <tr class="separator:a869d8b11e2fde6ffe9c5482614581a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a388f3fa0740a4a2c2c7fc54dbaf7f56a" id="r_a388f3fa0740a4a2c2c7fc54dbaf7f56a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a388f3fa0740a4a2c2c7fc54dbaf7f56a">squidaio_stat</a> (const char *, struct stat *, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
+<tr class="memitem:a388f3fa0740a4a2c2c7fc54dbaf7f56a" id="r_a388f3fa0740a4a2c2c7fc54dbaf7f56a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a388f3fa0740a4a2c2c7fc54dbaf7f56a">squidaio_stat</a> (const char *, struct stat *, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
 <tr class="separator:a388f3fa0740a4a2c2c7fc54dbaf7f56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8e67b6943bd27b68785c58747128690" id="r_ab8e67b6943bd27b68785c58747128690"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#ab8e67b6943bd27b68785c58747128690">squidaio_unlink</a> (const char *, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
+<tr class="memitem:ab8e67b6943bd27b68785c58747128690" id="r_ab8e67b6943bd27b68785c58747128690"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#ab8e67b6943bd27b68785c58747128690">squidaio_unlink</a> (const char *, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
 <tr class="separator:ab8e67b6943bd27b68785c58747128690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e35c8c5b73d7fe745ed1d37abcd522c" id="r_a3e35c8c5b73d7fe745ed1d37abcd522c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a3e35c8c5b73d7fe745ed1d37abcd522c">squidaio_opendir</a> (const char *, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
+<tr class="memitem:a3e35c8c5b73d7fe745ed1d37abcd522c" id="r_a3e35c8c5b73d7fe745ed1d37abcd522c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a3e35c8c5b73d7fe745ed1d37abcd522c">squidaio_opendir</a> (const char *, <a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *)</td></tr>
 <tr class="separator:a3e35c8c5b73d7fe745ed1d37abcd522c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4762d93a70a71a9fcee9580d39ee6e3" id="r_aa4762d93a70a71a9fcee9580d39ee6e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#aa4762d93a70a71a9fcee9580d39ee6e3">squidaio_poll_done</a> (void)</td></tr>
 <tr class="separator:aa4762d93a70a71a9fcee9580d39ee6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2554411e8a0026c33c474fc6ce9d28b7" id="r_a2554411e8a0026c33c474fc6ce9d28b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a2554411e8a0026c33c474fc6ce9d28b7">squidaio_operations_pending</a> (void)</td></tr>
+<tr class="memitem:a2554411e8a0026c33c474fc6ce9d28b7" id="r_a2554411e8a0026c33c474fc6ce9d28b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a2554411e8a0026c33c474fc6ce9d28b7">squidaio_operations_pending</a> (void)</td></tr>
 <tr class="separator:a2554411e8a0026c33c474fc6ce9d28b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9d017dd76808f7e0c89571c243b4167" id="r_ae9d017dd76808f7e0c89571c243b4167"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#ae9d017dd76808f7e0c89571c243b4167">squidaio_sync</a> (void)</td></tr>
+<tr class="memitem:ae9d017dd76808f7e0c89571c243b4167" id="r_ae9d017dd76808f7e0c89571c243b4167"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#ae9d017dd76808f7e0c89571c243b4167">squidaio_sync</a> (void)</td></tr>
 <tr class="separator:ae9d017dd76808f7e0c89571c243b4167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeae398a4448cf12a1d8df019acddce60" id="r_aeae398a4448cf12a1d8df019acddce60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#aeae398a4448cf12a1d8df019acddce60">squidaio_get_queue_len</a> (void)</td></tr>
+<tr class="memitem:aeae398a4448cf12a1d8df019acddce60" id="r_aeae398a4448cf12a1d8df019acddce60"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#aeae398a4448cf12a1d8df019acddce60">squidaio_get_queue_len</a> (void)</td></tr>
 <tr class="separator:aeae398a4448cf12a1d8df019acddce60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6c2c652122ddd70c02dc96beecaaab0" id="r_af6c2c652122ddd70c02dc96beecaaab0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#af6c2c652122ddd70c02dc96beecaaab0">squidaio_xmalloc</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>)</td></tr>
+<tr class="memitem:af6c2c652122ddd70c02dc96beecaaab0" id="r_af6c2c652122ddd70c02dc96beecaaab0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#af6c2c652122ddd70c02dc96beecaaab0">squidaio_xmalloc</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>)</td></tr>
 <tr class="separator:af6c2c652122ddd70c02dc96beecaaab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3fd5d3be471e52377ea4f91bfdaed2e" id="r_ae3fd5d3be471e52377ea4f91bfdaed2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#ae3fd5d3be471e52377ea4f91bfdaed2e">squidaio_xfree</a> (void *p, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>)</td></tr>
+<tr class="memitem:ae3fd5d3be471e52377ea4f91bfdaed2e" id="r_ae3fd5d3be471e52377ea4f91bfdaed2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#ae3fd5d3be471e52377ea4f91bfdaed2e">squidaio_xfree</a> (void *p, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>)</td></tr>
 <tr class="separator:ae3fd5d3be471e52377ea4f91bfdaed2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75704c6289576c42af2b0fe97260fc65" id="r_a75704c6289576c42af2b0fe97260fc65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a75704c6289576c42af2b0fe97260fc65">squidaio_stats</a> (<a class="el" href="classStoreEntry.html">StoreEntry</a> *)</td></tr>
 <tr class="separator:a75704c6289576c42af2b0fe97260fc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,15 +206,15 @@ Functions</h2></td></tr>
 <tr class="separator:abb0119fac371b58c8896d57d96199666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa91328a9042ec4f86a46a327a23198a7" id="r_aa91328a9042ec4f86a46a327a23198a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#aa91328a9042ec4f86a46a327a23198a7">aioDone</a> (void)</td></tr>
 <tr class="separator:aa91328a9042ec4f86a46a327a23198a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9a1a1f21c6e75921c284014ec2627f3" id="r_ab9a1a1f21c6e75921c284014ec2627f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#ab9a1a1f21c6e75921c284014ec2627f3">aioCancel</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>)</td></tr>
+<tr class="memitem:ab9a1a1f21c6e75921c284014ec2627f3" id="r_ab9a1a1f21c6e75921c284014ec2627f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#ab9a1a1f21c6e75921c284014ec2627f3">aioCancel</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>)</td></tr>
 <tr class="separator:ab9a1a1f21c6e75921c284014ec2627f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a3e5860e7a38fd3c027e7aaaf362539" id="r_a6a3e5860e7a38fd3c027e7aaaf362539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a6a3e5860e7a38fd3c027e7aaaf362539">aioOpen</a> (const char *, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>, <a class="el" href="types_8h.html#a51b5bca3280ca743227e9b07c4f839a1">mode_t</a>, <a class="el" href="DiskThreads_8h.html#adeb5693f10ddd8f89fd3b692890a3ea1">AIOCB</a> *, void *)</td></tr>
+<tr class="memitem:a6a3e5860e7a38fd3c027e7aaaf362539" id="r_a6a3e5860e7a38fd3c027e7aaaf362539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a6a3e5860e7a38fd3c027e7aaaf362539">aioOpen</a> (const char *, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>, <a class="el" href="types_8h.html#a51b5bca3280ca743227e9b07c4f839a1">mode_t</a>, <a class="el" href="DiskThreads_8h.html#adeb5693f10ddd8f89fd3b692890a3ea1">AIOCB</a> *, void *)</td></tr>
 <tr class="separator:a6a3e5860e7a38fd3c027e7aaaf362539"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b01fdce72eae24d9ac6f14a28ea5436" id="r_a9b01fdce72eae24d9ac6f14a28ea5436"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a9b01fdce72eae24d9ac6f14a28ea5436">aioClose</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>)</td></tr>
+<tr class="memitem:a9b01fdce72eae24d9ac6f14a28ea5436" id="r_a9b01fdce72eae24d9ac6f14a28ea5436"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a9b01fdce72eae24d9ac6f14a28ea5436">aioClose</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>)</td></tr>
 <tr class="separator:a9b01fdce72eae24d9ac6f14a28ea5436"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dfcf61f2b2cfe0ed0f07524cd85f639" id="r_a2dfcf61f2b2cfe0ed0f07524cd85f639"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a2dfcf61f2b2cfe0ed0f07524cd85f639">aioWrite</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>, off_t offset, char *, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <a class="el" href="DiskThreads_8h.html#adeb5693f10ddd8f89fd3b692890a3ea1">AIOCB</a> *, void *, <a class="el" href="mem_2forward_8h.html#a302831a7d071d1b751ca56db1efb9e10">FREE</a> *)</td></tr>
+<tr class="memitem:a2dfcf61f2b2cfe0ed0f07524cd85f639" id="r_a2dfcf61f2b2cfe0ed0f07524cd85f639"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a2dfcf61f2b2cfe0ed0f07524cd85f639">aioWrite</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>, off_t offset, char *, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <a class="el" href="DiskThreads_8h.html#adeb5693f10ddd8f89fd3b692890a3ea1">AIOCB</a> *, void *, <a class="el" href="mem_2forward_8h.html#a302831a7d071d1b751ca56db1efb9e10">FREE</a> *)</td></tr>
 <tr class="separator:a2dfcf61f2b2cfe0ed0f07524cd85f639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefde0c5f6fb805566d1224199046e52a" id="r_aefde0c5f6fb805566d1224199046e52a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#aefde0c5f6fb805566d1224199046e52a">aioRead</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>, off_t offset, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <a class="el" href="DiskThreads_8h.html#adeb5693f10ddd8f89fd3b692890a3ea1">AIOCB</a> *, void *)</td></tr>
+<tr class="memitem:aefde0c5f6fb805566d1224199046e52a" id="r_aefde0c5f6fb805566d1224199046e52a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#aefde0c5f6fb805566d1224199046e52a">aioRead</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>, off_t offset, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <a class="el" href="DiskThreads_8h.html#adeb5693f10ddd8f89fd3b692890a3ea1">AIOCB</a> *, void *)</td></tr>
 <tr class="separator:aefde0c5f6fb805566d1224199046e52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93b182e6267c9c269f3c9c4570b6eac6" id="r_a93b182e6267c9c269f3c9c4570b6eac6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DiskThreads_8h.html#a93b182e6267c9c269f3c9c4570b6eac6">aioStat</a> (char *, struct stat *, <a class="el" href="DiskThreads_8h.html#adeb5693f10ddd8f89fd3b692890a3ea1">AIOCB</a> *, void *)</td></tr>
 <tr class="separator:a93b182e6267c9c269f3c9c4570b6eac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -367,7 +367,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void AIOCB(<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> fd, void *<a class="el" href="classcbdata.html">cbdata</a>, const char *buf, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> aio_return, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> aio_errno)</td>
+          <td class="memname">typedef void AIOCB(<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> fd, void *<a class="el" href="classcbdata.html">cbdata</a>, const char *buf, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> aio_return, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> aio_errno)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -429,7 +429,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void aioCancel </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>fd</em></td><td>)</td>
           <td></td>
         </tr>
@@ -453,7 +453,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void aioClose </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>fd</em></td><td>)</td>
           <td></td>
         </tr>
@@ -519,7 +519,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>oflag</em>, </td>
         </tr>
         <tr>
@@ -587,7 +587,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void aioRead </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>fd</em>, </td>
         </tr>
         <tr>
@@ -723,7 +723,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void aioWrite </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>fd</em>, </td>
         </tr>
         <tr>
@@ -785,7 +785,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_cancel </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_cancel </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classsquidaio__result__t.html">squidaio_result_t</a> *&#160;</td>
           <td class="paramname"><em>resultp</em></td><td>)</td>
@@ -809,9 +809,9 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_close </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_close </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>fd</em>, </td>
         </tr>
         <tr>
@@ -843,7 +843,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_get_queue_len </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_get_queue_len </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -878,9 +878,9 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="aiops_8cc_source.html#l00218">218</a> of file <a class="el" href="aiops_8cc_source.html">aiops.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="aiops__win32_8cc.html#a7071ec9eb2e113405239451fac2c2ffda29bab469c5632bd69a603f623b44c74d">_THREAD_FAILED</a>, <a class="el" href="aiops__win32_8cc.html#a7071ec9eb2e113405239451fac2c2ffdabb14a4aba43b66dd1f7c5d01a17278bc">_THREAD_STARTING</a>, <a class="el" href="aiops_8cc.html#a7f72480a3170cdc4aedb3d1a41306f65">AIO_LARGE_BUFS</a>, <a class="el" href="aiops_8cc.html#a384c3c0fedec13c8ff2688d40bc525cc">AIO_MEDIUM_BUFS</a>, <a class="el" href="aiops_8cc.html#abe79e8894b24a35eac5e74208bf82e20">AIO_MICRO_BUFS</a>, <a class="el" href="aiops_8cc.html#af7cafbeb7f5433c5066c0f10c24f6446">AIO_SMALL_BUFS</a>, <a class="el" href="aiops_8cc.html#a15358a80518e6c3b611d7abfad55d7cb">AIO_TINY_BUFS</a>, <a class="el" href="classMem_1_1Allocator.html#adf8e1d67e87828fb50fa52b5add00050">Mem::Allocator::alloc()</a>, <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, <a class="el" href="structsquidaio__request__queue__t.html#a0724d69376892547b153542f790ecec9">squidaio_request_queue_t::blocked</a>, <a class="el" href="structsquidaio__request__queue__t.html#ab227fc8e18186d1d47160c13aec767a7">squidaio_request_queue_t::cond</a>, <a class="el" href="structsquidaio__thread__t.html#a1f067dcb99576cb90cd4352360984425">squidaio_thread_t::current_req</a>, <a class="el" href="aiops_8cc.html#a757654fa9293810165e68a0cbd5b159f">done_queue</a>, <a class="el" href="aiops__win32_8cc.html#a757654fa9293810165e68a0cbd5b159f">done_queue</a>, <a class="el" href="structsquidaio__thread__t.html#ad905bd72d1a290ee8954e3d901801f01">squidaio_thread_t::dwThreadId</a>, <a class="el" href="defines_8h.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>, <a class="el" href="fatal_8cc.html#ab64d40563aeeae7c01b72bea4c3ed032">fatal()</a>, <a class="el" href="aiops_8cc.html#a1a4389f0a4648d3d1a55e392c7d4b0f2">globattr</a>, <a class="el" href="structsquidaio__request__queue__t.html#a150e265648818dffb27cba4f7c035091">squidaio_request_queue_t::head</a>, <a class="el" href="classCommIO.html#a951a2ed1c56912d8290e0fcedf3dc81b">CommIO::Initialize()</a>, <a class="el" href="aiops_8cc.html#a5761c2f355ee358ef6f379d658ccb382">main_thread</a>, <a class="el" href="aiops__win32_8cc.html#a876757bc4c5e10c163799a726cef2ef7">main_thread</a>, <a class="el" href="Pool_8h.html#aa56fddcad811ede94a4f03f22a69e676">memPoolCreate</a>, <a class="el" href="structsquidaio__request__queue__t.html#ae6860c0a3717571cf1c7d1e5c555bc7a">squidaio_request_queue_t::mutex</a>, <a class="el" href="structsquidaio__thread__t.html#a10b93ec742b10463fdf583157dc56888">squidaio_thread_t::next</a>, <a class="el" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="el" href="DiskThreads_8h.html#acf854d1717130336e7cb353248c53541">NUMTHREADS</a>, <a class="el" href="aiops_8cc.html#a2d62e60d83391453b246336f833d63d3">request_queue</a>, <a class="el" href="aiops__win32_8cc.html#a2d62e60d83391453b246336f833d63d3">request_queue</a>, <a class="el" href="structsquidaio__request__queue__t.html#aed091168476f924bb33345dcaf1ef05f">squidaio_request_queue_t::requests</a>, <a class="el" href="structsquidaio__thread__t.html#a3b005d6a2ad8575c31beec296b75898a">squidaio_thread_t::requests</a>, <a class="el" href="aiops_8cc.html#af45f8ea774e7d9c739d91c132889e7bf">squidaio_initialised</a>, <a class="el" href="aiops__win32_8cc.html#af45f8ea774e7d9c739d91c132889e7bf">squidaio_initialised</a>, <a class="el" href="aiops_8cc.html#a38bb243c51f9228d1b31893b78f28d8f">squidaio_large_bufs</a>, <a class="el" href="aiops__win32_8cc.html#a38bb243c51f9228d1b31893b78f28d8f">squidaio_large_bufs</a>, <a class="el" href="aiops_8cc.html#a3c05e1557efbd2be1587363ff78a607d">squidaio_medium_bufs</a>, <a class="el" href="aiops__win32_8cc.html#a3c05e1557efbd2be1587363ff78a607d">squidaio_medium_bufs</a>, <a class="el" href="aiops_8cc.html#ac032948189878347378828e0f24e9cbe">squidaio_micro_bufs</a>, <a class="el" href="aiops__win32_8cc.html#ac032948189878347378828e0f24e9cbe">squidaio_micro_bufs</a>, <a class="el" href="aiops_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops__win32_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops_8cc.html#a381fb4b896942733340bde7f39a76ae7">squidaio_small_bufs</a>, <a class="el" href="aiops__win32_8cc.html#a381fb4b896942733340bde7f39a76ae7">squidaio_small_bufs</a>, <a class="el" href="aiops__win32_8cc.html#ade0609bf64773e7bf4812a5425e487bd">squidaio_thread_loop()</a>, <a class="el" href="aiops_8cc.html#a4c828083511b08002a25829709d529d1">squidaio_thread_loop()</a>, <a class="el" href="aiops_8cc.html#a93127c0d8bfece09345e3f50b12a538a">squidaio_thread_pool</a>, <a class="el" href="aiops__win32_8cc.html#a93127c0d8bfece09345e3f50b12a538a">squidaio_thread_pool</a>, <a class="el" href="aiops_8cc.html#aa6f424f5921d62667aac5dac3e8e960d">squidaio_tiny_bufs</a>, <a class="el" href="aiops__win32_8cc.html#aa6f424f5921d62667aac5dac3e8e960d">squidaio_tiny_bufs</a>, <a class="el" href="structsquidaio__thread__t.html#a34f469b1516e5d32dac1926881afecfb">squidaio_thread_t::status</a>, <a class="el" href="structsquidaio__request__queue__t.html#a9c3ed21d0e8e6df998273274eece5a7b">squidaio_request_queue_t::tailp</a>, <a class="el" href="structsquidaio__thread__t.html#a11ea99e8fb438d5facbad03234fa7e4d">squidaio_thread_t::thread</a>, <a class="el" href="aiops_8cc.html#a54671fd0886b75d7f15beb7337267ebc">threads</a>, <a class="el" href="aiops__win32_8cc.html#a54671fd0886b75d7f15beb7337267ebc">threads</a>, and <a class="el" href="defines_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>.</p>
+<p class="reference">References <a class="el" href="aiops__win32_8cc.html#a7071ec9eb2e113405239451fac2c2ffda29bab469c5632bd69a603f623b44c74d">_THREAD_FAILED</a>, <a class="el" href="aiops__win32_8cc.html#a7071ec9eb2e113405239451fac2c2ffdabb14a4aba43b66dd1f7c5d01a17278bc">_THREAD_STARTING</a>, <a class="el" href="aiops__win32_8cc.html#a7f72480a3170cdc4aedb3d1a41306f65">AIO_LARGE_BUFS</a>, <a class="el" href="aiops__win32_8cc.html#a384c3c0fedec13c8ff2688d40bc525cc">AIO_MEDIUM_BUFS</a>, <a class="el" href="aiops__win32_8cc.html#abe79e8894b24a35eac5e74208bf82e20">AIO_MICRO_BUFS</a>, <a class="el" href="aiops__win32_8cc.html#af7cafbeb7f5433c5066c0f10c24f6446">AIO_SMALL_BUFS</a>, <a class="el" href="aiops__win32_8cc.html#a15358a80518e6c3b611d7abfad55d7cb">AIO_TINY_BUFS</a>, <a class="el" href="classMem_1_1Allocator.html#adf8e1d67e87828fb50fa52b5add00050">Mem::Allocator::alloc()</a>, <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, <a class="el" href="structsquidaio__request__queue__t.html#a0724d69376892547b153542f790ecec9">squidaio_request_queue_t::blocked</a>, <a class="el" href="structsquidaio__request__queue__t.html#ab227fc8e18186d1d47160c13aec767a7">squidaio_request_queue_t::cond</a>, <a class="el" href="structsquidaio__thread__t.html#a1f067dcb99576cb90cd4352360984425">squidaio_thread_t::current_req</a>, <a class="el" href="aiops_8cc.html#a757654fa9293810165e68a0cbd5b159f">done_queue</a>, <a class="el" href="aiops__win32_8cc.html#a757654fa9293810165e68a0cbd5b159f">done_queue</a>, <a class="el" href="structsquidaio__thread__t.html#ad905bd72d1a290ee8954e3d901801f01">squidaio_thread_t::dwThreadId</a>, <a class="el" href="defines_8h.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>, <a class="el" href="fatal_8cc.html#ab64d40563aeeae7c01b72bea4c3ed032">fatal()</a>, <a class="el" href="aiops_8cc.html#a1a4389f0a4648d3d1a55e392c7d4b0f2">globattr</a>, <a class="el" href="structsquidaio__request__queue__t.html#a150e265648818dffb27cba4f7c035091">squidaio_request_queue_t::head</a>, <a class="el" href="classCommIO.html#a951a2ed1c56912d8290e0fcedf3dc81b">CommIO::Initialize()</a>, <a class="el" href="aiops_8cc.html#a5761c2f355ee358ef6f379d658ccb382">main_thread</a>, <a class="el" href="aiops__win32_8cc.html#a876757bc4c5e10c163799a726cef2ef7">main_thread</a>, <a class="el" href="Pool_8h.html#aa56fddcad811ede94a4f03f22a69e676">memPoolCreate</a>, <a class="el" href="structsquidaio__request__queue__t.html#ae6860c0a3717571cf1c7d1e5c555bc7a">squidaio_request_queue_t::mutex</a>, <a class="el" href="structsquidaio__thread__t.html#a10b93ec742b10463fdf583157dc56888">squidaio_thread_t::next</a>, <a class="el" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="el" href="DiskThreads_8h.html#acf854d1717130336e7cb353248c53541">NUMTHREADS</a>, <a class="el" href="aiops_8cc.html#a2d62e60d83391453b246336f833d63d3">request_queue</a>, <a class="el" href="aiops__win32_8cc.html#a2d62e60d83391453b246336f833d63d3">request_queue</a>, <a class="el" href="structsquidaio__request__queue__t.html#aed091168476f924bb33345dcaf1ef05f">squidaio_request_queue_t::requests</a>, <a class="el" href="structsquidaio__thread__t.html#a3b005d6a2ad8575c31beec296b75898a">squidaio_thread_t::requests</a>, <a class="el" href="aiops_8cc.html#af45f8ea774e7d9c739d91c132889e7bf">squidaio_initialised</a>, <a class="el" href="aiops__win32_8cc.html#af45f8ea774e7d9c739d91c132889e7bf">squidaio_initialised</a>, <a class="el" href="aiops_8cc.html#a38bb243c51f9228d1b31893b78f28d8f">squidaio_large_bufs</a>, <a class="el" href="aiops__win32_8cc.html#a38bb243c51f9228d1b31893b78f28d8f">squidaio_large_bufs</a>, <a class="el" href="aiops_8cc.html#a3c05e1557efbd2be1587363ff78a607d">squidaio_medium_bufs</a>, <a class="el" href="aiops__win32_8cc.html#a3c05e1557efbd2be1587363ff78a607d">squidaio_medium_bufs</a>, <a class="el" href="aiops_8cc.html#ac032948189878347378828e0f24e9cbe">squidaio_micro_bufs</a>, <a class="el" href="aiops__win32_8cc.html#ac032948189878347378828e0f24e9cbe">squidaio_micro_bufs</a>, <a class="el" href="aiops_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops__win32_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops_8cc.html#a381fb4b896942733340bde7f39a76ae7">squidaio_small_bufs</a>, <a class="el" href="aiops__win32_8cc.html#a381fb4b896942733340bde7f39a76ae7">squidaio_small_bufs</a>, <a class="el" href="aiops__win32_8cc.html#ade0609bf64773e7bf4812a5425e487bd">squidaio_thread_loop()</a>, <a class="el" href="aiops_8cc.html#a4c828083511b08002a25829709d529d1">squidaio_thread_loop()</a>, <a class="el" href="aiops_8cc.html#a93127c0d8bfece09345e3f50b12a538a">squidaio_thread_pool</a>, <a class="el" href="aiops__win32_8cc.html#a93127c0d8bfece09345e3f50b12a538a">squidaio_thread_pool</a>, <a class="el" href="aiops_8cc.html#aa6f424f5921d62667aac5dac3e8e960d">squidaio_tiny_bufs</a>, <a class="el" href="aiops__win32_8cc.html#aa6f424f5921d62667aac5dac3e8e960d">squidaio_tiny_bufs</a>, <a class="el" href="structsquidaio__thread__t.html#a34f469b1516e5d32dac1926881afecfb">squidaio_thread_t::status</a>, <a class="el" href="structsquidaio__request__queue__t.html#a9c3ed21d0e8e6df998273274eece5a7b">squidaio_request_queue_t::tailp</a>, <a class="el" href="structsquidaio__thread__t.html#a11ea99e8fb438d5facbad03234fa7e4d">squidaio_thread_t::thread</a>, <a class="el" href="aiops_8cc.html#a54671fd0886b75d7f15beb7337267ebc">threads</a>, <a class="el" href="aiops__win32_8cc.html#a54671fd0886b75d7f15beb7337267ebc">threads</a>, and <a class="el" href="defines_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="aiops_8cc.html#a5438e177f42398e49652bc9469b47978">squidaio_open()</a>, <a class="el" href="aiops__win32_8cc.html#a0749b1d846a641d83cbeb9e334edfe16">squidaio_stat()</a>, and <a class="el" href="aiops_8cc.html#a236f10dd3ce0fc9fbe103f2100078ca5">squidaio_unlink()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="aiops__win32_8cc.html#a5438e177f42398e49652bc9469b47978">squidaio_open()</a>, <a class="el" href="aiops__win32_8cc.html#a0749b1d846a641d83cbeb9e334edfe16">squidaio_stat()</a>, and <a class="el" href="aiops__win32_8cc.html#a236f10dd3ce0fc9fbe103f2100078ca5">squidaio_unlink()</a>.</p>
 
 </div>
 </div>
@@ -891,7 +891,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_open </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_open </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
@@ -899,7 +899,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>oflag</em>, </td>
         </tr>
         <tr>
@@ -924,7 +924,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="aiops_8cc_source.html#l00639">639</a> of file <a class="el" href="aiops_8cc_source.html">aiops.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="DiskThreads_8h.html#aadbd7b09910026ef6d7229bb4c8c6eacac0ec1f78498d870029822d78d9b3a6ae">_AIO_OP_OPEN</a>, <a class="el" href="classMem_1_1Allocator.html#adf8e1d67e87828fb50fa52b5add00050">Mem::Allocator::alloc()</a>, <a class="el" href="structsquidaio__request__t.html#a3d15e7474c6757b4510c6f14991ba65a">squidaio_request_t::cancelled</a>, <a class="el" href="structsquidaio__request__t.html#a20eee61473d4358bdb6c708d85680ae0">squidaio_request_t::mode</a>, <a class="el" href="structsquidaio__request__t.html#afaada2454d26997d9e2a52cea4a2cbed">squidaio_request_t::oflag</a>, <a class="el" href="structsquidaio__request__t.html#a780c871340dcef3c11f017b3b9159a18">squidaio_request_t::path</a>, <a class="el" href="structsquidaio__request__t.html#ad1241245b0d2b99f17b06d81694e1b8b">squidaio_request_t::request_type</a>, <a class="el" href="classsquidaio__result__t.html#a6084dceb9e44878eaf2406f431dba61d">squidaio_result_t::result_type</a>, <a class="el" href="structsquidaio__request__t.html#a4cbc03291fb3250ae3b5cb10caa18faf">squidaio_request_t::resultp</a>, <a class="el" href="aiops_8cc.html#a5dd264496dd490b6e7288935d7e643c2">squidaio_init()</a>, <a class="el" href="aiops_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops__win32_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops__win32_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>, and <a class="el" href="aiops__win32_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>.</p>
+<p class="reference">References <a class="el" href="DiskThreads_8h.html#aadbd7b09910026ef6d7229bb4c8c6eacac0ec1f78498d870029822d78d9b3a6ae">_AIO_OP_OPEN</a>, <a class="el" href="classMem_1_1Allocator.html#adf8e1d67e87828fb50fa52b5add00050">Mem::Allocator::alloc()</a>, <a class="el" href="structsquidaio__request__t.html#a3d15e7474c6757b4510c6f14991ba65a">squidaio_request_t::cancelled</a>, <a class="el" href="structsquidaio__request__t.html#a20eee61473d4358bdb6c708d85680ae0">squidaio_request_t::mode</a>, <a class="el" href="structsquidaio__request__t.html#afaada2454d26997d9e2a52cea4a2cbed">squidaio_request_t::oflag</a>, <a class="el" href="structsquidaio__request__t.html#a780c871340dcef3c11f017b3b9159a18">squidaio_request_t::path</a>, <a class="el" href="structsquidaio__request__t.html#ad1241245b0d2b99f17b06d81694e1b8b">squidaio_request_t::request_type</a>, <a class="el" href="classsquidaio__result__t.html#a6084dceb9e44878eaf2406f431dba61d">squidaio_result_t::result_type</a>, <a class="el" href="structsquidaio__request__t.html#a4cbc03291fb3250ae3b5cb10caa18faf">squidaio_request_t::resultp</a>, <a class="el" href="aiops__win32_8cc.html#a5dd264496dd490b6e7288935d7e643c2">squidaio_init()</a>, <a class="el" href="aiops_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops__win32_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops__win32_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>, and <a class="el" href="aiops__win32_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="async__io_8cc.html#a7d2610c3d131a6ee22c70d18811aea93">aioOpen()</a>.</p>
 
@@ -937,7 +937,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_opendir </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_opendir </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname">, </td>
@@ -965,7 +965,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_operations_pending </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_operations_pending </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -1013,9 +1013,9 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_read </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_read </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>fd</em>, </td>
         </tr>
         <tr>
@@ -1039,7 +1039,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>whence</em>, </td>
         </tr>
         <tr>
@@ -1095,7 +1095,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_stat </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_stat </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
@@ -1122,7 +1122,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="aiops_8cc_source.html#l00780">780</a> of file <a class="el" href="aiops_8cc_source.html">aiops.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="DiskThreads_8h.html#aadbd7b09910026ef6d7229bb4c8c6eacafe8dc0a58b360ec5850f50b703fb266b">_AIO_OP_STAT</a>, <a class="el" href="classMem_1_1Allocator.html#adf8e1d67e87828fb50fa52b5add00050">Mem::Allocator::alloc()</a>, <a class="el" href="structsquidaio__request__t.html#a3d15e7474c6757b4510c6f14991ba65a">squidaio_request_t::cancelled</a>, <a class="el" href="structsquidaio__request__t.html#a780c871340dcef3c11f017b3b9159a18">squidaio_request_t::path</a>, <a class="el" href="structsquidaio__request__t.html#ad1241245b0d2b99f17b06d81694e1b8b">squidaio_request_t::request_type</a>, <a class="el" href="classsquidaio__result__t.html#a6084dceb9e44878eaf2406f431dba61d">squidaio_result_t::result_type</a>, <a class="el" href="structsquidaio__request__t.html#a4cbc03291fb3250ae3b5cb10caa18faf">squidaio_request_t::resultp</a>, <a class="el" href="aiops__win32_8cc.html#a5dd264496dd490b6e7288935d7e643c2">squidaio_init()</a>, <a class="el" href="aiops_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops__win32_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops__win32_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops_8cc.html#af6c2c652122ddd70c02dc96beecaaab0">squidaio_xmalloc()</a>, <a class="el" href="aiops_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>, <a class="el" href="aiops__win32_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>, <a class="el" href="structsquidaio__request__t.html#aac30642bcd2257ae34f34de006e58f49">squidaio_request_t::statp</a>, and <a class="el" href="structsquidaio__request__t.html#a7defc98ebf09706a48bbd7e2c3c946a7">squidaio_request_t::tmpstatp</a>.</p>
+<p class="reference">References <a class="el" href="DiskThreads_8h.html#aadbd7b09910026ef6d7229bb4c8c6eacafe8dc0a58b360ec5850f50b703fb266b">_AIO_OP_STAT</a>, <a class="el" href="classMem_1_1Allocator.html#adf8e1d67e87828fb50fa52b5add00050">Mem::Allocator::alloc()</a>, <a class="el" href="structsquidaio__request__t.html#a3d15e7474c6757b4510c6f14991ba65a">squidaio_request_t::cancelled</a>, <a class="el" href="structsquidaio__request__t.html#a780c871340dcef3c11f017b3b9159a18">squidaio_request_t::path</a>, <a class="el" href="structsquidaio__request__t.html#ad1241245b0d2b99f17b06d81694e1b8b">squidaio_request_t::request_type</a>, <a class="el" href="classsquidaio__result__t.html#a6084dceb9e44878eaf2406f431dba61d">squidaio_result_t::result_type</a>, <a class="el" href="structsquidaio__request__t.html#a4cbc03291fb3250ae3b5cb10caa18faf">squidaio_request_t::resultp</a>, <a class="el" href="aiops__win32_8cc.html#a5dd264496dd490b6e7288935d7e643c2">squidaio_init()</a>, <a class="el" href="aiops_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops__win32_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops__win32_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops__win32_8cc.html#af6c2c652122ddd70c02dc96beecaaab0">squidaio_xmalloc()</a>, <a class="el" href="aiops_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>, <a class="el" href="aiops__win32_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>, <a class="el" href="structsquidaio__request__t.html#aac30642bcd2257ae34f34de006e58f49">squidaio_request_t::statp</a>, and <a class="el" href="structsquidaio__request__t.html#a7defc98ebf09706a48bbd7e2c3c946a7">squidaio_request_t::tmpstatp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="async__io_8cc.html#afb4597c73b4e561e7fc06ef35f495d79">aioStat()</a>.</p>
 
@@ -1159,7 +1159,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_sync </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_sync </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -1183,7 +1183,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_unlink </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_unlink </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
@@ -1204,7 +1204,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="aiops_8cc_source.html#l00814">814</a> of file <a class="el" href="aiops_8cc_source.html">aiops.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="DiskThreads_8h.html#aadbd7b09910026ef6d7229bb4c8c6eacaa1e4c12936aec65591a5219cd7323d3f">_AIO_OP_UNLINK</a>, <a class="el" href="classMem_1_1Allocator.html#adf8e1d67e87828fb50fa52b5add00050">Mem::Allocator::alloc()</a>, <a class="el" href="structsquidaio__request__t.html#a3d15e7474c6757b4510c6f14991ba65a">squidaio_request_t::cancelled</a>, <a class="el" href="structsquidaio__request__t.html#a780c871340dcef3c11f017b3b9159a18">squidaio_request_t::path</a>, <a class="el" href="structsquidaio__request__t.html#ad1241245b0d2b99f17b06d81694e1b8b">squidaio_request_t::request_type</a>, <a class="el" href="classsquidaio__result__t.html#a6084dceb9e44878eaf2406f431dba61d">squidaio_result_t::result_type</a>, <a class="el" href="structsquidaio__request__t.html#a4cbc03291fb3250ae3b5cb10caa18faf">squidaio_request_t::resultp</a>, <a class="el" href="aiops_8cc.html#a5dd264496dd490b6e7288935d7e643c2">squidaio_init()</a>, <a class="el" href="aiops_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops__win32_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops__win32_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>, and <a class="el" href="aiops__win32_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>.</p>
+<p class="reference">References <a class="el" href="DiskThreads_8h.html#aadbd7b09910026ef6d7229bb4c8c6eacaa1e4c12936aec65591a5219cd7323d3f">_AIO_OP_UNLINK</a>, <a class="el" href="classMem_1_1Allocator.html#adf8e1d67e87828fb50fa52b5add00050">Mem::Allocator::alloc()</a>, <a class="el" href="structsquidaio__request__t.html#a3d15e7474c6757b4510c6f14991ba65a">squidaio_request_t::cancelled</a>, <a class="el" href="structsquidaio__request__t.html#a780c871340dcef3c11f017b3b9159a18">squidaio_request_t::path</a>, <a class="el" href="structsquidaio__request__t.html#ad1241245b0d2b99f17b06d81694e1b8b">squidaio_request_t::request_type</a>, <a class="el" href="classsquidaio__result__t.html#a6084dceb9e44878eaf2406f431dba61d">squidaio_result_t::result_type</a>, <a class="el" href="structsquidaio__request__t.html#a4cbc03291fb3250ae3b5cb10caa18faf">squidaio_request_t::resultp</a>, <a class="el" href="aiops__win32_8cc.html#a5dd264496dd490b6e7288935d7e643c2">squidaio_init()</a>, <a class="el" href="aiops_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops__win32_8cc.html#ac704e5afe05c1c13cae708b2d0ae9b76">squidaio_queue_request()</a>, <a class="el" href="aiops_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops__win32_8cc.html#a6026039a9ab900190bb6c5ce37f77193">squidaio_request_pool</a>, <a class="el" href="aiops_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>, and <a class="el" href="aiops__win32_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="async__io_8cc.html#abd6c46e1a581d36309a333fcdbe61613">aioUnlink()</a>.</p>
 
@@ -1217,9 +1217,9 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> squidaio_write </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> squidaio_write </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>fd</em>, </td>
         </tr>
         <tr>
@@ -1243,7 +1243,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>whence</em>, </td>
         </tr>
         <tr>
@@ -1283,7 +1283,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -1311,7 +1311,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void * squidaio_xmalloc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1322,7 +1322,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="classMem_1_1Allocator.html#adf8e1d67e87828fb50fa52b5add00050">Mem::Allocator::alloc()</a>, <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, <a class="el" href="aiops_8cc.html#a403dcf1a8d68faaddaa4ec4f4d83e584">squidaio_get_pool()</a>, <a class="el" href="aiops__win32_8cc.html#a403dcf1a8d68faaddaa4ec4f4d83e584">squidaio_get_pool()</a>, and <a class="el" href="negotiate__wrapper_8cc.html#a6af5faec3f9662b20ffc9903f923dec0">xmalloc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="async__io_8cc.html#ab3ea680241bcd310adec74878098825c">aioRead()</a>, <a class="el" href="aiops_8cc.html#a0749b1d846a641d83cbeb9e334edfe16">squidaio_stat()</a>, <a class="el" href="aiops_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>, and <a class="el" href="aiops__win32_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="async__io_8cc.html#ab3ea680241bcd310adec74878098825c">aioRead()</a>, <a class="el" href="aiops__win32_8cc.html#a0749b1d846a641d83cbeb9e334edfe16">squidaio_stat()</a>, <a class="el" href="aiops_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>, and <a class="el" href="aiops__win32_8cc.html#a47b15850aa7057f2c2a211378ca19b3e">squidaio_xstrdup()</a>.</p>
 
 </div>
 </div>

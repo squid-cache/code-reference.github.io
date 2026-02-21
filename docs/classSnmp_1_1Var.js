@@ -41,6 +41,6 @@ var classSnmp_1_1Var =
     [ "objid", "classSnmp_1_1Var.html#a264e831b08a9037c2e2c65944f5d79b4", null ],
     [ "string", "classSnmp_1_1Var.html#ad16ddb338c7202385756e1737235b4e6", null ],
     [ "type", "classSnmp_1_1Var.html#a8bd719974b3554116631ea80dc88b6aa", null ],
-    [ "val", "classSnmp_1_1Var.html#a21c5c2c1deb427d9fe41151800cc1277", null ],
+    [ "val", "classSnmp_1_1Var.html#a6e21267bdb208f7728ae79c04bc55150", null ],
     [ "val_len", "classSnmp_1_1Var.html#ae13be7af72c0cc4408d3612d1356eb9e", null ]
 ];

@@ -120,9 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa2c07555d5efe5908c49b4a61173d42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e1483b82878662a9e7ade8c488dc0ac" id="r_a5e1483b82878662a9e7ade8c488dc0ac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIORequestor.html#a5e1483b82878662a9e7ade8c488dc0ac">closeCompleted</a> ()=0</td></tr>
 <tr class="separator:a5e1483b82878662a9e7ade8c488dc0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a994e7a2bdb4f0d7ce7ae33e99c4c6897" id="r_a994e7a2bdb4f0d7ce7ae33e99c4c6897"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIORequestor.html#a994e7a2bdb4f0d7ce7ae33e99c4c6897">readCompleted</a> (const char *buf, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> len, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> errflag, <a class="el" href="classRefCount.html">RefCount</a>&lt; <a class="el" href="classReadRequest.html">ReadRequest</a> &gt;)=0</td></tr>
+<tr class="memitem:a994e7a2bdb4f0d7ce7ae33e99c4c6897" id="r_a994e7a2bdb4f0d7ce7ae33e99c4c6897"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIORequestor.html#a994e7a2bdb4f0d7ce7ae33e99c4c6897">readCompleted</a> (const char *buf, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> len, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> errflag, <a class="el" href="classRefCount.html">RefCount</a>&lt; <a class="el" href="classReadRequest.html">ReadRequest</a> &gt;)=0</td></tr>
 <tr class="separator:a994e7a2bdb4f0d7ce7ae33e99c4c6897"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5a0b205c5bfe8b692bfef334bb59aae" id="r_ad5a0b205c5bfe8b692bfef334bb59aae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIORequestor.html#ad5a0b205c5bfe8b692bfef334bb59aae">writeCompleted</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> errflag, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> len, <a class="el" href="classRefCount.html">RefCount</a>&lt; <a class="el" href="classWriteRequest.html">WriteRequest</a> &gt;)=0</td></tr>
+<tr class="memitem:ad5a0b205c5bfe8b692bfef334bb59aae" id="r_ad5a0b205c5bfe8b692bfef334bb59aae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIORequestor.html#ad5a0b205c5bfe8b692bfef334bb59aae">writeCompleted</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> errflag, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> len, <a class="el" href="classRefCount.html">RefCount</a>&lt; <a class="el" href="classWriteRequest.html">WriteRequest</a> &gt;)=0</td></tr>
 <tr class="separator:ad5a0b205c5bfe8b692bfef334bb59aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -222,13 +222,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>len</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>errflag</em>, </td>
         </tr>
         <tr>
@@ -268,7 +268,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void IORequestor::writeCompleted </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>errflag</em>, </td>
         </tr>
         <tr>

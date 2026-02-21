@@ -123,7 +123,7 @@ Public Types</h2></td></tr>
 <tr class="separator:a0a80b1ba87e68d0ef8e510963af53b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d5240ec4a99c68e2ed5575d7ebc2c63" id="r_a8d5240ec4a99c68e2ed5575d7ebc2c63"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreIOState.html#a8d5240ec4a99c68e2ed5575d7ebc2c63">STRCB</a>(void *their_data, const char *buf, ssize_t len, <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a> self)</td></tr>
 <tr class="separator:a8d5240ec4a99c68e2ed5575d7ebc2c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af82d5f8ddee6eae14054d5a93b54a2cb" id="r_af82d5f8ddee6eae14054d5a93b54a2cb"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreIOState.html#af82d5f8ddee6eae14054d5a93b54a2cb">STIOCB</a>(void *their_data, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> errflag, <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a> self)</td></tr>
+<tr class="memitem:af82d5f8ddee6eae14054d5a93b54a2cb" id="r_af82d5f8ddee6eae14054d5a93b54a2cb"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreIOState.html#af82d5f8ddee6eae14054d5a93b54a2cb">STIOCB</a>(void *their_data, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> errflag, <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a> self)</td></tr>
 <tr class="separator:af82d5f8ddee6eae14054d5a93b54a2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -139,16 +139,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0dc4cbc1694d672bfc57258470610c0d" id="r_a0dc4cbc1694d672bfc57258470610c0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#a0dc4cbc1694d672bfc57258470610c0d">write</a> (char const *buf, <a class="el" href="stub__liblog_8cc.html#a95f7889ed17fb3324addbb3d5dacc9bc">size_t</a> <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, off_t <a class="el" href="classStoreIOState.html#a33a303be7e5e8e0ddbd690087acac133">offset</a>, <a class="el" href="mem_2forward_8h.html#a302831a7d071d1b751ca56db1efb9e10">FREE</a> *free_func) override</td></tr>
 <tr class="memdesc:a0dc4cbc1694d672bfc57258470610c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">wraps <a class="el" href="classRock_1_1IoState.html#aaf82a01320035f6b20b6eb6eb74c5f94">tryWrite()</a> to handle deep write failures centrally and safely  <br /></td></tr>
 <tr class="separator:a0dc4cbc1694d672bfc57258470610c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af474a6db19b2c329a0e83148efb225d5" id="r_af474a6db19b2c329a0e83148efb225d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#af474a6db19b2c329a0e83148efb225d5">close</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> how) override</td></tr>
+<tr class="memitem:af474a6db19b2c329a0e83148efb225d5" id="r_af474a6db19b2c329a0e83148efb225d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#af474a6db19b2c329a0e83148efb225d5">close</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> how) override</td></tr>
 <tr class="memdesc:af474a6db19b2c329a0e83148efb225d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">finish or abort swapping per CloseHow  <br /></td></tr>
 <tr class="separator:af474a6db19b2c329a0e83148efb225d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad52ed32c23c15ca4601e622fd0c5445a" id="r_ad52ed32c23c15ca4601e622fd0c5445a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#ad52ed32c23c15ca4601e622fd0c5445a">stillWaiting</a> () const</td></tr>
 <tr class="memdesc:ad52ed32c23c15ca4601e622fd0c5445a"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether we are still waiting for the I/O results (i.e., not closed)  <br /></td></tr>
 <tr class="separator:ad52ed32c23c15ca4601e622fd0c5445a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae16459a453c262b4188dee3ef3d375bc" id="r_ae16459a453c262b4188dee3ef3d375bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#ae16459a453c262b4188dee3ef3d375bc">handleReadCompletion</a> (<a class="el" href="classRock_1_1ReadRequest.html">Rock::ReadRequest</a> &amp;request, const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> rlen, const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> errFlag)</td></tr>
+<tr class="memitem:ae16459a453c262b4188dee3ef3d375bc" id="r_ae16459a453c262b4188dee3ef3d375bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#ae16459a453c262b4188dee3ef3d375bc">handleReadCompletion</a> (<a class="el" href="classRock_1_1ReadRequest.html">Rock::ReadRequest</a> &amp;request, const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> rlen, const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> errFlag)</td></tr>
 <tr class="memdesc:ae16459a453c262b4188dee3ef3d375bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">forwards read data (or an error) to the reader that initiated this I/O  <br /></td></tr>
 <tr class="separator:ae16459a453c262b4188dee3ef3d375bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a08c4fb91a6e76a2e7a314045c48032" id="r_a8a08c4fb91a6e76a2e7a314045c48032"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#a8a08c4fb91a6e76a2e7a314045c48032">finishedWriting</a> (const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> errFlag)</td></tr>
+<tr class="memitem:a8a08c4fb91a6e76a2e7a314045c48032" id="r_a8a08c4fb91a6e76a2e7a314045c48032"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#a8a08c4fb91a6e76a2e7a314045c48032">finishedWriting</a> (const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> errFlag)</td></tr>
 <tr class="memdesc:a8a08c4fb91a6e76a2e7a314045c48032"><td class="mdescLeft">&#160;</td><td class="mdescRight">called by SwapDir::writeCompleted() after the last write and on error  <br /></td></tr>
 <tr class="separator:a8a08c4fb91a6e76a2e7a314045c48032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38bd7fe22c39d94608e7555fbaccf3aa" id="r_a38bd7fe22c39d94608e7555fbaccf3aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#a38bd7fe22c39d94608e7555fbaccf3aa">expectedReply</a> (const <a class="el" href="namespaceRock.html#a1f365e470a804b11c371c79c177cd07f">IoXactionId</a> receivedId)</td></tr>
@@ -223,10 +223,10 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a289d5bf7571d6efa28072c91bb1f5ffb" id="r_a289d5bf7571d6efa28072c91bb1f5ffb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#a289d5bf7571d6efa28072c91bb1f5ffb">writeToDisk</a> ()</td></tr>
 <tr class="memdesc:a289d5bf7571d6efa28072c91bb1f5ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">write what was buffered during <a class="el" href="classRock_1_1IoState.html#a0dc4cbc1694d672bfc57258470610c0d" title="wraps tryWrite() to handle deep write failures centrally and safely">write()</a> calls  <br /></td></tr>
 <tr class="separator:a289d5bf7571d6efa28072c91bb1f5ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a853c390e0fe0106d6286038ee3a75d1e" id="r_a853c390e0fe0106d6286038ee3a75d1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#a853c390e0fe0106d6286038ee3a75d1e">callReaderBack</a> (const char *buf, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> rlen)</td></tr>
+<tr class="memitem:a853c390e0fe0106d6286038ee3a75d1e" id="r_a853c390e0fe0106d6286038ee3a75d1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#a853c390e0fe0106d6286038ee3a75d1e">callReaderBack</a> (const char *buf, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> rlen)</td></tr>
 <tr class="memdesc:a853c390e0fe0106d6286038ee3a75d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">report (already sanitized/checked) I/O results to the read initiator  <br /></td></tr>
 <tr class="separator:a853c390e0fe0106d6286038ee3a75d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4264166125c99b8daa87d795e57930cb" id="r_a4264166125c99b8daa87d795e57930cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#a4264166125c99b8daa87d795e57930cb">callBack</a> (<a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> errflag)</td></tr>
+<tr class="memitem:a4264166125c99b8daa87d795e57930cb" id="r_a4264166125c99b8daa87d795e57930cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRock_1_1IoState.html#a4264166125c99b8daa87d795e57930cb">callBack</a> (<a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> errflag)</td></tr>
 <tr class="separator:a4264166125c99b8daa87d795e57930cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -289,7 +289,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void StoreIOState::STIOCB(void *their_data, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> errflag, <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a> self)</td>
+          <td class="memname">typedef void StoreIOState::STIOCB(void *their_data, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> errflag, <a class="el" href="classStoreIOState.html#a405546ca20b5bfb4af78d32536064779">StoreIOState::Pointer</a> self)</td>
         </tr>
       </table>
   </td>
@@ -447,7 +447,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Rock::IoState::callBack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>errflag</em></td><td>)</td>
           <td></td>
         </tr>
@@ -483,7 +483,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>rlen</em>&#160;</td>
         </tr>
         <tr>
@@ -517,7 +517,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Rock::IoState::close </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>how</em></td><td>)</td>
           <td></td>
         </tr>
@@ -622,7 +622,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Rock::IoState::finishedWriting </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>errFlag</em></td><td>)</td>
           <td></td>
         </tr>
@@ -650,13 +650,13 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>rlen</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>errFlag</em>&#160;</td>
         </tr>
         <tr>

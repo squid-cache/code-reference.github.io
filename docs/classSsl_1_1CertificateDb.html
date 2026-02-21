@@ -184,7 +184,7 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a49e0803d43550cc65feeb83fa72375f3" id="r_a49e0803d43550cc65feeb83fa72375f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#a49e0803d43550cc65feeb83fa72375f3">pure_find</a> (std::string const &amp;key, const <a class="el" href="namespaceSecurity.html#a925e3b00c386009efff30453a63b0c95">Security::CertPointer</a> &amp;expectedOrig, <a class="el" href="namespaceSecurity.html#a925e3b00c386009efff30453a63b0c95">Security::CertPointer</a> &amp;cert, Security::PrivateKeyPointer &amp;pkey)</td></tr>
 <tr class="memdesc:a49e0803d43550cc65feeb83fa72375f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Only find certificate in current db and return it.  <br /></td></tr>
 <tr class="separator:a49e0803d43550cc65feeb83fa72375f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30ae6145f0c682ac8231e57b140ff641" id="r_a30ae6145f0c682ac8231e57b140ff641"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#a30ae6145f0c682ac8231e57b140ff641">deleteRow</a> (const char **row, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> rowIndex)</td></tr>
+<tr class="memitem:a30ae6145f0c682ac8231e57b140ff641" id="r_a30ae6145f0c682ac8231e57b140ff641"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#a30ae6145f0c682ac8231e57b140ff641">deleteRow</a> (const char **row, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> rowIndex)</td></tr>
 <tr class="memdesc:a30ae6145f0c682ac8231e57b140ff641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete a row from TXT_DB.  <br /></td></tr>
 <tr class="separator:a30ae6145f0c682ac8231e57b140ff641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada8227108e900ec4fb69c8052d3993d2" id="r_ada8227108e900ec4fb69c8052d3993d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#ada8227108e900ec4fb69c8052d3993d2">deleteInvalidCertificate</a> ()</td></tr>
@@ -211,19 +211,19 @@ Static Private Member Functions</h2></td></tr>
 <tr class="memitem:adb0837c872fb5681af486cc4d8cb80fc" id="r_adb0837c872fb5681af486cc4d8cb80fc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#adb0837c872fb5681af486cc4d8cb80fc">sq_TXT_DB_delete</a> (TXT_DB *<a class="el" href="classSsl_1_1CertificateDb.html#a3b9e329d4a6276b02ccf83cb0d039ea1">db</a>, const char **row)</td></tr>
 <tr class="memdesc:adb0837c872fb5681af486cc4d8cb80fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the first matching row from TXT_DB. Ignores failures.  <br /></td></tr>
 <tr class="separator:adb0837c872fb5681af486cc4d8cb80fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae433ead19f15febc9c071c168bd3f5dd" id="r_ae433ead19f15febc9c071c168bd3f5dd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#ae433ead19f15febc9c071c168bd3f5dd">sq_TXT_DB_delete_row</a> (TXT_DB *<a class="el" href="classSsl_1_1CertificateDb.html#a3b9e329d4a6276b02ccf83cb0d039ea1">db</a>, <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> idx)</td></tr>
+<tr class="memitem:ae433ead19f15febc9c071c168bd3f5dd" id="r_ae433ead19f15febc9c071c168bd3f5dd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#ae433ead19f15febc9c071c168bd3f5dd">sq_TXT_DB_delete_row</a> (TXT_DB *<a class="el" href="classSsl_1_1CertificateDb.html#a3b9e329d4a6276b02ccf83cb0d039ea1">db</a>, <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> idx)</td></tr>
 <tr class="memdesc:ae433ead19f15febc9c071c168bd3f5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the row on position idx from TXT_DB. Ignores failures.  <br /></td></tr>
 <tr class="separator:ae433ead19f15febc9c071c168bd3f5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59a5fe2bb6fa67f52bb5f123a07c719b" id="r_a59a5fe2bb6fa67f52bb5f123a07c719b"><td class="memItemLeft" align="right" valign="top">static unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#a59a5fe2bb6fa67f52bb5f123a07c719b">index_serial_hash</a> (const char **a)</td></tr>
 <tr class="memdesc:a59a5fe2bb6fa67f52bb5f123a07c719b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback hash function for serials. Used to create TXT_DB index of serials.  <br /></td></tr>
 <tr class="separator:a59a5fe2bb6fa67f52bb5f123a07c719b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20336504162f9753534deed647cdfc5f" id="r_a20336504162f9753534deed647cdfc5f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#a20336504162f9753534deed647cdfc5f">index_serial_cmp</a> (const char **a, const char **b)</td></tr>
+<tr class="memitem:a20336504162f9753534deed647cdfc5f" id="r_a20336504162f9753534deed647cdfc5f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#a20336504162f9753534deed647cdfc5f">index_serial_cmp</a> (const char **a, const char **b)</td></tr>
 <tr class="memdesc:a20336504162f9753534deed647cdfc5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback compare function for serials. Used to create TXT_DB index of serials.  <br /></td></tr>
 <tr class="separator:a20336504162f9753534deed647cdfc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b9750a9d2b58dc7950f03cb420d70fb" id="r_a6b9750a9d2b58dc7950f03cb420d70fb"><td class="memItemLeft" align="right" valign="top">static unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#a6b9750a9d2b58dc7950f03cb420d70fb">index_name_hash</a> (const char **a)</td></tr>
 <tr class="memdesc:a6b9750a9d2b58dc7950f03cb420d70fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback hash function for names. Used to create TXT_DB index of names..  <br /></td></tr>
 <tr class="separator:a6b9750a9d2b58dc7950f03cb420d70fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8db536bbe9721bd9a569a5d8c0710660" id="r_a8db536bbe9721bd9a569a5d8c0710660"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#a8db536bbe9721bd9a569a5d8c0710660">index_name_cmp</a> (const char **a, const char **b)</td></tr>
+<tr class="memitem:a8db536bbe9721bd9a569a5d8c0710660" id="r_a8db536bbe9721bd9a569a5d8c0710660"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#a8db536bbe9721bd9a569a5d8c0710660">index_name_cmp</a> (const char **a, const char **b)</td></tr>
 <tr class="memdesc:a8db536bbe9721bd9a569a5d8c0710660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback compare function for names. Used to create TXT_DB index of names..  <br /></td></tr>
 <tr class="separator:a8db536bbe9721bd9a569a5d8c0710660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34a4bc9b972e6a99cb26f4c7f1cfd1df" id="r_a34a4bc9b972e6a99cb26f4c7f1cfd1df"><td class="memItemLeft" align="right" valign="top">static&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSsl_1_1CertificateDb.html#a34a4bc9b972e6a99cb26f4c7f1cfd1df">IMPLEMENT_LHASH_HASH_FN</a> (<a class="el" href="classSsl_1_1CertificateDb.html#a59a5fe2bb6fa67f52bb5f123a07c719b">index_serial_hash</a>, const char **) static IMPLEMENT_LHASH_COMP_FN(<a class="el" href="classSsl_1_1CertificateDb.html#a20336504162f9753534deed647cdfc5f">index_serial_cmp</a></td></tr>
@@ -602,7 +602,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>rowIndex</em>&#160;</td>
         </tr>
         <tr>
@@ -808,7 +808,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> Ssl::CertificateDb::index_name_cmp </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Ssl::CertificateDb::index_name_cmp </td>
           <td>(</td>
           <td class="paramtype">const char **&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -878,7 +878,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> Ssl::CertificateDb::index_serial_cmp </td>
+          <td class="memname"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> Ssl::CertificateDb::index_serial_cmp </td>
           <td>(</td>
           <td class="paramtype">const char **&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -1265,7 +1265,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>idx</em>&#160;</td>
         </tr>
         <tr>

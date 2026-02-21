@@ -182,7 +182,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a277c25af8acb3ed4dfcea64c20218ecb" id="r_a277c25af8acb3ed4dfcea64c20218ecb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPeerPoolMgr.html#a277c25af8acb3ed4dfcea64c20218ecb">openNewConnection</a> ()</td></tr>
 <tr class="memdesc:a277c25af8acb3ed4dfcea64c20218ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts the process of opening a new standby connection (if possible)  <br /></td></tr>
 <tr class="separator:a277c25af8acb3ed4dfcea64c20218ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99c52b916896b0c932591e0b5b6d367d" id="r_a99c52b916896b0c932591e0b5b6d367d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPeerPoolMgr.html#a99c52b916896b0c932591e0b5b6d367d">closeOldConnections</a> (const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> howMany)</td></tr>
+<tr class="memitem:a99c52b916896b0c932591e0b5b6d367d" id="r_a99c52b916896b0c932591e0b5b6d367d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPeerPoolMgr.html#a99c52b916896b0c932591e0b5b6d367d">closeOldConnections</a> (const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> howMany)</td></tr>
 <tr class="memdesc:a99c52b916896b0c932591e0b5b6d367d"><td class="mdescLeft">&#160;</td><td class="mdescRight">closes 'howMany' standby connections  <br /></td></tr>
 <tr class="separator:a99c52b916896b0c932591e0b5b6d367d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93913ffc0f273bd83afbf667b710f2e1" id="r_a93913ffc0f273bd83afbf667b710f2e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPeerPoolMgr.html#a93913ffc0f273bd83afbf667b710f2e1">handleOpenedConnection</a> (const <a class="el" href="classCommConnectCbParams.html">CommConnectCbParams</a> &amp;params)</td></tr>
@@ -251,7 +251,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a081febbb65e8be715aae705887b2992c" id="r_a081febbb65e8be715aae705887b2992c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classJobWait.html">JobWait</a>&lt; <a class="el" href="classSecurity_1_1BlindPeerConnector.html">Security::BlindPeerConnector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPeerPoolMgr.html#a081febbb65e8be715aae705887b2992c">encryptionWait</a></td></tr>
 <tr class="memdesc:a081febbb65e8be715aae705887b2992c"><td class="mdescLeft">&#160;</td><td class="mdescRight">waits for the established transport connection to be secured/encrypted  <br /></td></tr>
 <tr class="separator:a081febbb65e8be715aae705887b2992c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24b9fe969a683539efcab1253f33427f" id="r_a24b9fe969a683539efcab1253f33427f"><td class="memItemLeft" align="right" valign="top">unsigned <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPeerPoolMgr.html#a24b9fe969a683539efcab1253f33427f">addrUsed</a></td></tr>
+<tr class="memitem:a24b9fe969a683539efcab1253f33427f" id="r_a24b9fe969a683539efcab1253f33427f"><td class="memItemLeft" align="right" valign="top">unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPeerPoolMgr.html#a24b9fe969a683539efcab1253f33427f">addrUsed</a></td></tr>
 <tr class="memdesc:a24b9fe969a683539efcab1253f33427f"><td class="mdescLeft">&#160;</td><td class="mdescRight">counter for cycling through peer addresses  <br /></td></tr>
 <tr class="separator:a24b9fe969a683539efcab1253f33427f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -578,7 +578,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void PeerPoolMgr::closeOldConnections </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a>&#160;</td>
           <td class="paramname"><em>howMany</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1167,7 +1167,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned <a class="el" href="stub__fd_8cc.html#a2f81796204b7bbe80bac6d6599203024">int</a> PeerPoolMgr::addrUsed</td>
+          <td class="memname">unsigned <a class="el" href="stub__fd_8cc.html#a490d5097953ca1717c1cb2f05251ce45">int</a> PeerPoolMgr::addrUsed</td>
         </tr>
       </table>
   </td>
