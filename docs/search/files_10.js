@@ -14,7 +14,7 @@ var searchData=
   ['parse_2ec_11',['parse.c',['../parse_8c.html',1,'']]],
   ['parse_2eh_12',['parse.h',['../parse_8h.html',1,'']]],
   ['parser_2ecc_13',['parser.cc',['../http_2one_2Parser_8cc.html',1,'(Global Namespace)'],['../proxyp_2Parser_8cc.html',1,'(Global Namespace)']]],
-  ['parser_2eh_14',['parser.h',['../http_2one_2Parser_8h.html',1,'(Global Namespace)'],['../proxyp_2Parser_8h.html',1,'(Global Namespace)']]],
+  ['parser_2eh_14',['parser.h',['../proxyp_2Parser_8h.html',1,'(Global Namespace)'],['../http_2one_2Parser_8h.html',1,'(Global Namespace)']]],
   ['parsing_2ecc_15',['parsing.cc',['../ftp_2Parsing_8cc.html',1,'(Global Namespace)'],['../Parsing_8cc.html',1,'(Global Namespace)']]],
   ['parsing_2eh_16',['parsing.h',['../ftp_2Parsing_8h.html',1,'(Global Namespace)'],['../Parsing_8h.html',1,'(Global Namespace)']]],
   ['parsingbuffer_2ecc_17',['ParsingBuffer.cc',['../ParsingBuffer_8cc.html',1,'']]],
@@ -67,7 +67,7 @@ var searchData=
   ['protocoldata_2ecc_64',['ProtocolData.cc',['../ProtocolData_8cc.html',1,'']]],
   ['protocoldata_2eh_65',['ProtocolData.h',['../ProtocolData_8h.html',1,'']]],
   ['protocoltype_2eh_66',['ProtocolType.h',['../ProtocolType_8h.html',1,'']]],
-  ['protocolversion_2eh_67',['protocolversion.h',['../anyp_2ProtocolVersion_8h.html',1,'(Global Namespace)'],['../http_2ProtocolVersion_8h.html',1,'(Global Namespace)']]],
+  ['protocolversion_2eh_67',['protocolversion.h',['../http_2ProtocolVersion_8h.html',1,'(Global Namespace)'],['../anyp_2ProtocolVersion_8h.html',1,'(Global Namespace)']]],
   ['protos_2eh_68',['protos.h',['../protos_8h.html',1,'']]],
   ['proxycerts_2eh_69',['ProxyCerts.h',['../ProxyCerts_8h.html',1,'']]]
 ];
