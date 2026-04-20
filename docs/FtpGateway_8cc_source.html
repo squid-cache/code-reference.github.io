@@ -738,7 +738,7 @@ $(document).ready(function(){initNavTree('FtpGateway_8cc_source.html',''); initR
 <div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>            <span class="comment">// point after tokens[i+2] :</span></div>
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>            copyFrom = buf + <a class="code hl_variable" href="parse_8c.html#a9c9a05907a8c9d1c8e928ae4801517c4">tokens</a>[i + 2].pos + strlen(<a class="code hl_variable" href="parse_8c.html#a9c9a05907a8c9d1c8e928ae4801517c4">tokens</a>[i + 2].token);</div>
 <div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>            <span class="keywordflow">if</span> (flags.<a class="code hl_variable" href="structFtp_1_1GatewayFlags.html#a504d5f8898824ee835c3f68aed88381a">skip_whitespace</a>) {</div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>                <span class="keywordflow">while</span> (strchr(<a class="code hl_define" href="compat__shared_8h.html#af172ea808e99a9f4d4cc3631a496f246">w_space</a>, *copyFrom))</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>                <span class="keywordflow">while</span> (*copyFrom &amp;&amp; strchr(<a class="code hl_define" href="compat__shared_8h.html#af172ea808e99a9f4d4cc3631a496f246">w_space</a>, *copyFrom))</div>
 <div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>                    ++copyFrom;</div>
 <div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>                <span class="comment">/* Handle the following four formats:</span></div>
@@ -749,7 +749,7 @@ $(document).ready(function(){initNavTree('FtpGateway_8cc_source.html',''); initR
 <div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span><span class="comment">                 * Assuming a single space between date and filename</span></div>
 <div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span><span class="comment">                 * suggested by:  Nathan.Bailey@cc.monash.edu.au and</span></div>
 <div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span><span class="comment">                 * Mike Battersby &lt;mike@starbug.bofh.asn.au&gt; */</span></div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>                <span class="keywordflow">if</span> (strchr(<a class="code hl_define" href="compat__shared_8h.html#af172ea808e99a9f4d4cc3631a496f246">w_space</a>, *copyFrom))</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>                <span class="keywordflow">if</span> (*copyFrom &amp;&amp; strchr(<a class="code hl_define" href="compat__shared_8h.html#af172ea808e99a9f4d4cc3631a496f246">w_space</a>, *copyFrom))</div>
 <div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>                    ++copyFrom;</div>
 <div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>            }</div>
 <div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span> </div>

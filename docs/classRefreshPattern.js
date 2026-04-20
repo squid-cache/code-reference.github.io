@@ -8,7 +8,7 @@ var classRefreshPattern =
     [ "printHead", "classRefreshPattern.html#adba2ec294659f351267c858a2db4d589", null ],
     [ "printPattern", "classRefreshPattern.html#a7c189f138b4ba67ad0736644eba3289b", null ],
     [ "regex", "classRefreshPattern.html#a8fce0a4eddbce89400976fbc95fe06b9", null ],
-    [ "flags", "classRefreshPattern.html#ad566e241265b7673eee801cf049ab0df", null ],
+    [ "flags", "classRefreshPattern.html#a3994ffe6da46efca1273b791b89066f6", null ],
     [ "ignore_no_store", "classRefreshPattern.html#a8b9850b2ecef01b1bda419203c84dd21", null ],
     [ "ignore_private", "classRefreshPattern.html#a29dcd46145d08ba08f985bf38f588dbf", null ],
     [ "ignore_reload", "classRefreshPattern.html#ae978b1ddff1faf12f2d1d4a2040c22ef", null ],
