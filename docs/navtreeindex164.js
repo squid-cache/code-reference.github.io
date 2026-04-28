@@ -64,8 +64,6 @@ var NAVTREEINDEX164 =
 "servers_2forward_8h.html#adf377404cef36010cd7e17ec7b5a8a87":[10,0,0,5,29,0,4],
 "servers_2forward_8h.html#ae2b3b88ec5c7af470746a1658d7434f3":[10,0,0,5,29,0,3],
 "servers_2forward_8h_source.html":[10,0,0,5,29,0],
-"sgi_8h.html":[10,0,0,0,0,13],
-"sgi_8h_source.html":[10,0,0,0,0,13],
 "shm_8cc.html":[10,0,0,0,27],
 "shm_8cc.html#a1cb4b5b0cd04597d05fa72afd889f737":[10,0,0,0,27,0],
 "shm_8cc_source.html":[10,0,0,0,27],
@@ -249,5 +247,7 @@ var NAVTREEINDEX164 =
 "snmp__core_8h_source.html":[10,0,0,5,281],
 "snmp__debug_8h.html":[10,0,0,2,19],
 "snmp__debug_8h.html#a64e937ac1bce1504858e8adfde25cee6":[10,0,0,2,19,0],
-"snmp__debug_8h_source.html":[10,0,0,2,19]
+"snmp__debug_8h_source.html":[10,0,0,2,19],
+"snmp__error_8c.html":[10,0,0,3,1,6],
+"snmp__error_8c.html#a7e35c374cc4edfe670fb309d9e912a81":[10,0,0,3,1,6,1]
 };

@@ -1,7 +1,5 @@
 var NAVTREEINDEX173 =
 {
-"stub__fatal_8cc.html":[10,0,0,5,33,27],
-"stub__fatal_8cc.html#a77cbbab6aa8dbe35ac16b5d0918ff791":[10,0,0,5,33,27,0],
 "stub__fatal_8cc.html#ab3c37b863f21afba4994007b17bfe27a":[10,0,0,5,33,27,1],
 "stub__fatal_8cc_source.html":[10,0,0,5,33,27],
 "stub__fd_8cc.html":[10,0,0,5,33,28],
@@ -215,8 +213,8 @@ var NAVTREEINDEX173 =
 "stub__wordlist_8cc.html":[10,0,0,5,33,89],
 "stub__wordlist_8cc.html#a77cbbab6aa8dbe35ac16b5d0918ff791":[10,0,0,5,33,89,0],
 "stub__wordlist_8cc_source.html":[10,0,0,5,33,89],
-"sunos_8h.html":[10,0,0,0,0,15],
-"sunos_8h_source.html":[10,0,0,0,0,15],
+"sunos_8h.html":[10,0,0,0,0,14],
+"sunos_8h_source.html":[10,0,0,0,0,14],
 "support_8cc.html":[10,0,0,5,31,24],
 "support_8cc.html#a040e9e4f8ea7f454679aa876067512dd":[10,0,0,5,31,24,15],
 "support_8cc.html#a1517e4c53d643b433159dc85dfa4afc8":[10,0,0,5,31,24,20],
@@ -249,5 +247,7 @@ var NAVTREEINDEX173 =
 "support__bits_8cci.html#afd9994379f852ee5c7512343f0e7df2b":[10,0,0,3,0,2,1],
 "support__bits_8cci_source.html":[10,0,0,3,0,2],
 "support__endian_8h.html":[10,0,0,3,0,3],
-"support__endian_8h.html#a3e376c247d19427f3c01311e816f2574":[10,0,0,3,0,3,1]
+"support__endian_8h.html#a3e376c247d19427f3c01311e816f2574":[10,0,0,3,0,3,1],
+"support__endian_8h.html#a3ea73a6089f61223b225c46e2ba58a47":[10,0,0,3,0,3,2],
+"support__endian_8h.html#a684a5d26d1989cbd925e97292cc81c72":[10,0,0,3,0,3,4]
 };

@@ -13,7 +13,6 @@ var dir_64e03a04aad354a84010cfdcba3cb628 =
     [ "openbsd.h", "openbsd_8h.html", null ],
     [ "os2.h", "os2_8h.html", null ],
     [ "qnx.h", "qnx_8h.html", null ],
-    [ "sgi.h", "sgi_8h.html", null ],
     [ "solaris.h", "solaris_8h.html", null ],
     [ "sunos.h", "sunos_8h.html", null ]
 ];
