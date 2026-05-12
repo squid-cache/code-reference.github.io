@@ -357,7 +357,7 @@ var searchData=
   ['cpuaffinitymap_354',['cpuAffinityMap',['../classSquidConfig.html#a7052ede7e3a216985af8891a5dc1c0c2',1,'SquidConfig']]],
   ['cputime_355',['cputime',['../classStatCounters.html#a8921bb95144e8480d0686ea7c2c0f653',1,'StatCounters']]],
   ['cr_356',['CR',['../classCharacterSet.html#aadd7516201b54e55463ef348dcf82c99',1,'CharacterSet']]],
-  ['create_357',['create',['../classStoreIoStats.html#a4381ad6bed85ef1553257fed3b8a8620',1,'StoreIoStats::create'],['../struct__storerepl__entry.html#a1091886dfe9342daff4d84f60ff011aa',1,'_storerepl_entry::create'],['../structdiskd__stats__t.html#abcdcef25f8626dc270449f007116ffdd',1,'diskd_stats_t::create']]],
+  ['create_357',['create',['../classStoreIoStats.html#a9fd4b185482d17905fd6873424253ca3',1,'StoreIoStats::create'],['../struct__storerepl__entry.html#a1091886dfe9342daff4d84f60ff011aa',1,'_storerepl_entry::create'],['../structdiskd__stats__t.html#abcdcef25f8626dc270449f007116ffdd',1,'diskd_stats_t::create']]],
   ['create_5fcalls_358',['create_calls',['../classMgr_1_1StoreIoActionData.html#a4df14245ed7f17bf06fd9c24773248ad',1,'Mgr::StoreIoActionData']]],
   ['create_5fcreate_5ffail_359',['create_create_fail',['../classMgr_1_1StoreIoActionData.html#ae9b92d6bbb211c171369430df229e08c',1,'Mgr::StoreIoActionData']]],
   ['create_5ffail_360',['create_fail',['../classDiskdActionData.html#a9bc40ee841f9b118af13455bdbfea909',1,'DiskdActionData::create_fail'],['../classStoreIoStats.html#aa5ba0eaaed4f536d771db43a4e3cd214',1,'StoreIoStats::create_fail']]],
