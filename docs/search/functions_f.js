@@ -11,7 +11,7 @@ var searchData=
   ['offlinetoggleaction_8',['OfflineToggleAction',['../classMgr_1_1OfflineToggleAction.html#abd16073be8541690b86726cc4f1835b5',1,'Mgr::OfflineToggleAction']]],
   ['offset_9',['offset',['../classStoreIOState.html#a33a303be7e5e8e0ddbd690087acac133',1,'StoreIOState::offset()'],['../classAdaptation_1_1Icap_1_1VirginBodyAct.html#a0ad268c37ea77a90301294888b8281d3',1,'Adaptation::Icap::VirginBodyAct::offset()']]],
   ['offsetlimitexceeded_10',['offsetLimitExceeded',['../classHttpHdrRange.html#a12c5e64c3784370248030585422f0a68',1,'HttpHdrRange']]],
-  ['oid2addr_11',['oid2addr',['../snmp__core_8cc.html#af75db9ea2e3bc10fcb0feddca6b378eb',1,'oid2addr(oid *id, Ip::Address &amp;addr, u_int size):&#160;snmp_core.cc'],['../snmp__core_8h.html#a984c88e7cd02a6ba10aab4ab29f03dae',1,'oid2addr(oid *Dest, Ip::Address &amp;addr, u_int code):&#160;snmp_core.cc']]],
+  ['oid2addr_11',['oid2addr',['../snmp__core_8cc.html#afc787c71816b0d16edf2e8cdaadd4a06',1,'oid2addr(const oid *const id, const size_t size):&#160;snmp_core.cc'],['../snmp__core_8h.html#ac6bdba9837cb8dc4c9786f7f96614331',1,'oid2addr(const oid *, size_t):&#160;snmp_core.cc']]],
   ['oktoaccept_12',['okToAccept',['../classComm_1_1TcpAcceptor.html#a1e8f6511aeea17b5ad51ec7a67c79c31',1,'Comm::TcpAcceptor']]],
   ['old_13',['old',['../classIpc_1_1Mem_1_1Object.html#aadf1b966c778e7aab3c47f910551d65e',1,'Ipc::Mem::Object::Old()'],['../classIpc_1_1Mem_1_1Owner.html#a9e204c40a1368ba164ec4cbb37ac4681',1,'Ipc::Mem::Owner::Old()']]],
   ['old_5fcomm_5freset_5fclose_14',['old_comm_reset_close',['../comm_8h.html#a23b79849104c3808dcbf8ed742d28449',1,'old_comm_reset_close(int fd):&#160;comm.cc'],['../comm_8cc.html#a23b79849104c3808dcbf8ed742d28449',1,'old_comm_reset_close(int fd):&#160;comm.cc']]],

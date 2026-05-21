@@ -391,7 +391,7 @@ var searchData=
   ['snmpconstructreponse_388',['snmpConstructReponse',['../snmp__core_8cc.html#a3bd6cdca7dfb82123e54918322e64c85',1,'snmp_core.cc']]],
   ['snmpcreateoid_389',['snmpCreateOid',['../snmp__core_8cc.html#a7bc21c2105dfc3f3a43ce15342ac0c6b',1,'snmp_core.cc']]],
   ['snmpcreateoidfromstr_390',['snmpCreateOidFromStr',['../snmp__core_8cc.html#a0299cf5839e6ee70d33815b21e47762f',1,'snmp_core.cc']]],
-  ['snmpdebugoid_391',['snmpdebugoid',['../snmp__core_8cc.html#a2f4ed8725d5d87d123631e65d9b4c072',1,'snmpDebugOid(oid *Name, snint Len, MemBuf &amp;outbuf):&#160;snmp_core.cc'],['../snmp__core_8h.html#a2f4ed8725d5d87d123631e65d9b4c072',1,'snmpDebugOid(oid *Name, snint Len, MemBuf &amp;outbuf):&#160;snmp_core.cc']]],
+  ['snmpdebugoid_391',['snmpdebugoid',['../snmp__core_8cc.html#a1fc0dc0fba5cfd72c22b522db35a57a5',1,'snmpDebugOid(const oid *const Name, const snint Len, MemBuf &amp;outbuf):&#160;snmp_core.cc'],['../snmp__core_8h.html#a6eb16d7845d5c56643cac764fc92ed31',1,'snmpDebugOid(const oid *, snint Len, MemBuf &amp;outbuf):&#160;snmp_core.cc']]],
   ['snmpdecodepacket_392',['snmpDecodePacket',['../snmp__core_8cc.html#a8a8fd53ae57b3e512dc8106ddad8f985',1,'snmp_core.cc']]],
   ['snmphandleudp_393',['snmpHandleUdp',['../snmp__core_8cc.html#a3f22f885a76515f6480167fafb354e49',1,'snmp_core.cc']]],
   ['snmpinit_394',['snmpInit',['../snmp__core_8cc.html#ac13dfa5ab7422c2ddcb16604bd0879a0',1,'snmp_core.cc']]],

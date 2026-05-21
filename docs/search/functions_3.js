@@ -309,7 +309,7 @@ var searchData=
   ['clearvalue_306',['clearValue',['../classSnmp_1_1Var.html#aeb2b3bf14f31832b673709b17d878955',1,'Snmp::Var']]],
   ['clearvars_307',['clearVars',['../classSnmp_1_1Pdu.html#a50e67b18315050bd2eefecfa3fe54ecd',1,'Snmp::Pdu']]],
   ['client_308',['client',['../classClient.html#a1b7fc2f39b02daa92f97de95774aebc4',1,'Client::Client()'],['../classHelper_1_1Client.html#a3fe33d3669af7b8e0cb3f741f3a0117e',1,'Helper::Client::Client()'],['../classFtp_1_1Client.html#a8a3185d2637543d5d755c437254c0ceb',1,'Ftp::Client::Client()']]],
-  ['client_5fentry_309',['client_entry',['../client__db_8h.html#a3356caa9558a452787bfdaaf19dda0da',1,'client_entry(Ip::Address *current):&#160;client_db.cc'],['../client__db_8cc.html#a3356caa9558a452787bfdaaf19dda0da',1,'client_entry(Ip::Address *current):&#160;client_db.cc']]],
+  ['client_5fentry_309',['client_entry',['../client__db_8h.html#a1e852c0024419f9615918064cd6c0526',1,'client_entry(const Ip::Address *):&#160;client_db.cc'],['../client__db_8cc.html#a334252d435b5d1eb2cf476bf286e4c21',1,'client_entry(const Ip::Address *current):&#160;client_db.cc']]],
   ['client_5finst_310',['client_Inst',['../snmp__core_8cc.html#a70c38305d30d9317f116b84ec1e4e3d2',1,'snmp_core.cc']]],
   ['clientaccesscheck_311',['clientaccesscheck',['../client__side__request_8h.html#a35225d89cfb9fd4573c565b998e9c37f',1,'clientAccessCheck():&#160;client_side_request.h'],['../classClientRequestContext.html#a71477b784014a3f5309153a6d8b1f70c',1,'ClientRequestContext::clientAccessCheck()']]],
   ['clientaccesscheck2_312',['clientAccessCheck2',['../classClientRequestContext.html#a004907eaa1efbcc4eb3bec5784ec0960',1,'ClientRequestContext']]],

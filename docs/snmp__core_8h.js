@@ -15,10 +15,10 @@ var snmp__core_8h =
       [ "atMin", "snmp__core_8h.html#abb81ef2677b8b799e924c7baddc2fcd7a808dbac37cf15a2f59dba86882113392", null ]
     ] ],
     [ "addr2oid", "snmp__core_8h.html#a813a9c8d34692c98887babd74e29f348", null ],
-    [ "oid2addr", "snmp__core_8h.html#a984c88e7cd02a6ba10aab4ab29f03dae", null ],
+    [ "oid2addr", "snmp__core_8h.html#ac6bdba9837cb8dc4c9786f7f96614331", null ],
     [ "snmpAgentResponse", "snmp__core_8h.html#a768249e2e12350bf0e0835f2756f23ab", null ],
     [ "snmpAggrType", "snmp__core_8h.html#ab7742d046bd25058a9ef97b2e5856b5a", null ],
-    [ "snmpDebugOid", "snmp__core_8h.html#a2f4ed8725d5d87d123631e65d9b4c072", null ],
+    [ "snmpDebugOid", "snmp__core_8h.html#a6eb16d7845d5c56643cac764fc92ed31", null ],
     [ "snmpHandleUdp", "snmp__core_8h.html#a528adb5b2e7f3830d926419e33cf2b24", null ],
     [ "snmpOutgoingConn", "snmp__core_8h.html#a0194ec8b3a4885563a39d12bd9b6c6b1", null ]
 ];

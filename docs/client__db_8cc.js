@@ -3,7 +3,7 @@ var client__db_8cc =
     [ "ClientDbRr", "classClientDbRr.html", "classClientDbRr" ],
     [ "CLIENT_DB_HASH_SIZE", "client__db_8cc.html#aedc1dd56d0b382764592b483da187ef8", null ],
     [ "CUTOFF_SECONDS", "client__db_8cc.html#a94c9549046162f6eb75a2f771c9cec78", null ],
-    [ "client_entry", "client__db_8cc.html#a3356caa9558a452787bfdaaf19dda0da", null ],
+    [ "client_entry", "client__db_8cc.html#a334252d435b5d1eb2cf476bf286e4c21", null ],
     [ "clientdbAdd", "client__db_8cc.html#a73f96d987cf069e8f8dae5735cce102b", null ],
     [ "clientdbCutoffDenied", "client__db_8cc.html#ace78c19693cb1fc027c60f41c295ff52", null ],
     [ "clientdbDump", "client__db_8cc.html#af53766cb613d1b412ae2c19bf06e5dfa", null ],
