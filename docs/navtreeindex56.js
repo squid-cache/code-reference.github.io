@@ -1,5 +1,6 @@
 var NAVTREEINDEX56 =
 {
+"classCapturingStoreEntry.html#a03097a677184f0c65ad08f031e30fa21":[9,0,155,9],
 "classCapturingStoreEntry.html#a0745b88b04fa7c99bd4cf6284967f591":[9,0,155,121],
 "classCapturingStoreEntry.html#a10957ad0af773823067046e969f3cc3d":[9,0,155,76],
 "classCapturingStoreEntry.html#a10b56d81f537dcc51f4292f9e95e11e4":[9,0,155,122],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "classClassCHostPool.html":[7,2,8,0,8],
 "classClassCHostPool.html#a0172b817856b1dbe9cbe983aad3b86a9":[7,2,8,0,8,5],
 "classClassCHostPool.html#a045ff176cba43c532e6532c7b127d492":[7,2,8,0,8,9],
-"classClassCHostPool.html#a18d0e7a5776cb640f3cfea2396aa8ae1":[7,2,8,0,8,2],
-"classClassCHostPool.html#a361c836b6a6bb7b7f4fdf13c56f3773a":[7,2,8,0,8,15]
+"classClassCHostPool.html#a18d0e7a5776cb640f3cfea2396aa8ae1":[7,2,8,0,8,2]
 };

@@ -196,6 +196,7 @@ var autoconf_8h =
     [ "HAVE_NETINET_TCP_H", "autoconf_8h.html#a73764f445d28d141ebf0465a69004864", null ],
     [ "HAVE_NETTLE_BASE64_H", "autoconf_8h.html#ab56e15cd25bef5df38b27c005c58d0ca", null ],
     [ "HAVE_NETTLE_MD5_H", "autoconf_8h.html#a93c3c17ecdf56c0bdbc43705b4ded220", null ],
+    [ "HAVE_NETTLE_VERSION_H", "autoconf_8h.html#aeb8423499adc5296f76ed741b886cd03", null ],
     [ "HAVE_OPENDIR", "autoconf_8h.html#a7cbcd5e9e882451e8c93a78b06f563c4", null ],
     [ "HAVE_OPENSSL_ASN1_H", "autoconf_8h.html#a186d34e3f4d329707074e197ce11f1ba", null ],
     [ "HAVE_OPENSSL_BIO_H", "autoconf_8h.html#a752ac207d606152a4065b7274602d4d0", null ],
