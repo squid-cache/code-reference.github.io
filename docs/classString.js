@@ -39,6 +39,7 @@ var classString =
     [ "pos", "classString.html#a9093f1141bd64e22c5290e27882ac173", null ],
     [ "psize", "classString.html#a048a11f83e5427a29d1ced9d1a7158f5", null ],
     [ "rawBuf", "classString.html#a77a7c8c6845f33722735772524b8034d", null ],
+    [ "RawSizeMaxXXX", "classString.html#a86ad6a6031465f9c6f98678460a5a80d", null ],
     [ "reset", "classString.html#ae6cee7ae0cdf7e54b4f6b38d0a3460e2", null ],
     [ "rfind", "classString.html#a75dd5c87d574414211b6e6b54f8753a3", null ],
     [ "rpos", "classString.html#afed3059109ac5830c2812aafedceef25", null ],

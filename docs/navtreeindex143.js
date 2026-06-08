@@ -1,5 +1,6 @@
 var NAVTREEINDEX143 =
 {
+"classnetdbEntry.html#aeb58697c7277e94de50468abcf1756b3":[9,0,445,15],
 "classnetdbEntry.html#afce3428588a861a358e7027f81495ad5":[9,0,445,1],
 "classnetdbExchangeState.html":[9,0,446],
 "classnetdbExchangeState.html#a573ead4b70c720b66aae02b0c7ddcca9":[9,0,446,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX143 =
 "client__db_8h.html":[10,0,0,5,62],
 "client__db_8h.html#a093b31ce4c3dfe437bb1c22988eb2c68":[10,0,0,5,62,7],
 "client__db_8h.html#a0cbd3883deefb4366f462859614de54a":[10,0,0,5,62,1],
-"client__db_8h.html#a1e852c0024419f9615918064cd6c0526":[10,0,0,5,62,0],
-"client__db_8h.html#a46789157dd36b993f045d93735462bf5":[10,0,0,5,62,2]
+"client__db_8h.html#a1e852c0024419f9615918064cd6c0526":[10,0,0,5,62,0]
 };
