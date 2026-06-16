@@ -198,7 +198,7 @@ var searchData=
   ['memstorerr_195',['MemStoreRr',['../classMemStoreRr.html#ac050adf25faf504d84f83861fb3a0fbb',1,'MemStoreRr']]],
   ['menu_196',['menu',['../classCacheManager.html#a022ccdd782697f7444300f47782e8f79',1,'CacheManager']]],
   ['menuaction_197',['MenuAction',['../classMgr_1_1MenuAction.html#accd180b13ff9cf69e625f6a585547176',1,'Mgr::MenuAction']]],
-  ['merge_198',['merge',['../classAcl_1_1SplayInserter.html#af539058e40fe31829d1c4959f224227d',1,'Acl::SplayInserter::Merge()'],['../classHttpHdrRange.html#a266d139e3ec071cb10b348f9231c2436',1,'HttpHdrRange::merge()']]],
+  ['merge_198',['merge',['../classHttpHdrRange.html#a266d139e3ec071cb10b348f9231c2436',1,'HttpHdrRange::merge()'],['../classAcl_1_1SplayInserter.html#af539058e40fe31829d1c4959f224227d',1,'Acl::SplayInserter::Merge()']]],
   ['mergewith_199',['mergewith',['../classHttpHdrScTarget.html#a2f4ac461553f0ed2f702f2f84d2dd12f',1,'HttpHdrScTarget::mergeWith()'],['../classHttpHdrRangeSpec.html#a948757e84aaad7badbd2d94a51d7eb7e',1,'HttpHdrRangeSpec::mergeWith()']]],
   ['message_200',['message',['../classAdaptation_1_1Message.html#a6c29fd09c02252a770b2c66291e99545',1,'Adaptation::Message::Message()'],['../classAdaptation_1_1Message.html#ac7ce98eabebd135ca8705ccc3fbbf46b',1,'Adaptation::Message::Message(Header *aHeader)'],['../classAdaptation_1_1Message.html#ac01d989e3d177022daf46dbb5f993e88',1,'Adaptation::Message::Message(const Message &amp;)'],['../classHttp_1_1Message.html#a544b01e2e2ce776f931668928a084b22',1,'Http::Message::Message()']]],
   ['messagebucket_201',['MessageBucket',['../classMessageBucket.html#a99a9a3b7ec394b28fd73943b9117fc07',1,'MessageBucket']]],

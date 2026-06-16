@@ -115,7 +115,7 @@ var searchData=
   ['initial_112',['initial',['../classClientDelayConfig.html#a13f675439815b14729fdc9c78a5ef7a9',1,'ClientDelayConfig::initial'],['../classDelayConfig.html#ab3f97b4e29fce18926ae4c7913107af6',1,'DelayConfig::initial']]],
   ['initialbucketlevel_113',['initialBucketLevel',['../classMessageDelayPool.html#a87ba1f1d6f15a46c2dfcbed1c990e0ae',1,'MessageDelayPool']]],
   ['initialised_114',['initialised',['../classDiskDaemonDiskIOModule.html#a99142126ff3ab42e10ecec9b20ba1749',1,'DiskDaemonDiskIOModule::initialised'],['../classDiskThreadsIOStrategy.html#a92335585090cd694cbbeafe4f694907a',1,'DiskThreadsIOStrategy::initialised'],['../classAuth_1_1Scheme.html#a0d6a186986a09d4cd301cc36ff482bc2',1,'Auth::Scheme::initialised']]],
-  ['initialized_115',['initialized',['../classPeerDigest.html#a7247b8565e1f16ebacc7092e8053beee',1,'PeerDigest::initialized'],['../classCommIO.html#a6c0c10fb7d8313b26d2672f04304e9dc',1,'CommIO::Initialized']]],
+  ['initialized_115',['initialized',['../classCommIO.html#a6c0c10fb7d8313b26d2672f04304e9dc',1,'CommIO::Initialized'],['../classPeerDigest.html#a7247b8565e1f16ebacc7092e8053beee',1,'PeerDigest::initialized']]],
   ['initiator_116',['initiator',['../classMasterXaction.html#ac7b235896c9805ba47d97372183fb34d',1,'MasterXaction::initiator'],['../classXactionInitiator.html#ab53aa7b1f98b73c40dd121826056444a',1,'XactionInitiator::initiator']]],
   ['initiator_5f_117',['initiator_',['../classPeerSelector.html#a19b09e214bb687a19825ad3f6a6bd2ff',1,'PeerSelector']]],
   ['initiators_5f_118',['initiators_',['../classAcl_1_1TransactionInitiator.html#abb94f159075f273c6a86798a56a34ddd',1,'Acl::TransactionInitiator']]],

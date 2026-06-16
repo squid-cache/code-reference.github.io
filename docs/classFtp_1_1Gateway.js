@@ -170,7 +170,6 @@ var classFtp_1_1Gateway =
     [ "password", "classFtp_1_1Gateway.html#a8a6448d64ee7332ce70481f22a98db8b", null ],
     [ "password_url", "classFtp_1_1Gateway.html#a940a9aced769fa664f690fdea14bdd30", null ],
     [ "pathcomps", "classFtp_1_1Gateway.html#a72997cd5920cba4dd4d08a2a700bbe86", null ],
-    [ "proxy_host", "classFtp_1_1Gateway.html#a28ab55cc51a9e093f1b5721908a39b13", null ],
     [ "receivedWholeAdaptedReply", "classFtp_1_1Gateway.html#a739857e8914782c5f2bbb76af51ed31d", null ],
     [ "receivedWholeRequestBody", "classFtp_1_1Gateway.html#a259fd7462ba4c84275dd93b7d253569b", null ],
     [ "reply_hdr", "classFtp_1_1Gateway.html#a386710827e0c81f004b55c6fbc2f1a5b", null ],

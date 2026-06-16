@@ -53,7 +53,7 @@ var searchData=
   ['addr_5ftable_50',['addr_table',['../net__db_8cc.html#a82ec4b56531f0d50cfbec76183226d75',1,'net_db.cc']]],
   ['address_51',['address',['../classDelayedUdpSend.html#a9120b79c526a41a4109d151df9869bdb',1,'DelayedUdpSend::address'],['../classIpc_1_1UdsOp.html#af5320fb1648a1c71fa178dd8d96fc998',1,'Ipc::UdsOp::address'],['../classSnmp_1_1Request.html#a9767c3125012311959871c649452b42b',1,'Snmp::Request::address'],['../classSquidConfig.html#a021cdabb1c573356d3f2bbbcbb432284',1,'SquidConfig::address'],['../structsnmp__pdu.html#a0985525a1d6943f9d3a2923fe9ee2e08',1,'snmp_pdu::address'],['../structip__user__dict.html#ac7f641ff6114ef8dba4aca23deed12de',1,'ip_user_dict::address']]],
   ['addresses_52',['addresses',['../classCachePeer.html#ac3cb464ce25d44b4feb5fc5bd9ed3bf8',1,'CachePeer']]],
-  ['addrs_53',['addrs',['../classipcache__entry.html#a798d5164e1ec2bf7a306993f84fd0dc0',1,'ipcache_entry::addrs'],['../classSquidConfig.html#a7359b8e7d76021bb050a0399c1516e94',1,'SquidConfig::Addrs']]],
+  ['addrs_53',['addrs',['../classSquidConfig.html#a7359b8e7d76021bb050a0399c1516e94',1,'SquidConfig::Addrs'],['../classipcache__entry.html#a798d5164e1ec2bf7a306993f84fd0dc0',1,'ipcache_entry::addrs']]],
   ['addrused_54',['addrUsed',['../classPeerPoolMgr.html#a24b9fe969a683539efcab1253f33427f',1,'PeerPoolMgr']]],
   ['adminemail_55',['adminEmail',['../classSquidConfig.html#ab4795036e0bac3bea76a98114a49c3bd',1,'SquidConfig']]],
   ['adsi_5fpath_56',['ADSI_Path',['../ext__ad__group__acl_8cc.html#a1da3e47d352d61d8cd1389fd8f7567bf',1,'ext_ad_group_acl.cc']]],
