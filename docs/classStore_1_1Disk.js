@@ -66,7 +66,7 @@ var classStore_1_1Disk =
     [ "cleanLog", "classStore_1_1Disk.html#a87ff175696042830617393071895f55b", null ],
     [ "disker", "classStore_1_1Disk.html#a8b930038e5cf4d7797ad9aa08d26a498", null ],
     [ "flags", "classStore_1_1Disk.html#a5cc25d200957206efde5ee259a70c9f5", null ],
-    [ "fs", "classStore_1_1Disk.html#aeaca8336ae79eca70e5a11f5dbacd2a8", null ],
+    [ "fs", "classStore_1_1Disk.html#a7099d3afa2b49a5ffa08e8b32ca73410", null ],
     [ "index", "classStore_1_1Disk.html#a2d740ff7c1a98be5a7bf58d777444380", null ],
     [ "max_objsize", "classStore_1_1Disk.html#a8c6abcc24c5ac3186cabca0d7216040e", null ],
     [ "max_size", "classStore_1_1Disk.html#adc56c9d69d37c9b8b31285a515f42192", null ],

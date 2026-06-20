@@ -108,7 +108,7 @@ var classRock_1_1SwapDir =
     [ "filePath", "classRock_1_1SwapDir.html#a2eeccdca9cb1eda9a220b1f1efc6b9f3", null ],
     [ "flags", "classRock_1_1SwapDir.html#a5cc25d200957206efde5ee259a70c9f5", null ],
     [ "freeSlots", "classRock_1_1SwapDir.html#a213873f2e0ea2e6752f617eb420ce8bf", null ],
-    [ "fs", "classRock_1_1SwapDir.html#aeaca8336ae79eca70e5a11f5dbacd2a8", null ],
+    [ "fs", "classRock_1_1SwapDir.html#a7099d3afa2b49a5ffa08e8b32ca73410", null ],
     [ "HeaderSize", "classRock_1_1SwapDir.html#a6f3382e82199d12779741bf0957754d7", null ],
     [ "index", "classRock_1_1SwapDir.html#a2d740ff7c1a98be5a7bf58d777444380", null ],
     [ "io", "classRock_1_1SwapDir.html#a97c29d995821917351aea4876ed0f3e1", null ],

@@ -63,7 +63,7 @@ var classTestSwapDir =
     [ "cleanLog", "classTestSwapDir.html#a87ff175696042830617393071895f55b", null ],
     [ "disker", "classTestSwapDir.html#a8b930038e5cf4d7797ad9aa08d26a498", null ],
     [ "flags", "classTestSwapDir.html#a5cc25d200957206efde5ee259a70c9f5", null ],
-    [ "fs", "classTestSwapDir.html#aeaca8336ae79eca70e5a11f5dbacd2a8", null ],
+    [ "fs", "classTestSwapDir.html#a7099d3afa2b49a5ffa08e8b32ca73410", null ],
     [ "index", "classTestSwapDir.html#a2d740ff7c1a98be5a7bf58d777444380", null ],
     [ "max_objsize", "classTestSwapDir.html#a8c6abcc24c5ac3186cabca0d7216040e", null ],
     [ "max_size", "classTestSwapDir.html#adc56c9d69d37c9b8b31285a515f42192", null ],

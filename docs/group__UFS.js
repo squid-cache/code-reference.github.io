@@ -137,7 +137,7 @@ var group__UFS =
       [ "currentIOOptions", "classFs_1_1Ufs_1_1UFSSwapDir.html#a09317cd49a0d251e8786759a2124908f", null ],
       [ "disker", "classFs_1_1Ufs_1_1UFSSwapDir.html#a8b930038e5cf4d7797ad9aa08d26a498", null ],
       [ "flags", "classFs_1_1Ufs_1_1UFSSwapDir.html#a5cc25d200957206efde5ee259a70c9f5", null ],
-      [ "fs", "classFs_1_1Ufs_1_1UFSSwapDir.html#aeaca8336ae79eca70e5a11f5dbacd2a8", null ],
+      [ "fs", "classFs_1_1Ufs_1_1UFSSwapDir.html#a7099d3afa2b49a5ffa08e8b32ca73410", null ],
       [ "fsdata", "classFs_1_1Ufs_1_1UFSSwapDir.html#ade5831573505934e4c577fe310b68e79", null ],
       [ "index", "classFs_1_1Ufs_1_1UFSSwapDir.html#a2d740ff7c1a98be5a7bf58d777444380", null ],
       [ "IO", "classFs_1_1Ufs_1_1UFSSwapDir.html#a88dc7aac5a35bcfd3bcb3f0b6f74e278", null ],

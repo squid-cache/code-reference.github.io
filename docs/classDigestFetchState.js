@@ -14,11 +14,11 @@ var classDigestFetchState =
     [ "old_entry", "classDigestFetchState.html#afbd45c285ca89baa005b5f89bc5791a2", null ],
     [ "old_sc", "classDigestFetchState.html#a8d55ebf7e4bd9a2c3cf584aec2893d0a", null ],
     [ "pd", "classDigestFetchState.html#a4af436123622d72ee8ca1590392fce58", null ],
-    [ "recv", "classDigestFetchState.html#a66463ef08993eb5d7a5f5bfc16a8d692", null ],
+    [ "recv", "classDigestFetchState.html#a9f1479c91e918d29a049f5d051cc9ddf", null ],
     [ "request", "classDigestFetchState.html#a4b303477db1bb7fb8eab3d01ad114711", null ],
     [ "resp_time", "classDigestFetchState.html#a9a524b5b0cd45af883253a3fa9292acc", null ],
     [ "sc", "classDigestFetchState.html#a02dd4541a2ab0f48ad8a6ffff4e63224", null ],
-    [ "sent", "classDigestFetchState.html#a858bd479cf50402c303a2b315b35d8a7", null ],
+    [ "sent", "classDigestFetchState.html#a5c7d7dab2b59bf4f2a0bc805b12d6126", null ],
     [ "start_time", "classDigestFetchState.html#aad4bf75c7b334ba08623d4c59346406f", null ],
     [ "state", "classDigestFetchState.html#aef0fc14ead75cb1c1a2b6e75f8d98740", null ]
 ];
