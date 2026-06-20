@@ -223,7 +223,7 @@ var NAVTREEINDEX =
 "classSecurity_1_1PeerOptions.html#a9ad7ceeb51e9e4e9bfa26c1d895207bf",
 "classServer.html#a98d67b135b6b75188ae9088769432ea0",
 "classSnmp_1_1Inquirer.html#a4ca74d9d723d853833ffff326bbefffb",
-"classSnmp_1_1Var.html#a5bea43ca7168ecce7fc0efad17c8bbba",
+"classSnmp_1_1Var.html#a52eac23b01775772b4d424b26bf9ac61",
 "classSquidConfig.html#a546d6d5205f5347743b2171e9d965926",
 "classSsl_1_1CertValidationMsg.html#a14f38d3be48bab19ab89612f7a0e6165",
 "classSsl_1_1CertificateDb.html#af553d10bd1b4d27c77d30eb479cf2289",
