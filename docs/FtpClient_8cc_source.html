@@ -973,400 +973,415 @@ $(document).ready(function(){initNavTree('FtpClient_8cc_source.html',''); initRe
 <div class="foldopen" id="foldopen00845" data-start="{" data-end="}">
 <div class="line"><a id="l00845" name="l00845"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a514ac56b4f75b4f5c57192a2672332b9">  845</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a514ac56b4f75b4f5c57192a2672332b9">Ftp::Client::writeCommand</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *buf)</div>
 <div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>{</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>    <span class="keywordtype">char</span> *ebuf;</div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>    <span class="comment">/* trace FTP protocol communications at level 2 */</span></div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 2, <span class="stringliteral">&quot;ftp&lt;&lt; &quot;</span> &lt;&lt; buf);</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span> </div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="SquidConfig_8cc.html#a75b136e6a1eef61424d84596a404aafe">Config</a>.<a class="code hl_variable" href="classSquidConfig.html#ab8ca7fb7ca7d4287697cfe77b173b3c7">Ftp</a>.<a class="code hl_variable" href="classSquidConfig.html#ac0e23c3454f59e726b07430184cfef9f">telnet</a>)</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>        ebuf = <a class="code hl_function" href="namespaceFtp.html#a9c8cf507f8625b19ef9a6ce99fba621e">escapeIAC</a>(buf);</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>        ebuf = <a class="code hl_define" href="negotiate__wrapper_8cc.html#a5eb055ca3b42205cc134b4a438cd9a72">xstrdup</a>(buf);</div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span> </div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>    <a class="code hl_define" href="xalloc_8h.html#a74ad4c3c3aa58c8fea96eb0dc090fd67">safe_free</a>(ctrl.last_command);</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span> </div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>    <a class="code hl_define" href="xalloc_8h.html#a74ad4c3c3aa58c8fea96eb0dc090fd67">safe_free</a>(ctrl.last_reply);</div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span> </div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>    ctrl.last_command = ebuf;</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>    <span class="comment">// The caller must supply a non-empty command followed by CRLF.</span></div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>    <span class="comment">// TODO: Move CRLF appending code from callers to here.</span></div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>    <span class="keyword">const</span> <span class="keyword">auto</span> bufLen = strlen(buf);</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>    <a class="code hl_define" href="Assure_8h.html#a1fcca4cd6cfc3b9f835aa3652eb0c2f5">Assure</a>(bufLen &gt; 2);</div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    <a class="code hl_define" href="Assure_8h.html#a1fcca4cd6cfc3b9f835aa3652eb0c2f5">Assure</a>(buf[bufLen-2] == <span class="charliteral">&#39;\r&#39;</span>);</div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>    <a class="code hl_define" href="Assure_8h.html#a1fcca4cd6cfc3b9f835aa3652eb0c2f5">Assure</a>(buf[bufLen-1] == <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span> </div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>    <span class="keyword">const</span> <span class="keyword">auto</span> crlfCharPosition = strcspn(buf, <a class="code hl_variable" href="namespaceFtp.html#a72f0a22885f625feb8c912766a42713d">crlf</a>);</div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>    <span class="keywordflow">if</span> (crlfCharPosition != bufLen-2) {</div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>        <span class="keyword">const</span> <span class="keyword">auto</span> invalidCharName = buf[crlfCharPosition] == <span class="charliteral">&#39;\r&#39;</span> ? <span class="stringliteral">&quot;CR&quot;</span> : <span class="stringliteral">&quot;LF&quot;</span>;</div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 2, <span class="stringliteral">&quot;ERROR: Caller assembled a malformed FTP command. Found &quot;</span> &lt;&lt; invalidCharName &lt;&lt; <span class="stringliteral">&quot; at position &quot;</span> &lt;&lt; crlfCharPosition);</div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>        failed(<a class="code hl_enumvalue" href="error_2forward_8h.html#a0c0ad09d74260ddc16d72bc291116e1aa3b46a0e442ac3cbabe506f94886a93e0">ERR_FTP_FAILURE</a>, 0);</div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>    }</div>
 <div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span> </div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespaceComm.html#a91f0a0e22e74a7ad6f7c44c137c6f005">Comm::IsConnOpen</a>(ctrl.conn)) {</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 2, <span class="stringliteral">&quot;cannot send to closing ctrl &quot;</span> &lt;&lt; ctrl.conn);</div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>        <span class="comment">// TODO: assert(ctrl.closer != NULL);</span></div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>    }</div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span> </div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>    <span class="keyword">typedef</span> <a class="code hl_class" href="classCommCbMemFunT.html">CommCbMemFunT&lt;Client, CommIoCbParams&gt;</a> Dialer;</div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>    <a class="code hl_class" href="classRefCount.html">AsyncCall::Pointer</a> call = <a class="code hl_define" href="AsyncJobCalls_8h.html#a3412f4fa1246aee4d4ac46a143075e03">JobCallback</a>(9, 5, Dialer, <span class="keyword">this</span>,</div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>                                          <a class="code hl_function" href="classFtp_1_1Client.html#a874b13b8b4f4ae50390dd6639cf39804">Ftp::Client::writeCommandCallback</a>);</div>
-<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>    <a class="code hl_function" href="namespaceComm.html#a96a9518a6c2c77d282a79f406e0252a9">Comm::Write</a>(ctrl.conn, ctrl.last_command, strlen(ctrl.last_command), call, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>    <span class="keywordtype">char</span> *ebuf;</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>    <span class="comment">/* trace FTP protocol communications at level 2 */</span></div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 2, <span class="stringliteral">&quot;ftp&lt;&lt; &quot;</span> &lt;&lt; buf);</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span> </div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="SquidConfig_8cc.html#a75b136e6a1eef61424d84596a404aafe">Config</a>.<a class="code hl_variable" href="classSquidConfig.html#ab8ca7fb7ca7d4287697cfe77b173b3c7">Ftp</a>.<a class="code hl_variable" href="classSquidConfig.html#ac0e23c3454f59e726b07430184cfef9f">telnet</a>)</div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>        ebuf = <a class="code hl_function" href="namespaceFtp.html#a9c8cf507f8625b19ef9a6ce99fba621e">escapeIAC</a>(buf);</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>        ebuf = <a class="code hl_define" href="negotiate__wrapper_8cc.html#a5eb055ca3b42205cc134b4a438cd9a72">xstrdup</a>(buf);</div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span> </div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>    <a class="code hl_define" href="xalloc_8h.html#a74ad4c3c3aa58c8fea96eb0dc090fd67">safe_free</a>(ctrl.last_command);</div>
 <div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span> </div>
-<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>    scheduleReadControlReply(0);</div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>}</div>
-</div>
-<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span> </div>
-<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00877" data-start="{" data-end="}">
-<div class="line"><a id="l00877" name="l00877"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a874b13b8b4f4ae50390dd6639cf39804">  877</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a874b13b8b4f4ae50390dd6639cf39804">Ftp::Client::writeCommandCallback</a>(<span class="keyword">const</span> <a class="code hl_class" href="classCommIoCbParams.html">CommIoCbParams</a> &amp;io)</div>
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>{</div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span> </div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 5, <span class="stringliteral">&quot;wrote &quot;</span> &lt;&lt; io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &lt;&lt; <span class="stringliteral">&quot; bytes&quot;</span>);</div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span> </div>
-<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &gt; 0) {</div>
-<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>        <a class="code hl_function" href="fd_8cc.html#aa97e245466d1538f61efda1c6bba46b0">fd_bytes</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a6a391b2345409642778d85f241c5facb">fd</a>, io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>, <a class="code hl_enumvalue" href="fd_8h.html#a8936995a6e57593bcaeb4bc6ad2c7cc0a1129c0e4d43f2d121652a7302712cff6">IoDirection::Write</a>);</div>
-<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>        <a class="code hl_variable" href="StatCounters_8cc.html#a97511f6512b50279a2cd9cf1446060d7">statCounter</a>.<a class="code hl_variable" href="classStatCounters.html#a9e8fe5a56064294a4e2f9bb1a84b1862">server</a>.<a class="code hl_variable" href="classStatCounters.html#ae260c58b940427b0c17f45e39ec845d5">all</a>.<a class="code hl_variable" href="classStatCounters.html#a8cd6e48b996bbdf19dbb6bf4fe5b4431">kbytes_out</a> += io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>;</div>
-<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>        <a class="code hl_variable" href="StatCounters_8cc.html#a97511f6512b50279a2cd9cf1446060d7">statCounter</a>.<a class="code hl_variable" href="classStatCounters.html#a9e8fe5a56064294a4e2f9bb1a84b1862">server</a>.<a class="code hl_variable" href="classStatCounters.html#a95b0e0425365d0cfc9442eab7d4ec57d">ftp</a>.<a class="code hl_variable" href="classStatCounters.html#a8cd6e48b996bbdf19dbb6bf4fe5b4431">kbytes_out</a> += io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>;</div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>    }</div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>    <a class="code hl_define" href="xalloc_8h.html#a74ad4c3c3aa58c8fea96eb0dc090fd67">safe_free</a>(ctrl.last_reply);</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span> </div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>    ctrl.last_command = ebuf;</div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span> </div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespaceComm.html#a91f0a0e22e74a7ad6f7c44c137c6f005">Comm::IsConnOpen</a>(ctrl.conn)) {</div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 2, <span class="stringliteral">&quot;cannot send to closing ctrl &quot;</span> &lt;&lt; ctrl.conn);</div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>        <span class="comment">// TODO: assert(ctrl.closer != NULL);</span></div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>    }</div>
+<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span> </div>
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>    <span class="keyword">typedef</span> <a class="code hl_class" href="classCommCbMemFunT.html">CommCbMemFunT&lt;Client, CommIoCbParams&gt;</a> Dialer;</div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>    <a class="code hl_class" href="classRefCount.html">AsyncCall::Pointer</a> call = <a class="code hl_define" href="AsyncJobCalls_8h.html#a3412f4fa1246aee4d4ac46a143075e03">JobCallback</a>(9, 5, Dialer, <span class="keyword">this</span>,</div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>                                          <a class="code hl_function" href="classFtp_1_1Client.html#a874b13b8b4f4ae50390dd6639cf39804">Ftp::Client::writeCommandCallback</a>);</div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>    <a class="code hl_function" href="namespaceComm.html#a96a9518a6c2c77d282a79f406e0252a9">Comm::Write</a>(ctrl.conn, ctrl.last_command, strlen(ctrl.last_command), call, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span> </div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommCommonCbParams.html#aaa1b70c6ff254ac72ac1503fc158df7e">flag</a> == <a class="code hl_enumvalue" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050a884f9d58f0f131131497fa9ceefb3b3c">Comm::ERR_CLOSING</a>)</div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>    scheduleReadControlReply(0);</div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>}</div>
+</div>
 <div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span> </div>
-<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommCommonCbParams.html#aaa1b70c6ff254ac72ac1503fc158df7e">flag</a>) {</div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, <a class="code hl_define" href="debug_2Stream_8h.html#ad1f6f001d275799243ee96d0b1519d3a">DBG_IMPORTANT</a>, <span class="stringliteral">&quot;ERROR: FTP command write failure: &quot;</span> &lt;&lt; io.<a class="code hl_variable" href="classCommCommonCbParams.html#acbcbe42d3ccd12c6de3b1f3d1d7c4bc3">conn</a> &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; <a class="code hl_function" href="xstrerror_8cc.html#a3d643f764de4776e5489d4eb55a99849">xstrerr</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d">xerrno</a>));</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>        failed(<a class="code hl_enumvalue" href="error_2forward_8h.html#a0c0ad09d74260ddc16d72bc291116e1aa91f1ffad5c1c4c9651105009dc47c60c">ERR_WRITE_ERROR</a>, io.<a class="code hl_variable" href="classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d">xerrno</a>);</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>        <span class="comment">/* failed closes ctrl.conn and frees ftpState */</span></div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>    }</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>}</div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00892" data-start="{" data-end="}">
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a874b13b8b4f4ae50390dd6639cf39804">  892</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a874b13b8b4f4ae50390dd6639cf39804">Ftp::Client::writeCommandCallback</a>(<span class="keyword">const</span> <a class="code hl_class" href="classCommIoCbParams.html">CommIoCbParams</a> &amp;io)</div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>{</div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span> </div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 5, <span class="stringliteral">&quot;wrote &quot;</span> &lt;&lt; io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &lt;&lt; <span class="stringliteral">&quot; bytes&quot;</span>);</div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span> </div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &gt; 0) {</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>        <a class="code hl_function" href="fd_8cc.html#aa97e245466d1538f61efda1c6bba46b0">fd_bytes</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a6a391b2345409642778d85f241c5facb">fd</a>, io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>, <a class="code hl_enumvalue" href="fd_8h.html#a8936995a6e57593bcaeb4bc6ad2c7cc0a1129c0e4d43f2d121652a7302712cff6">IoDirection::Write</a>);</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>        <a class="code hl_variable" href="StatCounters_8cc.html#a97511f6512b50279a2cd9cf1446060d7">statCounter</a>.<a class="code hl_variable" href="classStatCounters.html#a9e8fe5a56064294a4e2f9bb1a84b1862">server</a>.<a class="code hl_variable" href="classStatCounters.html#ae260c58b940427b0c17f45e39ec845d5">all</a>.<a class="code hl_variable" href="classStatCounters.html#a8cd6e48b996bbdf19dbb6bf4fe5b4431">kbytes_out</a> += io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>;</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>        <a class="code hl_variable" href="StatCounters_8cc.html#a97511f6512b50279a2cd9cf1446060d7">statCounter</a>.<a class="code hl_variable" href="classStatCounters.html#a9e8fe5a56064294a4e2f9bb1a84b1862">server</a>.<a class="code hl_variable" href="classStatCounters.html#a95b0e0425365d0cfc9442eab7d4ec57d">ftp</a>.<a class="code hl_variable" href="classStatCounters.html#a8cd6e48b996bbdf19dbb6bf4fe5b4431">kbytes_out</a> += io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>;</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>    }</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span> </div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommCommonCbParams.html#aaa1b70c6ff254ac72ac1503fc158df7e">flag</a> == <a class="code hl_enumvalue" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050a884f9d58f0f131131497fa9ceefb3b3c">Comm::ERR_CLOSING</a>)</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span> </div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommCommonCbParams.html#aaa1b70c6ff254ac72ac1503fc158df7e">flag</a>) {</div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, <a class="code hl_define" href="debug_2Stream_8h.html#ad1f6f001d275799243ee96d0b1519d3a">DBG_IMPORTANT</a>, <span class="stringliteral">&quot;ERROR: FTP command write failure: &quot;</span> &lt;&lt; io.<a class="code hl_variable" href="classCommCommonCbParams.html#acbcbe42d3ccd12c6de3b1f3d1d7c4bc3">conn</a> &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; <a class="code hl_function" href="xstrerror_8cc.html#a3d643f764de4776e5489d4eb55a99849">xstrerr</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d">xerrno</a>));</div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>        failed(<a class="code hl_enumvalue" href="error_2forward_8h.html#a0c0ad09d74260ddc16d72bc291116e1aa91f1ffad5c1c4c9651105009dc47c60c">ERR_WRITE_ERROR</a>, io.<a class="code hl_variable" href="classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d">xerrno</a>);</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>        <span class="comment">/* failed closes ctrl.conn and frees ftpState */</span></div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    }</div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>}</div>
 </div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span> </div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00901" data-start="{" data-end="}">
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#ad54115b8034c1ce537614481c5a2278b">  901</a></span><a class="code hl_function" href="classFtp_1_1Client.html#ad54115b8034c1ce537614481c5a2278b">Ftp::Client::ctrlClosed</a>(<span class="keyword">const</span> <a class="code hl_class" href="classCommCloseCbParams.html">CommCloseCbParams</a> &amp;)</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>{</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 4, status());</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>    <span class="keywordflow">if</span> (ctrl.conn)</div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>        ctrl.conn-&gt;noteClosure();</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>    ctrl.clear();</div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>    doneWithFwd = <span class="stringliteral">&quot;ctrlClosed()&quot;</span>; <span class="comment">// assume FwdState is monitoring too</span></div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>    mustStop(<span class="stringliteral">&quot;Ftp::Client::ctrlClosed&quot;</span>);</div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>}</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00916" data-start="{" data-end="}">
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#ad54115b8034c1ce537614481c5a2278b">  916</a></span><a class="code hl_function" href="classFtp_1_1Client.html#ad54115b8034c1ce537614481c5a2278b">Ftp::Client::ctrlClosed</a>(<span class="keyword">const</span> <a class="code hl_class" href="classCommCloseCbParams.html">CommCloseCbParams</a> &amp;)</div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>{</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 4, status());</div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    <span class="keywordflow">if</span> (ctrl.conn)</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>        ctrl.conn-&gt;noteClosure();</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>    ctrl.clear();</div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>    doneWithFwd = <span class="stringliteral">&quot;ctrlClosed()&quot;</span>; <span class="comment">// assume FwdState is monitoring too</span></div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>    mustStop(<span class="stringliteral">&quot;Ftp::Client::ctrlClosed&quot;</span>);</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>}</div>
 </div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span> </div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00912" data-start="{" data-end="}">
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a5399aebf35750fba8d932a9630d9b262">  912</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a5399aebf35750fba8d932a9630d9b262">Ftp::Client::timeout</a>(<span class="keyword">const</span> <a class="code hl_class" href="classCommTimeoutCbParams.html">CommTimeoutCbParams</a> &amp;io)</div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>{</div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 4, io.<a class="code hl_variable" href="classCommCommonCbParams.html#acbcbe42d3ccd12c6de3b1f3d1d7c4bc3">conn</a> &lt;&lt; <span class="stringliteral">&quot;: &#39;&quot;</span> &lt;&lt; entry-&gt;url() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> );</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span> </div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <span class="keywordflow">if</span> (abortOnBadEntry(<span class="stringliteral">&quot;entry went bad while waiting for a timeout&quot;</span>))</div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span> </div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    failed(<a class="code hl_enumvalue" href="error_2forward_8h.html#a0c0ad09d74260ddc16d72bc291116e1aa318cd13f8303df65a21bc629ec5f9f31">ERR_READ_TIMEOUT</a>, 0);</div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    <span class="comment">/* failed() closes ctrl.conn and frees ftpState */</span></div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>}</div>
-</div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span> </div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span><span class="keyword">const</span> <a class="code hl_class" href="classRefCount.html">Comm::ConnectionPointer</a> &amp;</div>
-<div class="foldopen" id="foldopen00924" data-start="{" data-end="}">
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#abe247c57af2723e079c5dcef027a6209">  924</a></span><a class="code hl_function" href="classFtp_1_1Client.html#abe247c57af2723e079c5dcef027a6209">Ftp::Client::dataConnection</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>    <span class="keywordflow">return</span> data.conn;</div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>}</div>
-</div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span> </div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00930" data-start="{" data-end="}">
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#afdc3bc426826c78f3b66389d13a8dec2">  930</a></span><a class="code hl_function" href="classFtp_1_1Client.html#afdc3bc426826c78f3b66389d13a8dec2">Ftp::Client::noteDelayAwareReadChance</a>()</div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>{</div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>    <span class="comment">// TODO: Merge with HttpStateData::noteDelayAwareReadChance()</span></div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>    waitingForDelayAwareReadChance = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>    data.read_pending = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>    maybeReadVirginBody();</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span> </div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00927" data-start="{" data-end="}">
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a5399aebf35750fba8d932a9630d9b262">  927</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a5399aebf35750fba8d932a9630d9b262">Ftp::Client::timeout</a>(<span class="keyword">const</span> <a class="code hl_class" href="classCommTimeoutCbParams.html">CommTimeoutCbParams</a> &amp;io)</div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>{</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 4, io.<a class="code hl_variable" href="classCommCommonCbParams.html#acbcbe42d3ccd12c6de3b1f3d1d7c4bc3">conn</a> &lt;&lt; <span class="stringliteral">&quot;: &#39;&quot;</span> &lt;&lt; entry-&gt;url() &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> );</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span> </div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>    <span class="keywordflow">if</span> (abortOnBadEntry(<span class="stringliteral">&quot;entry went bad while waiting for a timeout&quot;</span>))</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span> </div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>    failed(<a class="code hl_enumvalue" href="error_2forward_8h.html#a0c0ad09d74260ddc16d72bc291116e1aa318cd13f8303df65a21bc629ec5f9f31">ERR_READ_TIMEOUT</a>, 0);</div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>    <span class="comment">/* failed() closes ctrl.conn and frees ftpState */</span></div>
 <div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>}</div>
 </div>
 <div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span> </div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span><span class="keyword">const</span> <a class="code hl_class" href="classRefCount.html">Comm::ConnectionPointer</a> &amp;</div>
 <div class="foldopen" id="foldopen00939" data-start="{" data-end="}">
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#ab03be61b487a578428915ce26e28d6b8">  939</a></span><a class="code hl_function" href="classFtp_1_1Client.html#ab03be61b487a578428915ce26e28d6b8">Ftp::Client::maybeReadVirginBody</a>()</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>{</div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>    <span class="comment">// too late to read</span></div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespaceComm.html#a91f0a0e22e74a7ad6f7c44c137c6f005">Comm::IsConnOpen</a>(data.conn) || <a class="code hl_define" href="fde_8h.html#a0f820c6a388ea0380a19a97713736a35">fd_table</a>[data.conn-&gt;fd].closing())</div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span> </div>
-<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>    <span class="keywordflow">if</span> (data.read_pending)</div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span> </div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    initReadBuf();</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span> </div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    <span class="comment">// XXX: We only use this call to decide whether to read; we never increase data.readBuf space.</span></div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>    <span class="comment">// TODO: Upgrade data.readBuf to SBuf and merge this with similar HttpStateData::readReply() code.</span></div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>    <span class="keyword">const</span> <span class="keyword">auto</span> read_sz = calcBufferSpaceToReserve(data.readBuf-&gt;spaceSize(), data.readBuf-&gt;spaceSize());</div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span> </div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 9, <span class="stringliteral">&quot;FTP may read up to &quot;</span> &lt;&lt; read_sz &lt;&lt; <span class="stringliteral">&quot; bytes&quot;</span>);</div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span> </div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    <span class="keywordflow">if</span> (!read_sz)</div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span> </div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>    data.read_pending = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span> </div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>    <span class="keyword">typedef</span> <a class="code hl_class" href="classCommCbMemFunT.html">CommCbMemFunT&lt;Client, CommTimeoutCbParams&gt;</a> TimeoutDialer;</div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>    <a class="code hl_class" href="classRefCount.html">AsyncCall::Pointer</a> timeoutCall =  <a class="code hl_define" href="AsyncJobCalls_8h.html#a3412f4fa1246aee4d4ac46a143075e03">JobCallback</a>(9, 5,</div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>                                      TimeoutDialer, <span class="keyword">this</span>, <a class="code hl_function" href="classFtp_1_1Client.html#a5399aebf35750fba8d932a9630d9b262">Ftp::Client::timeout</a>);</div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>    <a class="code hl_function" href="comm_8cc.html#a1d65b72cb3685143bbc87633b7f53b3e">commSetConnTimeout</a>(data.conn, <a class="code hl_variable" href="SquidConfig_8cc.html#a75b136e6a1eef61424d84596a404aafe">Config</a>.<a class="code hl_variable" href="classSquidConfig.html#a616f6fb80c58175d607c035c74744b17">Timeout</a>.<a class="code hl_variable" href="classSquidConfig.html#a771397cfd0a2f7d513cb5092ef50e3f6">read</a>, timeoutCall);</div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span> </div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9,5,<span class="stringliteral">&quot;queueing read on FD &quot;</span> &lt;&lt; data.conn-&gt;fd);</div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span> </div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>    <span class="keyword">const</span> <span class="keyword">auto</span> amountToRead = entry-&gt;bytesWanted(<a class="code hl_class" href="classRange.html">Range&lt;size_t&gt;</a>(0, read_sz));</div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span> </div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>    <span class="keywordflow">if</span> (amountToRead &lt;= 0) {</div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>        delayRead();</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>    }</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span> </div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>    <span class="keyword">using </span>ReadDialer = <a class="code hl_class" href="classCommCbMemFunT.html">CommCbMemFunT&lt;Client, CommIoCbParams&gt;</a>;</div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>    <a class="code hl_class" href="classRefCount.html">AsyncCall::Pointer</a> readCallback = <a class="code hl_define" href="AsyncJobCalls_8h.html#a3412f4fa1246aee4d4ac46a143075e03">JobCallback</a>(9, 5, ReadDialer, <span class="keyword">this</span>, <a class="code hl_function" href="classFtp_1_1Client.html#a290cd406dbdd4174f7591357d1a65805">Client::dataRead</a>);</div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>    <a class="code hl_function" href="Read_8h.html#a172f652cee9cf7837348c4a3bb6599f7">comm_read</a>(data.conn, data.readBuf-&gt;space(), amountToRead, readCallback);</div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>}</div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#abe247c57af2723e079c5dcef027a6209">  939</a></span><a class="code hl_function" href="classFtp_1_1Client.html#abe247c57af2723e079c5dcef027a6209">Ftp::Client::dataConnection</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>    <span class="keywordflow">return</span> data.conn;</div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>}</div>
 </div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span> </div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen00981" data-start="{" data-end="}">
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a290cd406dbdd4174f7591357d1a65805">  981</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a290cd406dbdd4174f7591357d1a65805">Ftp::Client::dataRead</a>(<span class="keyword">const</span> <a class="code hl_class" href="classCommIoCbParams.html">CommIoCbParams</a> &amp;io)</div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>{</div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>    <span class="keywordtype">int</span> j;</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>    <span class="keywordtype">int</span> bin;</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span> </div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>    data.read_pending = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span> </div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, <span class="stringliteral">&quot;FD &quot;</span> &lt;&lt; io.<a class="code hl_variable" href="classCommCommonCbParams.html#a6a391b2345409642778d85f241c5facb">fd</a> &lt;&lt; <span class="stringliteral">&quot; Read &quot;</span> &lt;&lt; io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &lt;&lt; <span class="stringliteral">&quot; bytes&quot;</span>);</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span> </div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00945" data-start="{" data-end="}">
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#afdc3bc426826c78f3b66389d13a8dec2">  945</a></span><a class="code hl_function" href="classFtp_1_1Client.html#afdc3bc426826c78f3b66389d13a8dec2">Ftp::Client::noteDelayAwareReadChance</a>()</div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>{</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    <span class="comment">// TODO: Merge with HttpStateData::noteDelayAwareReadChance()</span></div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    waitingForDelayAwareReadChance = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>    data.read_pending = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    maybeReadVirginBody();</div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>}</div>
+</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span> </div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00954" data-start="{" data-end="}">
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#ab03be61b487a578428915ce26e28d6b8">  954</a></span><a class="code hl_function" href="classFtp_1_1Client.html#ab03be61b487a578428915ce26e28d6b8">Ftp::Client::maybeReadVirginBody</a>()</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>{</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    <span class="comment">// too late to read</span></div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespaceComm.html#a91f0a0e22e74a7ad6f7c44c137c6f005">Comm::IsConnOpen</a>(data.conn) || <a class="code hl_define" href="fde_8h.html#a0f820c6a388ea0380a19a97713736a35">fd_table</a>[data.conn-&gt;fd].closing())</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span> </div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    <span class="keywordflow">if</span> (data.read_pending)</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span> </div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>    initReadBuf();</div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span> </div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>    <span class="comment">// XXX: We only use this call to decide whether to read; we never increase data.readBuf space.</span></div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>    <span class="comment">// TODO: Upgrade data.readBuf to SBuf and merge this with similar HttpStateData::readReply() code.</span></div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>    <span class="keyword">const</span> <span class="keyword">auto</span> read_sz = calcBufferSpaceToReserve(data.readBuf-&gt;spaceSize(), data.readBuf-&gt;spaceSize());</div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span> </div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 9, <span class="stringliteral">&quot;FTP may read up to &quot;</span> &lt;&lt; read_sz &lt;&lt; <span class="stringliteral">&quot; bytes&quot;</span>);</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span> </div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>    <span class="keywordflow">if</span> (!read_sz)</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span> </div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    data.read_pending = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span> </div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>    <span class="keyword">typedef</span> <a class="code hl_class" href="classCommCbMemFunT.html">CommCbMemFunT&lt;Client, CommTimeoutCbParams&gt;</a> TimeoutDialer;</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>    <a class="code hl_class" href="classRefCount.html">AsyncCall::Pointer</a> timeoutCall =  <a class="code hl_define" href="AsyncJobCalls_8h.html#a3412f4fa1246aee4d4ac46a143075e03">JobCallback</a>(9, 5,</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>                                      TimeoutDialer, <span class="keyword">this</span>, <a class="code hl_function" href="classFtp_1_1Client.html#a5399aebf35750fba8d932a9630d9b262">Ftp::Client::timeout</a>);</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>    <a class="code hl_function" href="comm_8cc.html#a1d65b72cb3685143bbc87633b7f53b3e">commSetConnTimeout</a>(data.conn, <a class="code hl_variable" href="SquidConfig_8cc.html#a75b136e6a1eef61424d84596a404aafe">Config</a>.<a class="code hl_variable" href="classSquidConfig.html#a616f6fb80c58175d607c035c74744b17">Timeout</a>.<a class="code hl_variable" href="classSquidConfig.html#a771397cfd0a2f7d513cb5092ef50e3f6">read</a>, timeoutCall);</div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span> </div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9,5,<span class="stringliteral">&quot;queueing read on FD &quot;</span> &lt;&lt; data.conn-&gt;fd);</div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span> </div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>    <span class="keyword">const</span> <span class="keyword">auto</span> amountToRead = entry-&gt;bytesWanted(<a class="code hl_class" href="classRange.html">Range&lt;size_t&gt;</a>(0, read_sz));</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span> </div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>    <span class="keywordflow">if</span> (amountToRead &lt;= 0) {</div>
+<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>        delayRead();</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>    }</div>
 <div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span> </div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &gt; 0) {</div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>        <a class="code hl_variable" href="StatCounters_8cc.html#a97511f6512b50279a2cd9cf1446060d7">statCounter</a>.<a class="code hl_variable" href="classStatCounters.html#a9e8fe5a56064294a4e2f9bb1a84b1862">server</a>.<a class="code hl_variable" href="classStatCounters.html#ae260c58b940427b0c17f45e39ec845d5">all</a>.<a class="code hl_variable" href="classStatCounters.html#aa88b8ad0eef8be950212966821e49b49">kbytes_in</a> += io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>;</div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>        <a class="code hl_variable" href="StatCounters_8cc.html#a97511f6512b50279a2cd9cf1446060d7">statCounter</a>.<a class="code hl_variable" href="classStatCounters.html#a9e8fe5a56064294a4e2f9bb1a84b1862">server</a>.<a class="code hl_variable" href="classStatCounters.html#a95b0e0425365d0cfc9442eab7d4ec57d">ftp</a>.<a class="code hl_variable" href="classStatCounters.html#aa88b8ad0eef8be950212966821e49b49">kbytes_in</a> += io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>;</div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>    }</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>    <span class="keyword">using </span>ReadDialer = <a class="code hl_class" href="classCommCbMemFunT.html">CommCbMemFunT&lt;Client, CommIoCbParams&gt;</a>;</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>    <a class="code hl_class" href="classRefCount.html">AsyncCall::Pointer</a> readCallback = <a class="code hl_define" href="AsyncJobCalls_8h.html#a3412f4fa1246aee4d4ac46a143075e03">JobCallback</a>(9, 5, ReadDialer, <span class="keyword">this</span>, <a class="code hl_function" href="classFtp_1_1Client.html#a290cd406dbdd4174f7591357d1a65805">Client::dataRead</a>);</div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>    <a class="code hl_function" href="Read_8h.html#a172f652cee9cf7837348c4a3bb6599f7">comm_read</a>(data.conn, data.readBuf-&gt;space(), amountToRead, readCallback);</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>}</div>
+</div>
 <div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span> </div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommCommonCbParams.html#aaa1b70c6ff254ac72ac1503fc158df7e">flag</a> == <a class="code hl_enumvalue" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050a884f9d58f0f131131497fa9ceefb3b3c">Comm::ERR_CLOSING</a>)</div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span> </div>
-<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a6a391b2345409642778d85f241c5facb">fd</a> == data.conn-&gt;fd);</div>
-<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span> </div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="defines_8h.html#ac1f8e975d5c9f901f8ec9f29db1aca92">EBIT_TEST</a>(entry-&gt;flags, <a class="code hl_enumvalue" href="enums_8h.html#a16685eea158879e41b101ca3634de462af1d0ae16fcfb269505ed3e22bc2e3fe5">ENTRY_ABORTED</a>)) {</div>
-<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>        abortOnData(<span class="stringliteral">&quot;entry aborted during dataRead&quot;</span>);</div>
-<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>    }</div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00996" data-start="{" data-end="}">
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a290cd406dbdd4174f7591357d1a65805">  996</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a290cd406dbdd4174f7591357d1a65805">Ftp::Client::dataRead</a>(<span class="keyword">const</span> <a class="code hl_class" href="classCommIoCbParams.html">CommIoCbParams</a> &amp;io)</div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>{</div>
+<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>    <span class="keywordtype">int</span> j;</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>    <span class="keywordtype">int</span> bin;</div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span> </div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>    data.read_pending = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span> </div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, <span class="stringliteral">&quot;FD &quot;</span> &lt;&lt; io.<a class="code hl_variable" href="classCommCommonCbParams.html#a6a391b2345409642778d85f241c5facb">fd</a> &lt;&lt; <span class="stringliteral">&quot; Read &quot;</span> &lt;&lt; io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &lt;&lt; <span class="stringliteral">&quot; bytes&quot;</span>);</div>
 <div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span> </div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommCommonCbParams.html#aaa1b70c6ff254ac72ac1503fc158df7e">flag</a> == <a class="code hl_enumvalue" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050a2d02cf4ed31f765e18f4d8474ede4e24">Comm::OK</a> &amp;&amp; io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &gt; 0) {</div>
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 5, <span class="stringliteral">&quot;appended &quot;</span> &lt;&lt; io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &lt;&lt; <span class="stringliteral">&quot; bytes to readBuf&quot;</span>);</div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>        data.readBuf-&gt;appended(io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>);</div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span><span class="preprocessor">#if USE_DELAY_POOLS</span></div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>        <a class="code hl_class" href="classDelayId.html">DelayId</a> delayId = entry-&gt;mem_obj-&gt;mostBytesAllowed();</div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>        delayId.<a class="code hl_function" href="classDelayId.html#a8574ea07f1287ef028ca0210d021b82d">bytesIn</a>(io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>);</div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>        ++ <a class="code hl_variable" href="globals_8h.html#ae8b3bef889ae7e4cc506af03676d47d0">IOStats</a>.<a class="code hl_variable" href="classIoStats.html#af92eab3e595f600596d4487b0d7a4a6f">Ftp</a>.<a class="code hl_variable" href="classIoStats.html#ab80df4a1a6b793ee9bd2392acca4ef5e">reads</a>;</div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span> </div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>        <span class="keywordflow">for</span> (j = io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> - 1, bin = 0; j; ++bin)</div>
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>            j &gt;&gt;= 1;</div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span> </div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>        ++ <a class="code hl_variable" href="globals_8h.html#ae8b3bef889ae7e4cc506af03676d47d0">IOStats</a>.<a class="code hl_variable" href="classIoStats.html#af92eab3e595f600596d4487b0d7a4a6f">Ftp</a>.<a class="code hl_variable" href="classIoStats.html#a7bb9a3af2e4412cd29ca33f80345cb3a">read_hist</a>[bin];</div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &gt; 0) {</div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>        <a class="code hl_variable" href="StatCounters_8cc.html#a97511f6512b50279a2cd9cf1446060d7">statCounter</a>.<a class="code hl_variable" href="classStatCounters.html#a9e8fe5a56064294a4e2f9bb1a84b1862">server</a>.<a class="code hl_variable" href="classStatCounters.html#ae260c58b940427b0c17f45e39ec845d5">all</a>.<a class="code hl_variable" href="classStatCounters.html#aa88b8ad0eef8be950212966821e49b49">kbytes_in</a> += io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>;</div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>        <a class="code hl_variable" href="StatCounters_8cc.html#a97511f6512b50279a2cd9cf1446060d7">statCounter</a>.<a class="code hl_variable" href="classStatCounters.html#a9e8fe5a56064294a4e2f9bb1a84b1862">server</a>.<a class="code hl_variable" href="classStatCounters.html#a95b0e0425365d0cfc9442eab7d4ec57d">ftp</a>.<a class="code hl_variable" href="classStatCounters.html#aa88b8ad0eef8be950212966821e49b49">kbytes_in</a> += io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>;</div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>    }</div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span> </div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommCommonCbParams.html#aaa1b70c6ff254ac72ac1503fc158df7e">flag</a> == <a class="code hl_enumvalue" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050a884f9d58f0f131131497fa9ceefb3b3c">Comm::ERR_CLOSING</a>)</div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span> </div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a6a391b2345409642778d85f241c5facb">fd</a> == data.conn-&gt;fd);</div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span> </div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="defines_8h.html#ac1f8e975d5c9f901f8ec9f29db1aca92">EBIT_TEST</a>(entry-&gt;flags, <a class="code hl_enumvalue" href="enums_8h.html#a16685eea158879e41b101ca3634de462af1d0ae16fcfb269505ed3e22bc2e3fe5">ENTRY_ABORTED</a>)) {</div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>        abortOnData(<span class="stringliteral">&quot;entry aborted during dataRead&quot;</span>);</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>    }</div>
 <div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span> </div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommCommonCbParams.html#aaa1b70c6ff254ac72ac1503fc158df7e">flag</a> != <a class="code hl_enumvalue" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050a2d02cf4ed31f765e18f4d8474ede4e24">Comm::OK</a>) {</div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(50, <a class="code hl_function" href="comm_8cc.html#a5251fe5d6fc5e17c11cc995edfef398f">ignoreErrno</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d">xerrno</a>) ? 3 : <a class="code hl_define" href="debug_2Stream_8h.html#ad1f6f001d275799243ee96d0b1519d3a">DBG_IMPORTANT</a>,</div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>               <span class="stringliteral">&quot;ERROR: FTP data read failure: &quot;</span> &lt;&lt; <a class="code hl_function" href="xstrerror_8cc.html#a3d643f764de4776e5489d4eb55a99849">xstrerr</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d">xerrno</a>));</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span> </div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="comm_8cc.html#a5251fe5d6fc5e17c11cc995edfef398f">ignoreErrno</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d">xerrno</a>)) {</div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>            maybeReadVirginBody();</div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>            failed(<a class="code hl_enumvalue" href="error_2forward_8h.html#a0c0ad09d74260ddc16d72bc291116e1aacd0129ea7567a99caef7ab86ed500d9a">ERR_READ_ERROR</a>, 0);</div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>            <span class="comment">/* failed closes ctrl.conn and frees ftpState */</span></div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>        }</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> == 0) {</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, <span class="stringliteral">&quot;Calling dataComplete() because io.size == 0&quot;</span>);</div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>        <span class="comment">/*</span></div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span><span class="comment">         * DPW 2007-04-23</span></div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span><span class="comment">         * Dangerous curves ahead.  This call to dataComplete was</span></div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span><span class="comment">         * calling scheduleReadControlReply, handleControlReply,</span></div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span><span class="comment">         * and then ftpReadTransferDone.  If ftpReadTransferDone</span></div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span><span class="comment">         * gets unexpected status code, it closes down the control</span></div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span><span class="comment">         * socket and our FtpStateData object gets destroyed.   As</span></div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span><span class="comment">         * a workaround we no longer set the &#39;buffered_ok&#39; flag in</span></div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span><span class="comment">         * the scheduleReadControlReply call.</span></div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span><span class="comment">         */</span></div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>        dataComplete();</div>
-<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>    }</div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span> </div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>    processReplyBody();</div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>}</div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommCommonCbParams.html#aaa1b70c6ff254ac72ac1503fc158df7e">flag</a> == <a class="code hl_enumvalue" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050a2d02cf4ed31f765e18f4d8474ede4e24">Comm::OK</a> &amp;&amp; io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &gt; 0) {</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 5, <span class="stringliteral">&quot;appended &quot;</span> &lt;&lt; io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &lt;&lt; <span class="stringliteral">&quot; bytes to readBuf&quot;</span>);</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>        data.readBuf-&gt;appended(io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>);</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span><span class="preprocessor">#if USE_DELAY_POOLS</span></div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>        <a class="code hl_class" href="classDelayId.html">DelayId</a> delayId = entry-&gt;mem_obj-&gt;mostBytesAllowed();</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>        delayId.<a class="code hl_function" href="classDelayId.html#a8574ea07f1287ef028ca0210d021b82d">bytesIn</a>(io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>);</div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>        ++ <a class="code hl_variable" href="globals_8h.html#ae8b3bef889ae7e4cc506af03676d47d0">IOStats</a>.<a class="code hl_variable" href="classIoStats.html#af92eab3e595f600596d4487b0d7a4a6f">Ftp</a>.<a class="code hl_variable" href="classIoStats.html#ab80df4a1a6b793ee9bd2392acca4ef5e">reads</a>;</div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span> </div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>        <span class="keywordflow">for</span> (j = io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> - 1, bin = 0; j; ++bin)</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>            j &gt;&gt;= 1;</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span> </div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>        ++ <a class="code hl_variable" href="globals_8h.html#ae8b3bef889ae7e4cc506af03676d47d0">IOStats</a>.<a class="code hl_variable" href="classIoStats.html#af92eab3e595f600596d4487b0d7a4a6f">Ftp</a>.<a class="code hl_variable" href="classIoStats.html#a7bb9a3af2e4412cd29ca33f80345cb3a">read_hist</a>[bin];</div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    }</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span> </div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommCommonCbParams.html#aaa1b70c6ff254ac72ac1503fc158df7e">flag</a> != <a class="code hl_enumvalue" href="namespaceComm.html#a9d8d4f4a5745b975c5785998e4246050a2d02cf4ed31f765e18f4d8474ede4e24">Comm::OK</a>) {</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(50, <a class="code hl_function" href="comm_8cc.html#a5251fe5d6fc5e17c11cc995edfef398f">ignoreErrno</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d">xerrno</a>) ? 3 : <a class="code hl_define" href="debug_2Stream_8h.html#ad1f6f001d275799243ee96d0b1519d3a">DBG_IMPORTANT</a>,</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>               <span class="stringliteral">&quot;ERROR: FTP data read failure: &quot;</span> &lt;&lt; <a class="code hl_function" href="xstrerror_8cc.html#a3d643f764de4776e5489d4eb55a99849">xstrerr</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d">xerrno</a>));</div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span> </div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="comm_8cc.html#a5251fe5d6fc5e17c11cc995edfef398f">ignoreErrno</a>(io.<a class="code hl_variable" href="classCommCommonCbParams.html#a5376946442719c10cc9307045e09460d">xerrno</a>)) {</div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>            maybeReadVirginBody();</div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>            failed(<a class="code hl_enumvalue" href="error_2forward_8h.html#a0c0ad09d74260ddc16d72bc291116e1aacd0129ea7567a99caef7ab86ed500d9a">ERR_READ_ERROR</a>, 0);</div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>            <span class="comment">/* failed closes ctrl.conn and frees ftpState */</span></div>
+<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>        }</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> == 0) {</div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, <span class="stringliteral">&quot;Calling dataComplete() because io.size == 0&quot;</span>);</div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>        <span class="comment">/*</span></div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span><span class="comment">         * DPW 2007-04-23</span></div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span><span class="comment">         * Dangerous curves ahead.  This call to dataComplete was</span></div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span><span class="comment">         * calling scheduleReadControlReply, handleControlReply,</span></div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span><span class="comment">         * and then ftpReadTransferDone.  If ftpReadTransferDone</span></div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span><span class="comment">         * gets unexpected status code, it closes down the control</span></div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span><span class="comment">         * socket and our FtpStateData object gets destroyed.   As</span></div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span><span class="comment">         * a workaround we no longer set the &#39;buffered_ok&#39; flag in</span></div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span><span class="comment">         * the scheduleReadControlReply call.</span></div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span><span class="comment">         */</span></div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>        dataComplete();</div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>    }</div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span> </div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>    processReplyBody();</div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>}</div>
 </div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span> </div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen01050" data-start="{" data-end="}">
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a47b2b606d29c8e6f896d64a7eaa95176"> 1050</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a47b2b606d29c8e6f896d64a7eaa95176">Ftp::Client::dataComplete</a>()</div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>{</div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3,status());</div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span> </div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    <span class="comment">/* Connection closed; transfer done. */</span></div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span> </div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>    data.close();</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span> </div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>    <span class="comment">/* expect the &quot;transfer complete&quot; message on the control socket */</span></div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span><span class="comment">     * DPW 2007-04-23</span></div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span><span class="comment">     * Previously, this was the only place where we set the</span></div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span><span class="comment">     * &#39;buffered_ok&#39; flag when calling scheduleReadControlReply().</span></div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span><span class="comment">     * It caused some problems if the FTP server returns an unexpected</span></div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span><span class="comment">     * status code after the data command.  FtpStateData was being</span></div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span><span class="comment">     * deleted in the middle of dataRead().</span></div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span><span class="comment">     */</span></div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    <span class="comment">/* AYJ: 2011-01-13: Bug 2581.</span></div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span><span class="comment">     * 226 status is possibly waiting in the ctrl buffer.</span></div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span><span class="comment">     * The connection will hang if we DONT send buffered_ok.</span></div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span><span class="comment">     * This happens on all transfers which can be completely sent by the</span></div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span><span class="comment">     * server before the 150 started status message is read in by Squid.</span></div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span><span class="comment">     * ie all transfers of about one packet hang.</span></div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span><span class="comment">     */</span></div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>    scheduleReadControlReply(1);</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>}</div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span> </div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen01065" data-start="{" data-end="}">
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a47b2b606d29c8e6f896d64a7eaa95176"> 1065</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a47b2b606d29c8e6f896d64a7eaa95176">Ftp::Client::dataComplete</a>()</div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>{</div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3,status());</div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span> </div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>    <span class="comment">/* Connection closed; transfer done. */</span></div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span> </div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>    data.close();</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span> </div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>    <span class="comment">/* expect the &quot;transfer complete&quot; message on the control socket */</span></div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span><span class="comment">     * DPW 2007-04-23</span></div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span><span class="comment">     * Previously, this was the only place where we set the</span></div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span><span class="comment">     * &#39;buffered_ok&#39; flag when calling scheduleReadControlReply().</span></div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span><span class="comment">     * It caused some problems if the FTP server returns an unexpected</span></div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span><span class="comment">     * status code after the data command.  FtpStateData was being</span></div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span><span class="comment">     * deleted in the middle of dataRead().</span></div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span><span class="comment">     */</span></div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>    <span class="comment">/* AYJ: 2011-01-13: Bug 2581.</span></div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span><span class="comment">     * 226 status is possibly waiting in the ctrl buffer.</span></div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span><span class="comment">     * The connection will hang if we DONT send buffered_ok.</span></div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span><span class="comment">     * This happens on all transfers which can be completely sent by the</span></div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span><span class="comment">     * server before the 150 started status message is read in by Squid.</span></div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span><span class="comment">     * ie all transfers of about one packet hang.</span></div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span><span class="comment">     */</span></div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>    scheduleReadControlReply(1);</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>}</div>
 </div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span> </div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen01079" data-start="{" data-end="}">
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#aebf177b73d4f2c1bf97ec740174ea9d3"> 1079</a></span><a class="code hl_function" href="classFtp_1_1Client.html#aebf177b73d4f2c1bf97ec740174ea9d3">Ftp::Client::abortAll</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *reason)</div>
-<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>{</div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, <span class="stringliteral">&quot;aborting transaction for &quot;</span> &lt;&lt; reason &lt;&lt;</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>           <span class="stringliteral">&quot;; FD &quot;</span> &lt;&lt; (ctrl.conn!=<span class="keyword">nullptr</span>?ctrl.conn-&gt;fd:-1) &lt;&lt; <span class="stringliteral">&quot;, Data FD &quot;</span> &lt;&lt; (data.conn!=<span class="keyword">nullptr</span>?data.conn-&gt;fd:-1) &lt;&lt; <span class="stringliteral">&quot;, this &quot;</span> &lt;&lt; <span class="keyword">this</span>);</div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>    mustStop(reason);</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>}</div>
-</div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span> </div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen01091" data-start="{" data-end="}">
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a5de686655e7f02977e9b8142d6e3f32b"> 1091</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a5de686655e7f02977e9b8142d6e3f32b">Ftp::Client::switchTimeoutToDataChannel</a>()</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>{</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>    <a class="code hl_function" href="comm_8cc.html#a0666713190b57c4eb87f7055c549fc93">commUnsetConnTimeout</a>(ctrl.conn);</div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span> </div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>    <span class="keyword">typedef</span> <a class="code hl_class" href="classCommCbMemFunT.html">CommCbMemFunT&lt;Client, CommTimeoutCbParams&gt;</a> TimeoutDialer;</div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>    <a class="code hl_class" href="classRefCount.html">AsyncCall::Pointer</a> timeoutCall = <a class="code hl_define" href="AsyncJobCalls_8h.html#a3412f4fa1246aee4d4ac46a143075e03">JobCallback</a>(9, 5, TimeoutDialer, <span class="keyword">this</span>,</div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>                                     <a class="code hl_function" href="classFtp_1_1Client.html#a5399aebf35750fba8d932a9630d9b262">Ftp::Client::timeout</a>);</div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>    <a class="code hl_function" href="comm_8cc.html#a1d65b72cb3685143bbc87633b7f53b3e">commSetConnTimeout</a>(data.conn, <a class="code hl_variable" href="SquidConfig_8cc.html#a75b136e6a1eef61424d84596a404aafe">Config</a>.<a class="code hl_variable" href="classSquidConfig.html#a616f6fb80c58175d607c035c74744b17">Timeout</a>.<a class="code hl_variable" href="classSquidConfig.html#a771397cfd0a2f7d513cb5092ef50e3f6">read</a>, timeoutCall);</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span> </div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen01094" data-start="{" data-end="}">
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#aebf177b73d4f2c1bf97ec740174ea9d3"> 1094</a></span><a class="code hl_function" href="classFtp_1_1Client.html#aebf177b73d4f2c1bf97ec740174ea9d3">Ftp::Client::abortAll</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *reason)</div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>{</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, <span class="stringliteral">&quot;aborting transaction for &quot;</span> &lt;&lt; reason &lt;&lt;</div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>           <span class="stringliteral">&quot;; FD &quot;</span> &lt;&lt; (ctrl.conn!=<span class="keyword">nullptr</span>?ctrl.conn-&gt;fd:-1) &lt;&lt; <span class="stringliteral">&quot;, Data FD &quot;</span> &lt;&lt; (data.conn!=<span class="keyword">nullptr</span>?data.conn-&gt;fd:-1) &lt;&lt; <span class="stringliteral">&quot;, this &quot;</span> &lt;&lt; <span class="keyword">this</span>);</div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>    mustStop(reason);</div>
 <div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>}</div>
 </div>
 <div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span> </div>
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen01102" data-start="{" data-end="}">
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a514a4e99a589285007897805cfb92437"> 1102</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a514a4e99a589285007897805cfb92437">Ftp::Client::sentRequestBody</a>(<span class="keyword">const</span> <a class="code hl_class" href="classCommIoCbParams.html">CommIoCbParams</a> &amp;io)</div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>{</div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &gt; 0)</div>
-<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>        <a class="code hl_variable" href="StatCounters_8cc.html#a97511f6512b50279a2cd9cf1446060d7">statCounter</a>.<a class="code hl_variable" href="classStatCounters.html#a9e8fe5a56064294a4e2f9bb1a84b1862">server</a>.<a class="code hl_variable" href="classStatCounters.html#a95b0e0425365d0cfc9442eab7d4ec57d">ftp</a>.<a class="code hl_variable" href="classStatCounters.html#a8cd6e48b996bbdf19dbb6bf4fe5b4431">kbytes_out</a> += io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>;</div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>    <a class="code hl_function" href="classFtp_1_1Client.html#a514a4e99a589285007897805cfb92437">::Client::sentRequestBody</a>(io);</div>
-<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>}</div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen01106" data-start="{" data-end="}">
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a5de686655e7f02977e9b8142d6e3f32b"> 1106</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a5de686655e7f02977e9b8142d6e3f32b">Ftp::Client::switchTimeoutToDataChannel</a>()</div>
+<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>{</div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>    <a class="code hl_function" href="comm_8cc.html#a0666713190b57c4eb87f7055c549fc93">commUnsetConnTimeout</a>(ctrl.conn);</div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span> </div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>    <span class="keyword">typedef</span> <a class="code hl_class" href="classCommCbMemFunT.html">CommCbMemFunT&lt;Client, CommTimeoutCbParams&gt;</a> TimeoutDialer;</div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>    <a class="code hl_class" href="classRefCount.html">AsyncCall::Pointer</a> timeoutCall = <a class="code hl_define" href="AsyncJobCalls_8h.html#a3412f4fa1246aee4d4ac46a143075e03">JobCallback</a>(9, 5, TimeoutDialer, <span class="keyword">this</span>,</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>                                     <a class="code hl_function" href="classFtp_1_1Client.html#a5399aebf35750fba8d932a9630d9b262">Ftp::Client::timeout</a>);</div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>    <a class="code hl_function" href="comm_8cc.html#a1d65b72cb3685143bbc87633b7f53b3e">commSetConnTimeout</a>(data.conn, <a class="code hl_variable" href="SquidConfig_8cc.html#a75b136e6a1eef61424d84596a404aafe">Config</a>.<a class="code hl_variable" href="classSquidConfig.html#a616f6fb80c58175d607c035c74744b17">Timeout</a>.<a class="code hl_variable" href="classSquidConfig.html#a771397cfd0a2f7d513cb5092ef50e3f6">read</a>, timeoutCall);</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>}</div>
 </div>
-<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span> </div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span><span class="keywordtype">void</span></div>
-<div class="foldopen" id="foldopen01113" data-start="{" data-end="}">
-<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#aa698b39f52b07296a74704df5c4f9507"> 1113</a></span><a class="code hl_function" href="classFtp_1_1Client.html#aa698b39f52b07296a74704df5c4f9507">Ftp::Client::doneSendingRequestBody</a>()</div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>{</div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>    <a class="code hl_function" href="classFtp_1_1Client.html#aa698b39f52b07296a74704df5c4f9507">::Client::doneSendingRequestBody</a>();</div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, status());</div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>    dataComplete();</div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>    <span class="comment">/* NP: RFC 959  3.3.  DATA CONNECTION MANAGEMENT</span></div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span><span class="comment">     * if transfer type is &#39;stream&#39; call dataComplete()</span></div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span><span class="comment">     * otherwise leave open. (reschedule control channel read?)</span></div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span><span class="comment">     */</span></div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span> </div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen01117" data-start="{" data-end="}">
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#a514a4e99a589285007897805cfb92437"> 1117</a></span><a class="code hl_function" href="classFtp_1_1Client.html#a514a4e99a589285007897805cfb92437">Ftp::Client::sentRequestBody</a>(<span class="keyword">const</span> <a class="code hl_class" href="classCommIoCbParams.html">CommIoCbParams</a> &amp;io)</div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>{</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>    <span class="keywordflow">if</span> (io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a> &gt; 0)</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>        <a class="code hl_variable" href="StatCounters_8cc.html#a97511f6512b50279a2cd9cf1446060d7">statCounter</a>.<a class="code hl_variable" href="classStatCounters.html#a9e8fe5a56064294a4e2f9bb1a84b1862">server</a>.<a class="code hl_variable" href="classStatCounters.html#a95b0e0425365d0cfc9442eab7d4ec57d">ftp</a>.<a class="code hl_variable" href="classStatCounters.html#a8cd6e48b996bbdf19dbb6bf4fe5b4431">kbytes_out</a> += io.<a class="code hl_variable" href="classCommIoCbParams.html#a34e29cc8266e4126764a5a6077859542">size</a>;</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>    <a class="code hl_function" href="classFtp_1_1Client.html#a514a4e99a589285007897805cfb92437">::Client::sentRequestBody</a>(io);</div>
 <div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>}</div>
 </div>
 <div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span> </div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span><span class="keywordtype">bool</span></div>
-<div class="foldopen" id="foldopen01127" data-start="{" data-end="}">
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#ac396e741b91be860e73e7532e3bfd5b3"> 1127</a></span><a class="code hl_function" href="classFtp_1_1Client.html#ac396e741b91be860e73e7532e3bfd5b3">Ftp::Client::parseControlReply</a>(<span class="keywordtype">size_t</span> &amp;bytesUsed)</div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>{</div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>    <span class="keywordtype">char</span> *s;</div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>    <span class="keywordtype">char</span> *end;</div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>    <span class="keywordtype">int</span> usable;</div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>    <span class="keywordtype">int</span> complete = 0;</div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>    <a class="code hl_class" href="classwordlist.html">wordlist</a> *<a class="code hl_variable" href="aiops_8cc.html#a2843c63601909c4996765294132ecf69">head</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>    <span class="keyword">auto</span> headDeleter = [](<a class="code hl_class" href="classwordlist.html">wordlist</a> *h) { <a class="code hl_function" href="wordlist_8cc.html#a6a864a062395c542743d93ea2e48f3f4">wordlistDestroy</a>(&amp;h); };</div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>    <span class="keyword">auto</span> headGuard = std::unique_ptr&lt;wordlist, decltype(headDeleter)&gt;(<a class="code hl_variable" href="aiops_8cc.html#a2843c63601909c4996765294132ecf69">head</a>, headDeleter);</div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>    <a class="code hl_class" href="classwordlist.html">wordlist</a> *list;</div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>    <a class="code hl_class" href="classwordlist.html">wordlist</a> **tail = &amp;<a class="code hl_variable" href="aiops_8cc.html#a2843c63601909c4996765294132ecf69">head</a>;</div>
-<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>    <span class="keywordtype">size_t</span> linelen;</div>
-<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, status());</div>
-<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span><span class="comment">     * We need a NULL-terminated buffer for scanning, ick</span></div>
-<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span><span class="comment">     */</span></div>
-<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> len = ctrl.offset;</div>
-<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>    <span class="keyword">const</span> <span class="keyword">auto</span> sbufOwner = std::unique_ptr&lt;void, decltype(&amp;xfree)&gt;(<a class="code hl_define" href="negotiate__wrapper_8cc.html#a6af5faec3f9662b20ffc9903f923dec0">xmalloc</a>(len + 1), <a class="code hl_define" href="negotiate__wrapper_8cc.html#a2c3897f7c46ca54a2e0dd7b24a40c7cb">xfree</a>);</div>
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>    <span class="keyword">const</span> <span class="keyword">auto</span> sbuf = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(sbufOwner.get());</div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>    <a class="code hl_function" href="xstring_8cc.html#a14dfc5efacfd3d4cbccd03827103ac54">xstrncpy</a>(sbuf, ctrl.buf, len + 1);</div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>    end = sbuf + len - 1;</div>
-<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span> </div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>    <span class="keywordflow">while</span> (*end != <span class="charliteral">&#39;\r&#39;</span> &amp;&amp; *end != <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; end &gt; sbuf)</div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>        --end;</div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span> </div>
-<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>    usable = end - sbuf;</div>
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span> </div>
-<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, <span class="stringliteral">&quot;usable = &quot;</span> &lt;&lt; usable);</div>
-<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span> </div>
-<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>    <span class="keywordflow">if</span> (usable == 0) {</div>
-<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, <span class="stringliteral">&quot;didn&#39;t find end of line&quot;</span>);</div>
-<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>    }</div>
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span> </div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, len &lt;&lt; <span class="stringliteral">&quot; bytes to play with&quot;</span>);</div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>    ++end;</div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>    s = sbuf;</div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>    s += strspn(s, <a class="code hl_variable" href="namespaceFtp.html#a72f0a22885f625feb8c912766a42713d">crlf</a>);</div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span> </div>
-<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>    <span class="comment">// cumulative length of parsed control reply lines added to the list</span></div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>    <span class="keywordtype">size_t</span> replyLength = 0;</div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span> </div>
-<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>    <span class="keywordflow">for</span> (; s &lt; end; s += strcspn(s, <a class="code hl_variable" href="namespaceFtp.html#a72f0a22885f625feb8c912766a42713d">crlf</a>), s += strspn(s, <a class="code hl_variable" href="namespaceFtp.html#a72f0a22885f625feb8c912766a42713d">crlf</a>)) {</div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>        <span class="keywordflow">if</span> (complete)</div>
-<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span> </div>
-<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 5, <span class="stringliteral">&quot;s = {&quot;</span> &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>);</div>
-<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span> </div>
-<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span>        linelen = strcspn(s, <a class="code hl_variable" href="namespaceFtp.html#a72f0a22885f625feb8c912766a42713d">crlf</a>) + 1;</div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>        replyLength += linelen;</div>
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span> </div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>        <span class="keywordflow">if</span> (linelen &lt; 2)</div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span> </div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>        <span class="keywordflow">if</span> (replyLength &gt; <a class="code hl_function" href="classString.html#a86ad6a6031465f9c6f98678460a5a80d">String::RawSizeMaxXXX</a>())</div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classTextException.html">TextException</a>(<a class="code hl_function" href="sbuf_2Stream_8h.html#a6160c2bd5c3883a54866ccfd670ce4b6">ToSBuf</a>(<span class="stringliteral">&quot;control reply too long: &quot;</span>, replyLength, <span class="stringliteral">&quot; exceeds safe limit of &quot;</span>, <a class="code hl_function" href="classString.html#a86ad6a6031465f9c6f98678460a5a80d">String::RawSizeMaxXXX</a>(), <span class="stringliteral">&quot; bytes&quot;</span>), <a class="code hl_define" href="Here_8h.html#ae4d205e9d525856fbdfd44f7eccb309b">Here</a>());</div>
-<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span> </div>
-<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>        <span class="keywordflow">if</span> (linelen &gt; 3)</div>
-<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>            complete = (*s &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; *s &lt;= <span class="charliteral">&#39;9&#39;</span> &amp;&amp; *(s + 3) == <span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span> </div>
-<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>        list = <span class="keyword">new</span> <a class="code hl_class" href="classwordlist.html">wordlist</a>();</div>
-<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>        <span class="keywordflow">if</span> (!headGuard)</div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>            headGuard.reset(list);</div>
-<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span> </div>
-<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>        list-&gt;<a class="code hl_variable" href="classwordlist.html#a7a21dc17188fe243a9cdd0c71cdcfe67">key</a> = (<span class="keywordtype">char</span> *)<a class="code hl_define" href="negotiate__wrapper_8cc.html#a6af5faec3f9662b20ffc9903f923dec0">xmalloc</a>(linelen);</div>
-<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span> </div>
-<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>        <a class="code hl_function" href="xstring_8cc.html#a14dfc5efacfd3d4cbccd03827103ac54">xstrncpy</a>(list-&gt;<a class="code hl_variable" href="classwordlist.html#a7a21dc17188fe243a9cdd0c71cdcfe67">key</a>, s, linelen);</div>
-<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span> </div>
-<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>        <span class="comment">/* trace the FTP communication chat at level 2 */</span></div>
-<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 2, <span class="stringliteral">&quot;ftp&gt;&gt; &quot;</span> &lt;&lt; list-&gt;<a class="code hl_variable" href="classwordlist.html#a7a21dc17188fe243a9cdd0c71cdcfe67">key</a>);</div>
-<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span> </div>
-<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>        <span class="keywordflow">if</span> (complete) {</div>
-<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>            <span class="comment">// use list-&gt;key for last_reply because s contains the new line</span></div>
-<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>            <a class="code hl_define" href="xalloc_8h.html#a74ad4c3c3aa58c8fea96eb0dc090fd67">safe_free</a>(ctrl.last_reply);</div>
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>            ctrl.last_reply = <a class="code hl_define" href="negotiate__wrapper_8cc.html#a5eb055ca3b42205cc134b4a438cd9a72">xstrdup</a>(list-&gt;<a class="code hl_variable" href="classwordlist.html#a7a21dc17188fe243a9cdd0c71cdcfe67">key</a> + 4);</div>
-<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>            ctrl.replycode = atoi(list-&gt;<a class="code hl_variable" href="classwordlist.html#a7a21dc17188fe243a9cdd0c71cdcfe67">key</a>);</div>
-<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>        }</div>
-<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span> </div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>        *tail = list;</div>
-<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span> </div>
-<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>        tail = &amp;list-&gt;<a class="code hl_variable" href="classwordlist.html#acd82f9c4df0ceeb77c88fe7fce7033e3">next</a>;</div>
-<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>    }</div>
-<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span> </div>
-<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>    bytesUsed = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(s - sbuf);</div>
-<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span> </div>
-<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>    <span class="keywordflow">if</span> (!complete) {</div>
-<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>    }</div>
-<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span> </div>
-<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>    ctrl.message = headGuard.release();</div>
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(ctrl.replycode &gt;= 0);</div>
-<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(ctrl.last_reply);</div>
-<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(ctrl.message);</div>
-<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>}</div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span><span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen01128" data-start="{" data-end="}">
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#aa698b39f52b07296a74704df5c4f9507"> 1128</a></span><a class="code hl_function" href="classFtp_1_1Client.html#aa698b39f52b07296a74704df5c4f9507">Ftp::Client::doneSendingRequestBody</a>()</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>{</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>    <a class="code hl_function" href="classFtp_1_1Client.html#aa698b39f52b07296a74704df5c4f9507">::Client::doneSendingRequestBody</a>();</div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, status());</div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>    dataComplete();</div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>    <span class="comment">/* NP: RFC 959  3.3.  DATA CONNECTION MANAGEMENT</span></div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span><span class="comment">     * if transfer type is &#39;stream&#39; call dataComplete()</span></div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span><span class="comment">     * otherwise leave open. (reschedule control channel read?)</span></div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span><span class="comment">     */</span></div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>}</div>
 </div>
-<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span> </div>
-<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>}; <span class="comment">// namespace Ftp</span></div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span> </div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span><span class="keywordtype">bool</span></div>
+<div class="foldopen" id="foldopen01142" data-start="{" data-end="}">
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"><a class="line" href="classFtp_1_1Client.html#ac396e741b91be860e73e7532e3bfd5b3"> 1142</a></span><a class="code hl_function" href="classFtp_1_1Client.html#ac396e741b91be860e73e7532e3bfd5b3">Ftp::Client::parseControlReply</a>(<span class="keywordtype">size_t</span> &amp;bytesUsed)</div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>{</div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>    <span class="keywordtype">char</span> *s;</div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>    <span class="keywordtype">char</span> *end;</div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>    <span class="keywordtype">int</span> usable;</div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>    <span class="keywordtype">int</span> complete = 0;</div>
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>    <a class="code hl_class" href="classwordlist.html">wordlist</a> *<a class="code hl_variable" href="aiops_8cc.html#a2843c63601909c4996765294132ecf69">head</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>    <span class="keyword">auto</span> headDeleter = [](<a class="code hl_class" href="classwordlist.html">wordlist</a> *h) { <a class="code hl_function" href="wordlist_8cc.html#a6a864a062395c542743d93ea2e48f3f4">wordlistDestroy</a>(&amp;h); };</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>    <span class="keyword">auto</span> headGuard = std::unique_ptr&lt;wordlist, decltype(headDeleter)&gt;(<a class="code hl_variable" href="aiops_8cc.html#a2843c63601909c4996765294132ecf69">head</a>, headDeleter);</div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>    <a class="code hl_class" href="classwordlist.html">wordlist</a> *list;</div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>    <a class="code hl_class" href="classwordlist.html">wordlist</a> **tail = &amp;<a class="code hl_variable" href="aiops_8cc.html#a2843c63601909c4996765294132ecf69">head</a>;</div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>    <span class="keywordtype">size_t</span> linelen;</div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, status());</div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span><span class="comment">     * We need a NULL-terminated buffer for scanning, ick</span></div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span><span class="comment">     */</span></div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> len = ctrl.offset;</div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>    <span class="keyword">const</span> <span class="keyword">auto</span> sbufOwner = std::unique_ptr&lt;void, decltype(&amp;xfree)&gt;(<a class="code hl_define" href="negotiate__wrapper_8cc.html#a6af5faec3f9662b20ffc9903f923dec0">xmalloc</a>(len + 1), <a class="code hl_define" href="negotiate__wrapper_8cc.html#a2c3897f7c46ca54a2e0dd7b24a40c7cb">xfree</a>);</div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>    <span class="keyword">const</span> <span class="keyword">auto</span> sbuf = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(sbufOwner.get());</div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>    <a class="code hl_function" href="xstring_8cc.html#a14dfc5efacfd3d4cbccd03827103ac54">xstrncpy</a>(sbuf, ctrl.buf, len + 1);</div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>    end = sbuf + len - 1;</div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span> </div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>    <span class="keywordflow">while</span> (*end != <span class="charliteral">&#39;\r&#39;</span> &amp;&amp; *end != <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; end &gt; sbuf)</div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>        --end;</div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span> </div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>    usable = end - sbuf;</div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span> </div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, <span class="stringliteral">&quot;usable = &quot;</span> &lt;&lt; usable);</div>
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span> </div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>    <span class="keywordflow">if</span> (usable == 0) {</div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, <span class="stringliteral">&quot;didn&#39;t find end of line&quot;</span>);</div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>    }</div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span> </div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>    <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 3, len &lt;&lt; <span class="stringliteral">&quot; bytes to play with&quot;</span>);</div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>    ++end;</div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>    s = sbuf;</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>    s += strspn(s, <a class="code hl_variable" href="namespaceFtp.html#a72f0a22885f625feb8c912766a42713d">crlf</a>);</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span> </div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>    <span class="comment">// cumulative length of parsed control reply lines added to the list</span></div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>    <span class="keywordtype">size_t</span> replyLength = 0;</div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span> </div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>    <span class="keywordflow">for</span> (; s &lt; end; s += strcspn(s, <a class="code hl_variable" href="namespaceFtp.html#a72f0a22885f625feb8c912766a42713d">crlf</a>), s += strspn(s, <a class="code hl_variable" href="namespaceFtp.html#a72f0a22885f625feb8c912766a42713d">crlf</a>)) {</div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>        <span class="keywordflow">if</span> (complete)</div>
+<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span> </div>
+<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 5, <span class="stringliteral">&quot;s = {&quot;</span> &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>);</div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span> </div>
+<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>        linelen = strcspn(s, <a class="code hl_variable" href="namespaceFtp.html#a72f0a22885f625feb8c912766a42713d">crlf</a>) + 1;</div>
+<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>        replyLength += linelen;</div>
+<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span> </div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>        <span class="keywordflow">if</span> (linelen &lt; 2)</div>
+<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span> </div>
+<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>        <span class="keywordflow">if</span> (replyLength &gt; <a class="code hl_function" href="classString.html#a86ad6a6031465f9c6f98678460a5a80d">String::RawSizeMaxXXX</a>())</div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classTextException.html">TextException</a>(<a class="code hl_function" href="sbuf_2Stream_8h.html#a6160c2bd5c3883a54866ccfd670ce4b6">ToSBuf</a>(<span class="stringliteral">&quot;control reply too long: &quot;</span>, replyLength, <span class="stringliteral">&quot; exceeds safe limit of &quot;</span>, <a class="code hl_function" href="classString.html#a86ad6a6031465f9c6f98678460a5a80d">String::RawSizeMaxXXX</a>(), <span class="stringliteral">&quot; bytes&quot;</span>), <a class="code hl_define" href="Here_8h.html#ae4d205e9d525856fbdfd44f7eccb309b">Here</a>());</div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span> </div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>        <span class="keywordflow">if</span> (linelen &gt; 3)</div>
+<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>            complete = (*s &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; *s &lt;= <span class="charliteral">&#39;9&#39;</span> &amp;&amp; *(s + 3) == <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span> </div>
+<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>        list = <span class="keyword">new</span> <a class="code hl_class" href="classwordlist.html">wordlist</a>();</div>
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>        <span class="keywordflow">if</span> (!headGuard)</div>
+<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>            headGuard.reset(list);</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span> </div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>        list-&gt;<a class="code hl_variable" href="classwordlist.html#a7a21dc17188fe243a9cdd0c71cdcfe67">key</a> = (<span class="keywordtype">char</span> *)<a class="code hl_define" href="negotiate__wrapper_8cc.html#a6af5faec3f9662b20ffc9903f923dec0">xmalloc</a>(linelen);</div>
+<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span> </div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>        <a class="code hl_function" href="xstring_8cc.html#a14dfc5efacfd3d4cbccd03827103ac54">xstrncpy</a>(list-&gt;<a class="code hl_variable" href="classwordlist.html#a7a21dc17188fe243a9cdd0c71cdcfe67">key</a>, s, linelen);</div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span> </div>
+<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>        <span class="comment">/* trace the FTP communication chat at level 2 */</span></div>
+<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>        <a class="code hl_define" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>(9, 2, <span class="stringliteral">&quot;ftp&gt;&gt; &quot;</span> &lt;&lt; list-&gt;<a class="code hl_variable" href="classwordlist.html#a7a21dc17188fe243a9cdd0c71cdcfe67">key</a>);</div>
+<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span> </div>
+<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>        <span class="keywordflow">if</span> (complete) {</div>
+<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>            <span class="comment">// use list-&gt;key for last_reply because s contains the new line</span></div>
+<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>            <a class="code hl_define" href="xalloc_8h.html#a74ad4c3c3aa58c8fea96eb0dc090fd67">safe_free</a>(ctrl.last_reply);</div>
+<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>            ctrl.last_reply = <a class="code hl_define" href="negotiate__wrapper_8cc.html#a5eb055ca3b42205cc134b4a438cd9a72">xstrdup</a>(list-&gt;<a class="code hl_variable" href="classwordlist.html#a7a21dc17188fe243a9cdd0c71cdcfe67">key</a> + 4);</div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>            ctrl.replycode = atoi(list-&gt;<a class="code hl_variable" href="classwordlist.html#a7a21dc17188fe243a9cdd0c71cdcfe67">key</a>);</div>
+<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>        }</div>
+<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span> </div>
+<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>        *tail = list;</div>
+<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span> </div>
+<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>        tail = &amp;list-&gt;<a class="code hl_variable" href="classwordlist.html#acd82f9c4df0ceeb77c88fe7fce7033e3">next</a>;</div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>    }</div>
 <div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span> </div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>    bytesUsed = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(s - sbuf);</div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span> </div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>    <span class="keywordflow">if</span> (!complete) {</div>
+<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>    }</div>
+<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span> </div>
+<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>    ctrl.message = headGuard.release();</div>
+<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(ctrl.replycode &gt;= 0);</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(ctrl.last_reply);</div>
+<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(ctrl.message);</div>
+<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>}</div>
+</div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span> </div>
+<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>}; <span class="comment">// namespace Ftp</span></div>
+<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span> </div>
 <div class="ttc" id="aAssure_8h_html_a1fcca4cd6cfc3b9f835aa3652eb0c2f5"><div class="ttname"><a href="Assure_8h.html#a1fcca4cd6cfc3b9f835aa3652eb0c2f5">Assure</a></div><div class="ttdeci">#define Assure(condition)</div><div class="ttdef"><b>Definition</b> <a href="Assure_8h_source.html#l00035">Assure.h:35</a></div></div>
 <div class="ttc" id="aAsyncJobCalls_8h_html"><div class="ttname"><a href="AsyncJobCalls_8h.html">AsyncJobCalls.h</a></div></div>
 <div class="ttc" id="aAsyncJobCalls_8h_html_a3412f4fa1246aee4d4ac46a143075e03"><div class="ttname"><a href="AsyncJobCalls_8h.html#a3412f4fa1246aee4d4ac46a143075e03">JobCallback</a></div><div class="ttdeci">#define JobCallback(dbgSection, dbgLevel, Dialer, job, method)</div><div class="ttdoc">Convenience macro to create a Dialer-based job callback.</div><div class="ttdef"><b>Definition</b> <a href="AsyncJobCalls_8h_source.html#l00070">AsyncJobCalls.h:70</a></div></div>
@@ -1434,38 +1449,38 @@ $(document).ready(function(){initNavTree('FtpClient_8cc_source.html',''); initRe
 <div class="ttc" id="aclassFtp_1_1Client_html_a10662462bb31a0b63360bbf92fcabbbf"><div class="ttname"><a href="classFtp_1_1Client.html#a10662462bb31a0b63360bbf92fcabbbf">Ftp::Client::start</a></div><div class="ttdeci">void start() override</div><div class="ttdoc">called by AsyncStart; do not call directly</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00217">FtpClient.cc:217</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a11f0ef0bdf9b4f814b8127ac72994f32"><div class="ttname"><a href="classFtp_1_1Client.html#a11f0ef0bdf9b4f814b8127ac72994f32">Ftp::Client::handleEpsvReply</a></div><div class="ttdeci">bool handleEpsvReply(Ip::Address &amp;remoteAddr)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00513">FtpClient.cc:513</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a2357868f9d69f55292404caf0463819a"><div class="ttname"><a href="classFtp_1_1Client.html#a2357868f9d69f55292404caf0463819a">Ftp::Client::handleControlReply</a></div><div class="ttdeci">virtual void handleControlReply()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00441">FtpClient.cc:441</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_a290cd406dbdd4174f7591357d1a65805"><div class="ttname"><a href="classFtp_1_1Client.html#a290cd406dbdd4174f7591357d1a65805">Ftp::Client::dataRead</a></div><div class="ttdeci">void dataRead(const CommIoCbParams &amp;io)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00981">FtpClient.cc:981</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_a290cd406dbdd4174f7591357d1a65805"><div class="ttname"><a href="classFtp_1_1Client.html#a290cd406dbdd4174f7591357d1a65805">Ftp::Client::dataRead</a></div><div class="ttdeci">void dataRead(const CommIoCbParams &amp;io)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00996">FtpClient.cc:996</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a30c6b4610c4e3661b3ee2544bf9420df"><div class="ttname"><a href="classFtp_1_1Client.html#a30c6b4610c4e3661b3ee2544bf9420df">Ftp::Client::initReadBuf</a></div><div class="ttdeci">void initReadBuf()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00223">FtpClient.cc:223</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a3345723b4e0971c03ecdffa2605222ea"><div class="ttname"><a href="classFtp_1_1Client.html#a3345723b4e0971c03ecdffa2605222ea">Ftp::Client::sendPort</a></div><div class="ttdeci">bool sendPort()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00668">FtpClient.cc:668</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_a47b2b606d29c8e6f896d64a7eaa95176"><div class="ttname"><a href="classFtp_1_1Client.html#a47b2b606d29c8e6f896d64a7eaa95176">Ftp::Client::dataComplete</a></div><div class="ttdeci">void dataComplete()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01050">FtpClient.cc:1050</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_a47b2b606d29c8e6f896d64a7eaa95176"><div class="ttname"><a href="classFtp_1_1Client.html#a47b2b606d29c8e6f896d64a7eaa95176">Ftp::Client::dataComplete</a></div><div class="ttdeci">void dataComplete()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01065">FtpClient.cc:1065</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a486f314e5304c7af6ab0f5db81a046a1"><div class="ttname"><a href="classFtp_1_1Client.html#a486f314e5304c7af6ab0f5db81a046a1">Ftp::Client::closeServer</a></div><div class="ttdeci">void closeServer() override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00235">FtpClient.cc:235</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a4ab4da9a1eb5e48dc07d4727a4e6b938"><div class="ttname"><a href="classFtp_1_1Client.html#a4ab4da9a1eb5e48dc07d4727a4e6b938">Ftp::Client::scheduleReadControlReply</a></div><div class="ttdeci">void scheduleReadControlReply(int buffered_ok)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00327">FtpClient.cc:327</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a5030425a250b9ba73b3920f51254916f"><div class="ttname"><a href="classFtp_1_1Client.html#a5030425a250b9ba73b3920f51254916f">Ftp::Client::openListenSocket</a></div><div class="ttdeci">bool openListenSocket()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00817">FtpClient.cc:817</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_a514a4e99a589285007897805cfb92437"><div class="ttname"><a href="classFtp_1_1Client.html#a514a4e99a589285007897805cfb92437">Ftp::Client::sentRequestBody</a></div><div class="ttdeci">void sentRequestBody(const CommIoCbParams &amp;io) override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01102">FtpClient.cc:1102</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_a514a4e99a589285007897805cfb92437"><div class="ttname"><a href="classFtp_1_1Client.html#a514a4e99a589285007897805cfb92437">Ftp::Client::sentRequestBody</a></div><div class="ttdeci">void sentRequestBody(const CommIoCbParams &amp;io) override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01117">FtpClient.cc:1117</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a514ac56b4f75b4f5c57192a2672332b9"><div class="ttname"><a href="classFtp_1_1Client.html#a514ac56b4f75b4f5c57192a2672332b9">Ftp::Client::writeCommand</a></div><div class="ttdeci">void writeCommand(const char *buf)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00845">FtpClient.cc:845</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_a5399aebf35750fba8d932a9630d9b262"><div class="ttname"><a href="classFtp_1_1Client.html#a5399aebf35750fba8d932a9630d9b262">Ftp::Client::timeout</a></div><div class="ttdeci">virtual void timeout(const CommTimeoutCbParams &amp;io)</div><div class="ttdoc">read timeout handler</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00912">FtpClient.cc:912</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_a5399aebf35750fba8d932a9630d9b262"><div class="ttname"><a href="classFtp_1_1Client.html#a5399aebf35750fba8d932a9630d9b262">Ftp::Client::timeout</a></div><div class="ttdeci">virtual void timeout(const CommTimeoutCbParams &amp;io)</div><div class="ttdoc">read timeout handler</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00927">FtpClient.cc:927</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a5887559757049009e8c2f8a4acbb78d1"><div class="ttname"><a href="classFtp_1_1Client.html#a5887559757049009e8c2f8a4acbb78d1">Ftp::Client::handlePasvReply</a></div><div class="ttdeci">bool handlePasvReply(Ip::Address &amp;remoteAddr)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00477">FtpClient.cc:477</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_a5de686655e7f02977e9b8142d6e3f32b"><div class="ttname"><a href="classFtp_1_1Client.html#a5de686655e7f02977e9b8142d6e3f32b">Ftp::Client::switchTimeoutToDataChannel</a></div><div class="ttdeci">void switchTimeoutToDataChannel()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01091">FtpClient.cc:1091</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_a5de686655e7f02977e9b8142d6e3f32b"><div class="ttname"><a href="classFtp_1_1Client.html#a5de686655e7f02977e9b8142d6e3f32b">Ftp::Client::switchTimeoutToDataChannel</a></div><div class="ttdeci">void switchTimeoutToDataChannel()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01106">FtpClient.cc:1106</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a7d05c593bee5d7746868f5a26b99e846"><div class="ttname"><a href="classFtp_1_1Client.html#a7d05c593bee5d7746868f5a26b99e846">Ftp::Client::connectDataChannel</a></div><div class="ttdeci">void connectDataChannel()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00784">FtpClient.cc:784</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a826ee342738c82499b07abc05142ccf9"><div class="ttname"><a href="classFtp_1_1Client.html#a826ee342738c82499b07abc05142ccf9">Ftp::Client::doneWithServer</a></div><div class="ttdeci">bool doneWithServer() const override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00258">FtpClient.cc:258</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_a874b13b8b4f4ae50390dd6639cf39804"><div class="ttname"><a href="classFtp_1_1Client.html#a874b13b8b4f4ae50390dd6639cf39804">Ftp::Client::writeCommandCallback</a></div><div class="ttdeci">void writeCommandCallback(const CommIoCbParams &amp;io)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00877">FtpClient.cc:877</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_a874b13b8b4f4ae50390dd6639cf39804"><div class="ttname"><a href="classFtp_1_1Client.html#a874b13b8b4f4ae50390dd6639cf39804">Ftp::Client::writeCommandCallback</a></div><div class="ttdeci">void writeCommandCallback(const CommIoCbParams &amp;io)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00892">FtpClient.cc:892</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a8a3185d2637543d5d755c437254c0ceb"><div class="ttname"><a href="classFtp_1_1Client.html#a8a3185d2637543d5d755c437254c0ceb">Ftp::Client::Client</a></div><div class="ttdeci">Client(FwdState *fwdState)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00186">FtpClient.cc:186</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a8d2155793bdb6ceebc9e747da321019d"><div class="ttname"><a href="classFtp_1_1Client.html#a8d2155793bdb6ceebc9e747da321019d">Ftp::Client::sendEprt</a></div><div class="ttdeci">bool sendEprt()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00629">FtpClient.cc:629</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_a8dc41950c2f440d20577552c02833f07"><div class="ttname"><a href="classFtp_1_1Client.html#a8dc41950c2f440d20577552c02833f07">Ftp::Client::readControlReply</a></div><div class="ttdeci">void readControlReply(const CommIoCbParams &amp;io)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00384">FtpClient.cc:384</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_aa698b39f52b07296a74704df5c4f9507"><div class="ttname"><a href="classFtp_1_1Client.html#aa698b39f52b07296a74704df5c4f9507">Ftp::Client::doneSendingRequestBody</a></div><div class="ttdeci">void doneSendingRequestBody() override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01113">FtpClient.cc:1113</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_ab03be61b487a578428915ce26e28d6b8"><div class="ttname"><a href="classFtp_1_1Client.html#ab03be61b487a578428915ce26e28d6b8">Ftp::Client::maybeReadVirginBody</a></div><div class="ttdeci">void maybeReadVirginBody() override</div><div class="ttdoc">read response data from the network</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00939">FtpClient.cc:939</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_abe247c57af2723e079c5dcef027a6209"><div class="ttname"><a href="classFtp_1_1Client.html#abe247c57af2723e079c5dcef027a6209">Ftp::Client::dataConnection</a></div><div class="ttdeci">const Comm::ConnectionPointer &amp; dataConnection() const override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00924">FtpClient.cc:924</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_aa698b39f52b07296a74704df5c4f9507"><div class="ttname"><a href="classFtp_1_1Client.html#aa698b39f52b07296a74704df5c4f9507">Ftp::Client::doneSendingRequestBody</a></div><div class="ttdeci">void doneSendingRequestBody() override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01128">FtpClient.cc:1128</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_ab03be61b487a578428915ce26e28d6b8"><div class="ttname"><a href="classFtp_1_1Client.html#ab03be61b487a578428915ce26e28d6b8">Ftp::Client::maybeReadVirginBody</a></div><div class="ttdeci">void maybeReadVirginBody() override</div><div class="ttdoc">read response data from the network</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00954">FtpClient.cc:954</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_abe247c57af2723e079c5dcef027a6209"><div class="ttname"><a href="classFtp_1_1Client.html#abe247c57af2723e079c5dcef027a6209">Ftp::Client::dataConnection</a></div><div class="ttdeci">const Comm::ConnectionPointer &amp; dataConnection() const override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00939">FtpClient.cc:939</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_abe3717740668e4c4b08dd4d0dbb9735d"><div class="ttname"><a href="classFtp_1_1Client.html#abe3717740668e4c4b08dd4d0dbb9735d">Ftp::Client::failed</a></div><div class="ttdeci">virtual void failed(err_type error=ERR_NONE, int xerrno=0, ErrorState *ftperr=nullptr)</div><div class="ttdoc">handle a fatal transaction error, closing the control connection</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00264">FtpClient.cc:264</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_ac026ebec0450abcb1f575c62057dbca6"><div class="ttname"><a href="classFtp_1_1Client.html#ac026ebec0450abcb1f575c62057dbca6">Ftp::Client::ctrl</a></div><div class="ttdeci">CtrlChannel ctrl</div><div class="ttdoc">FTP control channel state.</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8h_source.html#l00142">FtpClient.h:142</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_ac1c3e501fc96da6850b8d745f7d1c23f"><div class="ttname"><a href="classFtp_1_1Client.html#ac1c3e501fc96da6850b8d745f7d1c23f">Ftp::Client::sendPassive</a></div><div class="ttdeci">bool sendPassive()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00675">FtpClient.cc:675</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_ac396e741b91be860e73e7532e3bfd5b3"><div class="ttname"><a href="classFtp_1_1Client.html#ac396e741b91be860e73e7532e3bfd5b3">Ftp::Client::parseControlReply</a></div><div class="ttdeci">bool parseControlReply(size_t &amp;bytesUsed)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01127">FtpClient.cc:1127</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_ac396e741b91be860e73e7532e3bfd5b3"><div class="ttname"><a href="classFtp_1_1Client.html#ac396e741b91be860e73e7532e3bfd5b3">Ftp::Client::parseControlReply</a></div><div class="ttdeci">bool parseControlReply(size_t &amp;bytesUsed)</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01142">FtpClient.cc:1142</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_acc6ce348800af022589b1b0567ebbb14"><div class="ttname"><a href="classFtp_1_1Client.html#acc6ce348800af022589b1b0567ebbb14">Ftp::Client::dataCloser</a></div><div class="ttdeci">AsyncCall::Pointer dataCloser()</div><div class="ttdoc">creates a data channel Comm close callback</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00824">FtpClient.cc:824</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_ad54115b8034c1ce537614481c5a2278b"><div class="ttname"><a href="classFtp_1_1Client.html#ad54115b8034c1ce537614481c5a2278b">Ftp::Client::ctrlClosed</a></div><div class="ttdeci">void ctrlClosed(const CommCloseCbParams &amp;io)</div><div class="ttdoc">handler called by Comm when FTP control channel is closed unexpectedly</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00901">FtpClient.cc:901</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_ad54115b8034c1ce537614481c5a2278b"><div class="ttname"><a href="classFtp_1_1Client.html#ad54115b8034c1ce537614481c5a2278b">Ftp::Client::ctrlClosed</a></div><div class="ttdeci">void ctrlClosed(const CommCloseCbParams &amp;io)</div><div class="ttdoc">handler called by Comm when FTP control channel is closed unexpectedly</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00916">FtpClient.cc:916</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_adda71dc8c25bd22d12895f0d7b6f284e"><div class="ttname"><a href="classFtp_1_1Client.html#adda71dc8c25bd22d12895f0d7b6f284e">Ftp::Client::dataChannelConnected</a></div><div class="ttdeci">virtual void dataChannelConnected(const CommConnectCbParams &amp;io)=0</div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_aebf177b73d4f2c1bf97ec740174ea9d3"><div class="ttname"><a href="classFtp_1_1Client.html#aebf177b73d4f2c1bf97ec740174ea9d3">Ftp::Client::abortAll</a></div><div class="ttdeci">void abortAll(const char *reason) override</div><div class="ttdoc">abnormal transaction termination; reason is for debugging only</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01079">FtpClient.cc:1079</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_aebf177b73d4f2c1bf97ec740174ea9d3"><div class="ttname"><a href="classFtp_1_1Client.html#aebf177b73d4f2c1bf97ec740174ea9d3">Ftp::Client::abortAll</a></div><div class="ttdeci">void abortAll(const char *reason) override</div><div class="ttdoc">abnormal transaction termination; reason is for debugging only</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l01094">FtpClient.cc:1094</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_af96d672ca01fa070cc9489614dab4194"><div class="ttname"><a href="classFtp_1_1Client.html#af96d672ca01fa070cc9489614dab4194">Ftp::Client::~Client</a></div><div class="ttdeci">~Client() override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00207">FtpClient.cc:207</a></div></div>
 <div class="ttc" id="aclassFtp_1_1Client_html_afc9e712a9e96a1faa3399cb8766e38cd"><div class="ttname"><a href="classFtp_1_1Client.html#afc9e712a9e96a1faa3399cb8766e38cd">Ftp::Client::dataClosed</a></div><div class="ttdeci">virtual void dataClosed(const CommCloseCbParams &amp;io)</div><div class="ttdoc">handler called by Comm when FTP data channel is closed unexpectedly</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00832">FtpClient.cc:832</a></div></div>
-<div class="ttc" id="aclassFtp_1_1Client_html_afdc3bc426826c78f3b66389d13a8dec2"><div class="ttname"><a href="classFtp_1_1Client.html#afdc3bc426826c78f3b66389d13a8dec2">Ftp::Client::noteDelayAwareReadChance</a></div><div class="ttdeci">void noteDelayAwareReadChance() override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00930">FtpClient.cc:930</a></div></div>
+<div class="ttc" id="aclassFtp_1_1Client_html_afdc3bc426826c78f3b66389d13a8dec2"><div class="ttname"><a href="classFtp_1_1Client.html#afdc3bc426826c78f3b66389d13a8dec2">Ftp::Client::noteDelayAwareReadChance</a></div><div class="ttdeci">void noteDelayAwareReadChance() override</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00945">FtpClient.cc:945</a></div></div>
 <div class="ttc" id="aclassFtp_1_1CtrlChannel_html_a2800f1e0d320d755535efbbd8cb17cd5"><div class="ttname"><a href="classFtp_1_1CtrlChannel.html#a2800f1e0d320d755535efbbd8cb17cd5">Ftp::CtrlChannel::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8h_source.html#l00080">FtpClient.h:80</a></div></div>
 <div class="ttc" id="aclassFtp_1_1CtrlChannel_html_a2dea60ab615b4dbbe3697a53d1135b89"><div class="ttname"><a href="classFtp_1_1CtrlChannel.html#a2dea60ab615b4dbbe3697a53d1135b89">Ftp::CtrlChannel::~CtrlChannel</a></div><div class="ttdeci">~CtrlChannel()</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8cc_source.html#l00149">FtpClient.cc:149</a></div></div>
 <div class="ttc" id="aclassFtp_1_1CtrlChannel_html_a307828727a2fbfcac9f3ee358ebb457e"><div class="ttname"><a href="classFtp_1_1CtrlChannel.html#a307828727a2fbfcac9f3ee358ebb457e">Ftp::CtrlChannel::buf</a></div><div class="ttdeci">char * buf</div><div class="ttdef"><b>Definition</b> <a href="FtpClient_8h_source.html#l00079">FtpClient.h:79</a></div></div>
