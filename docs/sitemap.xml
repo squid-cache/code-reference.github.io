@@ -29,12 +29,6 @@
     <loc>https://code-reference.squid-cache.org/cpu_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/compat_2debug_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/src_2debug_2debug_8cc_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/debug_8h_source.html</loc>
   </url>
   <url>
@@ -416,18 +410,6 @@
     <loc>https://code-reference.squid-cache.org/AccessLogEntry_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Acl_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Acl_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Acl_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Acl_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/AclDenyInfoList_8h_source.html</loc>
   </url>
   <url>
@@ -501,18 +483,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/BoolOps_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Certificate_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/security_2Certificate_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Certificate_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/security_2Certificate_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/CertificateData_8cc_source.html</loc>
@@ -627,18 +597,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/FilledChecklist_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Gadgets_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Gadgets_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Gadgets_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Gadgets_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/HasComponent_8cc_source.html</loc>
@@ -947,34 +905,46 @@
     <loc>https://code-reference.squid-cache.org/MessageRep_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/ecap_2ServiceRep_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/icap_2ServiceRep_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ecap_2ServiceRep_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/icap_2ServiceRep_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/XactionRep_8cc_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/XactionRep_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/History_8cc_source.html</loc>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Elements_8cc_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/icap_2History_8cc_source.html</loc>
+    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Elements_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ftp_2Elements_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/proxyp_2Elements_8cc_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/History_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/icap_2History_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Elements_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Elements_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ftp_2Elements_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/proxyp_2Elements_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/History_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/icap_2History_8cc_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/icap__log_8cc_source.html</loc>
@@ -1016,6 +986,18 @@
     <loc>https://code-reference.squid-cache.org/OptXact_8h_source.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/ecap_2ServiceRep_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/icap_2ServiceRep_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ecap_2ServiceRep_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/icap_2ServiceRep_8h_source.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/Xaction_8cc_source.html</loc>
   </url>
   <url>
@@ -1038,6 +1020,18 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Iterator_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Message_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2Message_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Message_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2Message_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Service_8cc_source.html</loc>
@@ -1085,6 +1079,12 @@
     <loc>https://code-reference.squid-cache.org/ProtocolType_8h_source.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/anyp_2ProtocolVersion_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2ProtocolVersion_8h_source.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/TrafficMode_8h_source.html</loc>
   </url>
   <url>
@@ -1106,6 +1106,18 @@
     <loc>https://code-reference.squid-cache.org/AsyncEngine_8h_source.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Acl_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Acl_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Acl_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Acl_8h_source.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/AclMaxUserIp_8cc_source.html</loc>
   </url>
   <url>
@@ -1119,6 +1131,12 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/AuthAclState_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2basic_2fake_2fake_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2url__rewriters_2fake_2fake_8cc_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/basic__getpwnam__auth_8cc_source.html</loc>
@@ -1163,90 +1181,6 @@
     <loc>https://code-reference.squid-cache.org/basic__sasl__auth_8cc_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/basic__smb__auth_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/basic__sspi__auth_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/valid_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/valid_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/CredentialsCache_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/CredentialsCache_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/CredentialState_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/edir__ldapext_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/edir__ldapext_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eDirectory_2digest__common_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/file_2digest__common_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/LDAP_2digest__common_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/digest__file__auth_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/text__backend_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/text__backend_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eDirectory_2digest__pw__auth_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/LDAP_2digest__pw__auth_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eDirectory_2ldap__backend_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/LDAP_2ldap__backend_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eDirectory_2ldap__backend_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/LDAP_2ldap__backend_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__kerberos_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__auth_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__auth__test_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__pac_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__sspi__auth_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__wrapper_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ntlm__fake__auth_8cc_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/basic_2Scheme_8cc_source.html</loc>
   </url>
   <url>
@@ -1275,6 +1209,18 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Scheme_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/basic__smb__auth_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/basic__sspi__auth_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/valid_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/valid_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/basic_2User_8cc_source.html</loc>
@@ -1335,6 +1281,90 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/UserRequest_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/CredentialsCache_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/CredentialsCache_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/CredentialState_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eDirectory_2digest__common_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/file_2digest__common_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/LDAP_2digest__common_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eDirectory_2digest__pw__auth_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/LDAP_2digest__pw__auth_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/edir__ldapext_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/edir__ldapext_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eDirectory_2ldap__backend_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/LDAP_2ldap__backend_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eDirectory_2ldap__backend_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/LDAP_2ldap__backend_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/digest__file__auth_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/text__backend_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/text__backend_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Gadgets_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Gadgets_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Gadgets_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Gadgets_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__kerberos_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__auth_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__auth__test_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__pac_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__sspi__auth_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__wrapper_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ntlm__fake__auth_8cc_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/QueueNode_8h_source.html</loc>
@@ -1847,6 +1877,27 @@
     <loc>https://code-reference.squid-cache.org/CpuAffinitySet_8h_source.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/compat_2debug_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/src_2debug_2debug_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/debug_2Messages_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ipc_2Messages_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/debug_2Stream_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2Stream_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/sbuf_2Stream_8h_source.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/defines_8h_source.html</loc>
   </url>
   <url>
@@ -2240,10 +2291,94 @@
     <loc>https://code-reference.squid-cache.org/ByteCode_8h_source.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2ecap_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2basic_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2digest_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2negotiate_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2ntlm_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eui_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/format_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/log_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ssl_2Config_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2ecap_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2basic_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2digest_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2negotiate_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2ntlm_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eui_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/format_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/log_2Config_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ssl_2Config_8h_source.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/Format_8cc_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Format_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/format_2Quoting_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/html_2Quoting_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/format_2Quoting_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/html_2Quoting_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Token_8cc_source.html</loc>
@@ -2357,30 +2492,6 @@
     <loc>https://code-reference.squid-cache.org/fs__io_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Elements_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Elements_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ftp_2Elements_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/proxyp_2Elements_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Elements_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Elements_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ftp_2Elements_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/proxyp_2Elements_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/ftp_2Parsing_8cc_source.html</loc>
   </url>
   <url>
@@ -2415,12 +2526,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/HeaderMangling_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/helper_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ssl_2helper_8cc_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/helper_8h_source.html</loc>
@@ -2477,18 +2582,6 @@
     <loc>https://code-reference.squid-cache.org/htcp_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/format_2Quoting_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/html_2Quoting_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/format_2Quoting_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/html_2Quoting_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/http_8cc_source.html</loc>
   </url>
   <url>
@@ -2501,19 +2594,19 @@
     <loc>https://code-reference.squid-cache.org/ContentLengthInterpreter_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Message_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2Message_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Message_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2Message_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/MethodType_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2one_2Parser_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/proxyp_2Parser_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2one_2Parser_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/proxyp_2Parser_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/RequestParser_8cc_source.html</loc>
@@ -2534,10 +2627,16 @@
     <loc>https://code-reference.squid-cache.org/TeChunkedParser_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/anyp_2ProtocolVersion_8h_source.html</loc>
+    <loc>https://code-reference.squid-cache.org/http_2one_2Tokenizer_8cc_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/http_2ProtocolVersion_8h_source.html</loc>
+    <loc>https://code-reference.squid-cache.org/parser_2Tokenizer_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2one_2Tokenizer_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/parser_2Tokenizer_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/RegisteredHeaders_8cc_source.html</loc>
@@ -2571,12 +2670,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Stream_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2basic_2fake_2fake_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2url__rewriters_2fake_2fake_8cc_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/rredir_8cc_source.html</loc>
@@ -2771,12 +2864,6 @@
     <loc>https://code-reference.squid-cache.org/QosConfig_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/ip_2tools_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/tools_8cc_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/ip_2tools_8h_source.html</loc>
   </url>
   <url>
@@ -2886,12 +2973,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/MemMap_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/debug_2Messages_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ipc_2Messages_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Port_8cc_source.html</loc>
@@ -3011,78 +3092,6 @@
     <loc>https://code-reference.squid-cache.org/access__log_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2ecap_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2basic_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2digest_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2negotiate_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2ntlm_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eui_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/format_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/log_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ssl_2Config_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2ecap_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2basic_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2digest_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2negotiate_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2ntlm_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eui_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/format_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/log_2Config_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ssl_2Config_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/CustomLog_8h_source.html</loc>
   </url>
   <url>
@@ -3188,6 +3197,87 @@
     <loc>https://code-reference.squid-cache.org/AllocatorProxy_8h_source.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/acl_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/anyp_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/base_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/clients_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/comm_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/dns_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/error_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/fs_2rock_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/helper_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2one_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ip_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ipc_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ipc_2mem_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/log_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/mem_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/mgr_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/parser_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/proxyp_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/sbuf_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/security_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/servers_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/snmp_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/store_2forward_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/time_2forward_8h_source.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/Meter_8h_source.html</loc>
   </url>
   <url>
@@ -3222,6 +3312,18 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Sensitive_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/mem_2Stats_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/sbuf_2Stats_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/mem_2Stats_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/sbuf_2Stats_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/mem__node_8cc_source.html</loc>
@@ -3365,6 +3467,18 @@
     <loc>https://code-reference.squid-cache.org/Registration_8h_source.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/mgr_2Request_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/snmp_2Request_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/mgr_2Response_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/snmp_2Response_8cc_source.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/ServiceTimesAction_8cc_source.html</loc>
   </url>
   <url>
@@ -3431,18 +3545,6 @@
     <loc>https://code-reference.squid-cache.org/BinaryTokenizer_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/http_2one_2Tokenizer_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/parser_2Tokenizer_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2one_2Tokenizer_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/parser_2Tokenizer_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/pconn_8cc_source.html</loc>
   </url>
   <url>
@@ -3503,18 +3605,6 @@
     <loc>https://code-reference.squid-cache.org/Header_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/http_2one_2Parser_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/proxyp_2Parser_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2one_2Parser_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/proxyp_2Parser_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/redirect_8cc_source.html</loc>
   </url>
   <url>
@@ -3569,87 +3659,6 @@
     <loc>https://code-reference.squid-cache.org/Algorithms_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/acl_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/anyp_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/base_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/clients_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/comm_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/dns_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/error_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/fs_2rock_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/helper_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2one_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ip_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ipc_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ipc_2mem_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/log_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mem_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mgr_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/parser_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/proxyp_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/sbuf_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/security_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/servers_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/snmp_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/store_2forward_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/time_2forward_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/List_8cc_source.html</loc>
   </url>
   <url>
@@ -3666,27 +3675,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/SBuf_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mem_2Stats_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/sbuf_2Stats_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mem_2Stats_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/sbuf_2Stats_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/debug_2Stream_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2Stream_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/sbuf_2Stream_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/StringConvert_8h_source.html</loc>
@@ -3714,6 +3702,18 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/CertError_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Certificate_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/security_2Certificate_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Certificate_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/security_2Certificate_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/CommunicationSecrets_8cc_source.html</loc>
@@ -3788,6 +3788,18 @@
     <loc>https://code-reference.squid-cache.org/ServerOptions_8h_source.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/security_2Session_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/snmp_2Session_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/security_2Session_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/snmp_2Session_8h_source.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/FtpServer_8cc_source.html</loc>
   </url>
   <url>
@@ -3810,30 +3822,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Pdu_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mgr_2Request_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/snmp_2Request_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mgr_2Response_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/snmp_2Response_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/security_2Session_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/snmp_2Session_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/security_2Session_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/snmp_2Session_8h_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Var_8cc_source.html</loc>
@@ -3915,6 +3903,24 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/ErrorDetailManager_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ssl_2gadgets_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/time_2gadgets_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ssl_2gadgets_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/time_2gadgets_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/helper_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ssl_2helper_8cc_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/PeekingPeerConnector_8cc_source.html</loc>
@@ -4538,18 +4544,6 @@
     <loc>https://code-reference.squid-cache.org/Engine_8h_source.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/ssl_2gadgets_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/time_2gadgets_8cc_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ssl_2gadgets_8h_source.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/time_2gadgets_8h_source.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/iso3307_8cc_source.html</loc>
   </url>
   <url>
@@ -4557,6 +4551,12 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/TimeOrTag_8h_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ip_2tools_8cc_source.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/tools_8cc_source.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Transients_8cc_source.html</loc>
@@ -4671,12 +4671,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/cpu_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/compat_2debug_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/src_2debug_2debug_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/debug_8h.html</loc>
@@ -5090,18 +5084,6 @@
     <loc>https://code-reference.squid-cache.org/AccessLogEntry_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Acl_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Acl_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Acl_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Acl_8h.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/AclDenyInfoList_8h.html</loc>
   </url>
   <url>
@@ -5175,18 +5157,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/BoolOps_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Certificate_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/security_2Certificate_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Certificate_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/security_2Certificate_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/CertificateData_8cc.html</loc>
@@ -5301,18 +5271,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/FilledChecklist_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Gadgets_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Gadgets_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/acl_2Gadgets_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Gadgets_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/HasComponent_8cc.html</loc>
@@ -5621,34 +5579,46 @@
     <loc>https://code-reference.squid-cache.org/MessageRep_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/ecap_2ServiceRep_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/icap_2ServiceRep_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ecap_2ServiceRep_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/icap_2ServiceRep_8h.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/XactionRep_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/XactionRep_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/History_8cc.html</loc>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Elements_8cc.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/icap_2History_8cc.html</loc>
+    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Elements_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ftp_2Elements_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/proxyp_2Elements_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/History_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/icap_2History_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Elements_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Elements_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ftp_2Elements_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/proxyp_2Elements_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/History_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/icap_2History_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/icap__log_8cc.html</loc>
@@ -5690,6 +5660,18 @@
     <loc>https://code-reference.squid-cache.org/OptXact_8h.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/ecap_2ServiceRep_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/icap_2ServiceRep_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ecap_2ServiceRep_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/icap_2ServiceRep_8h.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/Xaction_8cc.html</loc>
   </url>
   <url>
@@ -5712,6 +5694,18 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Iterator_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Message_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2Message_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Message_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2Message_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/notes_8dox.html</loc>
@@ -5762,6 +5756,12 @@
     <loc>https://code-reference.squid-cache.org/ProtocolType_8h.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/anyp_2ProtocolVersion_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2ProtocolVersion_8h.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/TrafficMode_8h.html</loc>
   </url>
   <url>
@@ -5783,6 +5783,18 @@
     <loc>https://code-reference.squid-cache.org/AsyncEngine_8h.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Acl_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Acl_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Acl_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Acl_8h.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/AclMaxUserIp_8cc.html</loc>
   </url>
   <url>
@@ -5796,6 +5808,12 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/AuthAclState_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2basic_2fake_2fake_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2url__rewriters_2fake_2fake_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/basic__getpwnam__auth_8cc.html</loc>
@@ -5840,90 +5858,6 @@
     <loc>https://code-reference.squid-cache.org/basic__sasl__auth_8cc.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/basic__smb__auth_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/basic__sspi__auth_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/valid_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/valid_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/CredentialsCache_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/CredentialsCache_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/CredentialState_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/edir__ldapext_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/edir__ldapext_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eDirectory_2digest__common_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/file_2digest__common_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/LDAP_2digest__common_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/digest__file__auth_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/text__backend_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/text__backend_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eDirectory_2digest__pw__auth_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/LDAP_2digest__pw__auth_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eDirectory_2ldap__backend_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/LDAP_2ldap__backend_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eDirectory_2ldap__backend_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/LDAP_2ldap__backend_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__kerberos_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__auth_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__auth__test_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__pac_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__sspi__auth_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/negotiate__wrapper_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ntlm__fake__auth_8cc.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/basic_2Scheme_8cc.html</loc>
   </url>
   <url>
@@ -5952,6 +5886,18 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Scheme_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/basic__smb__auth_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/basic__sspi__auth_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/valid_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/valid_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/basic_2User_8cc.html</loc>
@@ -6012,6 +5958,90 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/UserRequest_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/CredentialsCache_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/CredentialsCache_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/CredentialState_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eDirectory_2digest__common_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/file_2digest__common_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/LDAP_2digest__common_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eDirectory_2digest__pw__auth_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/LDAP_2digest__pw__auth_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/edir__ldapext_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/edir__ldapext_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eDirectory_2ldap__backend_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/LDAP_2ldap__backend_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eDirectory_2ldap__backend_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/LDAP_2ldap__backend_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/digest__file__auth_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/text__backend_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/text__backend_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Gadgets_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Gadgets_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Gadgets_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Gadgets_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__kerberos_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__auth_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__auth__test_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__kerberos__pac_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__sspi__auth_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/negotiate__wrapper_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ntlm__fake__auth_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/QueueNode_8h.html</loc>
@@ -6533,6 +6563,27 @@
     <loc>https://code-reference.squid-cache.org/CpuAffinitySet_8h.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/compat_2debug_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/src_2debug_2debug_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/debug_2Messages_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ipc_2Messages_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/debug_2Stream_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2Stream_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/sbuf_2Stream_8h.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/defines_8h.html</loc>
   </url>
   <url>
@@ -6926,10 +6977,94 @@
     <loc>https://code-reference.squid-cache.org/ByteCode_8h.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2ecap_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2basic_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2digest_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2negotiate_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2ntlm_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eui_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/format_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/log_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ssl_2Config_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2ecap_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2basic_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2digest_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2negotiate_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2ntlm_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/eui_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/format_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/log_2Config_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ssl_2Config_8h.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/Format_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Format_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/format_2Quoting_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/html_2Quoting_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/format_2Quoting_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/html_2Quoting_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Token_8cc.html</loc>
@@ -7043,30 +7178,6 @@
     <loc>https://code-reference.squid-cache.org/fs__io_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Elements_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Elements_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ftp_2Elements_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/proxyp_2Elements_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Elements_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Elements_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ftp_2Elements_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/proxyp_2Elements_8h.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/ftp_2Parsing_8cc.html</loc>
   </url>
   <url>
@@ -7101,12 +7212,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/HeaderMangling_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/helper_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ssl_2helper_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/helper_8h.html</loc>
@@ -7163,18 +7268,6 @@
     <loc>https://code-reference.squid-cache.org/htcp_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/format_2Quoting_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/html_2Quoting_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/format_2Quoting_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/html_2Quoting_8h.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/http_8cc.html</loc>
   </url>
   <url>
@@ -7187,19 +7280,19 @@
     <loc>https://code-reference.squid-cache.org/ContentLengthInterpreter_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Message_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2Message_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Message_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2Message_8h.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/MethodType_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2one_2Parser_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/proxyp_2Parser_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2one_2Parser_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/proxyp_2Parser_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/RequestParser_8cc.html</loc>
@@ -7220,10 +7313,16 @@
     <loc>https://code-reference.squid-cache.org/TeChunkedParser_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/anyp_2ProtocolVersion_8h.html</loc>
+    <loc>https://code-reference.squid-cache.org/http_2one_2Tokenizer_8cc.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/http_2ProtocolVersion_8h.html</loc>
+    <loc>https://code-reference.squid-cache.org/parser_2Tokenizer_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2one_2Tokenizer_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/parser_2Tokenizer_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/RegisteredHeaders_8cc.html</loc>
@@ -7257,12 +7356,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Stream_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2basic_2fake_2fake_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2url__rewriters_2fake_2fake_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/rredir_8cc.html</loc>
@@ -7457,12 +7550,6 @@
     <loc>https://code-reference.squid-cache.org/QosConfig_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/ip_2tools_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/tools_8cc.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/ip_2tools_8h.html</loc>
   </url>
   <url>
@@ -7572,12 +7659,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/MemMap_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/debug_2Messages_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ipc_2Messages_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Port_8cc.html</loc>
@@ -7697,78 +7778,6 @@
     <loc>https://code-reference.squid-cache.org/access__log_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2ecap_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2basic_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2digest_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2negotiate_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2ntlm_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eui_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/format_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/log_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ssl_2Config_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2ecap_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2icap_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2basic_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2digest_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2negotiate_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2ntlm_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/eui_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/format_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/log_2Config_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ssl_2Config_8h.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/CustomLog_8h.html</loc>
   </url>
   <url>
@@ -7874,6 +7883,87 @@
     <loc>https://code-reference.squid-cache.org/AllocatorProxy_8h.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/acl_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/adaptation_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/anyp_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/auth_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/base_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/clients_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/comm_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/dns_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/error_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/fs_2rock_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/helper_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/http_2one_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ip_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ipc_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ipc_2mem_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/log_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/mem_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/mgr_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/parser_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/proxyp_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/sbuf_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/security_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/servers_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/snmp_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/store_2forward_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/time_2forward_8h.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/Meter_8h.html</loc>
   </url>
   <url>
@@ -7908,6 +7998,18 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Sensitive_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/mem_2Stats_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/sbuf_2Stats_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/mem_2Stats_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/sbuf_2Stats_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/mem__node_8cc.html</loc>
@@ -8051,6 +8153,18 @@
     <loc>https://code-reference.squid-cache.org/Registration_8h.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/mgr_2Request_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/snmp_2Request_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/mgr_2Response_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/snmp_2Response_8cc.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/ServiceTimesAction_8cc.html</loc>
   </url>
   <url>
@@ -8117,18 +8231,6 @@
     <loc>https://code-reference.squid-cache.org/BinaryTokenizer_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/http_2one_2Tokenizer_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/parser_2Tokenizer_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2one_2Tokenizer_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/parser_2Tokenizer_8h.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/pconn_8cc.html</loc>
   </url>
   <url>
@@ -8189,18 +8291,6 @@
     <loc>https://code-reference.squid-cache.org/Header_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/http_2one_2Parser_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/proxyp_2Parser_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2one_2Parser_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/proxyp_2Parser_8h.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/redirect_8cc.html</loc>
   </url>
   <url>
@@ -8255,87 +8345,6 @@
     <loc>https://code-reference.squid-cache.org/Algorithms_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/acl_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/adaptation_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/anyp_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/auth_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/base_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/clients_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/comm_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/dns_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/error_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/fs_2rock_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/helper_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2one_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ip_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ipc_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ipc_2mem_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/log_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mem_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mgr_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/parser_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/proxyp_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/sbuf_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/security_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/servers_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/snmp_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/store_2forward_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/time_2forward_8h.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/List_8cc.html</loc>
   </url>
   <url>
@@ -8352,27 +8361,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/SBuf_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mem_2Stats_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/sbuf_2Stats_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mem_2Stats_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/sbuf_2Stats_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/debug_2Stream_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/http_2Stream_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/sbuf_2Stream_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/StringConvert_8h.html</loc>
@@ -8400,6 +8388,18 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/CertError_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Certificate_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/security_2Certificate_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/acl_2Certificate_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/security_2Certificate_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/CommunicationSecrets_8cc.html</loc>
@@ -8474,6 +8474,18 @@
     <loc>https://code-reference.squid-cache.org/ServerOptions_8h.html</loc>
   </url>
   <url>
+    <loc>https://code-reference.squid-cache.org/security_2Session_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/snmp_2Session_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/security_2Session_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/snmp_2Session_8h.html</loc>
+  </url>
+  <url>
     <loc>https://code-reference.squid-cache.org/FtpServer_8cc.html</loc>
   </url>
   <url>
@@ -8496,30 +8508,6 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Pdu_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mgr_2Request_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/snmp_2Request_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/mgr_2Response_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/snmp_2Response_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/security_2Session_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/snmp_2Session_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/security_2Session_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/snmp_2Session_8h.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Var_8cc.html</loc>
@@ -8601,6 +8589,24 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/ErrorDetailManager_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ssl_2gadgets_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/time_2gadgets_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ssl_2gadgets_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/time_2gadgets_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/helper_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ssl_2helper_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/PeekingPeerConnector_8cc.html</loc>
@@ -9224,18 +9230,6 @@
     <loc>https://code-reference.squid-cache.org/Engine_8h.html</loc>
   </url>
   <url>
-    <loc>https://code-reference.squid-cache.org/ssl_2gadgets_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/time_2gadgets_8cc.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/ssl_2gadgets_8h.html</loc>
-  </url>
-  <url>
-    <loc>https://code-reference.squid-cache.org/time_2gadgets_8h.html</loc>
-  </url>
-  <url>
     <loc>https://code-reference.squid-cache.org/iso3307_8cc.html</loc>
   </url>
   <url>
@@ -9243,6 +9237,12 @@
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/TimeOrTag_8h.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/ip_2tools_8cc.html</loc>
+  </url>
+  <url>
+    <loc>https://code-reference.squid-cache.org/tools_8cc.html</loc>
   </url>
   <url>
     <loc>https://code-reference.squid-cache.org/Transients_8cc.html</loc>
