@@ -70,7 +70,7 @@ var searchData=
   ['max_5fstale_5fany_67',['MAX_STALE_ANY',['../classHttpHdrCc.html#a969b435cab4502bb039f99a23ba51ffe',1,'HttpHdrCc']]],
   ['max_5fstale_5funknown_68',['MAX_STALE_UNKNOWN',['../classHttpHdrCc.html#ab07fcbdf794e47744f54982c26cd98a7',1,'HttpHdrCc']]],
   ['max_5fstale_5funset_69',['MAX_STALE_UNSET',['../classHttpHdrScTarget.html#a72404c428b172fbf42115079c3298fe4',1,'HttpHdrScTarget']]],
-  ['maxcapacity_70',['maxcapacity',['../classBodyPipe.html#a3170d4c091b93127c710a2736cc6fc72',1,'BodyPipe::MaxCapacity'],['../classSBufReservationRequirements.html#a7788d8a72c3c166d883976077d57d2c5',1,'SBufReservationRequirements::maxCapacity']]],
+  ['maxcapacity_70',['maxcapacity',['../classSBufReservationRequirements.html#a7788d8a72c3c166d883976077d57d2c5',1,'SBufReservationRequirements::maxCapacity'],['../classBodyPipe.html#a3170d4c091b93127c710a2736cc6fc72',1,'BodyPipe::MaxCapacity']]],
   ['maxcertsdownloads_71',['MaxCertsDownloads',['../classSecurity_1_1PeerConnector.html#ae6b161a1a464ab9da3be40082ccbf2f7',1,'Security::PeerConnector']]],
   ['maxcnlen_72',['MaxCnLen',['../ssl_2gadgets_8cc.html#a8950ee33dc73b14d41ff87583cc01473',1,'gadgets.cc']]],
   ['maxconn_73',['maxConn',['../classAdaptation_1_1ServiceConfig.html#a6611b2bef35d182dfd20ca166fe52701',1,'Adaptation::ServiceConfig']]],

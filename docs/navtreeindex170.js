@@ -1,6 +1,5 @@
 var NAVTREEINDEX170 =
 {
-"struct__store__check__cachable__hist.html#a8728284f13bfd05251be7f7ecc50b48a":[9,0,59,1],
 "struct__store__check__cachable__hist.html#abba3d7f8bb0948fcc25b53e5b3e88223":[9,0,59,8],
 "struct__store__check__cachable__hist.html#aca0277ec1e099e75f68730dc881cbd2f":[9,0,59,4],
 "struct__store__check__cachable__hist.html#ad13d0d5f0403e8fc358fa9a7957ed1f9":[9,0,59,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX170 =
 "structnode.html#a7a6cf376dbd54a6c4dd185e4c7e5b745":[9,0,447,0],
 "structnode.html#a82976528e8a9ae7be84f68deabcf32b8":[9,0,447,4],
 "structnode.html#a984e8dae33d83900bafe291eca857aff":[9,0,447,3],
-"structnode.html#a9a180e2574e923446ba783c12f31c6ff":[9,0,447,1]
+"structnode.html#a9a180e2574e923446ba783c12f31c6ff":[9,0,447,1],
+"structnode.html#aa3e8aa83f864292b5a01210f4453fcc0":[9,0,447,2]
 };

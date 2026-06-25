@@ -43,7 +43,6 @@ var classFwdState =
     [ "noteDestinationsEnd", "classFwdState.html#a1471174d7e3c9a0bc1acbb5f8931930f", null ],
     [ "notifyConnOpener", "classFwdState.html#ad7baeef92bc0c8bc529231234a8451b0", null ],
     [ "pconnPush", "classFwdState.html#a3183b54103e6432d17c19582f7e80b9f", null ],
-    [ "pinnedCanRetry", "classFwdState.html#af82d1e3d2fbce848d97acb1f84b66d19", null ],
     [ "reactToZeroSizeObject", "classFwdState.html#a120185287d479c6821d3a96040d62a8e", null ],
     [ "reforward", "classFwdState.html#aefb4585da3148562f1a689a5b03f12d7", null ],
     [ "RegisterWithCacheManager", "classFwdState.html#a88edd7e493b26a815d393b19fb0522d8", null ],

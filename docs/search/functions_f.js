@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['object_0',['object',['../classIpc_1_1Mem_1_1Object.html#ac8b92d220ed428cb08a9c46a71f984ec',1,'Ipc::Mem::Object::Object(const char *const id)'],['../classIpc_1_1Mem_1_1Object.html#a6a01de55dd48dccebeb3ccaaf67f7591',1,'Ipc::Mem::Object::Object(const Object &amp;)'],['../classIpc_1_1Mem_1_1Owner.html#a973fb9a47bf75da52cd87ef8b90e1c0d',1,'Ipc::Mem::Owner::object()']]],
+  ['object_0',['object',['../classIpc_1_1Mem_1_1Object.html#a6a01de55dd48dccebeb3ccaaf67f7591',1,'Ipc::Mem::Object::Object()'],['../classIpc_1_1Mem_1_1Owner.html#a973fb9a47bf75da52cd87ef8b90e1c0d',1,'Ipc::Mem::Owner::object()'],['../classIpc_1_1Mem_1_1Object.html#ac8b92d220ed428cb08a9c46a71f984ec',1,'Ipc::Mem::Object::Object()']]],
   ['objectbytesondisk_1',['objectBytesOnDisk',['../classMemObject.html#a4d85848811bc4b09ac630187caeeb166',1,'MemObject']]],
   ['objectlen_2',['objectLen',['../classStoreEntry.html#ad52e359c5dad8a74f7b28168f37f64fc',1,'StoreEntry']]],
   ['objectsize_3',['objectSize',['../classMem_1_1AllocatorProxy.html#ac31aa57618ea7efecf76c4c654923b97',1,'Mem::AllocatorProxy']]],

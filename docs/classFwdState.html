@@ -239,8 +239,6 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a7a54813e455a655612f921b1deea9c35" id="r_a7a54813e455a655612f921b1deea9c35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFwdState.html#a7a54813e455a655612f921b1deea9c35">usePinned</a> ()</td></tr>
 <tr class="memdesc:a7a54813e455a655612f921b1deea9c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">send request on an existing connection dedicated to the requesting client  <br /></td></tr>
 <tr class="separator:a7a54813e455a655612f921b1deea9c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af82d1e3d2fbce848d97acb1f84b66d19" id="r_af82d1e3d2fbce848d97acb1f84b66d19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFwdState.html#af82d1e3d2fbce848d97acb1f84b66d19">pinnedCanRetry</a> () const</td></tr>
-<tr class="separator:af82d1e3d2fbce848d97acb1f84b66d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaff701d57c00b631c62ea8f773e8291" id="r_afaff701d57c00b631c62ea8f773e8291"><td class="memTemplParams" colspan="2">template&lt;typename StepStart &gt; </td></tr>
 <tr class="memitem:afaff701d57c00b631c62ea8f773e8291"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFwdState.html#afaff701d57c00b631c62ea8f773e8291">advanceDestination</a> (const char *stepDescription, const <a class="el" href="namespaceComm.html#a2256a253c0fa350403f151d712286d9e">Comm::ConnectionPointer</a> &amp;conn, const StepStart &amp;startStep)</td></tr>
 <tr class="memdesc:afaff701d57c00b631c62ea8f773e8291"><td class="mdescLeft">&#160;</td><td class="mdescRight">starts a preparation step for an established connection; retries on failures  <br /></td></tr>
@@ -408,7 +406,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a321bbe799c340b7e1e74c475af887e7aae761b1331e5c96f8b36cc6d33eec4ab8" name="a321bbe799c340b7e1e74c475af887e7aae761b1331e5c96f8b36cc6d33eec4ab8"></a>raceHappened&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00243">243</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00239">239</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 </div>
 </div>
@@ -644,7 +642,7 @@ template&lt;typename StepStart &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="FwdState_8cc_source.html#l00691">691</a> of file <a class="el" href="FwdState_8cc_source.html">FwdState.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="classHttpRequest.html#a89ecd80930f0e5799f432229c40a3252">HttpRequest::bodyNibbled()</a>, <a class="el" href="classFwdState.html#ab5fd1a435317c8a962787499c20cffeb">checkRetriable()</a>, <a class="el" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>, <a class="el" href="classFwdState.html#a567a6c56ca42c58736d616330dafd7b5">EnoughTimeToReForward()</a>, <a class="el" href="classFwdState.html#a914774b0048e808b14f886395e6a4524">entry</a>, <a class="el" href="classFwdState.html#a8c0fca3391fd91e6954c6981909e0e5d">exhaustedTries()</a>, <a class="el" href="classFwdState.html#a9e0814bbc6a55d9980fb0146be1a7c1e">flags</a>, <a class="el" href="classHttpRequest.html#a76422841293a4230a1a76479e6964c04">HttpRequest::flags</a>, <a class="el" href="classStoreEntry.html#ae4dc05b6c5ca398130c0a155156592d2">StoreEntry::isEmpty()</a>, <a class="el" href="classRequestFlags.html#ab52379836cb29c2e8d17c1813400ef12">RequestFlags::pinned</a>, <a class="el" href="classFwdState.html#af82d1e3d2fbce848d97acb1f84b66d19">pinnedCanRetry()</a>, <a class="el" href="classFwdState.html#a18c28fe611231c889eb7b01db30ac6d7">request</a>, <a class="el" href="classFwdState.html#addb4912851a3a0159e24b850de1a8bf7">self</a>, <a class="el" href="globals_8h.html#a7f68568851b9c7f9291f7bb63f932c18">shutting_down</a>, <a class="el" href="classFwdState.html#ab2f8e3e89f1772aa80f1c19fddf86dd0">start_t</a>, <a class="el" href="enums_8h.html#af7404120c842ff6e605306823971959ea024b35d6b8662a132fc5a0480a7933ee">STORE_PENDING</a>, and <a class="el" href="classStoreEntry.html#adb1aad18212d6a162cfb59b3f23b5cf4">StoreEntry::store_status</a>.</p>
+<p class="reference">References <a class="el" href="classHttpRequest.html#a89ecd80930f0e5799f432229c40a3252">HttpRequest::bodyNibbled()</a>, <a class="el" href="classFwdState.html#ab5fd1a435317c8a962787499c20cffeb">checkRetriable()</a>, <a class="el" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>, <a class="el" href="classFwdState.html#a567a6c56ca42c58736d616330dafd7b5">EnoughTimeToReForward()</a>, <a class="el" href="classFwdState.html#a914774b0048e808b14f886395e6a4524">entry</a>, <a class="el" href="classFwdState.html#a8c0fca3391fd91e6954c6981909e0e5d">exhaustedTries()</a>, <a class="el" href="classFwdState.html#a9e0814bbc6a55d9980fb0146be1a7c1e">flags</a>, <a class="el" href="classHttpRequest.html#a76422841293a4230a1a76479e6964c04">HttpRequest::flags</a>, <a class="el" href="classStoreEntry.html#ae4dc05b6c5ca398130c0a155156592d2">StoreEntry::isEmpty()</a>, <a class="el" href="classRequestFlags.html#ab52379836cb29c2e8d17c1813400ef12">RequestFlags::pinned</a>, <a class="el" href="classFwdState.html#a18c28fe611231c889eb7b01db30ac6d7">request</a>, <a class="el" href="classFwdState.html#addb4912851a3a0159e24b850de1a8bf7">self</a>, <a class="el" href="globals_8h.html#a7f68568851b9c7f9291f7bb63f932c18">shutting_down</a>, <a class="el" href="classFwdState.html#ab2f8e3e89f1772aa80f1c19fddf86dd0">start_t</a>, <a class="el" href="enums_8h.html#af7404120c842ff6e605306823971959ea024b35d6b8662a132fc5a0480a7933ee">STORE_PENDING</a>, and <a class="el" href="classStoreEntry.html#adb1aad18212d6a162cfb59b3f23b5cf4">StoreEntry::store_status</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#ac7e9d742721daa3e491cf549ad100fb9">retryOrBail()</a>.</p>
 
@@ -862,7 +860,7 @@ template&lt;typename StepStart &gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the time left for this connection to become connected or 1 second if it is less than one second left </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8cc_source.html#l01444">1444</a> of file <a class="el" href="FwdState_8cc_source.html">FwdState.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8cc_source.html#l01422">1422</a> of file <a class="el" href="FwdState_8cc_source.html">FwdState.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="classComm_1_1Connection.html#ad8617829a32eaee8f268f7c4d1775283">Comm::Connection::connectTimeout()</a>, <a class="el" href="neighbors_8cc.html#a752438ef7dd82516762385a1e4f1b41c">positiveTimeout()</a>, and <a class="el" href="classFwdState.html#ab2f8e3e89f1772aa80f1c19fddf86dd0">start_t</a>.</p>
 
@@ -1578,38 +1576,6 @@ template&lt;typename StepStart &gt; </div>
 
 </div>
 </div>
-<a id="af82d1e3d2fbce848d97acb1f84b66d19" name="af82d1e3d2fbce848d97acb1f84b66d19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af82d1e3d2fbce848d97acb1f84b66d19">&#9670;&#160;</a></span>pinnedCanRetry()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool FwdState::pinnedCanRetry </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>whether a pinned to-peer connection can be replaced with another one (in order to retry or reforward a failed request) </p>
-
-<p class="definition">Definition at line <a class="el" href="FwdState_8cc_source.html#l01422">1422</a> of file <a class="el" href="FwdState_8cc_source.html">FwdState.cc</a>.</p>
-
-<p class="reference">References <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, <a class="el" href="classHttpRequest.html#a76422841293a4230a1a76479e6964c04">HttpRequest::flags</a>, <a class="el" href="classFwdState.html#a1b990d5c5b6dde7e851cf68a4a4e24f5">pconnRace</a>, <a class="el" href="classRequestFlags.html#ab52379836cb29c2e8d17c1813400ef12">RequestFlags::pinned</a>, <a class="el" href="classFwdState.html#a321bbe799c340b7e1e74c475af887e7aae761b1331e5c96f8b36cc6d33eec4ab8">raceHappened</a>, <a class="el" href="classFwdState.html#a18c28fe611231c889eb7b01db30ac6d7">request</a>, and <a class="el" href="classRequestFlags.html#abbde600374891ccc540eea4812414b69">RequestFlags::sslBumped</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="classFwdState.html#a0e7442c47d0944488064ed051047627b">checkRetry()</a>, and <a class="el" href="classFwdState.html#aefb4585da3148562f1a689a5b03f12d7">reforward()</a>.</p>
-
-</div>
-</div>
 <a id="a120185287d479c6821d3a96040d62a8e" name="a120185287d479c6821d3a96040d62a8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a120185287d479c6821d3a96040d62a8e">&#9670;&#160;</a></span>reactToZeroSizeObject()</h2>
 
@@ -1658,7 +1624,7 @@ template&lt;typename StepStart &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="FwdState_8cc_source.html#l01308">1308</a> of file <a class="el" href="FwdState_8cc_source.html">FwdState.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, <a class="el" href="classMemObject.html#ad5355b4679045222e5ea75b0c36f16c4">MemObject::baseReply()</a>, <a class="el" href="classHttpRequest.html#a89ecd80930f0e5799f432229c40a3252">HttpRequest::bodyNibbled()</a>, <a class="el" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>, <a class="el" href="classFwdState.html#ad23f0bb47fe71666c974afd101763028">destinations</a>, <a class="el" href="defines_8h.html#ac1f8e975d5c9f901f8ec9f29db1aca92">EBIT_TEST</a>, <a class="el" href="classResolvedPeers.html#ae3b85581b322b4e0ef0c1eb3e8b808b4">ResolvedPeers::empty()</a>, <a class="el" href="classFwdState.html#a914774b0048e808b14f886395e6a4524">entry</a>, <a class="el" href="enums_8h.html#a16685eea158879e41b101ca3634de462af1d0ae16fcfb269505ed3e22bc2e3fe5">ENTRY_ABORTED</a>, <a class="el" href="enums_8h.html#a16685eea158879e41b101ca3634de462a87c9289e2b5a5acdfcc01032d74c7212">ENTRY_FWD_HDR_WAIT</a>, <a class="el" href="classFwdState.html#a8c0fca3391fd91e6954c6981909e0e5d">exhaustedTries()</a>, <a class="el" href="classHttpRequest.html#a76422841293a4230a1a76479e6964c04">HttpRequest::flags</a>, <a class="el" href="classStoreEntry.html#a15b61bc1167a3670130a81bc5eca9f16">StoreEntry::flags</a>, <a class="el" href="namespaceHttp.html#a56a02f707188738d7e1663171e799696">Http::IsReforwardableStatus()</a>, <a class="el" href="classStoreEntry.html#a19fd5af89e99c467c29f7bd951ac901d">StoreEntry::mem()</a>, <a class="el" href="classStoreEntry.html#ab79c9d3fba14d5c997bae61161d9992f">StoreEntry::mem_obj</a>, <a class="el" href="classRequestFlags.html#ab52379836cb29c2e8d17c1813400ef12">RequestFlags::pinned</a>, <a class="el" href="classFwdState.html#af82d1e3d2fbce848d97acb1f84b66d19">pinnedCanRetry()</a>, <a class="el" href="classFwdState.html#a18c28fe611231c889eb7b01db30ac6d7">request</a>, <a class="el" href="classHttpReply.html#a01790af23c553b590ac6009ebb693b6d">HttpReply::sline</a>, <a class="el" href="classHttp_1_1StatusLine.html#af852e58bb3e96bc41cd16787b0a7d7db">Http::StatusLine::status()</a>, <a class="el" href="enums_8h.html#af7404120c842ff6e605306823971959ea024b35d6b8662a132fc5a0480a7933ee">STORE_PENDING</a>, <a class="el" href="classStoreEntry.html#adb1aad18212d6a162cfb59b3f23b5cf4">StoreEntry::store_status</a>, <a class="el" href="classPeerSelectionInitiator.html#a82e7b96170766c64e33f15f8aa3da8c8">PeerSelectionInitiator::subscribed</a>, and <a class="el" href="classStoreEntry.html#a3835284a1cb3623987d557c9754e5ffc">StoreEntry::url()</a>.</p>
+<p class="reference">References <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, <a class="el" href="classMemObject.html#ad5355b4679045222e5ea75b0c36f16c4">MemObject::baseReply()</a>, <a class="el" href="classHttpRequest.html#a89ecd80930f0e5799f432229c40a3252">HttpRequest::bodyNibbled()</a>, <a class="el" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>, <a class="el" href="classFwdState.html#ad23f0bb47fe71666c974afd101763028">destinations</a>, <a class="el" href="defines_8h.html#ac1f8e975d5c9f901f8ec9f29db1aca92">EBIT_TEST</a>, <a class="el" href="classResolvedPeers.html#ae3b85581b322b4e0ef0c1eb3e8b808b4">ResolvedPeers::empty()</a>, <a class="el" href="classFwdState.html#a914774b0048e808b14f886395e6a4524">entry</a>, <a class="el" href="enums_8h.html#a16685eea158879e41b101ca3634de462af1d0ae16fcfb269505ed3e22bc2e3fe5">ENTRY_ABORTED</a>, <a class="el" href="enums_8h.html#a16685eea158879e41b101ca3634de462a87c9289e2b5a5acdfcc01032d74c7212">ENTRY_FWD_HDR_WAIT</a>, <a class="el" href="classFwdState.html#a8c0fca3391fd91e6954c6981909e0e5d">exhaustedTries()</a>, <a class="el" href="classHttpRequest.html#a76422841293a4230a1a76479e6964c04">HttpRequest::flags</a>, <a class="el" href="classStoreEntry.html#a15b61bc1167a3670130a81bc5eca9f16">StoreEntry::flags</a>, <a class="el" href="namespaceHttp.html#a56a02f707188738d7e1663171e799696">Http::IsReforwardableStatus()</a>, <a class="el" href="classStoreEntry.html#a19fd5af89e99c467c29f7bd951ac901d">StoreEntry::mem()</a>, <a class="el" href="classStoreEntry.html#ab79c9d3fba14d5c997bae61161d9992f">StoreEntry::mem_obj</a>, <a class="el" href="classRequestFlags.html#ab52379836cb29c2e8d17c1813400ef12">RequestFlags::pinned</a>, <a class="el" href="classFwdState.html#a18c28fe611231c889eb7b01db30ac6d7">request</a>, <a class="el" href="classHttpReply.html#a01790af23c553b590ac6009ebb693b6d">HttpReply::sline</a>, <a class="el" href="classHttp_1_1StatusLine.html#af852e58bb3e96bc41cd16787b0a7d7db">Http::StatusLine::status()</a>, <a class="el" href="enums_8h.html#af7404120c842ff6e605306823971959ea024b35d6b8662a132fc5a0480a7933ee">STORE_PENDING</a>, <a class="el" href="classStoreEntry.html#adb1aad18212d6a162cfb59b3f23b5cf4">StoreEntry::store_status</a>, <a class="el" href="classPeerSelectionInitiator.html#a82e7b96170766c64e33f15f8aa3da8c8">PeerSelectionInitiator::subscribed</a>, and <a class="el" href="classStoreEntry.html#a3835284a1cb3623987d557c9754e5ffc">StoreEntry::url()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a37651d1474dfb7c77dfea1c5134fd77a">complete()</a>.</p>
 
@@ -2407,7 +2373,7 @@ template&lt;typename StepStart &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00204">204</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00200">200</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classClient.html#a9aff2f45d58c4f850caeb501acf1e272">Client::adaptOrFinalizeReply()</a>, <a class="el" href="classFwdState.html#afaff701d57c00b631c62ea8f773e8291">advanceDestination()</a>, <a class="el" href="classClient.html#a86876a2f168b1696e6238b3c43fe9a19">Client::blockCaching()</a>, <a class="el" href="classHttpStateData.html#a651b5758f05500d4d9b007c13182c12d">HttpStateData::buildRequestPrefix()</a>, <a class="el" href="classFwdState.html#a2bc3fb073aee437617e93fbef3c5154f">completed()</a>, <a class="el" href="classFwdState.html#a178c2dfa7a6549490c809060f01db028">connectedToPeer()</a>, <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, <a class="el" href="classHttpStateData.html#aaa2951fc566582353b1dbe1819f6ff9b">HttpStateData::continueAfterParsingHeader()</a>, <a class="el" href="classFwdState.html#a8d1bc18981cea8c1137d8c746f2d510e">dispatch()</a>, <a class="el" href="classHttpStateData.html#aff99eaf0f7813881b846e3a6e87e5aa0">HttpStateData::drop1xx()</a>, <a class="el" href="classFwdState.html#a9f2c3e1cb9c8db96d5133a018ac2bfc7">establishTunnelThruProxy()</a>, <a class="el" href="classHttpStateData.html#afa9484eae09068abe5a66fb76c786945">HttpStateData::finishingBrokenPost()</a>, <a class="el" href="classHttpStateData.html#aeb177f6bf66e888ebe28a4280a1f3d44">HttpStateData::forwardUpgrade()</a>, <a class="el" href="FtpGateway_8cc.html#a5946939bfae8d68fb10da968a1232635">ftpFail()</a>, <a class="el" href="FtpGateway_8cc.html#ad8373e56d2d545e288f8180677b67566">ftpSendReply()</a>, <a class="el" href="classHttpStateData.html#a7037774e824c153f5e3e876b9cbdb6ea">HttpStateData::handle1xx()</a>, <a class="el" href="classClient.html#a929f3318c4ffeabb569f66d40c5df5fe">Client::handleAdaptationBlocked()</a>, <a class="el" href="classClient.html#a6053fb38d1c526556db94cb37187aa6e">Client::handledEarlyAdaptationAbort()</a>, <a class="el" href="classHttpStateData.html#a07938dba6173cb5892c128c57483fd9f">HttpStateData::handleRequestBodyProducerAborted()</a>, <a class="el" href="classHttpStateData.html#a3ad883ffb8468ebaab0909e07ef8d736">HttpStateData::httpTimeout()</a>, <a class="el" href="classHttpStateData.html#aa68acadb6eaa4f4a6a0414a3c71c72cb">HttpStateData::markPrematureReplyBodyEofFailure()</a>, <a class="el" href="classFwdState.html#ace0f0fb74e8cfbc98cac5e07f186ca0b">noteConnection()</a>, <a class="el" href="classFwdState.html#a1471174d7e3c9a0bc1acbb5f8931930f">noteDestinationsEnd()</a>, <a class="el" href="classWhoisState.html#a3e57dd1c529414571013cc0713e99fe6">WhoisState::readReply()</a>, <a class="el" href="classHttpStateData.html#a69f56c5ad5fb0a6b8ae44e61df0ce7d6">HttpStateData::readReply()</a>, <a class="el" href="classFwdState.html#ac7e9d742721daa3e491cf549ad100fb9">retryOrBail()</a>, <a class="el" href="classFwdState.html#ae68cf398e48e712995401e86a26442fb">secureConnectionToPeer()</a>, <a class="el" href="classClient.html#a2afb92e84acee9bb523b96c580c37596">Client::sendBodyIsTooLargeError()</a>, <a class="el" href="classClient.html#aef83c0a99df91c0209427d43234f1b0d">Client::sentRequestBody()</a>, <a class="el" href="classClient.html#ad8e35625f5c99d98dafac38454247cef">Client::setFinalReply()</a>, <a class="el" href="classClient.html#a8c9fac652cbbe69fb233ab0c94c701fc">Client::setVirginReply()</a>, <a class="el" href="classFwdState.html#a391d66921577e62e543723f978062e97">Start()</a>, <a class="el" href="classFwdState.html#a62614b7d18e339d54e701a232efd5526">start()</a>, <a class="el" href="classClient.html#a6634cfabe79937632ae0706fac86b2af">Client::startAdaptation()</a>, <a class="el" href="classFwdState.html#aeeddd9c0e29dcacc4348b620ac31454d">syncHierNote()</a>, <a class="el" href="classFwdState.html#a7cf86800fbf2df7c68a2ba5eafeefa4b">tunnelEstablishmentDone()</a>, <a class="el" href="classFwdState.html#a8b8d08c5f92cfc4ff19d8cf3a18e2a22">updateAleWithFinalError()</a>, <a class="el" href="classFwdState.html#a78160d420998f3a8da637cf9f58968ea">updateAttempts()</a>, <a class="el" href="classFwdState.html#ae21810bf43359ab8862d91914b5c3872">useDestinations()</a>, <a class="el" href="classFwdState.html#a7a54813e455a655612f921b1deea9c35">usePinned()</a>, and <a class="el" href="classHttpStateData.html#ac60a83a38c55b69be006862814ec36b9">HttpStateData::wroteLast()</a>.</p>
 
@@ -2433,7 +2399,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00212">212</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00208">208</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a8d1bc18981cea8c1137d8c746f2d510e">dispatch()</a>, <a class="el" href="classFwdState.html#aee3d157b8666452a80f9f976a5558df1">fwdStart()</a>, <a class="el" href="classFwdState.html#ae68cf398e48e712995401e86a26442fb">secureConnectionToPeer()</a>, and <a class="el" href="classFwdState.html#a391d66921577e62e543723f978062e97">Start()</a>.</p>
 
@@ -2459,7 +2425,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00240">240</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00236">236</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a5795751b21ca608943fc4fb2d4025483">closePendingConnection()</a>, <a class="el" href="classFwdState.html#a6aa0fbb6df3de2d3de5f69ae639a7e09">closeServerConnection()</a>, <a class="el" href="classFwdState.html#a19074e7f188f8d411aad7c15540077de">serverClosed()</a>, <a class="el" href="classFwdState.html#ac17d5765b29de0e83b90eb785aa8545f">syncWithServerConn()</a>, and <a class="el" href="classFwdState.html#a5d345dbb9db02b7bbcb62dc9f9c2411a">unregister()</a>.</p>
 
@@ -2477,7 +2443,7 @@ template&lt;typename StepStart &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00217">217</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00213">213</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 </div>
 </div>
@@ -2501,7 +2467,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00238">238</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00234">234</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a37651d1474dfb7c77dfea1c5134fd77a">complete()</a>, <a class="el" href="classFwdState.html#a67baaf10258c77366dcab5e54eea4da3">fail()</a>, <a class="el" href="classFwdState.html#a144cd9865bc9420ff6f174e7ef4c9aeb">handleUnregisteredServerEnd()</a>, <a class="el" href="classFwdState.html#ace0f0fb74e8cfbc98cac5e07f186ca0b">noteConnection()</a>, <a class="el" href="classFwdState.html#a120185287d479c6821d3a96040d62a8e">reactToZeroSizeObject()</a>, <a class="el" href="classFwdState.html#a19074e7f188f8d411aad7c15540077de">serverClosed()</a>, and <a class="el" href="classFwdState.html#a5d345dbb9db02b7bbcb62dc9f9c2411a">unregister()</a>.</p>
 
@@ -2527,7 +2493,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00236">236</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00232">232</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, <a class="el" href="classFwdState.html#a3c7854bb035fd1b67c57e44710bbfe45">noteDestination()</a>, <a class="el" href="classFwdState.html#a1471174d7e3c9a0bc1acbb5f8931930f">noteDestinationsEnd()</a>, <a class="el" href="classFwdState.html#ad7baeef92bc0c8bc529231234a8451b0">notifyConnOpener()</a>, <a class="el" href="classFwdState.html#a120185287d479c6821d3a96040d62a8e">reactToZeroSizeObject()</a>, <a class="el" href="classFwdState.html#aefb4585da3148562f1a689a5b03f12d7">reforward()</a>, and <a class="el" href="classFwdState.html#ae21810bf43359ab8862d91914b5c3872">useDestinations()</a>.</p>
 
@@ -2545,7 +2511,7 @@ template&lt;typename StepStart &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00220">220</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00216">216</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 </div>
 </div>
@@ -2561,7 +2527,7 @@ template&lt;typename StepStart &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00218">218</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00214">214</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 </div>
 </div>
@@ -2585,7 +2551,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00227">227</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00223">223</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a8ca1f7203964826915d911f3f3c32c00">cancelStep()</a>, <a class="el" href="classFwdState.html#a178c2dfa7a6549490c809060f01db028">connectedToPeer()</a>, <a class="el" href="classFwdState.html#ae68cf398e48e712995401e86a26442fb">secureConnectionToPeer()</a>, and <a class="el" href="classFwdState.html#a31b13c7660d71fa229da937c0bb5c005">transporting()</a>.</p>
 
@@ -2603,7 +2569,7 @@ template&lt;typename StepStart &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00202">202</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00198">198</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classClient.html#a1b7fc2f39b02daa92f97de95774aebc4">Client::Client()</a>, <a class="el" href="classFwdState.html#a996acb64b4b3ab89868422841f02d2ef">~FwdState()</a>, <a class="el" href="classFwdState.html#a0e7442c47d0944488064ed051047627b">checkRetry()</a>, <a class="el" href="classFwdState.html#a37651d1474dfb7c77dfea1c5134fd77a">complete()</a>, <a class="el" href="classFwdState.html#a2bc3fb073aee437617e93fbef3c5154f">completed()</a>, <a class="el" href="classFwdState.html#a178c2dfa7a6549490c809060f01db028">connectedToPeer()</a>, <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, <a class="el" href="classFwdState.html#a8d1bc18981cea8c1137d8c746f2d510e">dispatch()</a>, <a class="el" href="classFwdState.html#a9f2c3e1cb9c8db96d5133a018ac2bfc7">establishTunnelThruProxy()</a>, <a class="el" href="classFwdState.html#aee3d157b8666452a80f9f976a5558df1">fwdStart()</a>, <a class="el" href="classFwdState.html#a144cd9865bc9420ff6f174e7ef4c9aeb">handleUnregisteredServerEnd()</a>, <a class="el" href="http_8cc.html#a2e467b171e83a08c8c4d562077f5df72">httpStart()</a>, <a class="el" href="classFwdState.html#adaca05a860b705c9391f1de6a7b28ecc">markStoredReplyAsWhole()</a>, <a class="el" href="classFwdState.html#aefb4585da3148562f1a689a5b03f12d7">reforward()</a>, <a class="el" href="classFwdState.html#ac7e9d742721daa3e491cf549ad100fb9">retryOrBail()</a>, <a class="el" href="classFwdState.html#a391d66921577e62e543723f978062e97">Start()</a>, <a class="el" href="classFwdState.html#a62614b7d18e339d54e701a232efd5526">start()</a>, <a class="el" href="classFwdState.html#a5d345dbb9db02b7bbcb62dc9f9c2411a">unregister()</a>, <a class="el" href="classFwdState.html#a2c49793d57e0c5edc028b6e29d79a53b">unregister()</a>, <a class="el" href="classFwdState.html#ae21810bf43359ab8862d91914b5c3872">useDestinations()</a>, and <a class="el" href="group__ServerProtocolWhoisAPI.html#ga59a75a67292798e719c7d6f02a06f281">whoisStart()</a>.</p>
 
@@ -2629,7 +2595,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00211">211</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00207">207</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a996acb64b4b3ab89868422841f02d2ef">~FwdState()</a>, <a class="el" href="classFwdState.html#afaff701d57c00b631c62ea8f773e8291">advanceDestination()</a>, <a class="el" href="classFwdState.html#a2bc3fb073aee437617e93fbef3c5154f">completed()</a>, <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, <a class="el" href="classFwdState.html#a67baaf10258c77366dcab5e54eea4da3">fail()</a>, <a class="el" href="classFwdState.html#a144cd9865bc9420ff6f174e7ef4c9aeb">handleUnregisteredServerEnd()</a>, <a class="el" href="classFwdState.html#a1471174d7e3c9a0bc1acbb5f8931930f">noteDestinationsEnd()</a>, <a class="el" href="classFwdState.html#a120185287d479c6821d3a96040d62a8e">reactToZeroSizeObject()</a>, <a class="el" href="classFwdState.html#ac7e9d742721daa3e491cf549ad100fb9">retryOrBail()</a>, <a class="el" href="classFwdState.html#a8b8d08c5f92cfc4ff19d8cf3a18e2a22">updateAleWithFinalError()</a>, and <a class="el" href="classFwdState.html#ae21810bf43359ab8862d91914b5c3872">useDestinations()</a>.</p>
 
@@ -2663,7 +2629,7 @@ template&lt;typename StepStart &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00219">219</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00215">215</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 </div>
 </div>
@@ -2687,7 +2653,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00214">214</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00210">210</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a37651d1474dfb7c77dfea1c5134fd77a">complete()</a>, <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, <a class="el" href="classFwdState.html#a8c0fca3391fd91e6954c6981909e0e5d">exhaustedTries()</a>, <a class="el" href="classFwdState.html#a1471174d7e3c9a0bc1acbb5f8931930f">noteDestinationsEnd()</a>, <a class="el" href="classFwdState.html#ac7e9d742721daa3e491cf549ad100fb9">retryOrBail()</a>, <a class="el" href="classFwdState.html#a78160d420998f3a8da637cf9f58968ea">updateAttempts()</a>, and <a class="el" href="classFwdState.html#a7a54813e455a655612f921b1deea9c35">usePinned()</a>.</p>
 
@@ -2713,9 +2679,9 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00244">244</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00240">240</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, <a class="el" href="classFwdState.html#af82d1e3d2fbce848d97acb1f84b66d19">pinnedCanRetry()</a>, <a class="el" href="classFwdState.html#a120185287d479c6821d3a96040d62a8e">reactToZeroSizeObject()</a>, and <a class="el" href="classFwdState.html#ac17d5765b29de0e83b90eb785aa8545f">syncWithServerConn()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, <a class="el" href="classFwdState.html#a120185287d479c6821d3a96040d62a8e">reactToZeroSizeObject()</a>, and <a class="el" href="classFwdState.html#ac17d5765b29de0e83b90eb785aa8545f">syncWithServerConn()</a>.</p>
 
 </div>
 </div>
@@ -2739,7 +2705,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00251">251</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00247">247</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a9ffef785cf8f57dffbf1cdafd861e20d">stopAndDestroy()</a>.</p>
 
@@ -2766,7 +2732,7 @@ template&lt;typename StepStart &gt; </div>
 </div><div class="memdoc">
 <p>waits for an HTTP CONNECT tunnel through a cache_peer to be negotiated over the (encrypted, if needed) transport connection to that cache_peer </p>
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00231">231</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00227">227</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a8ca1f7203964826915d911f3f3c32c00">cancelStep()</a>, <a class="el" href="classFwdState.html#a9f2c3e1cb9c8db96d5133a018ac2bfc7">establishTunnelThruProxy()</a>, <a class="el" href="classFwdState.html#a31b13c7660d71fa229da937c0bb5c005">transporting()</a>, and <a class="el" href="classFwdState.html#a7cf86800fbf2df7c68a2ba5eafeefa4b">tunnelEstablishmentDone()</a>.</p>
 
@@ -2784,9 +2750,9 @@ template&lt;typename StepStart &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00203">203</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00199">199</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classFwdState.html#a233f8cd3019c038f8ac9054b2087d01f">FwdState()</a>, <a class="el" href="classFwdState.html#a996acb64b4b3ab89868422841f02d2ef">~FwdState()</a>, <a class="el" href="classFwdState.html#afaff701d57c00b631c62ea8f773e8291">advanceDestination()</a>, <a class="el" href="classFwdState.html#ab5fd1a435317c8a962787499c20cffeb">checkRetriable()</a>, <a class="el" href="classFwdState.html#a0e7442c47d0944488064ed051047627b">checkRetry()</a>, <a class="el" href="classFwdState.html#a2bc3fb073aee437617e93fbef3c5154f">completed()</a>, <a class="el" href="classFwdState.html#a178c2dfa7a6549490c809060f01db028">connectedToPeer()</a>, <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, <a class="el" href="classHttpStateData.html#aaa2951fc566582353b1dbe1819f6ff9b">HttpStateData::continueAfterParsingHeader()</a>, <a class="el" href="classFwdState.html#a8d1bc18981cea8c1137d8c746f2d510e">dispatch()</a>, <a class="el" href="classFwdState.html#a290ab33c5e0de0d18b9b541062c58f4d">doneWithRetries()</a>, <a class="el" href="classFwdState.html#a9f2c3e1cb9c8db96d5133a018ac2bfc7">establishTunnelThruProxy()</a>, <a class="el" href="classFwdState.html#a67baaf10258c77366dcab5e54eea4da3">fail()</a>, <a class="el" href="FtpGateway_8cc.html#a5946939bfae8d68fb10da968a1232635">ftpFail()</a>, <a class="el" href="classFwdState.html#aee3d157b8666452a80f9f976a5558df1">fwdStart()</a>, <a class="el" href="classHttpStateData.html#a07938dba6173cb5892c128c57483fd9f">HttpStateData::handleRequestBodyProducerAborted()</a>, <a class="el" href="http_8cc.html#a2e467b171e83a08c8c4d562077f5df72">httpStart()</a>, <a class="el" href="classHttpStateData.html#a3ad883ffb8468ebaab0909e07ef8d736">HttpStateData::httpTimeout()</a>, <a class="el" href="classHttpStateData.html#aa68acadb6eaa4f4a6a0414a3c71c72cb">HttpStateData::markPrematureReplyBodyEofFailure()</a>, <a class="el" href="classFwdState.html#ace0f0fb74e8cfbc98cac5e07f186ca0b">noteConnection()</a>, <a class="el" href="classFwdState.html#a1471174d7e3c9a0bc1acbb5f8931930f">noteDestinationsEnd()</a>, <a class="el" href="classFwdState.html#af82d1e3d2fbce848d97acb1f84b66d19">pinnedCanRetry()</a>, <a class="el" href="classFwdState.html#a120185287d479c6821d3a96040d62a8e">reactToZeroSizeObject()</a>, <a class="el" href="classWhoisState.html#a3e57dd1c529414571013cc0713e99fe6">WhoisState::readReply()</a>, <a class="el" href="classHttpStateData.html#a69f56c5ad5fb0a6b8ae44e61df0ce7d6">HttpStateData::readReply()</a>, <a class="el" href="classFwdState.html#aefb4585da3148562f1a689a5b03f12d7">reforward()</a>, <a class="el" href="classFwdState.html#ac7e9d742721daa3e491cf549ad100fb9">retryOrBail()</a>, <a class="el" href="classFwdState.html#ae68cf398e48e712995401e86a26442fb">secureConnectionToPeer()</a>, <a class="el" href="classFwdState.html#a0817357f80f6b219c73c365473050bf4">secureConnectionToPeerIfNeeded()</a>, <a class="el" href="classClient.html#aef83c0a99df91c0209427d43234f1b0d">Client::sentRequestBody()</a>, <a class="el" href="classFwdState.html#a391d66921577e62e543723f978062e97">Start()</a>, <a class="el" href="classFwdState.html#a62614b7d18e339d54e701a232efd5526">start()</a>, <a class="el" href="classFwdState.html#a1ad1a5a1e478a989e87693cdbab965c4">successfullyConnectedToPeer()</a>, <a class="el" href="classFwdState.html#aeeddd9c0e29dcacc4348b620ac31454d">syncHierNote()</a>, <a class="el" href="classFwdState.html#ac17d5765b29de0e83b90eb785aa8545f">syncWithServerConn()</a>, <a class="el" href="classFwdState.html#a7cf86800fbf2df7c68a2ba5eafeefa4b">tunnelEstablishmentDone()</a>, <a class="el" href="classFwdState.html#ae21810bf43359ab8862d91914b5c3872">useDestinations()</a>, <a class="el" href="classFwdState.html#a7a54813e455a655612f921b1deea9c35">usePinned()</a>, <a class="el" href="group__ServerProtocolWhoisAPI.html#ga59a75a67292798e719c7d6f02a06f281">whoisStart()</a>, and <a class="el" href="classHttpStateData.html#ac60a83a38c55b69be006862814ec36b9">HttpStateData::wroteLast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classFwdState.html#a233f8cd3019c038f8ac9054b2087d01f">FwdState()</a>, <a class="el" href="classFwdState.html#a996acb64b4b3ab89868422841f02d2ef">~FwdState()</a>, <a class="el" href="classFwdState.html#afaff701d57c00b631c62ea8f773e8291">advanceDestination()</a>, <a class="el" href="classFwdState.html#ab5fd1a435317c8a962787499c20cffeb">checkRetriable()</a>, <a class="el" href="classFwdState.html#a0e7442c47d0944488064ed051047627b">checkRetry()</a>, <a class="el" href="classFwdState.html#a2bc3fb073aee437617e93fbef3c5154f">completed()</a>, <a class="el" href="classFwdState.html#a178c2dfa7a6549490c809060f01db028">connectedToPeer()</a>, <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, <a class="el" href="classHttpStateData.html#aaa2951fc566582353b1dbe1819f6ff9b">HttpStateData::continueAfterParsingHeader()</a>, <a class="el" href="classFwdState.html#a8d1bc18981cea8c1137d8c746f2d510e">dispatch()</a>, <a class="el" href="classFwdState.html#a290ab33c5e0de0d18b9b541062c58f4d">doneWithRetries()</a>, <a class="el" href="classFwdState.html#a9f2c3e1cb9c8db96d5133a018ac2bfc7">establishTunnelThruProxy()</a>, <a class="el" href="classFwdState.html#a67baaf10258c77366dcab5e54eea4da3">fail()</a>, <a class="el" href="FtpGateway_8cc.html#a5946939bfae8d68fb10da968a1232635">ftpFail()</a>, <a class="el" href="classFwdState.html#aee3d157b8666452a80f9f976a5558df1">fwdStart()</a>, <a class="el" href="classHttpStateData.html#a07938dba6173cb5892c128c57483fd9f">HttpStateData::handleRequestBodyProducerAborted()</a>, <a class="el" href="http_8cc.html#a2e467b171e83a08c8c4d562077f5df72">httpStart()</a>, <a class="el" href="classHttpStateData.html#a3ad883ffb8468ebaab0909e07ef8d736">HttpStateData::httpTimeout()</a>, <a class="el" href="classHttpStateData.html#aa68acadb6eaa4f4a6a0414a3c71c72cb">HttpStateData::markPrematureReplyBodyEofFailure()</a>, <a class="el" href="classFwdState.html#ace0f0fb74e8cfbc98cac5e07f186ca0b">noteConnection()</a>, <a class="el" href="classFwdState.html#a1471174d7e3c9a0bc1acbb5f8931930f">noteDestinationsEnd()</a>, <a class="el" href="classFwdState.html#a120185287d479c6821d3a96040d62a8e">reactToZeroSizeObject()</a>, <a class="el" href="classWhoisState.html#a3e57dd1c529414571013cc0713e99fe6">WhoisState::readReply()</a>, <a class="el" href="classHttpStateData.html#a69f56c5ad5fb0a6b8ae44e61df0ce7d6">HttpStateData::readReply()</a>, <a class="el" href="classFwdState.html#aefb4585da3148562f1a689a5b03f12d7">reforward()</a>, <a class="el" href="classFwdState.html#ac7e9d742721daa3e491cf549ad100fb9">retryOrBail()</a>, <a class="el" href="classFwdState.html#ae68cf398e48e712995401e86a26442fb">secureConnectionToPeer()</a>, <a class="el" href="classFwdState.html#a0817357f80f6b219c73c365473050bf4">secureConnectionToPeerIfNeeded()</a>, <a class="el" href="classClient.html#aef83c0a99df91c0209427d43234f1b0d">Client::sentRequestBody()</a>, <a class="el" href="classFwdState.html#a391d66921577e62e543723f978062e97">Start()</a>, <a class="el" href="classFwdState.html#a62614b7d18e339d54e701a232efd5526">start()</a>, <a class="el" href="classFwdState.html#a1ad1a5a1e478a989e87693cdbab965c4">successfullyConnectedToPeer()</a>, <a class="el" href="classFwdState.html#aeeddd9c0e29dcacc4348b620ac31454d">syncHierNote()</a>, <a class="el" href="classFwdState.html#ac17d5765b29de0e83b90eb785aa8545f">syncWithServerConn()</a>, <a class="el" href="classFwdState.html#a7cf86800fbf2df7c68a2ba5eafeefa4b">tunnelEstablishmentDone()</a>, <a class="el" href="classFwdState.html#ae21810bf43359ab8862d91914b5c3872">useDestinations()</a>, <a class="el" href="classFwdState.html#a7a54813e455a655612f921b1deea9c35">usePinned()</a>, <a class="el" href="group__ServerProtocolWhoisAPI.html#ga59a75a67292798e719c7d6f02a06f281">whoisStart()</a>, and <a class="el" href="classHttpStateData.html#ac60a83a38c55b69be006862814ec36b9">HttpStateData::wroteLast()</a>.</p>
 
 </div>
 </div>
@@ -2810,7 +2776,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00210">210</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00206">206</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a0e7442c47d0944488064ed051047627b">checkRetry()</a>, <a class="el" href="classFwdState.html#a144cd9865bc9420ff6f174e7ef4c9aeb">handleUnregisteredServerEnd()</a>, <a class="el" href="classFwdState.html#ac7e9d742721daa3e491cf549ad100fb9">retryOrBail()</a>, <a class="el" href="classFwdState.html#a62614b7d18e339d54e701a232efd5526">start()</a>, and <a class="el" href="classFwdState.html#a9ffef785cf8f57dffbf1cdafd861e20d">stopAndDestroy()</a>.</p>
 
@@ -2836,7 +2802,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00237">237</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00233">233</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a996acb64b4b3ab89868422841f02d2ef">~FwdState()</a>, <a class="el" href="classFwdState.html#a5795751b21ca608943fc4fb2d4025483">closePendingConnection()</a>, <a class="el" href="classFwdState.html#a6aa0fbb6df3de2d3de5f69ae639a7e09">closeServerConnection()</a>, <a class="el" href="classFwdState.html#a37651d1474dfb7c77dfea1c5134fd77a">complete()</a>, <a class="el" href="classFwdState.html#a8d1bc18981cea8c1137d8c746f2d510e">dispatch()</a>, <a class="el" href="classFwdState.html#a144cd9865bc9420ff6f174e7ef4c9aeb">handleUnregisteredServerEnd()</a>, <a class="el" href="classFwdState.html#a19074e7f188f8d411aad7c15540077de">serverClosed()</a>, <a class="el" href="classFwdState.html#a660c0256214a8806cbb6af550cc79bca">serverConnection()</a>, <a class="el" href="classFwdState.html#ac17d5765b29de0e83b90eb785aa8545f">syncWithServerConn()</a>, <a class="el" href="classFwdState.html#a5d345dbb9db02b7bbcb62dc9f9c2411a">unregister()</a>, <a class="el" href="classFwdState.html#a2c49793d57e0c5edc028b6e29d79a53b">unregister()</a>, and <a class="el" href="classFwdState.html#a7a54813e455a655612f921b1deea9c35">usePinned()</a>.</p>
 
@@ -2862,7 +2828,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00213">213</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00209">209</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a0e7442c47d0944488064ed051047627b">checkRetry()</a>, <a class="el" href="classFwdState.html#a49be3b51100f60642f4aae7bb98c8912">connectingTimeout()</a>, <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, and <a class="el" href="classFwdState.html#ac7e9d742721daa3e491cf549ad100fb9">retryOrBail()</a>.</p>
 
@@ -2889,7 +2855,7 @@ template&lt;typename StepStart &gt; </div>
 </div><div class="memdoc">
 <p>Whether the entire reply (including any body) was written to <a class="el" href="namespaceStore.html">Store</a>. The string literal value is only used for debugging. </p>
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00248">248</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00244">244</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a37651d1474dfb7c77dfea1c5134fd77a">complete()</a>, <a class="el" href="classFwdState.html#a2bc3fb073aee437617e93fbef3c5154f">completed()</a>, and <a class="el" href="classFwdState.html#adaca05a860b705c9391f1de6a7b28ecc">markStoredReplyAsWhole()</a>.</p>
 
@@ -2941,7 +2907,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00224">224</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00220">220</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a8ca1f7203964826915d911f3f3c32c00">cancelStep()</a>, <a class="el" href="classFwdState.html#adb32dae8f6dc230819314ce4b895063d">connectStart()</a>, <a class="el" href="classFwdState.html#ace0f0fb74e8cfbc98cac5e07f186ca0b">noteConnection()</a>, <a class="el" href="classFwdState.html#a3c7854bb035fd1b67c57e44710bbfe45">noteDestination()</a>, <a class="el" href="classFwdState.html#a1471174d7e3c9a0bc1acbb5f8931930f">noteDestinationsEnd()</a>, and <a class="el" href="classFwdState.html#ad7baeef92bc0c8bc529231234a8451b0">notifyConnOpener()</a>.</p>
 
@@ -2967,7 +2933,7 @@ template&lt;typename StepStart &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00234">234</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FwdState_8h_source.html#l00230">230</a> of file <a class="el" href="FwdState_8h_source.html">FwdState.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classFwdState.html#a37651d1474dfb7c77dfea1c5134fd77a">complete()</a>, <a class="el" href="classFwdState.html#a8d1bc18981cea8c1137d8c746f2d510e">dispatch()</a>, <a class="el" href="classFwdState.html#a144cd9865bc9420ff6f174e7ef4c9aeb">handleUnregisteredServerEnd()</a>, <a class="el" href="classFwdState.html#a19074e7f188f8d411aad7c15540077de">serverClosed()</a>, and <a class="el" href="classFwdState.html#a31b13c7660d71fa229da937c0bb5c005">transporting()</a>.</p>
 

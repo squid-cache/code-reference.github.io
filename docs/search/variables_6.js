@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['f1_0',['f1',['../struct__htcpDataHeaderSquid.html#a93b580321cb7eda5e232b008387e43d0',1,'_htcpDataHeaderSquid::F1'],['../classhtcpStuff.html#a22e94df1f2c5e7828007f3ea90579bdb',1,'htcpStuff::f1'],['../struct__htcpDataHeader.html#a7b9f36ac2a612c768184159c2fdefcfd',1,'_htcpDataHeader::F1']]],
+  ['f1_0',['f1',['../struct__htcpDataHeader.html#a7b9f36ac2a612c768184159c2fdefcfd',1,'_htcpDataHeader::F1'],['../struct__htcpDataHeaderSquid.html#a93b580321cb7eda5e232b008387e43d0',1,'_htcpDataHeaderSquid::F1'],['../classhtcpStuff.html#a22e94df1f2c5e7828007f3ea90579bdb',1,'htcpStuff::f1']]],
   ['f_5fbavail_1',['f_bavail',['../structstatvfs.html#a38e0b0109797e233de83ff9e8c4d0520',1,'statvfs']]],
   ['f_5fbfree_2',['f_bfree',['../structstatvfs.html#ab004873a74b951610b969a222116dccb',1,'statvfs']]],
   ['f_5fblocks_3',['f_blocks',['../structstatvfs.html#a83b2d1725a43fef463597eda75b7af1b',1,'statvfs']]],
@@ -52,7 +52,7 @@ var searchData=
   ['filenamehashcacher_49',['fileNameHashCacher',['../classSourceLocation.html#aef42df3eeaab9514ded452f2649550ea',1,'SourceLocation']]],
   ['fileno_50',['fileno',['../classIpc_1_1StoreMapUpdate_1_1Edition.html#a96083780605aab81648e5cf2868c59e4',1,'Ipc::StoreMapUpdate::Edition::fileNo'],['../classShmWriter.html#aa0b02bae39fc30286f3d77fd22c99124',1,'ShmWriter::fileNo']]],
   ['filenos_51',['filenos',['../classIpc_1_1StoreMap_1_1Owner.html#ad017b9f5cbd9af38440c4941a9a06c08',1,'Ipc::StoreMap::Owner::fileNos'],['../classIpc_1_1StoreMap.html#acacfe101cc3d1531cf5276e94c5d5465',1,'Ipc::StoreMap::fileNos']]],
-  ['filepath_52',['filepath',['../classFtp_1_1Gateway.html#ab10517f97f1e0acfb894eea41a3132ca',1,'Ftp::Gateway::filepath'],['../classRock_1_1SwapDir.html#a2eeccdca9cb1eda9a220b1f1efc6b9f3',1,'Rock::SwapDir::filePath'],['../classConfigParser_1_1CfgFile.html#a9dc9abfb2dd80b4bbae393c53e45435e',1,'ConfigParser::CfgFile::filePath']]],
+  ['filepath_52',['filepath',['../classRock_1_1SwapDir.html#a2eeccdca9cb1eda9a220b1f1efc6b9f3',1,'Rock::SwapDir::filePath'],['../classConfigParser_1_1CfgFile.html#a9dc9abfb2dd80b4bbae393c53e45435e',1,'ConfigParser::CfgFile::filePath'],['../classFtp_1_1Gateway.html#ab10517f97f1e0acfb894eea41a3132ca',1,'Ftp::Gateway::filepath']]],
   ['files_5fcleaned_53',['files_cleaned',['../classStatCounters.html#af7786be4db75a7248c7e0800f233bc0e',1,'StatCounters']]],
   ['filter_54',['filter',['../classAdaptation_1_1AccessCheck.html#a043394df95a265bca9e4e9dc6c77a14f',1,'Adaptation::AccessCheck::filter'],['../classStatObjectsState.html#aecf7abacb9c935422b0033831de2ace1',1,'StatObjectsState::filter']]],
   ['final_55',['final',['../classAdaptation_1_1Answer.html#af44812656a39cb00ef867fb6ebbf8057',1,'Adaptation::Answer']]],
@@ -115,7 +115,7 @@ var searchData=
   ['freecache_112',['freeCache',['../classMemPoolChunked.html#a37f46cd37a5310c5aade377ec043e92e',1,'MemPoolChunked']]],
   ['freed_113',['freed',['../classRock_1_1LoadingFlags.html#a8675481d6ffb1e105ab47be73c31ce65',1,'Rock::LoadingFlags']]],
   ['freefunc_114',['freefunc',['../classComm_1_1IoCallback.html#a205547570776dbb1dd21205e9758ea34',1,'Comm::IoCallback']]],
-  ['freelist_115',['freelist',['../classMemChunk.html#af671bddb23c1b033048b698752ded8a2',1,'MemChunk::freeList'],['../classMemPoolMalloc.html#ac343da7fba741972658fd2638a179fdb',1,'MemPoolMalloc::freelist']]],
+  ['freelist_115',['freelist',['../classMemPoolMalloc.html#ac343da7fba741972658fd2638a179fdb',1,'MemPoolMalloc::freelist'],['../classMemChunk.html#af671bddb23c1b033048b698752ded8a2',1,'MemChunk::freeList']]],
   ['freeslots_116',['freeslots',['../classMemStore.html#a6d2730835af2d42b262d367b352984b0',1,'MemStore::freeSlots'],['../classRock_1_1SwapDir.html#a213873f2e0ea2e6752f617eb420ce8bf',1,'Rock::SwapDir::freeSlots']]],
   ['freeslotsowners_117',['freeSlotsOwners',['../classRock_1_1SwapDirRr.html#ab967a42bcd7a6136ea46a30898f5f880',1,'Rock::SwapDirRr']]],
   ['fresh_118',['fresh',['../classIpc_1_1StoreMapUpdate.html#a8848d722ddc772145cffd6eb18954d86',1,'Ipc::StoreMapUpdate']]],

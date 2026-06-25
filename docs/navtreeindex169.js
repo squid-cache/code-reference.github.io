@@ -1,6 +1,5 @@
 var NAVTREEINDEX169 =
 {
-"structSMBDOMAIN.html#af9c21c527e8ce53923670e86ae361cc6":[9,0,541,1],
 "structSecurity_1_1PeerOptions_1_1flags__.html":[9,0,22,17,0],
 "structSecurity_1_1PeerOptions_1_1flags__.html":[8,0,26,18,0],
 "structSecurity_1_1PeerOptions_1_1flags__.html#a1cce6e38551086ae28f7a72d879004ed":[9,0,22,17,0,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX169 =
 "struct__store__check__cachable__hist.html#a4f9b4d3d769b8af94ee7b49e2d153700":[9,0,59,6],
 "struct__store__check__cachable__hist.html#a5ffe6d5fd0427e918c4caa6c94c37d39":[9,0,59,10],
 "struct__store__check__cachable__hist.html#a750d897edfc4acce56619df8b69957e1":[9,0,59,7],
-"struct__store__check__cachable__hist.html#a7a0e2c18bd2c03997a87f0765c07208f":[9,0,59,5]
+"struct__store__check__cachable__hist.html#a7a0e2c18bd2c03997a87f0765c07208f":[9,0,59,5],
+"struct__store__check__cachable__hist.html#a8728284f13bfd05251be7f7ecc50b48a":[9,0,59,1]
 };
