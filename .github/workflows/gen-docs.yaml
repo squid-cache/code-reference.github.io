@@ -21,18 +21,18 @@ jobs:
 
     steps:
       - name: Checkout Docs
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           token: ${{ secrets.PUSH_TOKEN }}
 
       - name: Checkout Squid sources
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           repository: squid-cache/squid
           path: squid
       
       - name: cache last commit hash
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: last-squid-commit.txt
           key: last-commit-hash-${{ github.run_id }}
@@ -80,7 +80,7 @@ jobs:
 
       - name: update self
         if: steps.check_squid_updates.outputs.had_update == 'true'
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v10
         with:
           message: "automated update"
           add: "./docs"
