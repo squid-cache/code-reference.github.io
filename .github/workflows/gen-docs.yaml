@@ -76,7 +76,7 @@ jobs:
         if: steps.check_squid_updates.outputs.had_update == 'true'
         run: |
           doxygen doxyfile
-          (cd docs; for f in $(find * -name \*.html); do sed -i~ "s@__filename__@$f@" $f; done ; find . -name \*~ | xargs -n 128 rm -f)
+          cd docs; for f in *.html; do sed -i~ "/meta name=.generator/a <link rel=\"canonical\" href=\"https://code-reference.squid-cache.org/$f\" />" $f; rm $f~; done
 
       - name: update self
         if: steps.check_squid_updates.outputs.had_update == 'true'
