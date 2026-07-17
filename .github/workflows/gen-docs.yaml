@@ -76,6 +76,7 @@ jobs:
         if: steps.check_squid_updates.outputs.had_update == 'true'
         run: |
           doxygen doxyfile
+          (cd docs; for f in $(find * -name \*.html); do sed -i~ "s@__filename__@$f@" $f; done ; find . -name \*~ | xargs -n 128 rm -f)
 
       - name: update self
         if: steps.check_squid_updates.outputs.had_update == 'true'
