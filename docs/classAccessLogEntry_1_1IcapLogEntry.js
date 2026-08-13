@@ -11,8 +11,8 @@ var classAccessLogEntry_1_1IcapLogEntry =
     [ "reply", "classAccessLogEntry_1_1IcapLogEntry.html#a6516295096b560dd23f4e876780cde4f", null ],
     [ "reqMethod", "classAccessLogEntry_1_1IcapLogEntry.html#aceac21accc90eb95ab4ad3a9dc7b9739", null ],
     [ "request", "classAccessLogEntry_1_1IcapLogEntry.html#afb628695aecd13017b2a8d313700dbb0", null ],
-    [ "reqUri", "classAccessLogEntry_1_1IcapLogEntry.html#a17d19dae2c42c67aef5c373ae50fcdc3", null ],
+    [ "reqUri", "classAccessLogEntry_1_1IcapLogEntry.html#a130eeeb9a1ff84072f0b396793e4b8f1", null ],
     [ "resStatus", "classAccessLogEntry_1_1IcapLogEntry.html#ac0191e25bdf8e90bd17f412f03133f2a", null ],
-    [ "serviceName", "classAccessLogEntry_1_1IcapLogEntry.html#a1b7add92b23d404361f945d5090a84ac", null ],
+    [ "serviceName", "classAccessLogEntry_1_1IcapLogEntry.html#a6ad8eef6da85f8c29e14400f308b97c1", null ],
     [ "trTime", "classAccessLogEntry_1_1IcapLogEntry.html#a4938300e7a59b2e124dbfe0cb07ba7a0", null ]
 ];

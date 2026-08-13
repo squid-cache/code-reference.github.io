@@ -236,7 +236,7 @@ var searchData=
   ['requestwritten_233',['requestWritten',['../classHttp_1_1Tunneler.html#a9ebce8cc0f2d650827dd2fe45027e017',1,'Http::Tunneler']]],
   ['require_5fauth_234',['require_auth',['../classexternal__acl.html#aef08d5ccca4cf6b62ffd336ea262fce1',1,'external_acl']]],
   ['required_235',['required',['../classVersion.html#a07dc99e0084e42d76acad912e4253ca2',1,'Version::required'],['../classACLUserData.html#a757af02e87907b338fa164e651eee942',1,'ACLUserData::required']]],
-  ['requri_236',['reqUri',['../classAccessLogEntry_1_1IcapLogEntry.html#a17d19dae2c42c67aef5c373ae50fcdc3',1,'AccessLogEntry::IcapLogEntry']]],
+  ['requri_236',['reqUri',['../classAccessLogEntry_1_1IcapLogEntry.html#a130eeeb9a1ff84072f0b396793e4b8f1',1,'AccessLogEntry::IcapLogEntry']]],
   ['res_5fdefnames_237',['res_defnames',['../classSquidConfig.html#a35696befadaea028668524ce7c9671f2',1,'SquidConfig']]],
   ['reservationid_238',['reservationid',['../classhelper__stateful__server.html#a96b0bc8da68a46c2b9bc1eb9a7e98379',1,'helper_stateful_server::reservationId'],['../classHelper_1_1Reply.html#acf531582a7598fbec01f2a9ab9ef4d6f',1,'Helper::Reply::reservationId']]],
   ['reservations_239',['reservations',['../classstatefulhelper.html#ae3b59e83d7694849546999b8758067bc',1,'statefulhelper']]],
