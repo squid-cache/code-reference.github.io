@@ -67,7 +67,7 @@ var searchData=
   ['protocoldata_2ecc_64',['ProtocolData.cc',['../ProtocolData_8cc.html',1,'']]],
   ['protocoldata_2eh_65',['ProtocolData.h',['../ProtocolData_8h.html',1,'']]],
   ['protocoltype_2eh_66',['ProtocolType.h',['../ProtocolType_8h.html',1,'']]],
-  ['protocolversion_2eh_67',['protocolversion.h',['../http_2ProtocolVersion_8h.html',1,'(Global Namespace)'],['../anyp_2ProtocolVersion_8h.html',1,'(Global Namespace)']]],
+  ['protocolversion_2eh_67',['protocolversion.h',['../anyp_2ProtocolVersion_8h.html',1,'(Global Namespace)'],['../http_2ProtocolVersion_8h.html',1,'(Global Namespace)']]],
   ['protos_2eh_68',['protos.h',['../protos_8h.html',1,'']]],
   ['proxycerts_2eh_69',['ProxyCerts.h',['../ProxyCerts_8h.html',1,'']]]
 ];
