@@ -18,7 +18,7 @@ var searchData=
   ['heap_2ec_15',['heap.c',['../heap_8c.html',1,'']]],
   ['heap_2eh_16',['heap.h',['../heap_8h.html',1,'']]],
   ['helper_2ecc_17',['helper.cc',['../helper_8cc.html',1,'(Global Namespace)'],['../ssl_2helper_8cc.html',1,'(Global Namespace)']]],
-  ['helper_2eh_18',['helper.h',['../helper_8h.html',1,'(Global Namespace)'],['../ssl_2helper_8h.html',1,'(Global Namespace)']]],
+  ['helper_2eh_18',['helper.h',['../ssl_2helper_8h.html',1,'(Global Namespace)'],['../helper_8h.html',1,'(Global Namespace)']]],
   ['here_2ecc_19',['Here.cc',['../Here_8cc.html',1,'']]],
   ['here_2eh_20',['Here.h',['../Here_8h.html',1,'']]],
   ['hier_5fcode_2eh_21',['hier_code.h',['../hier__code_8h.html',1,'']]],
