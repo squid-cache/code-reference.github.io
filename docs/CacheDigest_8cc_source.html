@@ -160,7 +160,7 @@ $(document).ready(function(){initNavTree('CacheDigest_8cc_source.html',''); init
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    mask_size(0),</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    bits_per_entry(bpe)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(<a class="code hl_define" href="md5_8h.html#a798438dc0194720c48b82a27ca9af05a">SQUID_MD5_DIGEST_LENGTH</a> == 16);  <span class="comment">/* our hash functions rely on 16 byte keys */</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">static_assert</span>(<a class="code hl_define" href="md5_8h.html#a798438dc0194720c48b82a27ca9af05a">SQUID_MD5_DIGEST_LENGTH</a> == 16);  <span class="comment">/* our hash functions rely on 16 byte keys */</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_function" href="classCacheDigest.html#a0190cd8ccaa282da611f1b9094f23bd9">updateCapacity</a>(aCapacity);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
 </div>

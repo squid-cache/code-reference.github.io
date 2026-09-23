@@ -465,7 +465,7 @@ $(document).ready(function(){initNavTree('htcp_8cc_source.html',''); initResizab
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>{</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <a class="code hl_struct" href="struct__htcpAuthHeader.html">htcpAuthHeader</a> auth;</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <span class="keywordtype">size_t</span> copy_sz = 0;</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(2 == <span class="keyword">sizeof</span>(uint16_t));</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(uint16_t) == 2);</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    auth.<a class="code hl_variable" href="struct__htcpAuthHeader.html#aedf3fb3ae17ab12011b735a66bbc3bf0">length</a> = htons(2);</div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    copy_sz += 2;</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keywordflow">if</span> (buflen &lt; copy_sz)</div>
