@@ -259,7 +259,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00903">903</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00908">908</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="Uri_8h.html#a1c7d80fad9e5024e4642f0be2c535bfdae219c37e54a5d65d7587155a421b8b7e">mdnHonorWildcards</a>, <a class="el" href="Uri_8h.html#a1c7d80fad9e5024e4642f0be2c535bfdabcef23a32bc2b075002b9033a5f78840">mdnRejectSubsubDomains</a>, and <a class="el" href="xis_8h.html#a99271806e10cad553e581cd3aa7c8c33">xtolower</a>.</p>
 
@@ -285,7 +285,7 @@ Functions</h2></td></tr>
 <p>Appends configured append_domain to hostname, assuming the given buffer is at least SQUIDHOSTNAMELEN bytes long, and that the host FQDN is not a 'dotless' TLD.</p>
 <dl class="section return"><dt>Returns</dt><dd>false if and only if there is not enough space to append </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00297">297</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00302">302</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="classSquidConfig.html#a6382b11d001515f712a0462d5e277280">SquidConfig::appendDomain</a>, <a class="el" href="classSquidConfig.html#a10945ff98ac5fedfaac23c4b8f4f2512">SquidConfig::appendDomainLen</a>, <a class="el" href="SquidConfig_8cc.html#a75b136e6a1eef61424d84596a404aafe">Config</a>, <a class="el" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>, and <a class="el" href="rfc2181_8h.html#a17573070c1b8cdd6570e594c23d4addb">SQUIDHOSTNAMELEN</a>.</p>
 
@@ -326,7 +326,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>call <a class="el" href="classHttpRequest.html#ac0c4711b9c47a56e565c14b763d86214">HttpRequest::canonicalCleanUrl()</a> instead if you have <a class="el" href="classHttpRequest.html">HttpRequest</a> </p><dl class="section return"><dt>Returns</dt><dd>a pointer to a local static buffer containing request URI that honors strip_query_terms and %-encodes unsafe URI characters </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00790">790</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00795">795</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="SquidConfig_8cc.html#a75b136e6a1eef61424d84596a404aafe">Config</a>, <a class="el" href="squid_8h.html#a9b17dd86bdde2e8cb89abe153a0f4f23">LOCAL_ARRAY</a>, <a class="el" href="defines_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>, <a class="el" href="namespaceHttp.html#a84eb275fbe86f9dcc2a0ce9164a60787a8ecea905b7d7b048a979e590cb11b9d7">Http::METHOD_CONNECT</a>, <a class="el" href="classSquidConfig.html#a89bec7bc02d66eb2ab65c74c3f6b13ac">SquidConfig::onoff</a>, <a class="el" href="namespaceAnyP.html#af0ba7042d4344a04b758836b3e6e7accae51fa1ab78fe6308e5228a718c17ca69">AnyP::PROTO_URN</a>, <a class="el" href="rfc1738_8h.html#aac1210d2cdbff9d38d2dff20cd8e2a7e">rfc1738_escape_unescaped</a>, <a class="el" href="SBuf_8h.html#a225d674d14bd9377da94fdb0edc08ecc">SQUIDSBUFPH</a>, <a class="el" href="SBuf_8h.html#aba15ad960fbece70b7940c8d3a5c344b">SQUIDSBUFPRINT</a>, <a class="el" href="SquidString_8h.html#abbb6179dd84b7d0df2160977a7c076a0">stringHasCntl()</a>, <a class="el" href="classSquidConfig.html#a46184ef8e86f5599c33dcb8f077cc158">SquidConfig::strip_query_terms</a>, and <a class="el" href="xstring_8cc.html#a14dfc5efacfd3d4cbccd03827103ac54">xstrncpy()</a>.</p>
 
@@ -351,7 +351,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Yet another alternative to urlCanonical. This one adds the <a href="https://">https://</a> parts to <a class="el" href="namespaceHttp.html#a84eb275fbe86f9dcc2a0ce9164a60787a8ecea905b7d7b048a979e590cb11b9d7">Http::METHOD_CONNECT</a> URL for use in error page outputs. Luckily we can leverage the others instead of duplicating. </p>
 
-<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00819">819</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00824">824</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="classHttpRequest.html#ac0c4711b9c47a56e565c14b763d86214">HttpRequest::canonicalCleanUrl()</a>, <a class="el" href="classAnyP_1_1Uri.html#aab379cecc273683d9744197a8a2efe3f">AnyP::Uri::host()</a>, <a class="el" href="squid_8h.html#a9b17dd86bdde2e8cb89abe153a0f4f23">LOCAL_ARRAY</a>, <a class="el" href="defines_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>, <a class="el" href="classHttpRequest.html#a1f0af82ff15e9a29d15319fc3cf05a54">HttpRequest::method</a>, <a class="el" href="namespaceHttp.html#a84eb275fbe86f9dcc2a0ce9164a60787a8ecea905b7d7b048a979e590cb11b9d7">Http::METHOD_CONNECT</a>, <a class="el" href="classAnyP_1_1Uri.html#aa09ef977328523ec48e7440c83d728d3">AnyP::Uri::port()</a>, and <a class="el" href="classHttpRequest.html#af191362e7cf9b99f7f15dd20a0076e89">HttpRequest::url</a>.</p>
 
@@ -375,7 +375,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l01002">1002</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l01007">1007</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="classAnyP_1_1Uri.html#a94b8c4cdbf6b7252217fb20d974af104">AnyP::Uri::Asterisk()</a>, <a class="el" href="classHttpHeader.html#abf9ae83ecee9c6ee5de511131993567b">HttpHeader::getInt64()</a>, <a class="el" href="classAnyP_1_1Uri.html#a267687947070d739a63da8a42969f12c">AnyP::Uri::getScheme()</a>, <a class="el" href="classHttp_1_1Message.html#a79ae935ff618211b139dcfdd8a5277ec">Http::Message::header</a>, <a class="el" href="namespaceHttp.html#a92faa3c60e0b457c167759389ae061a4a78311c3bedd99c69c01b5ada747f1de4">Http::MAX_FORWARDS</a>, <a class="el" href="classHttpRequest.html#a1f0af82ff15e9a29d15319fc3cf05a54">HttpRequest::method</a>, <a class="el" href="namespaceHttp.html#a84eb275fbe86f9dcc2a0ce9164a60787a8ecea905b7d7b048a979e590cb11b9d7">Http::METHOD_CONNECT</a>, <a class="el" href="namespaceHttp.html#a84eb275fbe86f9dcc2a0ce9164a60787abf0f2b96078c49aefdf7ab3ef183a5de">Http::METHOD_GET</a>, <a class="el" href="namespaceHttp.html#a84eb275fbe86f9dcc2a0ce9164a60787ae59da8aa7332b02b6e84725be140028b">Http::METHOD_HEAD</a>, <a class="el" href="namespaceHttp.html#a84eb275fbe86f9dcc2a0ce9164a60787a4fbb358ee66d6fe96e79cb8cf49b260a">Http::METHOD_OPTIONS</a>, <a class="el" href="namespaceHttp.html#a84eb275fbe86f9dcc2a0ce9164a60787ac284f1b2d0b0429b55542e9ca3be28d4">Http::METHOD_PURGE</a>, <a class="el" href="namespaceHttp.html#a84eb275fbe86f9dcc2a0ce9164a60787a3eff063fbded3d15e4cea500e09c2de3">Http::METHOD_PUT</a>, <a class="el" href="namespaceHttp.html#a84eb275fbe86f9dcc2a0ce9164a60787a048d612501964b8d3f0d41ede55395f3">Http::METHOD_TRACE</a>, <a class="el" href="classAnyP_1_1Uri.html#a4499a7819274e2dbe4ceb399e77e250d">AnyP::Uri::path()</a>, <a class="el" href="namespaceAnyP.html#af0ba7042d4344a04b758836b3e6e7acca6b36255bc8fc8723bdfa8d419847697c">AnyP::PROTO_FTP</a>, <a class="el" href="namespaceAnyP.html#af0ba7042d4344a04b758836b3e6e7acca62d94ce7433f7892fb4541f72ac4ac7d">AnyP::PROTO_HTTP</a>, <a class="el" href="namespaceAnyP.html#af0ba7042d4344a04b758836b3e6e7acca0f99ccafd63891be16873f9f2abe94ba">AnyP::PROTO_HTTPS</a>, <a class="el" href="namespaceAnyP.html#af0ba7042d4344a04b758836b3e6e7accae51fa1ab78fe6308e5228a718c17ca69">AnyP::PROTO_URN</a>, <a class="el" href="namespaceAnyP.html#af0ba7042d4344a04b758836b3e6e7accaecdd82dd2be0d8cae828bf48b529ec8a">AnyP::PROTO_WAIS</a>, <a class="el" href="namespaceAnyP.html#af0ba7042d4344a04b758836b3e6e7acca8cb0b9c9766c16c491b716e49e7fed5d">AnyP::PROTO_WHOIS</a>, and <a class="el" href="classHttpRequest.html#af191362e7cf9b99f7f15dd20a0076e89">HttpRequest::url</a>.</p>
 
@@ -417,7 +417,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00212">212</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00217">217</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, <a class="el" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>, <a class="el" href="Uri_8cc.html#a7b3d400c54dd0ce685ac6c136ae73fe3">matchDomainName()</a>, <a class="el" href="Uri_8h.html#a1c7d80fad9e5024e4642f0be2c535bfdae219c37e54a5d65d7587155a421b8b7e">mdnHonorWildcards</a>, <a class="el" href="Uri_8h.html#a1c7d80fad9e5024e4642f0be2c535bfdabcef23a32bc2b075002b9033a5f78840">mdnRejectSubsubDomains</a>, <a class="el" href="namespaceAnyP.html#af0ba7042d4344a04b758836b3e6e7accaa7fd444f49e775b6b1747dd6d5012638">AnyP::PROTO_MAX</a>, and <a class="el" href="namespaceAnyP.html#a604d4da2ae8603fea4c1fd6be1857dd7">AnyP::ProtocolType_str</a>.</p>
 
@@ -473,7 +473,7 @@ Functions</h2></td></tr>
 <p>relative-ref = relative-part [ "?" query ] [ "#" fragment ]</p>
 <p>relative-part = "//" authority path-abempty / path-absolute / path-noscheme / path-empty </p>
 
-<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00846">846</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Uri_8cc_source.html#l00851">851</a> of file <a class="el" href="Uri_8cc_source.html">Uri.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="clients_2Client_8cc.html#a3ec764a4e43296456355ec8606a29fb2">purgeEntriesByHeader()</a>.</p>
 
