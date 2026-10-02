@@ -31,11 +31,11 @@ var searchData=
   ['urn_2ecc_28',['urn.cc',['../urn_8cc.html',1,'']]],
   ['urn_2eh_29',['urn.h',['../urn_8h.html',1,'']]],
   ['user_2ecc_30',['user.cc',['../basic_2User_8cc.html',1,'(Global Namespace)'],['../digest_2User_8cc.html',1,'(Global Namespace)'],['../negotiate_2User_8cc.html',1,'(Global Namespace)'],['../ntlm_2User_8cc.html',1,'(Global Namespace)'],['../User_8cc.html',1,'(Global Namespace)']]],
-  ['user_2eh_31',['user.h',['../digest_2User_8h.html',1,'(Global Namespace)'],['../negotiate_2User_8h.html',1,'(Global Namespace)'],['../ntlm_2User_8h.html',1,'(Global Namespace)'],['../User_8h.html',1,'(Global Namespace)'],['../basic_2User_8h.html',1,'(Global Namespace)']]],
+  ['user_2eh_31',['user.h',['../basic_2User_8h.html',1,'(Global Namespace)'],['../digest_2User_8h.html',1,'(Global Namespace)'],['../User_8h.html',1,'(Global Namespace)'],['../ntlm_2User_8h.html',1,'(Global Namespace)'],['../negotiate_2User_8h.html',1,'(Global Namespace)']]],
   ['userdata_2ecc_32',['UserData.cc',['../UserData_8cc.html',1,'']]],
   ['userdata_2eh_33',['UserData.h',['../UserData_8h.html',1,'']]],
-  ['userrequest_2ecc_34',['userrequest.cc',['../UserRequest_8cc.html',1,'(Global Namespace)'],['../ntlm_2UserRequest_8cc.html',1,'(Global Namespace)'],['../negotiate_2UserRequest_8cc.html',1,'(Global Namespace)'],['../digest_2UserRequest_8cc.html',1,'(Global Namespace)'],['../basic_2UserRequest_8cc.html',1,'(Global Namespace)']]],
-  ['userrequest_2eh_35',['userrequest.h',['../negotiate_2UserRequest_8h.html',1,'(Global Namespace)'],['../basic_2UserRequest_8h.html',1,'(Global Namespace)'],['../UserRequest_8h.html',1,'(Global Namespace)'],['../ntlm_2UserRequest_8h.html',1,'(Global Namespace)'],['../digest_2UserRequest_8h.html',1,'(Global Namespace)']]],
+  ['userrequest_2ecc_34',['userrequest.cc',['../negotiate_2UserRequest_8cc.html',1,'(Global Namespace)'],['../basic_2UserRequest_8cc.html',1,'(Global Namespace)'],['../UserRequest_8cc.html',1,'(Global Namespace)'],['../ntlm_2UserRequest_8cc.html',1,'(Global Namespace)'],['../digest_2UserRequest_8cc.html',1,'(Global Namespace)']]],
+  ['userrequest_2eh_35',['userrequest.h',['../UserRequest_8h.html',1,'(Global Namespace)'],['../ntlm_2UserRequest_8h.html',1,'(Global Namespace)'],['../negotiate_2UserRequest_8h.html',1,'(Global Namespace)'],['../digest_2UserRequest_8h.html',1,'(Global Namespace)'],['../basic_2UserRequest_8h.html',1,'(Global Namespace)']]],
   ['util_2ecc_36',['util.cc',['../util_8cc.html',1,'']]],
   ['util_2eh_37',['util.h',['../util_8h.html',1,'']]]
 ];
