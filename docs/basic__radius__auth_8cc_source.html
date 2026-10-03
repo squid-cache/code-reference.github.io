@@ -705,7 +705,7 @@ $(document).ready(function(){initNavTree('basic__radius__auth_8cc_source.html','
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span> </div>
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>        <span class="comment">/* Parse out the username and password */</span></div>
 <div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>        ptr = buf;</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>        <span class="keywordflow">while</span> (isspace(*ptr))</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>        <span class="keywordflow">while</span> (<a class="code hl_define" href="xis_8h.html#a1ddc35653ddbcf46386d5c824a83a150">xisspace</a>(*ptr))</div>
 <div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>            ++ptr;</div>
 <div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>        <span class="keywordflow">if</span> ((end = strchr(ptr, <span class="charliteral">&#39; &#39;</span>)) == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>            <a class="code hl_define" href="protocol__defines_8h.html#a5631415cafa1eb9c681a282b754aaec7">SEND_ERR</a>(<span class="stringliteral">&quot;No password&quot;</span>);</div>
@@ -714,7 +714,7 @@ $(document).ready(function(){initNavTree('basic__radius__auth_8cc_source.html','
 <div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        *end = <span class="charliteral">&#39;\0&#39;</span>;</div>
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>        <a class="code hl_function" href="basic__radius__auth_8cc.html#a34016a91be86bd7f55f5e893f74e07f6">urldecode</a>(username, ptr, <a class="code hl_define" href="basic__radius__auth_8cc.html#add67fd8f3ec025cfba1cc243425c96df">MAXPWNAM</a>);</div>
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>        ptr = end + 1;</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>        <span class="keywordflow">while</span> (isspace(*ptr))</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>        <span class="keywordflow">while</span> (<a class="code hl_define" href="xis_8h.html#a1ddc35653ddbcf46386d5c824a83a150">xisspace</a>(*ptr))</div>
 <div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>            ++ptr;</div>
 <div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>        <a class="code hl_function" href="basic__radius__auth_8cc.html#a34016a91be86bd7f55f5e893f74e07f6">urldecode</a>(passwd, ptr, <a class="code hl_define" href="basic__radius__auth_8cc.html#adea493661bde2e6c45637a4f0a95c2b9">MAXPASS</a>);</div>
 <div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span> </div>
@@ -805,6 +805,7 @@ $(document).ready(function(){initNavTree('basic__radius__auth_8cc_source.html','
 <div class="ttc" id="aunistd_8h_html"><div class="ttname"><a href="unistd_8h.html">unistd.h</a></div></div>
 <div class="ttc" id="aunistd_8h_html_a6d1b44cffcc40b1b6706413d323bd250"><div class="ttname"><a href="unistd_8h.html#a6d1b44cffcc40b1b6706413d323bd250">xclose</a></div><div class="ttdeci">int xclose(int fd)</div><div class="ttdoc">POSIX close(2) equivalent.</div><div class="ttdef"><b>Definition</b> <a href="unistd_8h_source.html#l00043">unistd.h:43</a></div></div>
 <div class="ttc" id="awindows__service_8cc_html_a8f2a1d2002ae5c6d89dd38c23e8b253d"><div class="ttname"><a href="windows__service_8cc.html#a8f2a1d2002ae5c6d89dd38c23e8b253d">Win32SockCleanup</a></div><div class="ttdeci">static void Win32SockCleanup(void)</div><div class="ttdef"><b>Definition</b> <a href="windows__service_8cc_source.html#l00981">windows_service.cc:981</a></div></div>
+<div class="ttc" id="axis_8h_html_a1ddc35653ddbcf46386d5c824a83a150"><div class="ttname"><a href="xis_8h.html#a1ddc35653ddbcf46386d5c824a83a150">xisspace</a></div><div class="ttdeci">#define xisspace(x)</div><div class="ttdef"><b>Definition</b> <a href="xis_8h_source.html#l00015">xis.h:15</a></div></div>
 <div class="ttc" id="axstrerror_8cc_html_a3d643f764de4776e5489d4eb55a99849"><div class="ttname"><a href="xstrerror_8cc.html#a3d643f764de4776e5489d4eb55a99849">xstrerr</a></div><div class="ttdeci">const char * xstrerr(int error)</div><div class="ttdef"><b>Definition</b> <a href="xstrerror_8cc_source.html#l00083">xstrerror.cc:83</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
