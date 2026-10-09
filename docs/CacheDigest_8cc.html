@@ -129,6 +129,8 @@ Functions</h2></td></tr>
 <tr class="separator:a0ba5ee324bc800f79460c0a897721b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a768871dd4b21d74d0a4649987724bdd2" id="r_a768871dd4b21d74d0a4649987724bdd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CacheDigest_8cc.html#a768871dd4b21d74d0a4649987724bdd2">cacheDigestReport</a> (<a class="el" href="classCacheDigest.html">CacheDigest</a> *cd, const <a class="el" href="classSBuf.html">SBuf</a> &amp;label, <a class="el" href="classStoreEntry.html">StoreEntry</a> *e)</td></tr>
 <tr class="separator:a768871dd4b21d74d0a4649987724bdd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44cbadeecc112a02f92dd7c333b890f5" id="r_a44cbadeecc112a02f92dd7c333b890f5"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CacheDigest_8cc.html#a44cbadeecc112a02f92dd7c333b890f5">UnsafeMaskSize</a> (const uint64_t cap, const uint8_t bpe)</td></tr>
+<tr class="separator:a44cbadeecc112a02f92dd7c333b890f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -248,7 +250,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CacheDigest_8cc_source.html#l00279">279</a> of file <a class="el" href="CacheDigest_8cc_source.html">CacheDigest.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CacheDigest_8cc_source.html#l00322">322</a> of file <a class="el" href="CacheDigest_8cc_source.html">CacheDigest.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>, <a class="el" href="CacheDigest_8cc.html#a348f1319e26671e09351b4734d8f0dab">hashed_keys</a>, <a class="el" href="classCacheDigest.html#a9915df131fbbb003c54ee85ce03b575e">CacheDigest::mask_size</a>, and <a class="el" href="store__key__md5_8cc.html#ae14de11fa2cd3e2dc15d4763a06d0850">storeKeyText()</a>.</p>
 
@@ -335,6 +337,49 @@ Variables</h2></td></tr>
 <p class="reference">References <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, <a class="el" href="structCacheDigestStats.html#a23575bdee40bc7fdb87a9462f06eca1d">CacheDigestStats::bit_count</a>, <a class="el" href="structCacheDigestStats.html#a18ae26aa46ae821886f858419d295349">CacheDigestStats::bit_on_count</a>, <a class="el" href="structCacheDigestStats.html#a4810216effae651c11c496397ae6bf88">CacheDigestStats::bseq_count</a>, <a class="el" href="structCacheDigestStats.html#af5273c3efc66884b5faba7b3e04a838f">CacheDigestStats::bseq_len_sum</a>, <a class="el" href="defines_8h.html#a9101f5651fa374ac54cbed741c7d58ef">CBIT_TEST</a>, <a class="el" href="classCacheDigest.html#a1aa5d4d58d12721d827e2cc26fae819d">CacheDigest::mask</a>, and <a class="el" href="classCacheDigest.html#a9915df131fbbb003c54ee85ce03b575e">CacheDigest::mask_size</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="CacheDigest_8cc.html#a768871dd4b21d74d0a4649987724bdd2">cacheDigestReport()</a>, and <a class="el" href="classCacheDigest.html#a262b95df0c4f31a480ebef0a834be558">CacheDigest::usedMaskPercent()</a>.</p>
+
+</div>
+</div>
+<a id="a44cbadeecc112a02f92dd7c333b890f5" name="a44cbadeecc112a02f92dd7c333b890f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44cbadeecc112a02f92dd7c333b890f5">&#9670;&#160;</a></span>UnsafeMaskSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint64_t UnsafeMaskSize </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t&#160;</td>
+          <td class="paramname"><em>cap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>bpe</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classCacheDigest.html#a2630d90d179b1bb088f20e166627b187">CacheDigest::CalcMaskSize()</a> helper to compute digest mask size without accounting for any limits or restrictions other than those imposed by uint64_t type/math itself. </p>
+
+<p class="definition">Definition at line <a class="el" href="CacheDigest_8cc_source.html#l00274">274</a> of file <a class="el" href="CacheDigest_8cc_source.html">CacheDigest.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="Assure_8h.html#a1fcca4cd6cfc3b9f835aa3652eb0c2f5">Assure</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classCacheDigest.html#a2630d90d179b1bb088f20e166627b187">CacheDigest::CalcMaskSize()</a>.</p>
 
 </div>
 </div>

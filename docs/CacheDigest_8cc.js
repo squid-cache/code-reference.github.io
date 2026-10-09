@@ -6,5 +6,6 @@ var CacheDigest_8cc =
     [ "cacheDigestHashKey", "CacheDigest_8cc.html#ae53c3ccd8f55aaff30aca83cf94dafb2", null ],
     [ "cacheDigestReport", "CacheDigest_8cc.html#a768871dd4b21d74d0a4649987724bdd2", null ],
     [ "cacheDigestStats", "CacheDigest_8cc.html#a6b738c6de478c98778b1e0172543de4f", null ],
+    [ "UnsafeMaskSize", "CacheDigest_8cc.html#a44cbadeecc112a02f92dd7c333b890f5", null ],
     [ "hashed_keys", "CacheDigest_8cc.html#a348f1319e26671e09351b4734d8f0dab", null ]
 ];
