@@ -2,7 +2,6 @@ var security_2forward_8h =
 [
     [ "sk_dtor_wrapper", "security_2forward_8h.html#aa09518765dcf8e6595d260216bf20b31", null ],
     [ "SSL_FLAG_CONDITIONAL_AUTH", "security_2forward_8h.html#a0546c439688af7c5b79b8720e582c6e0", null ],
-    [ "SSL_FLAG_DELAYED_AUTH", "security_2forward_8h.html#ae003f564b41e4920a1a15a95ce14d59a", null ],
     [ "SSL_FLAG_DONT_VERIFY_DOMAIN", "security_2forward_8h.html#abe7b87eb301941ecd54d675879ab1dc3", null ],
     [ "SSL_FLAG_DONT_VERIFY_PEER", "security_2forward_8h.html#a08985104ec02cccb9b8be8d1df07cf14", null ],
     [ "SSL_FLAG_NO_DEFAULT_CA", "security_2forward_8h.html#a35b255a8af507541571f85518e6adf14", null ],

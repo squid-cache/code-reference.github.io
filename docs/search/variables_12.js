@@ -32,7 +32,7 @@ var searchData=
   ['rd_29',['rd',['../struct__rfc1035__message.html#a28633f2d3ecbf07ca59fdde4dfcc00a3',1,'_rfc1035_message']]],
   ['rdata_30',['rdata',['../classrfc1035__rr.html#a58c0b6f67a511f40102ee84bcabed6af',1,'rfc1035_rr']]],
   ['rdlength_31',['rdlength',['../classrfc1035__rr.html#a9b06d89f602c9829e1904611e51ca159',1,'rfc1035_rr']]],
-  ['read_32',['read',['../classIdleConnList.html#af29e78a3a92342c2962e7e72ebf903df',1,'IdleConnList::Read'],['../classStoreIOState.html#acc0bf6d6717a5421fed10dae99c08168',1,'StoreIOState::read'],['../classSquidConfig.html#a771397cfd0a2f7d513cb5092ef50e3f6',1,'SquidConfig::read'],['../structdiskd__stats__t.html#ae9b96555aa2b57270da76a6ba3d80ca5',1,'diskd_stats_t::read']]],
+  ['read_32',['read',['../structdiskd__stats__t.html#ae9b96555aa2b57270da76a6ba3d80ca5',1,'diskd_stats_t::read'],['../classIdleConnList.html#af29e78a3a92342c2962e7e72ebf903df',1,'IdleConnList::Read'],['../classStoreIOState.html#acc0bf6d6717a5421fed10dae99c08168',1,'StoreIOState::read'],['../classSquidConfig.html#a771397cfd0a2f7d513cb5092ef50e3f6',1,'SquidConfig::read']]],
   ['read_5fbuf_33',['read_buf',['../classFs_1_1Ufs_1_1UFSStoreState.html#a1ce58943544db230d970ad1383cb847f',1,'Fs::Ufs::UFSStoreState']]],
   ['read_5fdata_34',['read_data',['../classfde.html#aaf1368f8f5b3fe39d9d92eaca42ff4c3',1,'fde']]],
   ['read_5ffail_35',['read_fail',['../classDiskdActionData.html#a8b809c5bc0611c0dbb19840a02973773',1,'DiskdActionData']]],

@@ -7,7 +7,6 @@ var structFtp_1_1GatewayFlags =
     [ "epsv_all_sent", "structFtp_1_1GatewayFlags.html#a8c6595dd4f6f5343f1b61a8b4e11d412", null ],
     [ "http_header_sent", "structFtp_1_1GatewayFlags.html#af1777c0c2d68d29027c6487d6868e996", null ],
     [ "isdir", "structFtp_1_1GatewayFlags.html#a652d8862e809dbf02936013c4d7dcce4", null ],
-    [ "listformat_unknown", "structFtp_1_1GatewayFlags.html#aaf1377d5113dc7a33d9c2be0accef815", null ],
     [ "listing", "structFtp_1_1GatewayFlags.html#ab8a8e0885e516d9d5b089b6bf32d23cc", null ],
     [ "need_base_href", "structFtp_1_1GatewayFlags.html#ac89ac5945dbaa9a905bc04e95fd60e2e", null ],
     [ "no_dotdot", "structFtp_1_1GatewayFlags.html#a180ae08f36642ffcbef94f060b6290cf", null ],

@@ -314,7 +314,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Creates and returns an OpenSSL BIO object for writing to <code>buf</code> (or throws). TODO: Add support for reading from <code>buf</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01563">1563</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01559">1559</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="support_8cc.html#ac22c2852ded279325e3919e492e2def7">bio_sbuf_create()</a>, <a class="el" href="support_8cc.html#ace4eb2c66cae04bcf76416ca819c3f99">bio_sbuf_ctrl()</a>, <a class="el" href="support_8cc.html#a50949981ec051b10687321d37f88ac8a">bio_sbuf_destroy()</a>, <a class="el" href="support_8cc.html#a2b7088d894a6519b8fe1fc43224929d4">bio_sbuf_puts()</a>, <a class="el" href="support_8cc.html#a9d39c820763f1e0544c308df4f3250d4">bio_sbuf_write()</a>, <a class="el" href="openssl_8h.html#adad1643c3a8ab867b6bf3fc954e04ac2">BIO_set_data()</a>, <a class="el" href="openssl_8h.html#aa9ec959a6b719c59228eee3a4b327787">BIO_set_init()</a>, <a class="el" href="TextException_8h.html#ad79a19f4098f2506d0aa28628f18fd36">Must</a>, and <a class="el" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>.</p>
 
@@ -417,7 +417,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Chain signing certificate and chained certificates to an SSL Context </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01066">1066</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01062">1062</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, <a class="el" href="classSecurity_1_1KeyData.html#aa7380d0cad9ae212c6d404a8f4a4e7f6">Security::KeyData::cert</a>, <a class="el" href="classSecurity_1_1KeyData.html#ab199bb811028376f2c1021d80b63e346">Security::KeyData::chain</a>, <a class="el" href="debug_2Stream_8h.html#ad1f6f001d275799243ee96d0b1519d3a">DBG_IMPORTANT</a>, <a class="el" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>, <a class="el" href="acl_2external_2kerberos__ldap__group_2support_8h.html#a3654b5eb0d17fed9fc1f1dee818ad49f">error()</a>, <a class="el" href="namespaceSecurity.html#ae026d69c714c41065a22f2d0351a9c32">Security::ErrorString()</a>, <a class="el" href="classSecurity_1_1LockingPointer.html#abd5883cbae01116de745ff8496a65664">Security::LockingPointer&lt; T, UnLocker, Locker &gt;::get()</a>, and <a class="el" href="classSecurity_1_1ServerOptions.html#aecc550490f6120be59573543436a35f2">Security::ServerOptions::signingCa</a>.</p>
 
@@ -483,7 +483,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Generates a certificate and a private key using provided properties and set it to SSL object. </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01098">1098</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01094">1094</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="group__SslCrtdSslAPI.html#ga6d8a7bd1a6180efa04d569b0da798a2b">Ssl::generateSslCertificate()</a>, and <a class="el" href="classSecurity_1_1LockingPointer.html#abd5883cbae01116de745ff8496a65664">Security::LockingPointer&lt; T, UnLocker, Locker &gt;::get()</a>.</p>
 
@@ -524,7 +524,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Read private key and certificate from memory and set it to SSL object using their. </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01121">1121</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01117">1117</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="classSecurity_1_1LockingPointer.html#abd5883cbae01116de745ff8496a65664">Security::LockingPointer&lt; T, UnLocker, Locker &gt;::get()</a>, and <a class="el" href="group__SslCrtdSslAPI.html#gaba5d686e6a11a2ff27714b4bf86c0972">Ssl::readCertAndPrivateKeyFromMemory()</a>.</p>
 
@@ -565,7 +565,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Configure a previously unconfigured SSL context object. </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01091">1091</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01087">1087</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="group__SslCrtdSslAPI.html#gga87ed0e1c2b78fa6575e2c0c16cff01aba3b2f7ad911a421046bc60691daac32d5">Ssl::algSignTrusted</a>, <a class="el" href="group__ServerProtocolSSLAPI.html#ga653ff1e83e0cfb2c8483d2e84b980474">Ssl::chainCertificatesToSSLContext()</a>, and <a class="el" href="eDirectory_2ldap__backend_8cc.html#a63c89c04d1feae07ca35558055155ffb">port</a>.</p>
 
@@ -606,7 +606,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Create an SSL context using the provided certificate and key </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01021">1021</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01017">1017</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="classSecurity_1_1ServerOptions.html#a10f3d24b85367ae9b80e45df1dfc2ab5">Security::ServerOptions::createBlankContext()</a>, <a class="el" href="classSecurity_1_1LockingPointer.html#abd5883cbae01116de745ff8496a65664">Security::LockingPointer&lt; T, UnLocker, Locker &gt;::get()</a>, and <a class="el" href="classSecurity_1_1ServerOptions.html#ab93be9d1fdb074550bd2d72adca2f7c4">Security::ServerOptions::updateContextConfig()</a>.</p>
 
@@ -647,7 +647,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Decide on the kind of certificate and generate a CA- or self-signed one </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01052">1052</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01048">1048</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="group__ServerProtocolSSLAPI.html#ga653ff1e83e0cfb2c8483d2e84b980474">Ssl::chainCertificatesToSSLContext()</a>, <a class="el" href="group__ServerProtocolSSLAPI.html#ga8b646bfba6b409e0acef284766f80da3">Ssl::createSSLContext()</a>, and <a class="el" href="group__SslCrtdSslAPI.html#ga6d8a7bd1a6180efa04d569b0da798a2b">Ssl::generateSslCertificate()</a>.</p>
 
@@ -688,7 +688,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Read private key and certificate from memory and generate SSL context using their. </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01038">1038</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01034">1034</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="group__ServerProtocolSSLAPI.html#ga653ff1e83e0cfb2c8483d2e84b980474">Ssl::chainCertificatesToSSLContext()</a>, <a class="el" href="group__ServerProtocolSSLAPI.html#ga8b646bfba6b409e0acef284766f80da3">Ssl::createSSLContext()</a>, and <a class="el" href="group__SslCrtdSslAPI.html#gaba5d686e6a11a2ff27714b4bf86c0972">Ssl::readCertAndPrivateKeyFromMemory()</a>.</p>
 
@@ -735,7 +735,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Generate a certificate to be used as untrusted signing certificate, based on a trusted CA </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01463">1463</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01459">1459</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="group__SslCrtdSslAPI.html#gga87ed0e1c2b78fa6575e2c0c16cff01abadf93cbc7ca41b5e189ef7ec436af8bb8">Ssl::algSignSelf</a>, <a class="el" href="group__ServerProtocolSSLAPI.html#gadec5bd65942fa62dc3f069a41a3a0a27">Ssl::CommonHostName()</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#afe7c23e9e7cec3f582e753fe2f016624">Ssl::CertificateProperties::commonName</a>, <a class="el" href="group__SslCrtdSslAPI.html#ga6d8a7bd1a6180efa04d569b0da798a2b">Ssl::generateSslCertificate()</a>, <a class="el" href="classSecurity_1_1LockingPointer.html#abd5883cbae01116de745ff8496a65664">Security::LockingPointer&lt; T, UnLocker, Locker &gt;::get()</a>, <a class="el" href="group__ServerProtocolSSLAPI.html#gad32d19ea166f91108ea0e5216c72de55">Ssl::getOrganization()</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#abe15b8d355343b1fa18bab6060f1d0bd">Ssl::CertificateProperties::mimicCert</a>, <a class="el" href="classSecurity_1_1LockingPointer.html#ab599b2876300635a15afee3bc7e7af4f">Security::LockingPointer&lt; T, UnLocker, Locker &gt;::resetAndLock()</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#a7f540a634da4dc1393dc853a427fb18e">Ssl::CertificateProperties::setCommonName</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#a96a9264cbc454c9b7aff464bdfc113e5">Ssl::CertificateProperties::signAlgorithm</a>, and <a class="el" href="classSsl_1_1CertificateProperties.html#a02801c0f57427909bdc1bd3f25fc05d9">Ssl::CertificateProperties::signWithPkey</a>.</p>
 
@@ -795,7 +795,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Generates a unique key based on <a class="el" href="classSsl_1_1CertificateProperties.html">CertificateProperties</a> object and store it to key </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01486">1486</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01482">1482</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="group__SslCrtdSslAPI.html#gga87ed0e1c2b78fa6575e2c0c16cff01aba11c2a5f79f56c3580ea6fb6178cfd570">Ssl::algSignEnd</a>, <a class="el" href="classSBuf.html#aa12ede16b167c60722946fc8fe9292da">SBuf::append()</a>, <a class="el" href="group__ServerProtocolSSLAPI.html#ga82cc2b987b9058bdf7f8b21b0f0809fe">Ssl::BIO_new_SBuf()</a>, <a class="el" href="group__SslCrtdSslAPI.html#gaf27f0494263606b3fde9cbd7a686ec32">Ssl::certSignAlgorithm()</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#afe7c23e9e7cec3f582e753fe2f016624">Ssl::CertificateProperties::commonName</a>, <a class="el" href="classSecurity_1_1LockingPointer.html#abd5883cbae01116de745ff8496a65664">Security::LockingPointer&lt; T, UnLocker, Locker &gt;::get()</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#abe15b8d355343b1fa18bab6060f1d0bd">Ssl::CertificateProperties::mimicCert</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#a7f540a634da4dc1393dc853a427fb18e">Ssl::CertificateProperties::setCommonName</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#a936ed7b81a65aa2bc1f6c707a53722e5">Ssl::CertificateProperties::setValidAfter</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#aae49c04db7ded1e07a8f78be8f620db7">Ssl::CertificateProperties::setValidBefore</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#a96a9264cbc454c9b7aff464bdfc113e5">Ssl::CertificateProperties::signAlgorithm</a>, <a class="el" href="classSsl_1_1CertificateProperties.html#af6250b526cf6b3df279810de9544d06f">Ssl::CertificateProperties::signHash</a>, and <a class="el" href="namespaceSsl.html#a67bc273aa7fec5482fc6bd82e107307b">Ssl::X509_get_signature()</a>.</p>
 
@@ -830,7 +830,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Load PEM-encoded certificates from the given file. </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01216">1216</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01212">1212</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="debug_2Stream_8h.html#ad1f6f001d275799243ee96d0b1519d3a">DBG_IMPORTANT</a>, <a class="el" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>, <a class="el" href="namespaceSsl.html#a6647e7f98f842aafe5f46024f3607a3b">Ssl::ReadOptionalCertificate()</a>, and <a class="el" href="namespaceSecurity.html#ab4dfe29d04dc3880668fd3b41a5595aa">Security::SubjectName()</a>.</p>
 
@@ -855,7 +855,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Load PEM-encoded certificates to the squid untrusteds certificates internal DB from the given file. </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01447">1447</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01443">1443</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="group__ServerProtocolSSLAPI.html#gaa92e6b056a71028b140d7463968f71cc">Ssl::loadCerts()</a>, and <a class="el" href="namespaceSsl.html#a44e3cee3f9e9af98ad56f9405aff1ab2">Ssl::SquidUntrustedCerts()</a>.</p>
 
@@ -890,7 +890,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Sets the hostname for the <a class="el" href="classServer.html">Server</a> Name Indication (SNI) TLS extension if supported by the used openssl toolkit. </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01166">1166</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01162">1162</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="debug_2Stream_8h.html#ad8cd33a7d75c0efd4d3fd369dc6a8f13">debugs</a>, <a class="el" href="namespaceSecurity.html#ae026d69c714c41065a22f2d0351a9c32">Security::ErrorString()</a>, and <a class="el" href="classIp_1_1Address.html#ab00ddff71da22c55159fdc8176e14ea4">Ip::Address::isAnyAddr()</a>.</p>
 
@@ -924,7 +924,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l00967">967</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l00963">963</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="group__ServerProtocolSSLAPI.html#gafd493918a68532f5cf8f7eacbf5c4eed">Ssl::GetX509CAAttribute</a>.</p>
 
@@ -958,7 +958,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l00954">954</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l00950">950</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="group__ServerProtocolSSLAPI.html#gaeaeed8fead50dea8b50b10049435d258">Ssl::GetX509UserAttribute</a>.</p>
 
@@ -982,7 +982,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l00998">998</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l00994">994</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, and <a class="el" href="group__ServerProtocolSSLAPI.html#ga34f92be9a9b8d193376811a6bdb055c3">sslGetUserCertificatePEM()</a>.</p>
 
@@ -1004,7 +1004,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l00987">987</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l00983">983</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, and <a class="el" href="group__ServerProtocolSSLAPI.html#ga2e14e7e17c66fabcb71acf5342d5bab6">Ssl::GetX509PEM</a>.</p>
 
@@ -1028,7 +1028,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l00981">981</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l00977">977</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="group__ServerProtocolSSLAPI.html#ga72acae1d112ff4f6bac5f7fce970bb54">sslGetUserAttribute()</a>.</p>
 
@@ -1052,7 +1052,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Removes all certificates from squid untrusteds certificates internal DB and frees all memory </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01453">1453</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01449">1449</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="ModDevPoll_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>, and <a class="el" href="namespaceSsl.html#a44e3cee3f9e9af98ad56f9405aff1ab2">Ssl::SquidUntrustedCerts()</a>.</p>
 
@@ -1077,7 +1077,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Configures sslContext to use squid untrusted certificates internal list to complete certificate chains when verifies SSL servers certificates. </p>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01441">1441</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01437">1437</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="support_8cc.html#a8564bb958d9c26c7acc479f383eb7d56">untrustedToStoreCtx_cb()</a>.</p>
 
@@ -1119,7 +1119,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the contexts certificate is valid, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01141">1141</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="support_8cc_source.html#l01137">1137</a> of file <a class="el" href="support_8cc_source.html">support.cc</a>.</p>
 
 <p class="reference">References <a class="el" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>, <a class="el" href="namespaceSecurity.html#a627589d1e0751daa59cdc3edc3269418">Security::NewSessionObject()</a>, <a class="el" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="el" href="openssl_8h.html#a31143b34b6c18cfc8041c7f5359e01b5">X509_getm_notAfter</a>, and <a class="el" href="openssl_8h.html#a5e731d1ecda65a2bdebbbd879ee77d89">X509_getm_notBefore</a>.</p>
 
