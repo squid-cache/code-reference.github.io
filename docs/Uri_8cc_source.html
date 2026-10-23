@@ -1198,38 +1198,37 @@ $(document).ready(function(){initNavTree('Uri_8cc_source.html',''); initResizabl
 <div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>            choppedUri = <a class="code hl_function" href="xstring_8cc.html#a4282f37eaa4a260c714ac6d1bf6a200f">xstrndup</a>(uri, pos + 1);</div>
 <div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>        cleanedUri = <a class="code hl_function" href="xstring_8cc.html#a4282f37eaa4a260c714ac6d1bf6a200f">xstrndup</a>(<a class="code hl_function" href="rfc1738_8h.html#a99ceb7c3adc96b1424f47ce962e792c1">rfc1738_do_escape</a>(choppedUri ? choppedUri : uri,</div>
 <div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>                                                <a class="code hl_define" href="rfc1738_8h.html#aa693a78eb62509fddfd2a9da6634c0f8">RFC1738_ESCAPE_UNESCAPED</a>), <a class="code hl_define" href="defines_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>);</div>
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>        cleanedUri[pos] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>        <a class="code hl_define" href="negotiate__wrapper_8cc.html#a2c3897f7c46ca54a2e0dd7b24a40c7cb">xfree</a>(choppedUri);</div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>    }</div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span> </div>
-<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>    <span class="keywordflow">case</span> <a class="code hl_define" href="defines_8h.html#a4008092c7d768a5e81803e80ff7654e9">URI_WHITESPACE_DENY</a>:</div>
-<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>    <span class="keywordflow">case</span> <a class="code hl_define" href="defines_8h.html#a1670055d93c7767c1c71a3cddca9c5d9">URI_WHITESPACE_STRIP</a>:</div>
-<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>    <span class="keywordflow">default</span>: {</div>
-<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>        <span class="comment">// TODO: avoid duplication with urlParse()</span></div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *t;</div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>        <span class="keywordtype">char</span> *tmp_uri = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_define" href="negotiate__wrapper_8cc.html#a6af5faec3f9662b20ffc9903f923dec0">xmalloc</a>(strlen(uri) + 1));</div>
-<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>        <span class="keywordtype">char</span> *q = tmp_uri;</div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>        t = uri;</div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>        <span class="keywordflow">while</span> (*t) {</div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>            <span class="keywordflow">if</span> (!<a class="code hl_define" href="xis_8h.html#a1ddc35653ddbcf46386d5c824a83a150">xisspace</a>(*t)) {</div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>                *q = *t;</div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>                ++q;</div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>            }</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>            ++t;</div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>        }</div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>        *q = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>        cleanedUri = <a class="code hl_function" href="xstring_8cc.html#a4282f37eaa4a260c714ac6d1bf6a200f">xstrndup</a>(<a class="code hl_define" href="rfc1738_8h.html#aac1210d2cdbff9d38d2dff20cd8e2a7e">rfc1738_escape_unescaped</a>(tmp_uri), <a class="code hl_define" href="defines_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>);</div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>        <a class="code hl_define" href="negotiate__wrapper_8cc.html#a2c3897f7c46ca54a2e0dd7b24a40c7cb">xfree</a>(tmp_uri);</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>        <a class="code hl_define" href="negotiate__wrapper_8cc.html#a2c3897f7c46ca54a2e0dd7b24a40c7cb">xfree</a>(choppedUri);</div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>    }</div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span> </div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>    <span class="keywordflow">case</span> <a class="code hl_define" href="defines_8h.html#a4008092c7d768a5e81803e80ff7654e9">URI_WHITESPACE_DENY</a>:</div>
+<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>    <span class="keywordflow">case</span> <a class="code hl_define" href="defines_8h.html#a1670055d93c7767c1c71a3cddca9c5d9">URI_WHITESPACE_STRIP</a>:</div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>    <span class="keywordflow">default</span>: {</div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>        <span class="comment">// TODO: avoid duplication with urlParse()</span></div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *t;</div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>        <span class="keywordtype">char</span> *tmp_uri = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_define" href="negotiate__wrapper_8cc.html#a6af5faec3f9662b20ffc9903f923dec0">xmalloc</a>(strlen(uri) + 1));</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>        <span class="keywordtype">char</span> *q = tmp_uri;</div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>        t = uri;</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>        <span class="keywordflow">while</span> (*t) {</div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>            <span class="keywordflow">if</span> (!<a class="code hl_define" href="xis_8h.html#a1ddc35653ddbcf46386d5c824a83a150">xisspace</a>(*t)) {</div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>                *q = *t;</div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>                ++q;</div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>            }</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>            ++t;</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>        }</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>        *q = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>        cleanedUri = <a class="code hl_function" href="xstring_8cc.html#a4282f37eaa4a260c714ac6d1bf6a200f">xstrndup</a>(<a class="code hl_define" href="rfc1738_8h.html#aac1210d2cdbff9d38d2dff20cd8e2a7e">rfc1738_escape_unescaped</a>(tmp_uri), <a class="code hl_define" href="defines_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>);</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>        <a class="code hl_define" href="negotiate__wrapper_8cc.html#a2c3897f7c46ca54a2e0dd7b24a40c7cb">xfree</a>(tmp_uri);</div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>    }</div>
 <div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>    }</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>    }</div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span> </div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(cleanedUri);</div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>    <span class="keywordflow">return</span> cleanedUri;</div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>}</div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span> </div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>    <a class="code hl_define" href="assert_8h.html#a33fa45e42155e69ce8d0da0fd978b351">assert</a>(cleanedUri);</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>    <span class="keywordflow">return</span> cleanedUri;</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>}</div>
 </div>
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span> </div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span> </div>
 <div class="ttc" id="aAssure_8h_html_a1fcca4cd6cfc3b9f835aa3652eb0c2f5"><div class="ttname"><a href="Assure_8h.html#a1fcca4cd6cfc3b9f835aa3652eb0c2f5">Assure</a></div><div class="ttdeci">#define Assure(condition)</div><div class="ttdef"><b>Definition</b> <a href="Assure_8h_source.html#l00035">Assure.h:35</a></div></div>
 <div class="ttc" id="aHere_8h_html_ae4d205e9d525856fbdfd44f7eccb309b"><div class="ttname"><a href="Here_8h.html#ae4d205e9d525856fbdfd44f7eccb309b">Here</a></div><div class="ttdeci">#define Here()</div><div class="ttdoc">source code location of the caller</div><div class="ttdef"><b>Definition</b> <a href="Here_8h_source.html#l00015">Here.h:15</a></div></div>
 <div class="ttc" id="aHttpRequest_8h_html"><div class="ttname"><a href="HttpRequest_8h.html">HttpRequest.h</a></div></div>
