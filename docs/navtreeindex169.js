@@ -1,6 +1,5 @@
 var NAVTREEINDEX169 =
 {
-"structSecurity_1_1PeerOptions_1_1flags__.html#a1cce6e38551086ae28f7a72d879004ed":[9,0,22,17,0,3],
 "structSecurity_1_1PeerOptions_1_1flags__.html#a1cce6e38551086ae28f7a72d879004ed":[8,0,26,18,0,3],
 "structSecurity_1_1PeerOptions_1_1flags__.html#a4ea7ae8ddd742fd3beb29967eeae25bb":[9,0,22,17,0,1],
 "structSecurity_1_1PeerOptions_1_1flags__.html#a4ea7ae8ddd742fd3beb29967eeae25bb":[8,0,26,18,0,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX169 =
 "struct__store__check__cachable__hist.html#a7a0e2c18bd2c03997a87f0765c07208f":[9,0,59,5],
 "struct__store__check__cachable__hist.html#a8728284f13bfd05251be7f7ecc50b48a":[9,0,59,1],
 "struct__store__check__cachable__hist.html#abba3d7f8bb0948fcc25b53e5b3e88223":[9,0,59,8],
-"struct__store__check__cachable__hist.html#aca0277ec1e099e75f68730dc881cbd2f":[9,0,59,4]
+"struct__store__check__cachable__hist.html#aca0277ec1e099e75f68730dc881cbd2f":[9,0,59,4],
+"struct__store__check__cachable__hist.html#ad13d0d5f0403e8fc358fa9a7957ed1f9":[9,0,59,0]
 };

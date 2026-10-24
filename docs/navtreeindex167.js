@@ -1,6 +1,5 @@
 var NAVTREEINDEX167 =
 {
-"store__client_8cc.html":[10,0,0,5,299],
 "store__client_8cc.html#a06631df680fe4de46f305a34874175f9":[10,0,0,5,299,7],
 "store__client_8cc.html#a1d6f3137e148014416e0812a317f853f":[10,0,0,5,299,1],
 "store__client_8cc.html#a2fd2037662d89a828948fdb1182b963b":[10,0,0,5,299,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX167 =
 "structClientInfo_1_1Protocol.html#aedaa41fe203c9c9bd8edbacea4a0809b":[9,0,177,1,2],
 "structComm_1_1ConnOpener_1_1Calls.html":[8,0,4,3,0],
 "structComm_1_1ConnOpener_1_1Calls.html":[9,0,4,3,0],
-"structComm_1_1ConnOpener_1_1Calls.html#aae8b6fcf9e2b055c1213aa71394ea5f9":[9,0,4,3,0,0]
+"structComm_1_1ConnOpener_1_1Calls.html#aae8b6fcf9e2b055c1213aa71394ea5f9":[9,0,4,3,0,0],
+"structComm_1_1ConnOpener_1_1Calls.html#aae8b6fcf9e2b055c1213aa71394ea5f9":[8,0,4,3,0,0]
 };

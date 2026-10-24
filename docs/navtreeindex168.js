@@ -1,6 +1,5 @@
 var NAVTREEINDEX168 =
 {
-"structComm_1_1ConnOpener_1_1Calls.html#aae8b6fcf9e2b055c1213aa71394ea5f9":[8,0,4,3,0,0],
 "structComm_1_1ConnOpener_1_1Calls.html#ac092d868fbaa99bad45b1c536e92150b":[8,0,4,3,0,1],
 "structComm_1_1ConnOpener_1_1Calls.html#ac092d868fbaa99bad45b1c536e92150b":[9,0,4,3,0,1],
 "structComm_1_1ConnOpener_1_1Calls.html#af9f586d204cf4379cc7bc8f9b10164b9":[8,0,4,3,0,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX168 =
 "structSMBDOMAIN.html#a9d26367313cf90cf3751cc9247772492":[9,0,541,5],
 "structSMBDOMAIN.html#af9c21c527e8ce53923670e86ae361cc6":[9,0,541,1],
 "structSecurity_1_1PeerOptions_1_1flags__.html":[9,0,22,17,0],
-"structSecurity_1_1PeerOptions_1_1flags__.html":[8,0,26,18,0]
+"structSecurity_1_1PeerOptions_1_1flags__.html":[8,0,26,18,0],
+"structSecurity_1_1PeerOptions_1_1flags__.html#a1cce6e38551086ae28f7a72d879004ed":[9,0,22,17,0,3]
 };
